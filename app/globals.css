@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/*
+  YHC BRAND TOKENS
+  Source of truth: yhc-complete-sitemap-and-page-designs-2026-07-23.html (design constitution)
+  Do not change these values without updating the constitution doc first.
+*/
+:root {
+  --color-cream: #f5deb3;
+  --color-cream-bg: #fbf6ea;
+  --color-cream-deep: #efe2bf;
+  --color-navy: #1a2a41;
+  --color-navy-light: #2c4162;
+  --color-navy-2: #233a57;
+  --color-amber: #d4a04a;
+  --color-amber-dark: #a97b2e;
+  --color-amber-light: #facb7a;
+  --color-amber-tint: #fbf1df;
+  --color-green: #5b8a2d;
+  --color-green-tint: #f1f6e9;
+  --color-white: #ffffff;
+  --color-text-mid: #4a5a72;
+  --color-text-light: #8b96a8;
+  --color-border: rgba(26, 42, 65, 0.12);
+  --color-border-amber: rgba(212, 160, 74, 0.35);
+
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-cream-bg: var(--color-cream-bg);
+  --color-cream-deep: var(--color-cream-deep);
+  --color-navy: var(--color-navy);
+  --color-navy-light: var(--color-navy-light);
+  --color-navy-2: var(--color-navy-2);
+  --color-amber: var(--color-amber);
+  --color-amber-dark: var(--color-amber-dark);
+  --color-amber-light: var(--color-amber-light);
+  --color-amber-tint: var(--color-amber-tint);
+  --color-green: var(--color-green);
+  --color-green-tint: var(--color-green-tint);
+  --color-text-mid: var(--color-text-mid);
+  --color-text-light: var(--color-text-light);
+  --color-border: var(--color-border);
+  --color-border-amber: var(--color-border-amber);
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream-bg);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+/* Respect reduced motion everywhere */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
