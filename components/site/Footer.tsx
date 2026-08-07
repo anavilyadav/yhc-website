@@ -23,7 +23,7 @@ const treatmentLinks = [
 
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms of Use", href: "/terms" },
+  { label: "Terms of Use", href: "/terms-of-use" },
   { label: "Medical Disclaimer", href: "/medical-disclaimer" },
 ];
 
@@ -77,8 +77,16 @@ export default function Footer() {
               Locations
             </h3>
             <ul className="space-y-2 text-sm text-cream/60">
-              <li>Main Branch, Jaipur</li>
-              <li>Jagatpura Branch, Jaipur</li>
+              <li>
+                <Link href="/homeopathy-doctor-jaipur" className="hover:text-amber-light">
+                  Main Branch, Jaipur
+                </Link>
+              </li>
+              <li>
+                <Link href="/homeopathy-clinic-jagatpura-jaipur" className="hover:text-amber-light">
+                  Jagatpura Branch, Jaipur
+                </Link>
+              </li>
               <li>
                 <a href={telLink()} className="hover:text-amber-light">
                   {siteConfig.phone.display}

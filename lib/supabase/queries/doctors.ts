@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import { DOCTOR_SEED } from "@/lib/content/doctors-seed";
 
 export interface ConsultationPoint {
   heading: string;
@@ -29,14 +30,15 @@ export interface Doctor {
 }
 
 /**
- * All published doctors, ordered for the /about/ page.
- * Falls back to an empty array (rather than throwing) when Supabase isn't
- * configured yet, matching the pattern used by lib/data/*.ts elsewhere on
- * this site — the About page simply skips a doctor section it has no data for.
+ * All published doctors, ordered for the /about/ and /our-doctors/ pages.
+ * Falls back to the bundled seed (mirrors the Supabase seed exactly) when
+ * Supabase isn't configured yet, matching the pattern used by
+ * lib/data/*.ts elsewhere on this site — so these pages never render
+ * empty and `npm run build` always works before Supabase is connected.
  */
 export async function getDoctors(): Promise<Doctor[]> {
   const supabase = createClient();
-  if (!supabase) return [];
+  if (!supabase) return DOCTOR_SEED;
 
   const { data, error } = await supabase
     .from("doctors")
@@ -44,17 +46,16 @@ export async function getDoctors(): Promise<Doctor[]> {
     .eq("is_published", true)
     .order("display_order", { ascending: true });
 
-  if (error) {
-    console.error(`getDoctors: ${error.message}`);
-    return [];
-  }
+  if (error || !data || data.length === 0) return DOCTOR_SEED;
 
-  return data ?? [];
+  return data;
 }
 
 export async function getDoctorBySlug(slug: string): Promise<Doctor | null> {
+  const seedMatch = DOCTOR_SEED.find((doctor) => doctor.slug === slug) ?? null;
+
   const supabase = createClient();
-  if (!supabase) return null;
+  if (!supabase) return seedMatch;
 
   const { data, error } = await supabase
     .from("doctors")
@@ -63,10 +64,7 @@ export async function getDoctorBySlug(slug: string): Promise<Doctor | null> {
     .eq("is_published", true)
     .maybeSingle();
 
-  if (error) {
-    console.error(`getDoctorBySlug(${slug}): ${error.message}`);
-    return null;
-  }
+  if (error || !data) return seedMatch;
 
   return data;
 }

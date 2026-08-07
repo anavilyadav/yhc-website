@@ -388,11 +388,64 @@ is already at 6 items and the doc's own instruction gave a choice
 ("under About or as standalone link"), so Footer was the lower-friction
 option.
 
+## What's in this delivery — STEP 10: Doctors, Locations & Legal Pages
+
+Eight pages from `dr-anavil-step10-remaining-pages-2026-07-12.docx`:
+
+- `/our-doctors/` — parent listing with short cards for both doctors
+- `/our-doctors/dr-tp-yadav/` and `/our-doctors/dr-anavil-yadav/` — one
+  dynamic route (`app/our-doctors/[slug]/page.tsx`), not two static
+  pages, since both reuse the exact same `Doctor` data and the existing
+  `DoctorProfileSection` component built for the About page in STEP2.
+  Only the page-specific extras that don't belong in the shared
+  `doctors` table (a per-doctor patient testimonial, this page's own CTA
+  labels) live in a new `lib/content/doctor-profiles-content.ts`. Each
+  page emits that doctor's own full `Physician` JSON-LD via the existing
+  `buildPhysicianSchemas()`.
+- `/homeopathy-doctor-jaipur/` and `/homeopathy-clinic-jagatpura-jaipur/`
+  — location pages. Address/phone/timings are **not** duplicated from
+  the source doc's `[CEO to fill]` placeholders — they're fetched from
+  `getClinicLocations()` (the same Supabase-backed source `/contact/`
+  already uses, built in STEP3) and rendered with the existing
+  `ClinicLocationCard`, so a pending address shows "To be confirmed"
+  gracefully instead of a fabricated one, and updating it once in
+  Supabase updates every page that shows it.
+- `/privacy-policy/`, `/terms-of-use/`, `/medical-disclaimer/` — full
+  legal text, DPDPA 2023 / IT Act 2000 / Drug & Magic Remedies Act 1954
+  compliant per the source doc. The `[clinic email]` placeholder resolves
+  from `siteConfig.email` at render time (falls back to "email to be
+  confirmed") rather than being baked into the static text.
+
+**Fixed Footer's `/terms` → `/terms-of-use`** to match GIOS_P2's canonical
+URL (Footer already linked here before this page existed; it just 404'd).
+Also upgraded the Footer's plain-text "Main Branch, Jaipur" / "Jagatpura
+Branch, Jaipur" location labels into real links now that those pages exist.
+
+**Real gap found and fixed while building this:** `getDoctors()` /
+`getDoctorBySlug()` had no local seed fallback (unlike every other
+Supabase-backed data source on this site — diseases, testimonials, blog
+posts, disease pages all have one). This meant `/about/` silently
+rendered without its doctor sections, and a dedicated doctor page like
+`/our-doctors/dr-tp-yadav/` would 404 outright, whenever Supabase isn't
+yet connected — a real launch risk if the site goes live before Supabase
+is migrated. Added `lib/content/doctors-seed.ts`, mirroring
+`supabase/seed/doctors_seed.sql` exactly (same STEP2-approved content,
+not invented), and wired both query functions to fall back to it —
+matching the architecture every other content type already uses.
+
+**Bug found and fixed:** the `getInitials()` helper (added in STEP6, used
+for the no-photo-yet avatar placeholder) produced "Y" for "Dr T P Yadav"
+instead of "TY" — the `length > 1` filter meant to drop the "Dr" honorific
+also dropped the legitimate single-letter name parts "T" and "P". Rewrote
+it to take first-initial + last-initial after removing honorifics,
+regardless of how many single-letter parts sit in between.
+
 ## Verified
 
 - `npm run build` -- clean. Homepage + all 14 disease pages (STEP4 + STEP5)
   + 5 blog posts + `/online-consultation/`, `/patient-stories/`,
-  `/faq/`, and the vitiligo sub-page all prerendered as static HTML
+  `/faq/`, the vitiligo sub-page, both doctor profile pages, both
+  location pages, and all 3 legal pages all prerendered as static HTML
 - `npm run lint` -- clean
 - All 14 disease pages checked for: valid, parseable `MedicalWebPage` +
   `FAQPage` JSON-LD actually present as literal `<script>` tags in the
@@ -417,3 +470,11 @@ option.
   direct DOM interaction (searching "vitiligo" correctly narrows to the 3
   matching questions across categories and hides empty categories);
   `FAQPage` JSON-LD confirmed to contain all 25 questions
+- STEP10 pages checked in-browser: both doctor profile pages render full
+  bios/specialisations/testimonials with correct "TY" / "AY" initials
+  (post-fix); both location pages show graceful "To be confirmed" states
+  for pending address/timings; all 3 legal pages render with correct
+  section/bullet structure and the `[clinic email]` placeholder resolving
+  correctly; fixed a title-duplication bug on all 3 legal pages
+  (`content.title` already includes "— Yadav Homeo Clinic", so appending
+  `siteConfig.name` again produced a doubled title)
