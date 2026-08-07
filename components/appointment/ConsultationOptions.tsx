@@ -61,6 +61,11 @@ export function ConsultationOptions() {
               and we will guide you through the process.{" "}
               <a href={whatsappLinks.onlineConsultation}>Start on WhatsApp</a>
             </p>
+            <p className={styles.cardSecondary}>
+              Online consultations at Yadav Homeo Clinic are conducted in
+              accordance with the Telemedicine Practice Guidelines 2020
+              (NMC/MCI).
+            </p>
           </div>
         </div>
       </div>

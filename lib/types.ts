@@ -56,6 +56,8 @@ export interface DiseasePageFAQ {
 export interface DiseasePagePatientStory {
   quote: string;
   attribution: string;
+  /** Legal-compliance caveat shown under the story, e.g. "Individual results vary." */
+  note?: string;
 }
 
 export interface DiseasePageAboutCondition {

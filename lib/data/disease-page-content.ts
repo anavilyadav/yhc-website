@@ -133,7 +133,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       {
         question: "Can homeopathy permanently cure vitiligo?",
         answer:
-          "In many cases — particularly when treatment begins early and is continued consistently for 12 to 18 months — yes. Many of our patients achieve lasting repigmentation that does not reverse after treatment ends. However, not every case achieves complete cure and we are honest about this. What we can consistently offer is: stopping the spread and, in a significant proportion of cases, meaningful repigmentation.",
+          "In many cases — particularly early-stage vitiligo treated consistently for 12–18 months — lasting repigmentation is achievable. Many patients experience improvement that does not return after treatment ends. However, outcomes vary significantly and cannot be guaranteed for every individual.",
       },
       {
         question: "Do I need to stop using my steroid cream before starting homeopathy?",
@@ -468,6 +468,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       quote:
         "My father's creatinine was 6.8 in January 2023. Our nephrologist said dialysis was the next step and we should prepare for it. My aunt suggested Dr Yadav. We were not hopeful but we had nothing to lose. We started treatment in February. I shared reports every 6 weeks as instructed. By August — just 6 months later — creatinine had come down to 3.2. He has not started dialysis. He is eating, he is active. His nephrologist is surprised and monitoring him closely. We thank God every day.",
       attribution: "Ajay Sharma, 44, Jaipur — Son of CKD patient, Creatinine 6.8 → 3.2 in 6 months",
+      note: "This patient's outcome may not be typical. Results vary based on kidney function at treatment start, underlying cause, and compliance with nephrologist's care.",
     },
     faqs: [
       {
@@ -907,7 +908,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         paragraphs: [
           "Every parent worries about giving their child strong medicines — especially repeatedly. Antibiotics for every infection. Antihistamines for every allergy. Steroids for every asthma attack. Each time, the medicine works — and each time, the illness returns. Sometimes sooner. Sometimes worse. Parents begin to feel they are managing a cycle, not treating a problem.",
           "This is exactly where constitutional homeopathy makes its most important contribution to child health. Children have a naturally strong vital force — their bodies want to heal, and they respond faster and more deeply to homeopathic treatment than most adults. A child with recurrent tonsillitis who might otherwise need surgery often becomes completely infection-free within 6 to 12 months of constitutional treatment. A child with chronic eczema who has been on steroid creams since infancy begins to develop genuinely healthy skin. A child with chronic allergies who was on daily antihistamines starts reacting less to previously triggering substances.",
-          "The medicines themselves are ideal for children — tiny, sweet, dissolving pills that even very young children take willingly. No injections. No bitter syrups. No side effects. No risk of antibiotic resistance.",
+          "The medicines themselves are ideal for children — tiny, sweet, dissolving pills that even very young children take willingly. No injections. No bitter syrups. No pharmacological side effects. No risk of antibiotic resistance.",
         ],
       },
       {
@@ -915,7 +916,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         paragraphs: [
           "Tonsillectomy — surgical removal of the tonsils — is one of the most commonly performed surgeries in children worldwide. It is recommended for children who have frequent, severe tonsil infections that are not responding to antibiotics. The surgery is generally safe — but many parents instinctively feel that removing a part of their child's immune system is not the ideal solution.",
           "Constitutional homeopathic treatment for chronic tonsillitis has a strong and consistent track record at our clinic. By addressing the underlying immune susceptibility that makes the child prone to repeated throat infections — rather than removing the tonsils that are expressing this susceptibility — homeopathy allows many children to become genuinely free of recurrent tonsil infections over 6 to 12 months of treatment.",
-          "We have had numerous patients referred to us specifically because tonsillectomy was recommended and parents wanted to try a non-surgical option first. In the majority of these cases — particularly in children under 10 — constitutional treatment has been successful enough that surgery was no longer required.",
+          "We have had numerous patients referred to us specifically because tonsillectomy was recommended and parents wanted to try a non-surgical option first. In many of these cases — particularly in children under 10 — constitutional treatment has been successful enough that surgery was not required. We always recommend ENT review alongside homeopathic treatment.",
         ],
         note: "Important caveat: In cases of peritonsillar abscess, obstructive sleep apnea caused by severely enlarged tonsils, or other serious complications, surgery may still be the appropriate and necessary choice. We are honest about this from the first consultation.",
       },
@@ -1498,7 +1499,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         heading: "Type 2 Diabetes — Homeopathy as a Meaningful Supportive Tool",
         paragraphs: [
           "We are clear that homeopathy is not a standalone treatment for diabetes, and it does not replace insulin, metformin, or other prescribed antidiabetic medications. Diabetes management requires strict dietary control, regular monitoring, physical activity and appropriate medication — and none of this should be compromised.",
-          "What constitutional homeopathic treatment can offer diabetic patients is a meaningful support to their conventional management. Constitutional treatment has been shown to improve insulin sensitivity, reduce the inflammatory burden that worsens glycaemic control, improve energy and quality of life, and support the pancreatic function that remains. Many of our diabetic patients who pursue constitutional treatment alongside proper dietary control find their blood sugar management becomes easier and more stable over time.",
+          "What constitutional homeopathic treatment can offer diabetic patients is a meaningful support to their conventional management. In our clinical experience, constitutional treatment has supported improvement in insulin sensitivity in many patients, alongside a reduced inflammatory burden, improved energy and quality of life, and support for the pancreatic function that remains. Many of our diabetic patients who pursue constitutional treatment alongside proper dietary control find their blood sugar management becomes easier and more stable over time.",
           "For Pre-Diabetes — elevated fasting blood sugar or HbA1c in the pre-diabetic range — constitutional treatment alongside dietary and lifestyle changes offers a genuine opportunity to reverse the progression before full diabetes develops.",
         ],
       },

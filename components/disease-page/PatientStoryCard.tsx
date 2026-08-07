@@ -10,6 +10,9 @@ export default function PatientStoryCard({ story }: { story: DiseasePagePatientS
             &ldquo;{story.quote}&rdquo;
           </p>
           <footer className="mt-4 text-sm font-bold text-navy">— {story.attribution}</footer>
+          {story.note && (
+            <p className="mt-3 text-[12px] italic leading-relaxed text-text-light">{story.note}</p>
+          )}
         </blockquote>
       </div>
     </section>

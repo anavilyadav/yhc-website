@@ -46,6 +46,12 @@ export default function Testimonials({ testimonials }: { testimonials: Testimoni
             Read More Stories →
           </Link>
         </div>
+
+        <p className="mx-auto mt-8 max-w-2xl text-center text-[12px] leading-relaxed text-text-light">
+          Testimonials represent individual patient experiences. Results are not typical and
+          cannot be guaranteed. Homeopathic treatment outcomes vary based on individual
+          constitution, disease duration, compliance with treatment, and other factors.
+        </p>
       </div>
     </section>
   );
