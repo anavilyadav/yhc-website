@@ -352,11 +352,47 @@ own Intent Type 7 section says is the right primary CTA for this search
 intent anyway), and photo/video sections were left out rather than filled
 with stock imagery.
 
+## What's in this delivery — STEP 9: FAQ Page
+
+`/faq/` from `dr-anavil-step9-faq-page-schema-2026-07-12.docx` — this
+page's stated purpose is to replace Google Business Profile Q&A
+(deprecated Nov 2025) as the primary local-SEO Q&A signal, feeding
+Google's AI/voice search. That's the source of this page's most
+noticeable choice:
+
+**Content is in Hinglish (Roman-script Hindi/English), unlike every other
+page on the site.** This isn't a mistake or leftover placeholder — the
+source doc is explicit that this register is deliberate for this specific
+page, and the doc is marked "copy-paste ready," so the 25 Q&A were used
+verbatim rather than translated to match the rest of the site's English
+copy.
+
+Structure: hero, author box (fed live from the `doctors` table, same as
+the blog and the other STEP7/9 pages), a client-side search box
+(`FaqSearch`) that filters all 25 questions across the 4 categories by
+substring match on both question and answer text, medical disclaimer,
+final CTA. `FAQPage` JSON-LD covers all 25 questions in one block.
+
+Two corrections applied to the source content:
+- **Q11 (Migraine):** the exact same "permanently theek ho sakta hai"
+  question already flagged as FLAG 9 in
+  `dr-anavil-complete-legal-audit-2026-07-14.docx` — applied the audit's
+  required "individual results vary" qualifier from the start.
+- **Q25:** the source doc links to `/treatments/skin-diseases/psoriasis-
+  treatment-jaipur/`, a sub-page that was never written (only the
+  Vitiligo sub-page exists, from STEP7). Reworded to reference only the
+  pages that actually exist rather than link to a 404.
+
+Added `/faq/` to the Footer nav rather than the Header — the Header nav
+is already at 6 items and the doc's own instruction gave a choice
+("under About or as standalone link"), so Footer was the lower-friction
+option.
+
 ## Verified
 
 - `npm run build` -- clean. Homepage + all 14 disease pages (STEP4 + STEP5)
-  + 5 blog posts + `/online-consultation/`, `/patient-stories/` and the
-  vitiligo sub-page all prerendered as static HTML
+  + 5 blog posts + `/online-consultation/`, `/patient-stories/`,
+  `/faq/`, and the vitiligo sub-page all prerendered as static HTML
 - `npm run lint` -- clean
 - All 14 disease pages checked for: valid, parseable `MedicalWebPage` +
   `FAQPage` JSON-LD actually present as literal `<script>` tags in the
@@ -377,3 +413,7 @@ with stock imagery.
   active-button styling); vitiligo page's breadcrumb reads Home → Skin
   Diseases → Vitiligo in both the visible UI and the JSON-LD; all
   "Read more about [condition]" links resolve to real disease pages
+- STEP9 FAQ page checked in-browser: search box verified working via
+  direct DOM interaction (searching "vitiligo" correctly narrows to the 3
+  matching questions across categories and hides empty categories);
+  `FAQPage` JSON-LD confirmed to contain all 25 questions

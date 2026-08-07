@@ -8,6 +8,7 @@ const exploreLinks = [
   { label: "All Treatments", href: "/#conditions" },
   { label: "Online Consultation", href: "/online-consultation" },
   { label: "Patient Stories", href: "/patient-stories" },
+  { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
   { label: "Book Appointment", href: "/appointment" },
 ];
