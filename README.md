@@ -83,11 +83,11 @@ clinic/physician schema, `breadcrumb`) — adapted to this site's actual
 `/slug/` URLs instead of the doc's `/treatments/slug/` path, for the same
 reason as above.
 
-**Not included yet:** the other 7 STEP5 disease pages (Children's Health,
-Women's, Men's, Respiratory, Digestive, Hormonal, Mental Health) — their
-homepage cards link out but 404 until that step is delivered. The Skin
-Diseases page's dedicated Vitiligo/Psoriasis sub-pages are STEP7, not this
-step.
+**Not included yet (at this point in the delivery):** the other 7 STEP5
+disease pages (Children's Health, Women's, Men's, Respiratory, Digestive,
+Hormonal, Mental Health) — their homepage cards linked out but 404'd until
+STEP5 was delivered (see below). The Skin Diseases page's dedicated
+Vitiligo/Psoriasis sub-pages are STEP7, not yet delivered.
 
 ### Supabase — new table
 
@@ -173,15 +173,74 @@ rating) used in JSON-LD. Left blank, they're simply omitted -- never filled
 with placeholder/fake data, since that violates Google's structured data
 policy.
 
+## What's in this delivery — STEP 5: 7 More Disease/Treatment Pages
+
+The remaining 7 pages from `STEP5_Disease_Pages_Part2.docx`, completing the
+full set of 14 homepage condition cards (no more 404s from `/#conditions`):
+
+8. `/childrens-health/` — hero **replaced** with the STEP8 (GREEN) version,
+   same as Skin Diseases in STEP4 (see `dr-anavil-step8-hero-fixes-2026-07-12.docx`,
+   referenced as Doc #9 in the developer package master index). Body content
+   is STEP5's as written.
+9. `/womens-health/`
+10. `/mens-health/` — hero also replaced per STEP8. The master index's
+    instruction for Doc #7 (STEP5) additionally calls for a paragraph on
+    male-infertility stigma inserted into the body (added as its own section,
+    right after "Conditions We Treat") and a **prominent** disclaimer on the
+    sexual-health content ("Sexual health section: medical disclaimer
+    prominent") — implemented via the same `disclaimerProminent` flag STEP4
+    used for Cancer/Nervous System, since the page schema doesn't support a
+    separate mid-page banner.
+11. `/respiratory-diseases/`
+12. `/digestive-diseases/`
+13. `/hormonal-diseases/`
+14. `/mental-health/` — **judgment call, flagged rather than hidden:** the
+    source doc includes a crisis-line callout (iCall: 9152987821) next to the
+    Depression content, which is kept as an in-context note there. Beyond
+    that, this page also got `disclaimerProminent: true` even though no
+    source doc explicitly requests it for this page (unlike Men's Health,
+    where the master index does) — the page discusses suicidal ideation, the
+    same category of safety-critical content that earned Cancer and Nervous
+    System their prominent banners in STEP4. Worth a second look from Dr
+    Anavil given it's an inference, not a documented instruction.
+
+Same template as STEP4 (hero, conditions list, body sections, patient story,
+FAQ, disclaimer, final CTA) via the existing `app/[slug]/page.tsx` dynamic
+route — no new code, only new data in `lib/data/disease-page-content.ts`.
+
+**Content gaps filled in, flagged here rather than hidden:** STEP5's source
+document jumps straight from each page's SEO fields into body sections
+without a lead-in sentence before the "Conditions We Treat" bullet list
+(STEP4's pages all had one). A one-line intro was written per page in the
+same voice to satisfy the `conditionsIntro` field the shared template needs
+— e.g. Children's Health: "We treat a full range of childhood health
+concerns — from recurring infections to developmental and behavioural
+conditions:". Per-page `disclaimer` text was likewise written to match
+STEP4's tailored-per-condition voice (referencing the relevant specialist —
+paediatrician, gynaecologist, urologist, etc.) rather than the generic
+boilerplate in `GIOS_P7_Governance_Compliance.docx`, since that's the
+pattern STEP4 already established for this field.
+
+### Supabase — updated seed
+
+`supabase/schema.sql`'s `disease_pages` insert now covers all 14 pages —
+regenerated via `scripts/gen-disease-pages-sql.ts` from the updated
+`DISEASE_PAGE_SEED` (confirmed via `git diff` to be purely additive: the
+original 7 STEP4 rows are byte-for-byte unchanged). Re-run the whole file;
+it's still `on conflict do nothing`.
+
 ## Verified
 
-- `npm run build` -- clean. Homepage + all 7 STEP4 disease pages prerendered
-  as static HTML with 1h ISR (`generateStaticParams` on `app/[slug]/page.tsx`)
+- `npm run build` -- clean. Homepage + all 14 disease pages (STEP4 + STEP5)
+  prerendered as static HTML with 1h ISR (`generateStaticParams` on
+  `app/[slug]/page.tsx`)
 - `npm run lint` -- clean
-- All 7 disease pages checked for: valid, parseable `MedicalWebPage` +
+- All 14 disease pages checked for: valid, parseable `MedicalWebPage` +
   `FAQPage` JSON-LD actually present as literal `<script>` tags in the
   server-rendered HTML (not just client-injected -- see note in
-  `app/[slug]/page.tsx`); STEP8 hero override live on `/skin-diseases/`;
-  prominent disclaimer banner present on `/cancer/` and
-  `/nervous-system-disease/`; patient stories and FAQ content match source
-  docs verbatim
+  `app/[slug]/page.tsx`); STEP8 hero override live on `/skin-diseases/`,
+  `/childrens-health/` and `/mens-health/`; prominent disclaimer banner
+  present on `/cancer/`, `/nervous-system-disease/`, `/mens-health/` and
+  `/mental-health/`; patient stories and FAQ content match source docs
+  verbatim; `scripts/gen-disease-pages-sql.ts` output spot-checked for all
+  7 new slugs
