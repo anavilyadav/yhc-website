@@ -4,6 +4,8 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import MobileStickyBar from "@/components/site/MobileStickyBar";
 import FloatingWhatsApp from "@/components/site/FloatingWhatsApp";
+import ExitIntentPopup from "@/components/site/ExitIntentPopup";
+import GoogleAnalytics from "@/components/site/GoogleAnalytics";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -36,11 +38,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="h-full">
       <body className="flex min-h-full flex-col antialiased">
+        <GoogleAnalytics />
         <Header />
         <main className="flex-1 pb-16 md:pb-0">{children}</main>
         <Footer />
         <MobileStickyBar />
         <FloatingWhatsApp />
+        <ExitIntentPopup />
       </body>
     </html>
   );

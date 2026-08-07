@@ -9,6 +9,7 @@ const exploreLinks = [
   { label: "Online Consultation", href: "/online-consultation" },
   { label: "Patient Stories", href: "/patient-stories" },
   { label: "FAQ", href: "/faq" },
+  { label: "Homeopathy FAQ (50 Q&A)", href: "/homeopathy-faq" },
   { label: "Blog", href: "/blog" },
   { label: "Book Appointment", href: "/appointment" },
 ];
@@ -70,7 +71,7 @@ export default function Footer() {
               ))}
               <li>
                 <Link href="/#conditions" className="text-sm font-bold text-amber-light">
-                  All 14+ Categories →
+                  All 16+ Categories →
                 </Link>
               </li>
             </ul>

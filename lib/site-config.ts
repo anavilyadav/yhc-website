@@ -11,6 +11,12 @@ export const siteConfig = {
     e164: "+918949427254",
     whatsappNumber: "918949427254",
   },
+  // Main branch timings, per GIOS_P1_GoogleBusinessProfile.docx. Jagatpura
+  // branch timings differ and are not yet confirmed — see lib/data/contact.ts.
+  hours: {
+    weekday: "Mon–Sat: 9:00 AM–1:30 PM & 5:00–8:30 PM",
+    sunday: "Sun: By appointment",
+  },
   personalPhone: {
     display: "+91-8003231288",
     e164: "+918003231288",
@@ -39,7 +45,7 @@ export const siteConfig = {
     { value: "35+", label: "Years of Trusted Practice" },
     { value: "1,00,000+", label: "Patients Treated" },
     { value: "5,000+", label: "Special Children Helped" },
-    { value: "14+", label: "Disease Specialities" },
+    { value: "16+", label: "Disease Specialities" },
     { value: "2", label: "Clinic Locations in Jaipur" },
   ],
 } as const;

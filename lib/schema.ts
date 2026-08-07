@@ -48,6 +48,22 @@ export function buildClinicSchema() {
     currenciesAccepted: "INR",
     paymentAccepted: "Cash, UPI, Bank Transfer",
     doctor: [{ "@id": founderId }, { "@id": physicianId }],
+    // Main branch only — per GIOS_P1_GoogleBusinessProfile.docx. Jagatpura
+    // branch timings are not yet confirmed, so are omitted rather than guessed.
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "09:00",
+        closes: "13:30",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "17:00",
+        closes: "20:30",
+      },
+    ],
   };
 
   if (siteConfig.email) schema.email = siteConfig.email;
@@ -86,6 +102,25 @@ export function buildClinicSchema() {
   }
 
   return schema;
+}
+
+/**
+ * Tells voice assistants (Google Assistant, etc.) which homepage sections
+ * are best suited for text-to-speech readout. Per GIOS_P4_GEO_AI_Search.docx
+ * GEO Layer 5 — the referenced CSS classes are applied directly on the
+ * matching homepage sections (Hero, AboutTeaser, WhyChooseUs).
+ */
+export function buildSpeakableSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `${siteConfig.name} — Jaipur Homeopathy`,
+    url: `${siteConfig.url}/`,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".clinic-intro", ".hero-text", ".why-choose-us"],
+    },
+  };
 }
 
 export function buildWebsiteSchema() {

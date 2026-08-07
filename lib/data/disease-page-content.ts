@@ -126,6 +126,33 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         note: "Results vary by individual. Duration of disease, extent of involvement, and overall constitutional health all affect the treatment timeline. We set honest expectations at the first consultation.",
       },
     ],
+    comparisonTable: [
+      {
+        factor: "Treatment approach",
+        conventional: "Topical steroids, immunosuppressants, phototherapy — targets the visible lesion",
+        homeopathy: "Constitutional remedy addressing the underlying immune dysregulation, not just the skin",
+      },
+      {
+        factor: "Side effects",
+        conventional: "Skin thinning, rebound flares, long-term steroid dependency in many cases",
+        homeopathy: "Free from pharmacological side effects at classical dilutions; occasional brief healing aggravation",
+      },
+      {
+        factor: "Duration",
+        conventional: "Often lifelong management with recurring flares",
+        homeopathy: "12-18 months of constitutional treatment for chronic cases, aiming at lasting remission",
+      },
+      {
+        factor: "Goal",
+        conventional: "Symptom suppression and flare control",
+        homeopathy: "Correcting the underlying susceptibility so the condition improves from the root",
+      },
+      {
+        factor: "Cost over time",
+        conventional: "Ongoing prescriptions and repeat dermatology visits",
+        homeopathy: "One constitutional consultation with periodic follow-ups; medicines are low-cost",
+      },
+    ],
     patientStory: {
       quote:
         "I had vitiligo spreading on my face and both hands for nearly 9 years. I had visited three dermatologists and two other homeopaths before coming to Dr Yadav. Nothing had stopped the spread. Within 4 months of starting treatment at Yadav Homeo Clinic, I noticed that no new patches were forming — for the first time in years. By the 8th month I could see small brown dots forming inside the patches on my cheek. By 14 months the facial patches are approximately 65 percent repigmented. My hands are showing slower progress but are improving. I wish I had come here first.",
@@ -232,6 +259,33 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "RA is one of the most common autoimmune conditions we treat. Patients arrive with stiff, swollen, painful joints — especially in the morning. Many are on methotrexate, hydroxychloroquine or biologics. Their disease is being managed — but the fatigue, the side effects, and the knowledge that the disease is still progressing underneath take a toll.",
           "Constitutional homeopathic treatment for RA focuses on the immune system's overall dysregulation — not just the joint inflammation. Correctly prescribed remedies have produced meaningful reductions in morning stiffness and joint pain, lowering of inflammatory markers like CRP and ESR, and in some cases, the ability to reduce conventional medication doses under specialist supervision. Results are gradual — but they are real, measurable, and confirmed in blood tests.",
         ],
+      },
+    ],
+    comparisonTable: [
+      {
+        factor: "Treatment approach",
+        conventional: "Immunosuppressants, DMARDs, biologics targeting the immune response",
+        homeopathy: "Constitutional remedy aiming to correct the underlying immune dysregulation",
+      },
+      {
+        factor: "Side effects",
+        conventional: "Increased infection risk; organ function monitoring required with long-term immunosuppression",
+        homeopathy: "Free from pharmacological side effects at classical dilutions",
+      },
+      {
+        factor: "Monitoring",
+        conventional: "Regular inflammatory markers — CRP, ESR, RF, anti-CCP",
+        homeopathy: "Same objective lab markers tracked to measure genuine progress",
+      },
+      {
+        factor: "Duration",
+        conventional: "Often lifelong medication",
+        homeopathy: "Minimum 8-12 months for meaningful objective improvement",
+      },
+      {
+        factor: "Replaces conventional treatment?",
+        conventional: "—",
+        homeopathy: "No — used alongside DMARDs/biologics; dose changes only under specialist supervision",
       },
     ],
     patientStory: {
@@ -477,6 +531,33 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "Blood Pressure readings — weekly at home",
         ],
         note: "We review your blood reports at every follow-up. Progress in kidney cases is always measured objectively — through numbers, not just symptoms. Bring your latest reports to every consultation.",
+      },
+    ],
+    comparisonTable: [
+      {
+        factor: "Treatment approach",
+        conventional: "Dietary restriction, blood pressure/diabetes control, dialysis or transplant in advanced stages",
+        homeopathy: "Constitutional treatment addressing systemic drivers (BP, immune activity) alongside nephrology care",
+      },
+      {
+        factor: "Side effects",
+        conventional: "Dialysis carries its own burden; some medications affect kidney function long-term",
+        homeopathy: "Free from pharmacological side effects; never a substitute for dialysis when medically indicated",
+      },
+      {
+        factor: "Monitoring",
+        conventional: "Regular creatinine, eGFR and electrolyte panels",
+        homeopathy: "Same blood tests, reviewed every 6-8 weeks, alongside nephrology care",
+      },
+      {
+        factor: "Goal",
+        conventional: "Slow progression, manage complications",
+        homeopathy: "In CKD Stage 1-3, aim to stabilise or improve creatinine alongside nephrology care",
+      },
+      {
+        factor: "Replaces nephrology care?",
+        conventional: "—",
+        homeopathy: "No — always continued alongside, never as a substitute",
       },
     ],
     patientStory: {
@@ -726,6 +807,33 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
             ],
           },
         ],
+      },
+    ],
+    comparisonTable: [
+      {
+        factor: "Treatment approach",
+        conventional: "Behavioural therapies (ABA, speech, OT) plus medication for specific symptoms like sleep or hyperactivity",
+        homeopathy: "Constitutional remedy alongside all existing therapies, targeting sleep, digestion and behavioural regulation",
+      },
+      {
+        factor: "Side effects",
+        conventional: "Sleep and behaviour medications can cause sedation, weight gain or dependency",
+        homeopathy: "Free from pharmacological side effects; supports, never replaces, existing therapy",
+      },
+      {
+        factor: "Duration",
+        conventional: "Ongoing, often indefinite therapy and medication",
+        homeopathy: "Constitutional treatment typically continued for 1-2+ years alongside therapy",
+      },
+      {
+        factor: "Goal",
+        conventional: "Symptom and behaviour management",
+        homeopathy: "Improve the child's overall health baseline (sleep, digestion, immunity) so they are more receptive to therapy",
+      },
+      {
+        factor: "Works alongside existing therapy?",
+        conventional: "—",
+        homeopathy: "Yes — all speech therapy, OT, ABA and special education must continue without interruption",
       },
     ],
     patientStory: {
@@ -1113,6 +1221,33 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "Constitutional homeopathic treatment for female infertility works by improving the overall hormonal and constitutional health of the woman — creating the optimal internal environment for conception. We have seen natural conceptions in women diagnosed with PCOD, unexplained infertility, thin endometrium, poor egg quality in early-stage Premature Ovarian Insufficiency, and recurrent miscarriage after constitutional treatment.",
           "Homeopathy does not guarantee conception. No treatment does. But it offers a safe, side-effect-free option that can meaningfully improve the hormonal environment, egg quality and uterine receptivity — either as a standalone approach or as a complement to assisted reproduction.",
         ],
+      },
+    ],
+    comparisonTable: [
+      {
+        factor: "Treatment approach",
+        conventional: "Hormonal contraceptives, ovulation induction, or IVF",
+        homeopathy: "Constitutional remedy targeting the hypothalamic-pituitary-ovarian axis imbalance",
+      },
+      {
+        factor: "Side effects",
+        conventional: "Weight gain, mood changes and other hormonal medication side effects",
+        homeopathy: "Free from pharmacological side effects",
+      },
+      {
+        factor: "Monitoring",
+        conventional: "Ultrasound and hormonal panels",
+        homeopathy: "Same ultrasound and hormonal blood markers, tracked over 6-9 months",
+      },
+      {
+        factor: "Goal",
+        conventional: "Regulate cycles or achieve pregnancy through medical intervention",
+        homeopathy: "Regularise the underlying hormonal axis; some patients conceive naturally after constitutional treatment",
+      },
+      {
+        factor: "Cost over time",
+        conventional: "Ongoing hormonal medication or assisted-reproduction costs",
+        homeopathy: "Consultation-based, with medicines that are low-cost",
       },
     ],
     patientStory: {

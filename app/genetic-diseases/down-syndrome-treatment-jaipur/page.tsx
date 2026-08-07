@@ -7,12 +7,12 @@ import FAQAccordion from "@/components/disease-page/FAQAccordion";
 import DisclaimerBanner from "@/components/disease-page/DisclaimerBanner";
 import DiseasePageFinalCTA from "@/components/disease-page/DiseasePageFinalCTA";
 import { AuthorBox } from "@/components/blog/AuthorBox";
-import { VITILIGO_PAGE } from "@/lib/content/vitiligo-content";
+import { DOWN_SYNDROME_PAGE } from "@/lib/content/down-syndrome-content";
 import { buildMedicalWebPageSchema, buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
 
-const page = VITILIGO_PAGE;
+const page = DOWN_SYNDROME_PAGE;
 
 export const metadata: Metadata = {
   title: { absolute: page.pageTitle },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function VitiligoPage() {
+export default async function DownSyndromePage() {
   const doctor = await getDoctorBySlug(siteConfig.doctors.physician.slug);
   const medicalWebPageSchema = buildMedicalWebPageSchema({
     slug: `${page.parentSlug}/${page.slug}`,
@@ -71,9 +71,9 @@ export default async function VitiligoPage() {
 
       <div className="mx-auto max-w-4xl px-5 pb-2">
         <p className="text-[13px] text-text-mid">
-          Looking for other chronic skin conditions we treat — psoriasis, eczema, urticaria?{" "}
+          Looking for other genetic and rare conditions we support — Thalassemia, Haemophilia?{" "}
           <Link href={`/${page.parentSlug}`} className="font-semibold text-amber-dark hover:text-navy">
-            Visit our Skin Diseases page →
+            Visit our Genetic & Rare Diseases page →
           </Link>
         </p>
       </div>

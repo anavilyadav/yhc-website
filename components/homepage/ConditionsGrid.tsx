@@ -9,7 +9,7 @@ export default function ConditionsGrid({ diseases }: { diseases: Disease[] }) {
           <h2 className="font-serif text-2xl text-navy md:text-3xl">Conditions We Treat</h2>
           <p className="mt-3 text-[15px] leading-relaxed text-text-mid">
             We specialise in chronic, rare, and complex conditions — the ones where patients are
-            told &lsquo;nothing more can be done&rsquo;. Over 14 categories of disease treated
+            told &lsquo;nothing more can be done&rsquo;. Over 16 categories of disease treated
             with deep classical homeopathy.
           </p>
         </div>

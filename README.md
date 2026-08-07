@@ -501,6 +501,101 @@ existing `scripts/gen-disease-pages-sql.ts` (now 17 rows), and the
 new rows for Joint & Bone and Cardiac — not Sexual Health, matching its
 quiet-placement requirement.
 
+## What's in this delivery — Phase 1: GIOS audit fixes + tracker/sitemap gap closure
+
+STEP 1-11 completed the foundational build. This pass reads every remaining
+GIOS package (`GIOS_FinalAudit_Stage1Complete`, `GIOS_P1` GBP, `GIOS_P2`
+SEO+Schema+WordPress, `GIOS_P4` GEO/AI Search, `GIOS_P5` Patient Conversion
+OS, `GIOS_P6` Automation, `GIOS_P7` Governance), the homepage/content
+trackers, the TKOS spreadsheet, and the 38-page sitemap master doc, then
+implements every item that is (a) genuinely missing from the live Next.js
+site and (b) buildable in code without external accounts/credentials/photos
+this sandbox doesn't have.
+
+**SEO/technical:**
+- `app/robots.ts` + `app/sitemap.ts` — previously missing entirely. Explicitly
+  allows AI crawlers (GPTBot, Google-Extended, PerplexityBot, ClaudeBot) per
+  the Final Audit's "AI Crawler Audit" section. Sitemap covers all 43 routes.
+- Fixed a real bug: the homepage's JSON-LD schemas were injected via
+  `next/script`'s `<Script>` component, which defers to client-side and
+  never appears in the server-rendered HTML crawlers fetch — exactly the gap
+  already flagged in a comment in `app/[slug]/page.tsx` but never fixed on
+  the homepage itself. Converted to plain `<script>` tags, matching the
+  pattern already used on disease pages.
+- Added `openingHoursSpecification` to the clinic JSON-LD schema (was
+  entirely absent) and a `SpeakableSpecification` schema + matching CSS
+  hooks (`clinic-intro`, `hero-text`, `why-choose-us`) on the homepage for
+  voice search, per `GIOS_P4` GEO Layer 5.
+
+**E-E-A-T / GEO (GIOS_P4, Final Audit RF-06/RF-15):**
+- Every disease page (all 17 + the 4 sub-pages) now has an author box
+  **near the top**, not just the bottom — this was completely absent on
+  disease pages before this pass (only blog/FAQ/online-consultation had
+  one). Includes a "Medically reviewed by Dr T P Yadav" line.
+- Header now shows clinic hours + click-to-call phone in a slim top bar on
+  desktop, visible on every page (contact info was previously footer-only).
+- New page `/homeopathy-faq/` — the 50-question AI-citation FAQ database
+  from `GIOS_P4` Layer 3, transcribed verbatim (content was already fully
+  written in the source doc). Distinct from the existing 25-question
+  Hinglish `/faq/` page; each links to the other.
+
+**Conversion (GIOS_P5):**
+- Exit-intent popup (desktop, fires once per tab session) with a WhatsApp CTA.
+- Structured "Conventional Medicine vs Classical Homeopathy" comparison
+  tables added to the 5 highest-traffic disease pages (Skin, Autism, Kidney,
+  Autoimmune, Women's Health) per the Final Audit's "VALIDATED — implement
+  immediately" recommendation.
+- Testimonial disclaimer (already present on the homepage and Patient
+  Stories page) added to the per-disease-page `PatientStoryCard` too, so
+  it's consistent everywhere a patient quote appears.
+- GA4 event-tracking scaffold (`lib/analytics.ts`, `GoogleAnalytics.tsx`) —
+  entirely inert until `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set, matching the
+  Supabase env-var pattern. `phone_click`/`whatsapp_click` events wired into
+  the header, sticky mobile bar and floating WhatsApp button.
+
+**Internal linking (GIOS_P2 Section 3 + sitemap doc):**
+- "Related Conditions" cross-links added between the doc-specified pairs
+  (Skin ↔ Autoimmune, Autism ↔ Children's Health, Kidney ↔ Hormonal,
+  Women's Health ↔ Hormonal, Nervous System ↔ Children's Health).
+- New disease sub-pages, mirroring the existing Vitiligo sub-page: Psoriasis
+  (under Skin Diseases), Cerebral Palsy (under Nervous System Disorders),
+  Down Syndrome (under Genetic & Rare Diseases) — called for explicitly in
+  the sitemap master doc's page tree. Parent pages now link down to these;
+  each sub-page links back up. `patientStory` made optional on
+  `DiseaseSubPageContent` (mirroring the STEP11 fix to `DiseasePageContent`)
+  — Psoriasis and Cerebral Palsy omit it rather than inventing one; Down
+  Syndrome reuses the real, already-approved testimonial from the parent
+  Genetic & Rare Diseases page, since it's specifically about that condition.
+
+**Copy fixes:** stale "14 specialities"/"View All 14" references (site now
+has 16 nav-visible categories) corrected in `site-config.ts`, `Footer.tsx`
+and `ConditionsGrid.tsx`.
+
+### Explicitly out of scope for this pass — needs real data/accounts first
+
+These are called for across the GIOS docs but require something only Dr
+Anavil/the clinic can provide, so nothing was faked or stubbed in a
+misleading way:
+- **Google Reviews widget (Elfsight), real Google star rating** — no GBP
+  account/API access from this sandbox.
+- **Razorpay payment buttons, "advance-only" package gating** — needs a live
+  Razorpay account and API keys; out of scope for an agent to set up.
+- **Gallery page, real clinic/doctor photography, YouTube intro video** —
+  the sitemap doc calls for a `/gallery/` page and several photo assets;
+  none exist yet, and a photo gallery with no photos would look worse than
+  not having one.
+- **GBP ↔ website UTM link map, Practo/Lybrate/JustDial/LinkedIn profiles,
+  WhatsApp Business API templates** — all external platform work (GIOS_P1,
+  P4 Layer 4, P6), not website code.
+- **Header ticker vs static bar (Options A/B/C in the sitemap doc)** — the
+  doc's own author recommends the static bar (Option A) as the better fit
+  for "classical/premium" positioning over a scrolling ticker; implemented
+  that recommendation rather than building all three and asking you to pick.
+- **Jagatpura branch hours, exact street address, PIN, lat/long, UPI ID,
+  social handles, Google rating/review count** — still env-var-gated
+  placeholders per the existing pattern; fill in via Vercel env vars
+  whenever confirmed.
+
 ## Verified
 
 - `npm run build` -- clean. Homepage + all 17 disease pages (STEP4 +

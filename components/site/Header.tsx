@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
-import { siteConfig, whatsappLink } from "@/lib/site-config";
+import { siteConfig, telLink, whatsappLink } from "@/lib/site-config";
+import { trackEvent } from "@/lib/analytics";
 
 const navLinks = [
   { label: "About Us", href: "/about" },
@@ -13,6 +16,25 @@ const navLinks = [
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-navy">
+      {/*
+        Clinic hours + click-to-call phone visible on every page — GIOS_P4
+        GEO Layer 2 EXP-11 (contact info must be visible site-wide) and the
+        sitemap doc's recommended "Option A" static bar, judged the better
+        fit for the classical/premium positioning over a scrolling ticker.
+      */}
+      <div className="hidden items-center justify-between gap-4 border-b border-amber/20 bg-navy px-5 py-1.5 text-[11px] text-cream/60 md:flex">
+        <span>
+          {siteConfig.hours.weekday} · {siteConfig.hours.sunday}
+        </span>
+        <a
+          href={telLink()}
+          onClick={() => trackEvent("phone_click", { click_source: "header" })}
+          className="font-semibold text-amber-light hover:text-amber"
+        >
+          📞 {siteConfig.phone.display}
+        </a>
+      </div>
+
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
         <Link href="/" className="flex flex-col leading-tight">
           <span className="font-serif text-lg text-cream">{siteConfig.name}</span>
@@ -37,6 +59,7 @@ export default function Header() {
           href={whatsappLink()}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackEvent("whatsapp_click", { entry_point: "header" })}
           className="shrink-0 rounded-sm bg-amber px-4 py-2 text-xs font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90"
         >
           Book Consultation

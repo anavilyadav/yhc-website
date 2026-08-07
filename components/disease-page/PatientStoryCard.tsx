@@ -14,6 +14,11 @@ export default function PatientStoryCard({ story }: { story: DiseasePagePatientS
             <p className="mt-3 text-[12px] italic leading-relaxed text-text-light">{story.note}</p>
           )}
         </blockquote>
+        <p className="mt-4 text-[11px] leading-relaxed text-text-light">
+          Testimonials represent individual patient experiences. Results are not typical and
+          cannot be guaranteed. Homeopathic treatment outcomes vary based on individual
+          constitution, disease duration, compliance with treatment, and other factors.
+        </p>
       </div>
     </section>
   );

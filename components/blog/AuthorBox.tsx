@@ -10,7 +10,16 @@ import { getInitials } from "@/lib/utils";
  * "Last reviewed" date. Registration number is omitted gracefully when
  * not yet confirmed in Supabase, rather than showing placeholder text.
  */
-export function AuthorBox({ doctor, lastReviewed }: { doctor: Doctor | null; lastReviewed: string }) {
+export function AuthorBox({
+  doctor,
+  lastReviewed,
+  reviewedBy,
+}: {
+  doctor: Doctor | null;
+  lastReviewed: string;
+  /** e.g. "Dr T P Yadav, BHMS — Founder, 35+ years of clinical practice." Omitted when not applicable (e.g. Dr T P Yadav's own pages). */
+  reviewedBy?: string;
+}) {
   const name = doctor?.full_name ?? siteConfig.doctors.physician.name;
   const roleTitle = doctor?.role_title ?? "Homeopathic Physician";
   const credential = doctor?.credential_name ?? "BHMS";
@@ -37,6 +46,9 @@ export function AuthorBox({ doctor, lastReviewed }: { doctor: Doctor | null; las
           {registrationNumber && ` · ${registrationCouncil ?? "Reg. No."} ${registrationNumber}`}
         </p>
         <p className="mt-1 text-[11px] text-text-light">Last reviewed: {lastReviewed}</p>
+        {reviewedBy && (
+          <p className="mt-0.5 text-[11px] text-text-light">Medically reviewed by {reviewedBy}</p>
+        )}
       </div>
     </div>
   );

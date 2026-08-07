@@ -66,6 +66,12 @@ export interface DiseasePageAboutCondition {
   description: string;
 }
 
+export interface DiseasePageComparisonRow {
+  factor: string;
+  conventional: string;
+  homeopathy: string;
+}
+
 export interface DiseasePageContent {
   slug: string;
   pageTitle: string;
@@ -76,6 +82,8 @@ export interface DiseasePageContent {
   conditionsIntro: string;
   conditions: string[];
   sections: DiseasePageSection[];
+  /** GIOS Stage1 Final Audit "VALIDATED" item — only on the top 5 highest-traffic pages. */
+  comparisonTable?: DiseasePageComparisonRow[];
   /** Optional — omitted for pages with no doc-approved, consented patient testimonial (e.g. STEP11's 3 new pages) rather than inventing one. */
   patientStory?: DiseasePagePatientStory;
   faqs: DiseasePageFAQ[];
@@ -186,7 +194,8 @@ export interface DiseaseSubPageContent {
   secondaryKeywords: string[];
   hero: DiseasePageHero;
   sections: DiseasePageSection[];
-  patientStory: DiseasePagePatientStory;
+  /** Optional — omitted rather than inventing one where no doc-approved, consented patient testimonial exists for this specific condition. */
+  patientStory?: DiseasePagePatientStory;
   faqs: DiseasePageFAQ[];
   finalCta: string;
   disclaimer: string;

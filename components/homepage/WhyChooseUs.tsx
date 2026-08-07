@@ -27,7 +27,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-cream px-5 py-16">
+    <section className="why-choose-us bg-cream px-5 py-16">
       <div className="mx-auto max-w-6xl">
         <h2 className="mx-auto max-w-2xl text-center font-serif text-2xl text-navy md:text-3xl">
           Why Thousands of Patients Choose Us Over Every Other Option

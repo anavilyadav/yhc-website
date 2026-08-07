@@ -5,11 +5,11 @@ export default function Hero() {
   return (
     <section className="bg-cream px-5 py-16 md:py-24">
       <div className="mx-auto max-w-4xl text-center">
-        <h1 className="font-serif text-3xl leading-snug text-navy md:text-5xl md:leading-tight">
+        <h1 className="hero-text font-serif text-3xl leading-snug text-navy md:text-5xl md:leading-tight">
           When Every Treatment Has Failed — Homeopathy Still Has an Answer.
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-text-mid md:text-lg">
+        <p className="clinic-intro mx-auto mt-6 max-w-2xl text-base leading-relaxed text-text-mid md:text-lg">
           Yadav Homeo Clinic has been Jaipur&apos;s most trusted name in classical homeopathy for
           over 35 years. We specialise in chronic, genetic, autoimmune, and rare diseases — the
           conditions that mainstream medicine often calls &lsquo;incurable&rsquo;.
