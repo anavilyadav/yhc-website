@@ -120,6 +120,22 @@ const DISEASE_SEED: Disease[] = [
     is_specialty: false,
     display_order: 14,
   },
+  {
+    slug: "joint-bone-diseases",
+    title: "Joint & Bone Diseases",
+    description:
+      "Rheumatoid Arthritis, Ankylosing Spondylitis, Avascular Necrosis, Slipped Disc, Gout and Osteoarthritis — treated constitutionally, without lifelong painkiller dependency.",
+    is_specialty: true,
+    display_order: 15,
+  },
+  {
+    slug: "heart-cardiac-support",
+    title: "Cardiac & Heart Support",
+    description:
+      "Supportive homeopathic care alongside cardiology treatment — Hypertension, ASD, VSD, Cardiomyopathy and Eisenmenger's Syndrome — for families managing complex heart conditions.",
+    is_specialty: true,
+    display_order: 16,
+  },
 ];
 
 export async function getDiseases(): Promise<Disease[]> {

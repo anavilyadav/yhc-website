@@ -440,12 +440,74 @@ also dropped the legitimate single-letter name parts "T" and "P". Rewrote
 it to take first-initial + last-initial after removing honorifics,
 regardless of how many single-letter parts sit in between.
 
+## What's in this delivery — STEP 11: 3 New Disease Pages + Expansion Pass
+
+The final step, from `dr-anavil-step11-disease-gap-analysis-new-pages-2026-07-13.docx`
+— a gap analysis of 143 conditions against the 14 existing pages. This doc
+has two genuinely different kinds of content, treated differently:
+
+**3 fully-written new pages** (Sections 4-6 of the doc gave complete
+hero/conditions/FAQ/disclaimer content, same depth as every other disease
+page) — added to the same `DISEASE_PAGE_SEED` array and rendered by the
+existing `app/[slug]/page.tsx` template, no new page files needed:
+
+- `/joint-bone-diseases/` — RA, Ankylosing Spondylitis, Avascular
+  Necrosis, Slipped Disc, Gout, Osteoarthritis and more
+- `/heart-cardiac-support/` — Hypertension, ASD, VSD, Cardiomyopathy,
+  Eisenmenger's Syndrome, as supportive/adjunctive care alongside
+  cardiology. Carries the doc's mandatory prominent disclaimer verbatim
+  ("supportive and adjunctive only... does not replace cardiology care").
+- `/sexual-health/` — Loss of Libido, Genital Herpes, Genital Warts,
+  Syphilis, Gonorrhea, Chlamydia. Per the doc's explicit instruction
+  ("quiet placement... footer link only... internal link from Men's
+  Health page only"), this slug is **deliberately not** in
+  `lib/data/diseases.ts` or the `diseases` Supabase table, so it never
+  appears on the homepage's Conditions grid or main nav — verified via
+  direct DOM inspection that it's absent from the `#conditions` grid
+  while still reachable from the Footer and a single new link on
+  `/mens-health/`.
+
+None of the 3 new pages has a patient testimonial — the source doc
+doesn't provide one for these, and inventing one would be a fabricated
+testimonial (a hard compliance line per GIOS_P7 §8/9). Made
+`patientStory` optional on `DiseasePageContent` and the `[slug]` page
+now renders `PatientStoryCard` conditionally, rather than shipping a
+fake quote to satisfy a previously-required field.
+
+**Expansion pass on 10 existing pages** (Section 7 of the doc) — this
+section is materially different from Sections 4-6: it's a bare table of
+condition names (mostly Hindi one-line glosses), not full copy-paste-
+ready prose. Writing new "why this happens" sections, timelines and
+FAQs for ~40 conditions from a two-word gloss would mean authoring new
+clinical content nobody approved. Scoped this down to exactly what the
+doc actually provides: each missing condition was added to its page's
+existing `conditions` bullet list only, with a short factual one-line
+description (textbook-level — what the condition is — never a treatment-
+outcome claim), matching the register already used for that page's other
+list entries. No new sections, timelines, or FAQs were invented.
+Several conditions the doc asked for were already present under a
+different name (e.g. Nephrotic Syndrome and Glomerulonephritis were
+already on the Kidney page, Parkinson's and Panic Disorder were already
+listed) — only genuinely missing conditions were added, page by page:
+Skin (+2), Cancer (+10, all phrased "supportive care" per the doc's
+explicit legal note), Kidney (+3), Nervous System (+10), Women's Health
+(+3), Men's Health (+2), Respiratory (+2), Digestive (+2), Hormonal (+4),
+Mental Health (+3, framed consistently with that page's own established
+"severe conditions need psychiatric care" stance).
+
+`supabase/schema.sql` updated: `disease_pages` regenerated via the
+existing `scripts/gen-disease-pages-sql.ts` (now 17 rows), and the
+`diseases` table (a separate table backing the homepage grid) got two
+new rows for Joint & Bone and Cardiac — not Sexual Health, matching its
+quiet-placement requirement.
+
 ## Verified
 
-- `npm run build` -- clean. Homepage + all 14 disease pages (STEP4 + STEP5)
-  + 5 blog posts + `/online-consultation/`, `/patient-stories/`,
-  `/faq/`, the vitiligo sub-page, both doctor profile pages, both
-  location pages, and all 3 legal pages all prerendered as static HTML
+- `npm run build` -- clean. Homepage + all 17 disease pages (STEP4 +
+  STEP5 + STEP11) + 5 blog posts + `/online-consultation/`,
+  `/patient-stories/`, `/faq/`, the vitiligo sub-page, both doctor
+  profile pages, both location pages, and all 3 legal pages all
+  prerendered as static HTML
 - `npm run lint` -- clean
 - All 14 disease pages checked for: valid, parseable `MedicalWebPage` +
   `FAQPage` JSON-LD actually present as literal `<script>` tags in the
@@ -478,3 +540,12 @@ regardless of how many single-letter parts sit in between.
   correctly; fixed a title-duplication bug on all 3 legal pages
   (`content.title` already includes "— Yadav Homeo Clinic", so appending
   `siteConfig.name` again produced a doubled title)
+- STEP11 pages checked in-browser: Cardiac page's mandatory disclaimer
+  confirmed prominent (rendered immediately after the hero, not buried at
+  the bottom); Joint & Cardiac pages render with no patient-story section
+  (confirmed no fabricated testimonial slipped in); confirmed via direct
+  DOM query that `/sexual-health/` is genuinely absent from the
+  homepage's `#conditions` grid (16 cards, not 17) while still reachable
+  from the Footer and the new Men's Health page link; all 17 disease
+  pages build and prerender correctly after the Section 7 condition-list
+  expansions

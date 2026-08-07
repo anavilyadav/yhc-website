@@ -25,6 +25,10 @@ const legalLinks = [
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms of Use", href: "/terms-of-use" },
   { label: "Medical Disclaimer", href: "/medical-disclaimer" },
+  // Deliberately placed here rather than the Conditions column or main
+  // nav — dr-anavil-step11-disease-gap-analysis-new-pages-2026-07-13.docx
+  // asks for "quiet placement" for this page: footer link only.
+  { label: "Sexual Health (Confidential)", href: "/sexual-health" },
 ];
 
 export default function Footer() {

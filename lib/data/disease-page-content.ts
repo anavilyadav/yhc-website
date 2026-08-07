@@ -53,6 +53,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Chronic fungal infections — recurrent, resistant to antifungals",
       "Warts — common, plantar, flat",
       "Recurrent boils and skin infections",
+      "Prurigo Nodularis — intensely itchy, firm nodules that form from chronic scratching",
+      "Pemphigus — a group of rare autoimmune conditions causing blistering of the skin and mucous membranes",
     ],
     sections: [
       {
@@ -294,6 +296,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "All solid tumour cancers — undergoing surgery, chemotherapy or radiation",
       "Blood cancers (leukaemia, lymphoma) — supportive care alongside oncology treatment",
       "Post-treatment survivorship — recovery and long-term quality of life support",
+      "Prostate Cancer — supportive care alongside oncology treatment",
+      "Breast Cancer — supportive care alongside oncology treatment",
+      "Lung Cancer — supportive care alongside oncology treatment",
+      "Oral / Mouth Cancer — supportive care alongside oncology treatment",
+      "Cervical Cancer — supportive care alongside oncology treatment",
+      "Colorectal Cancer — supportive care alongside oncology treatment",
+      "Multiple Myeloma — supportive care alongside oncology treatment",
+      "Leukemia — supportive care alongside oncology treatment",
+      "Vocal Cord Cancer — supportive care alongside oncology treatment",
+      "Astrocytoma / Brain Tumour — supportive care alongside oncology treatment",
     ],
     sections: [
       {
@@ -409,6 +421,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Recurrent Urinary Tract Infections (UTIs) — particularly in women",
       "Kidney Stones — prevention of formation and recurrence, dissolution of small stones",
       "Interstitial Nephritis",
+      "Polycystic Kidney Disease (PKD) — genetic condition causing multiple fluid-filled cysts in the kidneys",
+      "Renal Cyst — fluid-filled sacs on the kidney, usually monitored and managed conservatively",
+      "Renal Artery Stenosis — narrowing of the arteries supplying the kidneys, often linked to hypertension",
     ],
     sections: [
       {
@@ -788,6 +803,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Restless Leg Syndrome",
       "Essential Tremor",
       "Neuropathy — diabetic, peripheral, post-chemotherapy",
+      "Motor Neurone Disease (MND) — progressive weakness from degeneration of motor neurons; supportive constitutional care",
+      "Muscular Dystrophy (including DMD) — genetic muscle-weakening conditions; supportive constitutional care alongside physiotherapy",
+      "Optic Atrophy — degeneration of the optic nerve affecting vision",
+      "Huntington's Disease — inherited progressive neurodegenerative condition; supportive constitutional care",
+      "Polymicrogyria — a congenital brain development disorder",
+      "Periventricular Leukomalacia (PVL) — a type of brain injury affecting premature infants",
+      "Microcephaly — smaller-than-expected head and brain development",
+      "Cerebral Atrophy — shrinkage of brain tissue; supportive constitutional care",
+      "Brain Tumour — supportive constitutional care alongside neuro-oncology treatment",
+      "Spinal Cord Disorders — supportive constitutional care for nerve-related spinal conditions",
     ],
     sections: [
       {
@@ -1038,6 +1063,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Mastitis — breast infection during breastfeeding",
       "Benign breast lumps and breast pain (mastalgia)",
       "Postpartum Depression and hormonal mood disorders",
+      "Fibroadenoma — benign, non-cancerous breast lump, most common in younger women",
+      "Uterine Prolapse — descent of the uterus due to weakened pelvic floor support",
+      "Pelvic Inflammatory Disease (PID) — infection of the reproductive organs; supportive constitutional care alongside required antibiotic treatment",
     ],
     sections: [
       {
@@ -1171,6 +1199,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Androgenetic Alopecia (male pattern baldness) — constitutional treatment",
       "Chronic Fatigue — persistent low energy and stamina",
       "Gynecomastia — excess breast tissue in men (hormonal)",
+      "Urethral Stricture — narrowing of the urethra causing urinary difficulty",
+      "Phimosis — tightness of the foreskin preventing retraction",
     ],
     sections: [
       {
@@ -1280,6 +1310,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Whooping Cough (Pertussis) recovery support",
       "Bronchiectasis — supportive constitutional management",
       "Vocal cord and laryngeal issues — chronic hoarseness, singer's nodules",
+      "Pulmonary Edema — fluid accumulation in the lungs; supportive care alongside required cardiac/medical management",
+      "Interstitial Lung Disease (ILD) — a group of conditions causing lung scarring; supportive constitutional care",
     ],
     sections: [
       {
@@ -1375,6 +1407,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Gallstones — small stone management, prevention of recurrence",
       "Bloating and Flatulence — chronic abdominal distension",
       "Food Intolerances — gluten, lactose, FODMAP sensitivities",
+      "Pancreatitis — inflammation of the pancreas; supportive constitutional care alongside required medical management",
+      "Gastric Tumours — supportive constitutional care alongside oncology treatment",
     ],
     sections: [
       {
@@ -1476,6 +1510,10 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Growth Hormone Deficiency in children — constitutional supportive treatment",
       "Gynecomastia — excess breast tissue in males due to hormonal imbalance",
       "Prolactin imbalance — hyperprolactinaemia",
+      "Prolactinoma — a benign pituitary tumour causing elevated prolactin levels",
+      "Pituitary Adenoma — benign tumour of the pituitary gland; supportive constitutional care",
+      "Cushing's Syndrome — excess cortisol; supportive constitutional care alongside required medical management",
+      "Addison's Disease — adrenal insufficiency; supportive constitutional care alongside required hormone replacement",
     ],
     sections: [
       {
@@ -1580,6 +1618,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Psychosomatic conditions — physical symptoms driven by emotional patterns",
       "Anger management — explosive anger, irritability affecting relationships",
       "Childhood behavioural and emotional conditions — see also Autism and Children pages",
+      "Schizophrenia — supportive constitutional care alongside essential psychiatric medication and care",
+      "Bipolar Disorder — supportive constitutional care alongside essential psychiatric medication and care",
+      "Dementia and Alzheimer's Disease — supportive constitutional care for quality of life alongside medical management",
     ],
     sections: [
       {
@@ -1654,6 +1695,237 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       alternateNames: ["Anxiety", "Depression", "OCD"],
       description:
         "A range of mild to moderate mental health conditions — including generalised anxiety, depression, OCD and insomnia — supported here with constitutional homeopathic treatment alongside appropriate psychiatric care where needed.",
+    },
+    isPublished: true,
+  },
+
+  // ============================================================
+  // 15. JOINT & BONE DISEASES — new category, STEP11
+  // Source content translated from Hinglish to English to match the
+  // voice of the other 14 disease pages this shares a template and grid
+  // with (unlike STEP9's /faq/ page, where Hinglish was the doc's
+  // explicit, stated intent for that specific page).
+  // ============================================================
+  {
+    slug: "joint-bone-diseases",
+    pageTitle:
+      "Homeopathy for Joint & Bone Diseases in Jaipur | RA, Ankylosing Spondylitis, Slipped Disc | Yadav Homeo Clinic",
+    metaDescription:
+      "Homeopathic treatment for Rheumatoid Arthritis, Ankylosing Spondylitis, Avascular Necrosis, Slipped Disc, Gout in Jaipur. 30+ years. No painkillers. Book consultation.",
+    focusKeyword: "homeopathy for joint pain Jaipur",
+    secondaryKeywords: [
+      "rheumatoid arthritis homeopathy",
+      "ankylosing spondylitis treatment Jaipur",
+      "slipped disc homeopathy",
+      "gout treatment homeopathy",
+    ],
+    hero: {
+      headline: "Your Joints Have Been Hurting for Years. Your Painkillers Know It Too.",
+      subheadline:
+        "Joint pain, arthritis, and spine problems are usually met with one of two conventional options — painkillers or surgery. Both carry real risks and real limitations. Classical homeopathy offers a third option — one that aims to address the inflammation at its cause, without lifetime dependency on medication.",
+      trustLine:
+        "30+ Years Joint & Spine Cases | RA, Ankylosing Spondylitis, AVN Specialist | No NSAIDs, No Steroids | Online Consultation Available",
+    },
+    conditionsIntro:
+      "We treat the full range of joint, spine and bone conditions — with particular depth in cases conventional medicine finds most difficult:",
+    conditions: [
+      "Rheumatoid Arthritis (RA) — autoimmune joint inflammation; constitutional treatment targets the immune dysregulation, not just the inflammation",
+      "Gout — uric acid deposits in the joints; homeopathy supports metabolic regulation alongside dietary guidance",
+      "Slipped Disc / Disc Prolapse — nerve compression causing back and leg pain; constitutional treatment for pain and nerve inflammation",
+      "Cervical Spondylosis — neck stiffness, pain and arm tingling from degeneration of the cervical spine",
+      "Lumbar Spondylosis — lower back degeneration causing radiating pain; classical treatment addresses the constitutional susceptibility",
+      "Frozen Shoulder — restricted shoulder movement from adhesive capsulitis, addressed constitutionally",
+      "Osteoarthritis — degenerative joint changes; pain and mobility are addressed, with slowing disease progression as the goal",
+      "Ankylosing Spondylitis — a spine-fusing inflammatory condition; constitutional treatment can help reduce inflammation and slow progression",
+      "Avascular Necrosis — loss of blood supply causing bone tissue death; supportive homeopathic care alongside orthopaedic monitoring",
+      "Osteoporosis — weakening of bones, especially in post-menopausal women; constitutional treatment alongside nutritional support",
+    ],
+    sections: [
+      {
+        heading: "Ankylosing Spondylitis & Avascular Necrosis — Where Conventional Medicine Has Limited Options",
+        paragraphs: [
+          "Ankylosing Spondylitis (AS) — a condition in which the spine gradually stiffens and fuses — is one where conventional medicine offers primarily painkillers and biological injections. These biological injections are expensive — ₹40,000 to ₹80,000 per injection — and typically need to be taken for life.",
+          "In our clinical experience, constitutional homeopathic treatment can support improvement in stiffness and morning pain in AS cases. Slowing disease progression is our primary goal. This is a difficult condition to treat — but a worthwhile one to pursue.",
+          "Avascular Necrosis (AVN) — bone tissue damage from reduced blood supply — is typically met with a recommendation for hip replacement surgery. In our clinic, we have experience managing early to moderate AVN cases conservatively, as a supportive approach alongside orthopaedic care.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Does homeopathy actually work for joint pain?",
+        answer:
+          "Yes — our clinical experience has been particularly positive for RA, gout, and cervical spondylosis. We have also seen meaningful improvement in ankylosing spondylitis. For osteoarthritis, homeopathy tends to offer better pain relief than disease reversal. At your first consultation, we will give you an honest prognosis for your specific case.",
+      },
+      {
+        question: "Will I need to stop my painkillers?",
+        answer:
+          "Not at all. Never stop any prescribed medicine abruptly. Homeopathic treatment works alongside your existing medication. As you respond, you and your doctor can gradually taper it together.",
+      },
+      {
+        question: "Can homeopathy help me avoid slipped disc surgery?",
+        answer:
+          "In some cases, yes — particularly for early to moderate disc prolapse. Surgery is typically necessary for Grade 3-4 cases. For Grade 1-2, conservative treatment (homeopathy plus physiotherapy) is a valid approach. We will give you an honest assessment after reviewing your MRI report.",
+      },
+      {
+        question: "How does homeopathy reduce uric acid in gout?",
+        answer:
+          "Constitutional homeopathy supports metabolic regulation. Dietary changes make the biggest difference to uric acid levels. Together — homeopathy and diet — can significantly reduce the frequency of gout attacks.",
+      },
+    ],
+    finalCta: "Book a Joint & Spine Consultation at Yadav Homeo Clinic →",
+    disclaimer:
+      "This page provides general information about how classical homeopathy may support joint, spine and bone conditions. Individual results vary and are not guaranteed. It is not a substitute for orthopaedic or rheumatological diagnosis and ongoing specialist care — always continue prescribed medication and consult your treating specialist before making any changes.",
+    disclaimerProminent: false,
+    aboutCondition: {
+      name: "Joint, Spine & Bone Conditions",
+      alternateNames: ["Rheumatoid Arthritis", "Ankylosing Spondylitis", "Osteoarthritis"],
+      description:
+        "A range of joint, spine and bone conditions — including rheumatoid arthritis, ankylosing spondylitis and avascular necrosis — supported here with constitutional homeopathic treatment.",
+    },
+    isPublished: true,
+  },
+
+  // ============================================================
+  // 16. CARDIAC & HEART SUPPORT — new category, STEP11.
+  // Prominent disclaimer is mandatory per the source doc: "This page
+  // must prominently display: 'Homeopathic treatment for cardiac
+  // conditions is supportive and adjunctive only...' " — same pattern
+  // STEP4 used for Cancer, where the mandated caution sentence itself
+  // *is* the disclaimer field, shown prominently rather than the
+  // generic tailored text used on lower-risk pages.
+  // ============================================================
+  {
+    slug: "heart-cardiac-support",
+    pageTitle:
+      "Homeopathy for Heart Disease in Jaipur | ASD, VSD, Hypertension, Cardiomyopathy | Yadav Homeo Clinic",
+    metaDescription:
+      "Homeopathic supportive care for heart conditions — ASD, VSD, Eisenmenger's Syndrome, High BP, Cardiomyopathy in Jaipur. 30+ years. Alongside cardiology care.",
+    focusKeyword: "homeopathy for heart disease Jaipur",
+    secondaryKeywords: [
+      "ASD VSD homeopathy",
+      "Eisenmenger syndrome homeopathy",
+      "high BP homeopathy",
+      "hypertension homeopathy Jaipur",
+    ],
+    hero: {
+      headline: "When the Heart Condition Has No Easy Answer — Some Families Find One Here.",
+      subheadline:
+        "Congenital heart conditions like ASD, VSD, and Eisenmenger's Syndrome are among the most difficult diagnoses a family receives. Surgery is not always possible. Medications manage symptoms. Classical homeopathic treatment, used alongside your cardiologist's care, can offer meaningful supportive therapy — improving quality of life and, in some cases, supporting better cardiac function.",
+    },
+    conditionsIntro:
+      "We offer supportive care alongside cardiology treatment for the following conditions:",
+    conditions: [
+      "Hypertension (High Blood Pressure) — constitutional treatment supports BP management alongside prescribed antihypertensives",
+      "ASD (Atrial Septal Defect) — a hole in the upper chambers of the heart; supportive homeopathic care for families advised watchful waiting or where surgery risk is high",
+      "VSD (Ventricular Septal Defect) — a hole in the lower chambers of the heart; supportive constitutional treatment alongside cardiology follow-up",
+      "Coronary Artery Disease — constitutional treatment for angina frequency and cardiovascular support, always with cardiologist supervision",
+      "Valvular Heart Disease — supportive care for managed valve conditions",
+      "Cardiomyopathy — constitutional support for heart muscle function",
+      "Eisenmenger's Syndrome — palliative and quality-of-life supportive homeopathic care for families managing this complex condition",
+    ],
+    sections: [
+      {
+        heading: "An Honest Word About Homeopathy and Heart Disease",
+        paragraphs: [
+          "We do not claim to cure cardiac conditions. Our role is to improve quality of life, manage symptoms, and support overall constitutional health — always alongside your cardiologist's care.",
+          "Most ASD/VSD families who come to us have already had surgery but still have symptoms, missed the surgical window, or have multiple conditions that make surgery complex. In these situations, constitutional homeopathic care can become a meaningful additional support.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Can homeopathy close an ASD or VSD?",
+        answer:
+          "No — we do not make this claim. Small ASDs/VSDs sometimes close spontaneously in childhood; this is natural history, not a result of homeopathy. Our role is to support overall cardiac health and immunity while your cardiologist continues monitoring.",
+      },
+      {
+        question: "Will I need to stop my heart medicines?",
+        answer:
+          "Never. This is not safe under any circumstances. Homeopathic treatment can be safely taken alongside any heart medicine.",
+      },
+      {
+        question: "How long does homeopathy take to help with hypertension?",
+        answer:
+          "Constitutional treatment typically shows improvement in BP variability and readings within 2 to 3 months. The long-term goal — reducing antihypertensive dosage — is pursued strictly under your doctor's supervision. Continued monitoring is essential.",
+      },
+    ],
+    finalCta: "Book a Cardiac Support Consultation at Yadav Homeo Clinic →",
+    disclaimer:
+      "Homeopathic treatment for cardiac conditions is supportive and adjunctive only. It does not replace cardiology care, cardiac medications, or surgical intervention where indicated.",
+    disclaimerProminent: true,
+    aboutCondition: {
+      name: "Cardiac & Heart Conditions",
+      alternateNames: ["ASD", "VSD", "Eisenmenger's Syndrome"],
+      description:
+        "A range of heart conditions — including congenital defects such as ASD and VSD, hypertension and cardiomyopathy — supported here with constitutional homeopathic treatment as an adjunct to cardiology care.",
+    },
+    isPublished: true,
+  },
+
+  // ============================================================
+  // 17. SEXUAL HEALTH — new category, STEP11.
+  // Per the source doc: "Do not add this page to main navigation. Add
+  // as footer link only. Internal link from Men's Health page only.
+  // Sensitive category needs quiet placement." Accordingly this slug is
+  // deliberately NOT added to lib/data/diseases.ts (so it never appears
+  // on the homepage's "Conditions We Treat" grid) — see components/
+  // site/Footer.tsx for the quiet footer link and app/[slug]/page.tsx
+  // for the single Men's Health -> Sexual Health internal link.
+  // ============================================================
+  {
+    slug: "sexual-health",
+    pageTitle: "Homeopathy for Sexual Health in Jaipur | Confidential Consultation | Yadav Homeo Clinic",
+    metaDescription:
+      "Confidential homeopathic consultation for sexual health concerns — loss of libido, genital infections, STIs in Jaipur. Complete privacy. Dr Anavil Yadav.",
+    focusKeyword: "sexual health homeopathy Jaipur",
+    secondaryKeywords: [
+      "STI homeopathy treatment",
+      "genital herpes homeopathy",
+      "loss of libido treatment Jaipur",
+    ],
+    hero: {
+      headline: "Some Health Problems Are the Hardest to Speak About. This Page Is for Those.",
+      subheadline:
+        "Sexual health concerns — infections, changes in desire, recurring genital conditions — carry a weight that most other health problems do not. They are private. They are sometimes embarrassing. And they are genuinely treatable. At Yadav Homeo Clinic, all sexual health consultations are completely confidential — between you and your doctor only.",
+    },
+    conditionsIntro: "We treat the following sexual health conditions with complete confidentiality:",
+    conditions: [
+      "Loss of Libido — hormonal, psychological or constitutional causes addressed through individualised homeopathic case-taking",
+      "Genital Herpes (Herpes Simplex Virus) — recurrence reduction is the primary goal; constitutional treatment for the frequency and severity of outbreaks",
+      "Genital Warts (HPV) — constitutional homeopathy to support the immune response to HPV",
+      "Syphilis (managed/tertiary) — supportive constitutional care alongside conventional treatment",
+      "Gonorrhea — acute gonorrhea requires antibiotic treatment; homeopathy plays a role in recurrent cases and rebuilding post-infection health",
+      "Chlamydia Infection — similar to gonorrhea: acute cases need antibiotics, with constitutional care for recurrent susceptibility",
+    ],
+    sections: [
+      {
+        heading: "Complete Confidentiality — Always",
+        paragraphs: [
+          "All consultations for sexual health conditions are conducted with complete confidentiality. Online consultation is available — from your phone, private, with no in-person visit required. No records are shared with anyone without your explicit consent.",
+        ],
+        note: "Important: Acute bacterial STIs (gonorrhea, chlamydia, syphilis) require antibiotic treatment. We never advise against this. Homeopathy plays a supportive role — for recurrence prevention, constitutional health, and recovery.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is online consultation available for sexual health?",
+        answer:
+          "Yes — online consultation is actually preferred by most patients for sexual health concerns. Complete privacy, from your own phone and home, with no one else present. Reports can be shared securely over WhatsApp.",
+      },
+      {
+        question: "Is this completely confidential?",
+        answer: "Yes. No records are shared with anyone. The consultation is strictly between you and your doctor.",
+      },
+    ],
+    finalCta: "Ready to Talk? Every Conversation Here Is Completely Confidential.",
+    disclaimer:
+      "This page provides general information about how classical homeopathy may support sexual health concerns. Individual results vary and are not guaranteed. Acute bacterial infections require antibiotic treatment — this page is not a substitute for diagnosis and treatment from a qualified physician. All consultations remain strictly confidential.",
+    disclaimerProminent: false,
+    aboutCondition: {
+      name: "Sexual Health Conditions",
+      alternateNames: ["Loss of Libido", "Genital Herpes", "STIs"],
+      description:
+        "A range of sexual health concerns — including loss of libido, genital infections and recurrent STIs — supported here with constitutional homeopathic treatment under strict confidentiality.",
     },
     isPublished: true,
   },

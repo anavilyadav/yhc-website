@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import DiseaseHero from "@/components/disease-page/DiseaseHero";
 import DisclaimerBanner from "@/components/disease-page/DisclaimerBanner";
 import ConditionsList from "@/components/disease-page/ConditionsList";
@@ -85,10 +86,27 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
 
       <ConditionsList intro={page.conditionsIntro} conditions={page.conditions} />
       <ContentSections sections={page.sections} />
-      <PatientStoryCard story={page.patientStory} />
+      {page.patientStory && <PatientStoryCard story={page.patientStory} />}
       <FAQAccordion faqs={page.faqs} />
 
       {!page.disclaimerProminent && <DisclaimerBanner text={page.disclaimer} />}
+
+      {/*
+        Doc-specified narrow exception (dr-anavil-step11-disease-gap-
+        analysis-new-pages-2026-07-13.docx, Section 6): Sexual Health gets
+        "quiet placement" — no main nav, no homepage grid card — with its
+        only internal link required to come specifically from Men's Health.
+      */}
+      {page.slug === "mens-health" && (
+        <div className="mx-auto max-w-4xl px-5 pb-2">
+          <p className="text-[13px] text-text-mid">
+            We also offer confidential consultations for sexual health concerns.{" "}
+            <Link href="/sexual-health" className="font-semibold text-amber-dark hover:text-navy">
+              Visit our Sexual Health page →
+            </Link>
+          </p>
+        </div>
+      )}
 
       <DiseasePageFinalCTA finalCta={page.finalCta} conditionName={page.aboutCondition.name} />
     </>

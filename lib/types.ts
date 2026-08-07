@@ -76,7 +76,8 @@ export interface DiseasePageContent {
   conditionsIntro: string;
   conditions: string[];
   sections: DiseasePageSection[];
-  patientStory: DiseasePagePatientStory;
+  /** Optional — omitted for pages with no doc-approved, consented patient testimonial (e.g. STEP11's 3 new pages) rather than inventing one. */
+  patientStory?: DiseasePagePatientStory;
   faqs: DiseasePageFAQ[];
   finalCta: string;
   disclaimer: string;
