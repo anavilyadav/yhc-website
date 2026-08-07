@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { whatsappLink } from "@/lib/site-config";
 
 const steps = [
@@ -55,6 +56,12 @@ export default function OnlineConsultation() {
         <p className="mt-4 text-[13px] italic text-text-mid">
           Patients from India, UAE, UK, USA, Canada, Australia — all treated online with the same
           precision and care as in-clinic visits.
+        </p>
+
+        <p className="mt-4">
+          <Link href="/online-consultation" className="text-sm font-bold text-navy hover:text-amber-dark">
+            Learn more about our online consultation process →
+          </Link>
         </p>
       </div>
     </section>

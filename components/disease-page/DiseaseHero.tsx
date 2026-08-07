@@ -5,9 +5,11 @@ import type { DiseasePageHero } from "@/lib/types";
 export default function DiseaseHero({
   hero,
   conditionName,
+  breadcrumbParent = { label: "Conditions We Treat", href: "/#conditions" },
 }: {
   hero: DiseasePageHero;
   conditionName: string;
+  breadcrumbParent?: { label: string; href: string };
 }) {
   return (
     <section className="bg-cream px-5 py-14 md:py-20">
@@ -17,8 +19,8 @@ export default function DiseaseHero({
             Home
           </Link>
           <span className="mx-1.5">/</span>
-          <Link href="/#conditions" className="hover:text-amber-dark">
-            Conditions We Treat
+          <Link href={breadcrumbParent.href} className="hover:text-amber-dark">
+            {breadcrumbParent.label}
           </Link>
           <span className="mx-1.5">/</span>
           <span className="text-navy">{conditionName}</span>

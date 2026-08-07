@@ -6,6 +6,7 @@ const exploreLinks = [
   { label: "About Us", href: "/about" },
   { label: "Our Doctors", href: "/our-doctors" },
   { label: "All Treatments", href: "/#conditions" },
+  { label: "Online Consultation", href: "/online-consultation" },
   { label: "Patient Stories", href: "/patient-stories" },
   { label: "Blog", href: "/blog" },
   { label: "Book Appointment", href: "/appointment" },

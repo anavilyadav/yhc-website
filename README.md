@@ -304,11 +304,59 @@ were not added, consistent with the rest of the site: no doctor or clinic
 photos have been added anywhere yet either (`photo_url` is null in the
 doctors seed) — this is one content gap, not two.
 
+## What's in this delivery — STEP 7: Missing Pages
+
+Three pages from `dr-anavil-step7-missing-pages-2026-07-12.docx` that were
+planned in the GIOS_P2 URL structure but had no content — and that other
+pages already had dead links pointing at (`DiseaseHero`'s "Start Online
+Consultation" button, the homepage's "Read More Stories" link, Footer's
+"Patient Stories" link all 404'd until this step):
+
+- `/online-consultation/` — dedicated landing page for online/NRI search
+  intent (GIOS_P5 Intent Type 7). Hero + author box + honest "is online as
+  effective" section + 6-step process + suitability list + a visible
+  Telemedicine Practice Guidelines 2020 compliance section (not just a
+  footnote — the source doc calls this out as a legal requirement, not
+  optional) + 3 testimonials + FAQ + disclaimer, ordered per GIOS_P5's
+  "FAQ after testimonials, before final CTA" rule.
+- `/patient-stories/` — 11 real-patient-story cards across 5 categories
+  (Skin, Kidney, Autism & Child Development, Women's Health, Nervous
+  System), each linking to its matching disease page. Filterable by
+  category via a client component (`PatientStoriesFilter`), per the source
+  doc's explicit request. Testimonial disclaimer shown both below the hero
+  and again at the bottom, per doc instruction.
+- `/skin-diseases/vitiligo-treatment-jaipur/` — a deep-dive sub-page under
+  Skin Diseases (URL adapted from GIOS_P2's `/treatments/skin-diseases/...`
+  to match the flat convention every other disease page already uses).
+  Reuses the existing disease-page components (`DiseaseHero`,
+  `ContentSections`, `PatientStoryCard`, `FAQAccordion`,
+  `DisclaimerBanner`, `DiseasePageFinalCTA`) rather than new one-off
+  components, since the content shape is identical to a disease page minus
+  the "Conditions We Treat" list. `DiseaseHero` and
+  `buildMedicalWebPageSchema` both gained an optional `breadcrumbParent`
+  override (default unchanged) so this page's breadcrumb reads Home → Skin
+  Diseases → Vitiligo instead of the default Home → Conditions We Treat.
+
+**Legal fix applied pre-emptively:** this doc's Vitiligo FAQ repeats the
+exact same "permanently cure vitiligo?" question that
+`dr-anavil-complete-legal-audit-2026-07-14.docx` FLAG 3 already flagged on
+the main Skin Diseases page — so the same corrected wording was used here
+from the start rather than shipping known-flagged language.
+
+**Deferred, not invented:** the source doc references several assets that
+don't exist yet — a Google Form for the intake process, before/after
+patient photos, video testimonials, and a Google Reviews (Elfsight) widget
+(all called for by GIOS_P5 too). None of these were faked; the online
+consultation page leads with WhatsApp instead of a form (which GIOS_P5's
+own Intent Type 7 section says is the right primary CTA for this search
+intent anyway), and photo/video sections were left out rather than filled
+with stock imagery.
+
 ## Verified
 
 - `npm run build` -- clean. Homepage + all 14 disease pages (STEP4 + STEP5)
-  + 5 blog posts prerendered as static HTML with hourly ISR
-  (`generateStaticParams` on `app/[slug]/page.tsx` and `app/blog/[slug]/page.tsx`)
+  + 5 blog posts + `/online-consultation/`, `/patient-stories/` and the
+  vitiligo sub-page all prerendered as static HTML
 - `npm run lint` -- clean
 - All 14 disease pages checked for: valid, parseable `MedicalWebPage` +
   `FAQPage` JSON-LD actually present as literal `<script>` tags in the
@@ -322,3 +370,10 @@ doctors seed) — this is one content gap, not two.
 - All 5 blog posts checked in-browser: author box renders correct
   initials, mandatory disclaimer present, `BlogPosting` JSON-LD present,
   related-post and related-disease links resolve to real pages
+- STEP7 pages checked in-browser: telemedicine compliance statement
+  visible (not hidden in fine print); patient-stories category filter
+  verified working (confirmed via direct DOM interaction — clicking
+  "Nervous System" correctly narrows to the 2 matching stories and applies
+  active-button styling); vitiligo page's breadcrumb reads Home → Skin
+  Diseases → Vitiligo in both the visible UI and the JSON-LD; all
+  "Read more about [condition]" links resolve to real disease pages

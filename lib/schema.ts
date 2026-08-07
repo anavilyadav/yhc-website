@@ -115,8 +115,10 @@ export function buildMedicalWebPageSchema(page: {
   pageTitle: string;
   metaDescription: string;
   aboutCondition: { name: string; alternateNames: string[]; description: string };
+  breadcrumbParent?: { label: string; href: string };
 }) {
   const pageUrl = `${siteConfig.url}/${page.slug}/`;
+  const parent = page.breadcrumbParent ?? { label: "Conditions We Treat", href: "/#conditions" };
 
   return {
     "@context": "https://schema.org",
@@ -146,8 +148,8 @@ export function buildMedicalWebPageSchema(page: {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Conditions We Treat",
-          item: `${siteConfig.url}/#conditions`,
+          name: parent.label,
+          item: `${siteConfig.url}${parent.href}`,
         },
         { "@type": "ListItem", position: 3, name: page.aboutCondition.name, item: pageUrl },
       ],

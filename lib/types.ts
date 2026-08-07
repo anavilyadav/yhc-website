@@ -168,3 +168,26 @@ export interface BlogPost {
   relatedPostSlugs: string[];
   isPublished: boolean;
 }
+
+/**
+ * Sub-page under a disease page (e.g. /skin-diseases/vitiligo-treatment-jaipur).
+ * Same shape as DiseasePageContent minus the "Conditions We Treat" bullet
+ * list, which doesn't apply to a single-condition deep-dive page.
+ * Source: dr-anavil-step7-missing-pages-2026-07-12.docx.
+ */
+export interface DiseaseSubPageContent {
+  slug: string;
+  parentSlug: string;
+  parentLabel: string;
+  pageTitle: string;
+  metaDescription: string;
+  focusKeyword: string;
+  secondaryKeywords: string[];
+  hero: DiseasePageHero;
+  sections: DiseasePageSection[];
+  patientStory: DiseasePagePatientStory;
+  faqs: DiseasePageFAQ[];
+  finalCta: string;
+  disclaimer: string;
+  aboutCondition: DiseasePageAboutCondition;
+}
