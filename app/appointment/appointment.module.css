@@ -1,0 +1,329 @@
+.hero {
+  background: var(--cream-deep);
+  padding: 56px 0 48px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  max-width: 720px;
+  margin: 0 auto 14px;
+}
+
+.heroSub {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  font-size: 16px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.heroBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: var(--radius-sm);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.heroBtnPrimary {
+  background: var(--navy);
+  color: var(--amber);
+}
+
+.heroBtnPrimary:hover {
+  background: var(--navy-light);
+}
+
+.heroBtnSecondary {
+  background: var(--green);
+  color: var(--white);
+}
+
+.heroBtnSecondary:hover {
+  filter: brightness(0.95);
+}
+
+.section {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sectionHeading {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 36px;
+}
+
+.sectionHeading h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.sectionHeading p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Consultation type cards */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--amber);
+  border-radius: var(--radius-md);
+  padding: 28px;
+}
+
+.card h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.card > p {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.tickList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.tickList li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 13.5px;
+  color: var(--text-mid);
+  margin-bottom: 8px;
+}
+
+.tickList li::before {
+  content: "✓";
+  color: var(--green);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.cardCta {
+  display: block;
+  text-align: center;
+  background: var(--amber);
+  color: var(--navy);
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+}
+
+.cardCta:hover {
+  background: var(--amber-dark);
+  color: var(--white);
+}
+
+.cardSecondary {
+  font-size: 12.5px;
+  color: var(--text-light);
+  text-align: center;
+  margin: 0;
+}
+
+/* Steps */
+.stepsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.step {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+}
+
+.stepNum {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.step h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.step p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.followUpNote {
+  margin-top: 28px;
+  background: var(--green-tint);
+  border: 1px solid rgba(91, 138, 45, 0.25);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  font-size: 13.5px;
+  color: var(--navy);
+}
+
+.followUpNote p {
+  margin: 0;
+  color: var(--navy);
+}
+
+/* Pricing */
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.priceCard {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px;
+}
+
+.priceCardMode {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--amber-dark);
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.priceCard h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.priceAmount {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.priceAmountPending {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.priceIncludes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-mid);
+}
+
+.priceIncludes li {
+  padding: 4px 0;
+  border-top: 1px dashed var(--border);
+}
+
+.priceIncludes li:first-child {
+  border-top: none;
+}
+
+.medicineNote {
+  margin-top: 20px;
+  background: var(--amber-tint);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--navy);
+}
+
+.medicineNote p {
+  margin: 0;
+  color: var(--navy);
+}
+
+/* Checklist */
+.checklistGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.checklistGroup h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--amber-dark);
+  margin-bottom: 12px;
+}
+
+.checklistGroup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.checklistGroup li {
+  font-size: 13.5px;
+  color: var(--text-mid);
+  padding: 6px 0 6px 22px;
+  position: relative;
+}
+
+.checklistGroup li::before {
+  content: "☐";
+  position: absolute;
+  left: 0;
+  color: var(--amber-dark);
+}
+
+.emotionalNote {
+  grid-column: 1 / -1;
+  background: var(--navy);
+  color: var(--cream);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  font-size: 13.5px;
+}
+
+.emotionalNote p {
+  margin: 0;
+  color: rgba(245, 222, 179, 0.85);
+}
+
+@media (max-width: 860px) {
+  .cardsGrid,
+  .stepsList,
+  .pricingGrid,
+  .checklistGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,289 @@
+.hero {
+  background: var(--cream-deep);
+  padding: 56px 0 40px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(26px, 4vw, 36px);
+  max-width: 700px;
+  margin: 0 auto 14px;
+}
+
+.heroSub {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+.quickBar {
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.quickBarGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 28px 0;
+}
+
+.quickItem {
+  text-align: center;
+}
+
+.quickIcon {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.quickLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--amber);
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.quickValue {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.quickSub {
+  font-size: 12px;
+  color: rgba(245, 222, 179, 0.65);
+}
+
+.section {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sectionHeading {
+  max-width: 640px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.sectionHeading h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.clinicGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.clinicCard {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.mapWrap {
+  aspect-ratio: 16 / 9;
+  background: var(--cream-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapWrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.mapPending {
+  font-size: 12.5px;
+  color: var(--text-light);
+  padding: 20px;
+  text-align: center;
+}
+
+.clinicBody {
+  padding: 22px;
+}
+
+.clinicBody h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.clinicRow {
+  font-size: 13.5px;
+  color: var(--text-mid);
+  margin-bottom: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.clinicRow strong {
+  color: var(--navy);
+}
+
+.pendingText {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Online contact */
+.onlineBox {
+  background: var(--green-tint);
+  border: 1px solid rgba(91, 138, 45, 0.25);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.onlineBox h2 {
+  font-size: 22px;
+}
+
+.onlineSteps {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+  display: grid;
+  gap: 10px;
+}
+
+.onlineSteps li {
+  font-size: 13.5px;
+  color: var(--text-mid);
+}
+
+.onlineSteps strong {
+  color: var(--navy);
+}
+
+.whatsappCta {
+  display: inline-block;
+  background: var(--green);
+  color: var(--white);
+  font-weight: bold;
+  padding: 13px 26px;
+  border-radius: var(--radius-sm);
+  margin-top: 8px;
+}
+
+.whatsappCta:hover {
+  filter: brightness(0.95);
+}
+
+/* Contact form */
+.formLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.formIntro h2 {
+  font-size: 22px;
+}
+
+.socialRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--amber-tint);
+  border: 1px solid var(--border-amber);
+  color: var(--amber-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--navy);
+}
+
+.field input,
+.field select,
+.field textarea {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  color: var(--navy);
+  background: var(--white);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.submitBtn {
+  background: var(--navy);
+  color: var(--amber);
+  font-weight: bold;
+  font-size: 14px;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background: var(--navy-light);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.formMessage {
+  font-size: 13.5px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+}
+
+.formMessageSuccess {
+  background: var(--green-tint);
+  color: var(--navy);
+}
+
+.formMessageError {
+  background: #fcebeb;
+  color: #a32d2d;
+}
+
+@media (max-width: 860px) {
+  .quickBarGrid,
+  .clinicGrid,
+  .formLayout {
+    grid-template-columns: 1fr;
+  }
+}

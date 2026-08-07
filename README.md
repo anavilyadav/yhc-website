@@ -99,6 +99,53 @@ from `lib/data/disease-page-content.ts` via `scripts/gen-disease-pages-sql.ts`
 — re-run that script if the content ever changes, rather than hand-editing
 the SQL, so the two never drift apart.
 
+## What's in this delivery — STEP 2: About Page
+
+`/about/` — hero, "Our Story" narrative, profile sections for Dr T P Yadav
+and Dr Anavil Yadav, clinic timeline, mission/vision/values, "why us" grid,
+and a closing CTA. Doctor bios (`doctors` table) are Supabase-backed and
+admin-editable, per the project's hard rule that content the doctor edits
+later lives in Supabase rather than hardcoded JSX — everything else on this
+page is static narrative copy from `STEP2_AboutUs_DoctorProfiles.docx` and
+lives in `lib/content/about-static-content.ts`. Each published doctor also
+gets a `Physician` JSON-LD block (`components/schema/PhysicianSchema.tsx`).
+
+### Supabase — new table
+
+Run `supabase/migrations/0001_create_doctors_table.sql` then
+`supabase/seed/doctors_seed.sql` once in your Supabase project's SQL editor.
+Until `doctors` has published rows (or Supabase isn't configured), the About
+page simply skips the doctor sections it has no data for rather than
+crashing the build.
+
+## What's in this delivery — STEP 3: Appointment & Contact Pages
+
+- `/appointment/` — consultation-type picker (in-clinic vs online), the
+  6-step online consultation process, pricing cards, a pre-visit preparation
+  checklist, and an FAQ accordion. Pricing and FAQs are Supabase-backed
+  (`pricing_plans`, `faqs` tables) with the two confirmed fee figures as a
+  build-safe fallback — the two online fees are genuinely undecided in the
+  source docs, so the UI shows "Fee to be confirmed" rather than a guess.
+- `/contact/` — quick contact bar, both clinic locations (map embed shown
+  once a Google Maps embed URL is supplied), an online-consultation callout,
+  and a contact form that posts to `app/api/contact/route.ts` and saves to
+  the `contact_submissions` table via the Supabase service-role key.
+
+Several business details (clinic addresses, PIN codes, map embeds, UPI ID,
+social links) are left as `null`/PENDING per source doc `STEP3_Appointment_
+Contact_Pages.docx` — components degrade gracefully (hide the field or show
+a "to be confirmed" note) instead of rendering placeholder or invented data.
+
+### Supabase — new tables
+
+Run `supabase/migrations/0002_appointment_contact.sql` once in your Supabase
+project's SQL editor. Creates `clinic_locations`, `pricing_plans`, `faqs`
+and `contact_submissions` (RLS-protected — public can read locations/pricing/
+FAQs and insert a contact submission, but only the service-role key can read
+submissions back). Set `SUPABASE_SERVICE_ROLE_KEY` in `.env.local` for the
+contact form to save; without it, submissions fail gracefully with a
+WhatsApp-us-instead message rather than a 500.
+
 ## Setup
 
 ```bash

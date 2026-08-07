@@ -1,0 +1,50 @@
+.accordion {
+  border-top: 1px solid var(--border);
+}
+
+.item {
+  border-bottom: 1px solid var(--border);
+}
+
+.questionRow {
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: none;
+  border: none;
+  padding: 18px 4px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--navy);
+  cursor: pointer;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--amber-tint);
+  color: var(--amber-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.panel {
+  padding: 0 4px 18px;
+}
+
+.panel p {
+  margin: 0;
+  font-size: 14px;
+}

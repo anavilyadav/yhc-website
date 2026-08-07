@@ -5,6 +5,7 @@ const navLinks = [
   { label: "About Us", href: "/about" },
   { label: "Treatments", href: "/#conditions" },
   { label: "Our Doctors", href: "/our-doctors" },
+  { label: "Appointment", href: "/appointment" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];

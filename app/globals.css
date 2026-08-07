@@ -50,6 +50,56 @@
   --font-sans: var(--font-sans);
 }
 
+/*
+  Plain-named aliases of the tokens above. app/appointment/, app/contact/
+  and components/shared/FaqAccordion use CSS Modules with var(--navy) etc.
+  instead of Tailwind classes — same brand values, different consumption
+  style — so both naming schemes point at one source of truth.
+*/
+:root {
+  --cream: var(--color-cream);
+  --cream-bg: var(--color-cream-bg);
+  --cream-deep: var(--color-cream-deep);
+  --navy: var(--color-navy);
+  --navy-light: var(--color-navy-light);
+  --navy-2: var(--color-navy-2);
+  --amber: var(--color-amber);
+  --amber-dark: var(--color-amber-dark);
+  --amber-light: var(--color-amber-light);
+  --amber-tint: var(--color-amber-tint);
+  --green: var(--color-green);
+  --green-tint: var(--color-green-tint);
+  --white: var(--color-white);
+  --text-mid: var(--color-text-mid);
+  --text-light: var(--color-text-light);
+  --border: var(--color-border);
+  --border-amber: var(--color-border-amber);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --container-width: 1120px;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 * {
   box-sizing: border-box;
 }

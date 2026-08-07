@@ -83,3 +83,55 @@ export interface DiseasePageContent {
   aboutCondition: DiseasePageAboutCondition;
   isPublished: boolean;
 }
+
+/**
+ * Appointment & Contact page types. Source: STEP3_Appointment_Contact_Pages.docx.
+ */
+export type ConsultationMode = "in_clinic" | "online";
+
+export interface ClinicLocation {
+  id: string;
+  slug: "main" | "jagatpura";
+  name: string;
+  addressLine: string | null;
+  city: string;
+  state: string;
+  pinCode: string | null;
+  phone: string;
+  whatsapp: string;
+  landmark: string | null;
+  mapEmbedUrl: string | null;
+  timingsWeekday: string;
+  timingsSunday: string;
+}
+
+export interface PricingPlan {
+  id: string;
+  code:
+    | "in_clinic_first"
+    | "in_clinic_followup"
+    | "online_first"
+    | "online_followup";
+  title: string;
+  mode: ConsultationMode;
+  priceInr: number | null;
+  inclusions: string[];
+}
+
+export interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
+  sortOrder: number;
+}
+
+export interface ContactSubmission {
+  fullName: string;
+  phone: string;
+  email: string | null;
+  cityCountry: string;
+  consultationType: "In-Clinic — Jaipur" | "Online — India" | "Online — International";
+  condition: string;
+  heardFrom: string | null;
+  message: string | null;
+}

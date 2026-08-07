@@ -15,7 +15,14 @@ export const siteConfig = {
     display: "+91-8003231288",
     e164: "+918003231288",
   },
-  email: process.env.NEXT_PUBLIC_CLINIC_EMAIL || "", // fill in real clinic email
+  email: process.env.NEXT_PUBLIC_CLINIC_EMAIL || null, // fill in real clinic email
+  upiId: process.env.NEXT_PUBLIC_CLINIC_UPI || null,
+  social: {
+    facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || null,
+    instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || null,
+    youtube: process.env.NEXT_PUBLIC_YOUTUBE_URL || null,
+    googleBusinessProfile: process.env.NEXT_PUBLIC_GBP_URL || null,
+  },
   doctors: {
     founder: {
       name: "Dr T P Yadav",
