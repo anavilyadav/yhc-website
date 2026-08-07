@@ -102,6 +102,74 @@ export function buildWebsiteSchema() {
   };
 }
 
+/**
+ * JSON-LD builders for disease/treatment pages (e.g. /skin-diseases/).
+ * Structure matches GIOS_P2_SEO_Schema_WordPress.docx, Section 6 master
+ * template, adapted to this site's actual URL structure (pages live at
+ * the site root, e.g. /skin-diseases/, rather than under a /treatments/
+ * prefix — matching the links already shipped in ConditionsGrid and
+ * Footer, since those are live and not to be changed for this).
+ */
+export function buildMedicalWebPageSchema(page: {
+  slug: string;
+  pageTitle: string;
+  metaDescription: string;
+  aboutCondition: { name: string; alternateNames: string[]; description: string };
+}) {
+  const pageUrl = `${siteConfig.url}/${page.slug}/`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name: page.pageTitle,
+    url: pageUrl,
+    description: page.metaDescription,
+    about: {
+      "@type": "MedicalCondition",
+      name: page.aboutCondition.name,
+      alternateName: page.aboutCondition.alternateNames,
+      description: page.aboutCondition.description,
+      possibleTreatment: {
+        "@type": "MedicalTherapy",
+        name: "Classical Homeopathic Treatment",
+        description: "Constitutional homeopathic treatment at Yadav Homeo Clinic, Jaipur",
+      },
+    },
+    author: { "@id": founderId },
+    reviewedBy: { "@id": founderId },
+    publisher: { "@id": clinicId },
+    inLanguage: "en-IN",
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${siteConfig.url}/` },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Conditions We Treat",
+          item: `${siteConfig.url}/#conditions`,
+        },
+        { "@type": "ListItem", position: 3, name: page.aboutCondition.name, item: pageUrl },
+      ],
+    },
+  };
+}
+
+export function buildFAQPageSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
 export function buildPhysicianSchemas() {
   const founder = {
     "@context": "https://schema.org",

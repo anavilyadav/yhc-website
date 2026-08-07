@@ -41,6 +41,64 @@ now would mean inventing content instead of using what you approved.
   written since that section says "copy exactly," but you'll probably want
   to update those two fields to 35+ as well. Just say the word.
 
+## What's in this delivery — STEP 4: 7 Disease/Treatment Pages
+
+All 7 pages from `STEP4_Disease_Pages_Part1.docx`, at the same URLs already
+linked from the homepage's Conditions grid and the footer (no `/treatments/`
+prefix — that prefix appears in `GIOS_P2_SEO_Schema_WordPress.docx` but the
+STEP1 homepage build already shipped links as `/skin-diseases/` etc., and
+per the project's own hard rule not to touch completed work, this delivery
+matches what's already live rather than introducing a second URL pattern):
+
+1. `/skin-diseases/` — hero **replaced** with the STEP8 (green) version per
+   developer package Instruction 1. Body content is STEP4's as written.
+2. `/autoimmune-diseases/`
+3. `/cancer/` — cancer support only; page opens with the mandatory "not a
+   cure for cancer" disclosure and carries a prominent disclaimer banner
+   per GIOS_P7 (cancer/neurological pages need this "supportive care only"
+   language surfaced, not just in the footer).
+4. `/renal-diseases/`
+5. `/genetic-diseases/`
+6. `/autism/`
+7. `/nervous-system-disease/` — also gets the prominent disclaimer banner
+   (AED/epilepsy safety language), same reasoning as cancer.
+
+Each page: hero, conditions-treated list, full body sections (with
+sub-sections for things like Cancer's during/after-chemo lists and Kidney's
+CKD-stage-by-stage expectations), one real patient story, FAQ accordion,
+medical disclaimer, and a page-specific final CTA — all pulling from
+Supabase (`disease_pages` table) with the exact STEP4 copy as a build-safe
+fallback, same pattern as the homepage's `diseases`/`testimonials` tables.
+
+Built as a single dynamic route (`app/[slug]/page.tsx` with
+`generateStaticParams`) rather than 7 separate page files, since all future
+disease pages (STEP5's 7 more, then STEP11's 3 new ones) will need the
+identical template — adding a page from here on is a data change, not a
+code change.
+
+**Schema:** `MedicalWebPage` + `FAQPage` JSON-LD per page, matching
+`GIOS_P2_SEO_Schema_WordPress.docx` Section 6's structure (`about`,
+`author`/`reviewedBy`/`publisher` as `@id` references into the homepage's
+clinic/physician schema, `breadcrumb`) — adapted to this site's actual
+`/slug/` URLs instead of the doc's `/treatments/slug/` path, for the same
+reason as above.
+
+**Not included yet:** the other 7 STEP5 disease pages (Children's Health,
+Women's, Men's, Respiratory, Digestive, Hormonal, Mental Health) — their
+homepage cards link out but 404 until that step is delivered. The Skin
+Diseases page's dedicated Vitiligo/Psoriasis sub-pages are STEP7, not this
+step.
+
+### Supabase — new table
+
+Re-run `supabase/schema.sql` (it's additive — `create table if not exists`
+and `on conflict do nothing`, safe to re-run on a database that already has
+the STEP1 tables). It now also creates `disease_pages`, RLS-protected same
+as the others, seeded with these 7 pages' exact content generated straight
+from `lib/data/disease-page-content.ts` via `scripts/gen-disease-pages-sql.ts`
+— re-run that script if the content ever changes, rather than hand-editing
+the SQL, so the two never drift apart.
+
 ## Setup
 
 ```bash
@@ -70,5 +128,13 @@ policy.
 
 ## Verified
 
-- `npm run build` -- clean, homepage prerendered as static + ISR (1h)
+- `npm run build` -- clean. Homepage + all 7 STEP4 disease pages prerendered
+  as static HTML with 1h ISR (`generateStaticParams` on `app/[slug]/page.tsx`)
 - `npm run lint` -- clean
+- All 7 disease pages checked for: valid, parseable `MedicalWebPage` +
+  `FAQPage` JSON-LD actually present as literal `<script>` tags in the
+  server-rendered HTML (not just client-injected -- see note in
+  `app/[slug]/page.tsx`); STEP8 hero override live on `/skin-diseases/`;
+  prominent disclaimer banner present on `/cancer/` and
+  `/nervous-system-disease/`; patient stories and FAQ content match source
+  docs verbatim
