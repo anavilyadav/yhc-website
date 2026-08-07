@@ -49,7 +49,7 @@ export default function PatientStoriesPage() {
       </section>
 
       <section className="bg-cream px-5 py-4">
-        <p className="mx-auto max-w-2xl text-center text-[12px] leading-relaxed text-text-light">
+        <p className="mx-auto max-w-2xl text-center text-[13px] leading-relaxed text-text-light">
           {testimonialDisclaimer}
         </p>
       </section>
@@ -71,7 +71,7 @@ export default function PatientStoriesPage() {
       </section>
 
       <section className="bg-white px-5 py-8">
-        <p className="mx-auto max-w-2xl text-center text-[12px] leading-relaxed text-text-light">
+        <p className="mx-auto max-w-2xl text-center text-[13px] leading-relaxed text-text-light">
           {testimonialDisclaimer}
         </p>
       </section>

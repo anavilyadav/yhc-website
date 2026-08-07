@@ -43,7 +43,7 @@ export default function Footer() {
 
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="mb-3 text-[11px] font-bold uppercase tracking-[0.15em] text-amber-light">
+            <h3 className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-amber-light">
               Explore
             </h3>
             <ul className="space-y-2">
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-[11px] font-bold uppercase tracking-[0.15em] text-amber-light">
+            <h3 className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-amber-light">
               Conditions
             </h3>
             <ul className="space-y-2">
@@ -78,7 +78,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-[11px] font-bold uppercase tracking-[0.15em] text-amber-light">
+            <h3 className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-amber-light">
               Locations
             </h3>
             <ul className="space-y-2 text-sm text-cream/60">
@@ -111,7 +111,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-[11px] font-bold uppercase tracking-[0.15em] text-amber-light">
+            <h3 className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-amber-light">
               Legal
             </h3>
             <ul className="space-y-2">
@@ -129,7 +129,7 @@ export default function Footer() {
         <hr className="my-8 border-amber/20" />
 
         <div className="rounded-sm bg-black/20 p-4">
-          <p className="text-[11px] leading-relaxed text-cream/50">
+          <p className="text-[12px] leading-relaxed text-cream/50">
             Medical Disclaimer: Information on this website is for educational purposes only.
             Treatment outcomes vary between individuals. Homeopathic treatment at Yadav Homeo
             Clinic is provided under qualified medical supervision in accordance with the Drug

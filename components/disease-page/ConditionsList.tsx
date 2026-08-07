@@ -16,7 +16,7 @@ export default function ConditionsList({ intro, conditions }: { intro: string; c
                 <span aria-hidden className="mt-0.5 text-green">
                   ✔
                 </span>
-                <p className="text-sm leading-relaxed text-text-mid">
+                <p className="text-[15px] leading-relaxed text-text-mid">
                   <span className="font-bold text-navy">{name}</span>
                   {detail ? ` — ${detail}` : ""}
                 </p>

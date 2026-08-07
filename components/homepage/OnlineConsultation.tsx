@@ -39,7 +39,7 @@ export default function OnlineConsultation() {
               <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-navy font-bold text-amber-light">
                 {step.n}
               </div>
-              <p className="text-[13px] leading-relaxed text-navy">{step.text}</p>
+              <p className="text-[14px] leading-relaxed text-navy">{step.text}</p>
             </div>
           ))}
         </div>
@@ -53,7 +53,7 @@ export default function OnlineConsultation() {
           Start Your Online Consultation →
         </a>
 
-        <p className="mt-4 text-[13px] italic text-text-mid">
+        <p className="mt-4 text-[14px] italic text-text-mid">
           Patients from India, UAE, UK, USA, Canada, Australia — all treated online with the same
           precision and care as in-clinic visits.
         </p>

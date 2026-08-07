@@ -39,15 +39,15 @@ export function AuthorBox({
         )}
       </div>
       <div>
-        <p className="text-sm font-bold text-navy">Written by {name}</p>
-        <p className="text-xs leading-relaxed text-text-mid">
+        <p className="text-[15px] font-bold text-navy">Written by {name}</p>
+        <p className="text-sm leading-relaxed text-text-mid">
           {roleTitle} · {credential}
           {credentialYear ? ` (${credentialYear})` : ""}
           {registrationNumber && ` · ${registrationCouncil ?? "Reg. No."} ${registrationNumber}`}
         </p>
-        <p className="mt-1 text-[11px] text-text-light">Last reviewed: {lastReviewed}</p>
+        <p className="mt-1 text-[12px] text-text-light">Last reviewed: {lastReviewed}</p>
         {reviewedBy && (
-          <p className="mt-0.5 text-[11px] text-text-light">Medically reviewed by {reviewedBy}</p>
+          <p className="mt-0.5 text-[12px] text-text-light">Medically reviewed by {reviewedBy}</p>
         )}
       </div>
     </div>

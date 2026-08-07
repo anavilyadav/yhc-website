@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
               className="rounded-sm border border-border-amber bg-white p-6"
             >
               <h3 className="mb-2 font-serif text-base font-bold text-navy">{f.title}</h3>
-              <p className="text-[13px] leading-relaxed text-text-mid">{f.text}</p>
+              <p className="text-[14px] leading-relaxed text-text-mid">{f.text}</p>
             </div>
           ))}
         </div>

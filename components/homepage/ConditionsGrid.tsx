@@ -32,7 +32,7 @@ export default function ConditionsGrid({ diseases }: { diseases: Disease[] }) {
                   SPECIALITY
                 </span>
               )}
-              <p className="mt-2 text-[13px] leading-relaxed text-text-mid">
+              <p className="mt-2 text-[14px] leading-relaxed text-text-mid">
                 {disease.description}
               </p>
               <span className="mt-3 block text-xs font-bold text-amber-dark group-hover:text-navy">

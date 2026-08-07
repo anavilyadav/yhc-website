@@ -13,7 +13,7 @@ export function ProcessSteps({ steps }: { steps: { title: string; body: string }
                 {i + 1}
               </div>
               <h3 className="mb-2 font-serif text-[15px] text-navy">{step.title}</h3>
-              <p className="text-[13px] leading-relaxed text-text-mid">{step.body}</p>
+              <p className="text-[14px] leading-relaxed text-text-mid">{step.body}</p>
             </div>
           ))}
         </div>

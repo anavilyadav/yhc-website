@@ -127,7 +127,7 @@ export function DoctorProfileSection({ doctor, photoSide, ctaHref, ctaLabel }: P
                 {doctor.consultation_points.map((point) => (
                   <li key={point.heading}>
                     <p className="font-semibold text-navy">{point.heading}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-text-mid">{point.body}</p>
+                    <p className="mt-1 text-[15px] leading-relaxed text-text-mid">{point.body}</p>
                   </li>
                 ))}
               </ul>

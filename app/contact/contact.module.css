@@ -118,7 +118,7 @@
 }
 
 .clinicRow {
-  font-size: 13.5px;
+  font-size: 15px;
   color: var(--text-mid);
   margin-bottom: 8px;
   display: flex;
@@ -159,7 +159,7 @@
 }
 
 .onlineSteps li {
-  font-size: 13.5px;
+  font-size: 15px;
   color: var(--text-mid);
 }
 
@@ -222,7 +222,7 @@
 }
 
 .field label {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   color: var(--navy);
 }
@@ -233,7 +233,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 11px 14px;
-  font-size: 14px;
+  font-size: 15px;
   font-family: var(--font-sans);
   color: var(--navy);
   background: var(--white);
@@ -248,7 +248,7 @@
   background: var(--navy);
   color: var(--amber);
   font-weight: bold;
-  font-size: 14px;
+  font-size: 15px;
   padding: 14px;
   border: none;
   border-radius: var(--radius-sm);
@@ -265,7 +265,7 @@
 }
 
 .formMessage {
-  font-size: 13.5px;
+  font-size: 14px;
   padding: 12px 14px;
   border-radius: var(--radius-sm);
 }

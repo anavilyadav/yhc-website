@@ -21,7 +21,7 @@ export default function DisclaimerBanner({
   return (
     <div className="mx-auto max-w-4xl px-5">
       <div className="rounded-sm bg-cream-deep p-4">
-        <p className="text-[12px] leading-relaxed text-text-mid">
+        <p className="text-[13px] leading-relaxed text-text-mid">
           <span className="font-bold text-navy">Medical Disclaimer: </span>
           {text}
         </p>

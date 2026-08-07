@@ -49,7 +49,7 @@ export default function HowWeWork() {
                 {step.label}
               </div>
               <h3 className="mb-2 font-serif text-[15px] text-cream">{step.title}</h3>
-              <p className="text-[13px] leading-relaxed text-cream/60">{step.text}</p>
+              <p className="text-[14px] leading-relaxed text-cream/60">{step.text}</p>
             </div>
           ))}
         </div>

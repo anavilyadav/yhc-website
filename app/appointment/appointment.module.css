@@ -68,7 +68,7 @@
 }
 
 .sectionHeading p {
-  font-size: 14px;
+  font-size: 15px;
   margin: 0;
 }
 
@@ -93,7 +93,7 @@
 }
 
 .card > p {
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 16px;
 }
 
@@ -107,7 +107,7 @@
   display: flex;
   gap: 8px;
   align-items: flex-start;
-  font-size: 13.5px;
+  font-size: 15px;
   color: var(--text-mid);
   margin-bottom: 8px;
 }
@@ -177,7 +177,7 @@
 }
 
 .step p {
-  font-size: 13px;
+  font-size: 15px;
   margin: 0;
 }
 
@@ -187,7 +187,7 @@
   border: 1px solid rgba(91, 138, 45, 0.25);
   border-radius: var(--radius-md);
   padding: 18px 22px;
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--navy);
 }
 
@@ -243,7 +243,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-mid);
 }
 
@@ -261,7 +261,7 @@
   background: var(--amber-tint);
   border-radius: var(--radius-md);
   padding: 16px 20px;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--navy);
 }
 
@@ -292,7 +292,7 @@
 }
 
 .checklistGroup li {
-  font-size: 13.5px;
+  font-size: 15px;
   color: var(--text-mid);
   padding: 6px 0 6px 22px;
   position: relative;
@@ -311,7 +311,7 @@
   color: var(--cream);
   border-radius: var(--radius-md);
   padding: 20px 24px;
-  font-size: 13.5px;
+  font-size: 14px;
 }
 
 .emotionalNote p {

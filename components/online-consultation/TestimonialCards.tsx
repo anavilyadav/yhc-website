@@ -16,15 +16,15 @@ export function TestimonialCards({
               key={t.attribution}
               className="rounded-sm border border-border-amber border-l-4 border-l-amber bg-cream-bg p-6"
             >
-              <p className="font-serif text-[14px] italic leading-relaxed text-text-mid">
+              <p className="font-serif text-[15px] italic leading-relaxed text-text-mid">
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <footer className="mt-4 text-[13px] font-bold text-navy">— {t.attribution}</footer>
+              <footer className="mt-4 text-sm font-bold text-navy">— {t.attribution}</footer>
             </blockquote>
           ))}
         </div>
 
-        <p className="mx-auto mt-8 max-w-2xl text-center text-[12px] leading-relaxed text-text-light">
+        <p className="mx-auto mt-8 max-w-2xl text-center text-[13px] leading-relaxed text-text-light">
           Testimonials represent individual patient experiences. Results are not typical and
           cannot be guaranteed. Homeopathic treatment outcomes vary based on individual
           constitution, disease duration, compliance with treatment, and other factors.
