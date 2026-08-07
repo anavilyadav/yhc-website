@@ -7,6 +7,7 @@ const exploreLinks = [
   { label: "Our Doctors", href: "/our-doctors" },
   { label: "All Treatments", href: "/#conditions" },
   { label: "Patient Stories", href: "/patient-stories" },
+  { label: "Blog", href: "/blog" },
   { label: "Book Appointment", href: "/appointment" },
 ];
 

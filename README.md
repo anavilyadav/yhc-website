@@ -229,11 +229,86 @@ regenerated via `scripts/gen-disease-pages-sql.ts` from the updated
 original 7 STEP4 rows are byte-for-byte unchanged). Re-run the whole file;
 it's still `on conflict do nothing`.
 
+## Legal compliance pass — `dr-anavil-complete-legal-audit-2026-07-14.docx`
+
+The full reference library (`REFERENCE KNOWLEDGE FOR THE PROJECT/`) is
+interlinked — reading it in full surfaced a dedicated legal audit doc
+reviewing every STEP document for Drug & Magic Remedies Act 1954 /
+Consumer Protection Act 2019 risk, with exact copy-paste fixes. Applied:
+
+- Skin Diseases FAQ: dropped "permanently cure" language for vitiligo
+- Kidney/Renal patient story: added a "results may not be typical" caveat
+  (new optional `note` field on `DiseasePagePatientStory`)
+- Children's Health: "No side effects" → "No pharmacological side effects";
+  tonsillitis "majority of cases" → "many cases" + ENT-review recommendation
+- Hormonal page: diabetes "has been shown to improve" (implies published
+  research) → "in our clinical experience... has supported improvement"
+- Appointment page: added the missing Telemedicine Practice Guidelines
+  2020 (NMC/MCI) compliance statement to the online-consultation card
+
+Also fixed independently (GIOS_P7 §3.2, confirmed missing by inspection):
+the mandatory testimonial disclaimer below the homepage Testimonials
+section. One flag from the audit (verify "1,00,000+ patients" / "5,000+
+children" against clinic records) is a factual check only Dr Anavil can
+do — not a code fix.
+
+## What's in this delivery — STEP 6: Blog Posts
+
+5 blog posts from `STEP6_Blog_Posts.docx`, used essentially verbatim — the
+legal audit already reviewed this content and found only one low-risk item
+requiring no change (Blog 1's title asks "Can Homeopathy Cure Vitiligo?"
+as a question and the post itself answers honestly, so it passes).
+
+- `/blog/` — listing page, newest first
+- `/blog/can-homeopathy-cure-vitiligo/`
+- `/blog/homeopathy-for-autism/`
+- `/blog/homeopathy-for-high-creatinine-kidney-disease/`
+- `/blog/what-to-expect-first-homeopathy-consultation/`
+- `/blog/myths-about-homeopathy-answered/`
+
+Each post: category/read-time/date meta, body content, a new reusable
+`AuthorBox` (photo-or-initials + name + qualification + registration
+number when confirmed + "Last reviewed" date — mandatory per GIOS_P7
+§10's E-E-A-T requirements, fed live from the `doctors` table so it never
+drifts from the About page), the mandatory blog disclaimer text from
+GIOS_P7 §3.2, a link to the most relevant disease page, and 1-2 related
+posts — matching GIOS_P2's internal-linking strategy. `BlogPosting`
+JSON-LD added per GIOS_P2 Section 7.
+
+Content is Supabase-backed (`blog_posts` table, `supabase/migrations/
+0003_blog_posts.sql`, seeded via the new `scripts/gen-blog-posts-sql.ts`)
+with the seed as a build-safe fallback — same architecture as
+`disease_pages`.
+
+**Found a real bug while building this:** the initials-placeholder logic
+(used when a doctor has no photo yet) rendered "DAY" for "Dr Anavil Yadav"
+instead of "AY", because "Dr" is 2 characters and slipped past the
+`length > 1` filter meant to drop single-letter fragments. This existed
+already in `DoctorProfileSection.tsx` from STEP2 (same bug, just never
+seen live because the About page hasn't been checked with a missing
+photo). Fixed both call sites via a new shared `getInitials()` helper in
+`lib/utils.ts` that also excludes honorifics.
+
+**Scope decision, flagged rather than silently done:** the source doc asks
+for literal inline hyperlinks within blog prose (e.g. "book a
+consultation" linked mid-sentence to `/appointment/`). This isn't
+implemented — paragraphs are stored as plain strings, matching how every
+disease page already renders its own body copy without inline links
+despite GIOS_P2 asking for the same there. Internal linking is instead
+satisfied via an explicit "Read more about [condition]" link, a "Related
+Reading" block, and the CTA — consistent with what's already shipped
+everywhere else on the site, not a gap unique to blog posts.
+
+Featured images (the source doc suggests Unsplash/Pexels stock photos)
+were not added, consistent with the rest of the site: no doctor or clinic
+photos have been added anywhere yet either (`photo_url` is null in the
+doctors seed) — this is one content gap, not two.
+
 ## Verified
 
 - `npm run build` -- clean. Homepage + all 14 disease pages (STEP4 + STEP5)
-  prerendered as static HTML with 1h ISR (`generateStaticParams` on
-  `app/[slug]/page.tsx`)
+  + 5 blog posts prerendered as static HTML with hourly ISR
+  (`generateStaticParams` on `app/[slug]/page.tsx` and `app/blog/[slug]/page.tsx`)
 - `npm run lint` -- clean
 - All 14 disease pages checked for: valid, parseable `MedicalWebPage` +
   `FAQPage` JSON-LD actually present as literal `<script>` tags in the
@@ -244,3 +319,6 @@ it's still `on conflict do nothing`.
   `/mental-health/`; patient stories and FAQ content match source docs
   verbatim; `scripts/gen-disease-pages-sql.ts` output spot-checked for all
   7 new slugs
+- All 5 blog posts checked in-browser: author box renders correct
+  initials, mandatory disclaimer present, `BlogPosting` JSON-LD present,
+  related-post and related-disease links resolve to real pages

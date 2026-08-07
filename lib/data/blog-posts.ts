@@ -1,0 +1,455 @@
+import type { BlogPost } from "@/lib/types";
+
+/**
+ * Fallback seed for blog posts — mirrors the `blog_posts` table's initial
+ * seed (see supabase/migrations/0003_blog_posts.sql). Used only when
+ * Supabase is unreachable or not yet configured, same pattern as
+ * lib/data/disease-page-content.ts.
+ *
+ * Source: STEP6_Blog_Posts.docx — content used verbatim (the legal audit,
+ * dr-anavil-complete-legal-audit-2026-07-14.docx FLAG 8, reviewed this
+ * content and found no changes required).
+ *
+ * The source doc's own publishing note says to release one post per week
+ * rather than all five at once — that's an editorial/marketing schedule
+ * decision for Dr Anavil to make via the admin panel (toggle `isPublished`
+ * per post), not something enforced in code.
+ */
+export const BLOG_POST_SEED: BlogPost[] = [
+  {
+    slug: "can-homeopathy-cure-vitiligo",
+    title: "Can Homeopathy Cure Vitiligo? 30 Years of Clinical Experience Gives an Honest Answer",
+    metaDescription:
+      "Can vitiligo be cured by homeopathy? An honest, evidence-based answer from Dr Anavil Yadav of Yadav Homeo Clinic, Jaipur — based on 30 years of treating vitiligo patients.",
+    focusKeyword: "can homeopathy cure vitiligo",
+    secondaryKeywords: [
+      "vitiligo homeopathy treatment",
+      "leucoderma homeopathy",
+      "vitiligo repigmentation homeopathy",
+      "safed daag homeopathy treatment",
+    ],
+    category: "Skin Diseases",
+    tags: ["vitiligo", "leucoderma", "skin", "homeopathy"],
+    readTime: "7 minutes",
+    publishedDate: "2026-08-07",
+    intro: [
+      "If you have vitiligo — those white patches that appear on the skin and refuse to go away — you have probably heard every promise imaginable. Certain diets that will cure it. Herbal oils. Light therapy. And homeopathy.",
+      "You deserve an honest answer. Not a sales pitch. Not a miraculous claim. An honest answer — from a clinic that has been treating vitiligo patients for 30 years.",
+      "That is what this article is.",
+    ],
+    sections: [
+      {
+        heading: "What Is Vitiligo and Why Does It Happen?",
+        paragraphs: [
+          "Vitiligo — known in Hindi as safed daag or leucoderma — is a condition in which the melanocytes (the cells responsible for producing skin pigment) are destroyed. The result: depigmented white patches that can appear anywhere on the body.",
+          "Why does this happen? Modern medicine understands vitiligo as an autoimmune condition — the immune system, for reasons that are not fully understood, begins attacking its own melanocytes. Genetics, stress, trauma, and environmental factors all appear to play a role. But the precise trigger varies from person to person.",
+          "This individual variation is exactly why a cookie-cutter treatment rarely works. And it is exactly why classical homeopathy — which treats the individual, not the diagnosis — has produced results for vitiligo patients that standardised dermatological protocols could not.",
+        ],
+      },
+      {
+        heading: "What Conventional Dermatology Offers — and Where It Falls Short",
+        paragraphs: [
+          "Let me be fair to conventional medicine first. Dermatologists offer several effective tools: PUVA light therapy, narrow-band UVB, tacrolimus cream, topical steroids, and skin grafting for stable vitiligo. These produce results in a proportion of patients — particularly light therapy, which can stimulate repigmentation in areas that still have dormant melanocytes.",
+          "The limitation is this: none of these approaches address why the immune system is attacking melanocytes in the first place. They treat the surface — the visible depigmentation — without correcting the underlying immune dysregulation. This is why many patients find their vitiligo spreads again after stopping treatment, or why it appears in new areas even while existing patches are being treated.",
+        ],
+      },
+      {
+        heading: "How Classical Homeopathy Approaches Vitiligo Differently",
+        paragraphs: [
+          "In classical homeopathy, vitiligo is not a skin disease. It is a systemic immune condition that is expressing itself through the skin. The white patches are a symptom — not the disease itself.",
+          "The constitutional remedy prescribed for a vitiligo patient is not chosen to repigment patches. It is chosen to correct the underlying constitutional susceptibility that caused the immune system to attack melanocytes. This means the prescription is based on the complete individual picture of the patient — their physical constitution, their emotional patterns, their response to stress, their general health history, their family medical history, and specific characteristics of their vitiligo.",
+          "Two patients with vitiligo on the same area of the body may receive entirely different remedies — because they are different people with different constitutions. This individualisation is what produces results that generic approaches cannot.",
+        ],
+      },
+      {
+        heading: "What We Have Seen in 30 Years — Honest Clinical Observations",
+        paragraphs: [
+          "I grew up watching my father, Dr T P Yadav, treat vitiligo patients. I have now been practising alongside him for nearly a decade. Based on our combined experience of hundreds of vitiligo cases, here is what we have consistently observed:",
+        ],
+        list: [
+          "Halting of spread: This is the most consistent outcome. The majority of patients who complete 6 to 12 months of constitutional treatment stop developing new patches. For a patient who has been watching their vitiligo spread steadily for years, this alone is enormously meaningful.",
+          "Repigmentation: Visible return of pigment to existing patches occurs in approximately 40 to 60 percent of patients who complete a full course of treatment. It begins as small brown dots — pigment islands — appearing within the white area, which gradually coalesce and spread inward.",
+          "Near-complete clearance: Seen in a smaller subset — perhaps 15 to 25 percent — particularly those with early-stage vitiligo on the face and trunk who begin treatment early.",
+        ],
+      },
+      {
+        heading: "Who Responds Best to Homeopathic Treatment for Vitiligo?",
+        paragraphs: ["Based on our clinical experience, the following factors predict better response:"],
+        list: [
+          "Earlier stage: vitiligo of less than 5 to 7 years duration typically responds better",
+          "Actively spreading: paradoxically, spreading vitiligo often responds better than old, completely stable patches — because there is more immune activity to work with",
+          "Face and trunk patches: these areas tend to repigment more readily than fingertips, lips, bony prominences and genitals",
+          "Younger patients: stronger vital force and less entrenched pathology",
+          "Otherwise good constitutional health: patients without multiple simultaneous autoimmune conditions tend to respond better",
+        ],
+        note: "Conversely, vitiligo of very long standing (15 to 20+ years), patches on fingertips and lips, and patients with multiple autoimmune conditions have a more guarded prognosis. We will always tell you honestly at the first consultation what we believe is achievable in your specific case.",
+      },
+      {
+        heading: "How Long Does Treatment Take?",
+        paragraphs: [
+          "This is the question patients most want to know — and the one that requires the most honest answer.",
+          "Vitiligo treatment is not quick. Expect a minimum of 12 months for meaningful repigmentation to occur. Most significant improvement happens in the 6 to 18 month window. Some patients continue treatment for 2 to 3 years and continue improving throughout that period.",
+          "The first 3 months are often the hardest — when little seems to be happening visibly, but the immune regulation is quietly beginning to shift. Patience here is not passive — it is part of the treatment.",
+        ],
+      },
+      {
+        heading: "Should You Try Homeopathy for Your Vitiligo?",
+        paragraphs: [
+          "If your vitiligo is spreading and conventional treatment has not stopped it — yes, a genuine trial of constitutional homeopathic treatment is worth pursuing. If you want to avoid the side effects of long-term steroid application — yes. If you are looking for a treatment approach that addresses the root cause rather than managing the surface — yes.",
+          "What you must be clear about: a genuine trial means at minimum 12 months of correctly prescribed, individualised constitutional treatment. Not a few weeks of over-the-counter homeopathic products from a medical store. The prescription must be individualised to you — by an experienced classical homeopath who takes the time to understand your complete case.",
+          "At Yadav Homeo Clinic, every vitiligo patient receives a 45 to 60 minute first consultation and a carefully individualised prescription. We see patients in Jaipur and online across India and internationally.",
+          "If you would like an honest assessment of whether your case is one we believe can benefit — reach out. We respond to every enquiry personally.",
+        ],
+      },
+    ],
+    finalCta: "Book a Vitiligo Consultation at Yadav Homeo Clinic — In Clinic (Jaipur) or Online →",
+    relatedDiseaseSlug: "skin-diseases",
+    relatedPostSlugs: ["myths-about-homeopathy-answered", "what-to-expect-first-homeopathy-consultation"],
+    isPublished: true,
+  },
+
+  {
+    slug: "homeopathy-for-autism",
+    title:
+      "My Child Has Autism — Can Homeopathy Help? An Honest Answer From a Doctor Who Has Treated 5,000 Special Children",
+    metaDescription:
+      "Can homeopathy help a child with autism? Dr Anavil Yadav of Yadav Homeo Clinic, Jaipur answers honestly — based on 30 years and 5000+ autism cases. Read before deciding.",
+    focusKeyword: "homeopathy for autism",
+    secondaryKeywords: [
+      "homeopathy for autism India",
+      "ASD homeopathy treatment",
+      "autism child homeopathy",
+      "does homeopathy help autism",
+      "autism homeopathy Jaipur",
+    ],
+    category: "Child Health",
+    tags: ["autism", "ASD", "ADHD", "child development", "homeopathy"],
+    readTime: "8 minutes",
+    publishedDate: "2026-08-07",
+    intro: [
+      "This is the question we receive more than any other. And the one we take most seriously.",
+      "Behind it is not just a medical query. Behind it is a parent who has been through the diagnosis — the grief, the fear, the overwhelming flood of information and misinformation. A parent who is doing everything they possibly can for their child. A parent who has heard things that gave hope, and things that took it away.",
+      "This parent deserves a completely honest answer. Not hope-selling. Not dismissal. Honest.",
+      "So here it is — based on 30 years of practice at Yadav Homeo Clinic and over 5,000 children with autism and developmental conditions treated by my father, Dr T P Yadav, and more recently by myself.",
+    ],
+    sections: [
+      {
+        heading: "What Homeopathy Does NOT Claim to Do for Autism",
+        paragraphs: [
+          "Let me start with what we do not claim — because in this field, false promises are common and dangerous.",
+          "Homeopathy does not cure autism. Autism Spectrum Disorder is a neurological difference — a different way the brain is wired. It is not a disease to be eliminated. Any practitioner who promises to 'cure' your child's autism is either misinformed or dishonest. Please be very careful of such claims.",
+          "We do not promise that your non-verbal child will become verbal. We do not promise that your child will be able to attend a mainstream school without support. We do not promise behaviours will disappear.",
+          "These are honest boundaries. Now let me tell you what we do see — consistently, and documented over thousands of cases.",
+        ],
+      },
+      {
+        heading: "What Homeopathy CAN Do — What 5,000 Cases Have Shown Us",
+        paragraphs: [
+          "Autism is rarely 'just' autism. Most autistic children carry a significant burden of co-occurring conditions that compound their difficulties enormously — and that homeopathy consistently addresses.",
+          "These co-occurring conditions are where our treatment produces its most reliable and profound results:",
+        ],
+        list: [
+          "Sleep disorders: Many autistic children sleep 3 to 4 hours at night — or wake repeatedly — creating exhausted children and exhausted families. Improved sleep is the most common first improvement parents notice after starting constitutional treatment. It usually comes within the first 2 to 3 months. When a child begins sleeping through the night, everything changes — their behaviour, their learning, their mood, the entire family's functioning.",
+          "Gastrointestinal problems: Chronic constipation, loose stools, food sensitivities, and abdominal discomfort that the child cannot communicate clearly. This physical discomfort drives behaviour — it is a major contributor to meltdowns, self-injury, hyperactivity and emotional dysregulation. When we address the gut, behaviour often improves dramatically — sometimes within weeks.",
+          "Hyperactivity and attention: Constitutional treatment consistently reduces the intensity of hyperactivity in many children. The ability to sit, focus and engage — even slightly longer — makes a significant difference to how much benefit the child gets from therapy and school.",
+          "Aggressive and self-injurious behaviours: Meltdowns, head-banging, hitting, biting. As sleep improves, gut improves, and overall regulation improves — these behaviours reduce in frequency and intensity in a significant proportion of children.",
+          "Immune function: Many autistic children have frequent ear infections, chest infections and viral illnesses. Each illness disrupts the child's routine — which autistic children handle particularly poorly — and sets back developmental progress. Strengthening immune function constitutionally reduces this burden meaningfully.",
+          "Communication: This is the outcome parents hope for most, and the most variable. Some non-verbal children begin to speak. Others develop more purposeful non-verbal communication. Others show improvement in the quality of existing speech. Language is the last thing to improve and not universal — but as the child becomes healthier overall, they become more available for language development.",
+        ],
+      },
+      {
+        heading: "I Grew Up Watching This Work — Here Is What I Saw",
+        paragraphs: [
+          "I am a second-generation homeopath. I grew up in this clinic watching my father work with autistic children and their families. I have seen things that, if you had told me about them before I witnessed them, I would have found difficult to believe.",
+          "A 4-year-old who had never made eye contact begin meeting his mother's gaze at month 3 of treatment. A non-verbal 6-year-old say 'Maa' for the first time after 14 months — I still remember the mother's face. Children who were having daily meltdowns becoming, over time, more regulated and happier — genuinely happier.",
+          "These are not statistics. These are children I have watched grow up. And their parents, who walk in defeated and walk out — slowly, over months — with something returning that they had stopped allowing themselves to feel: hope.",
+        ],
+      },
+      {
+        heading: "How the Consultation Works for an Autistic Child",
+        paragraphs: [
+          "The first consultation for an autistic child takes 1 to 1.5 hours — done with the parents. We take a complete developmental history: pregnancy and birth, early milestones, when parents first noticed differences, vaccination reactions, dietary history, sleep patterns, bowel habits, sensory sensitivities, specific behaviours, school observations, and complete family medical history.",
+          "The remedy selected from this picture is specific to this child — not to the autism diagnosis. Two autistic children with very similar presentations will often receive different medicines because they are different people with different constitutions.",
+        ],
+      },
+      {
+        heading: "The Most Important Thing I Can Tell You",
+        paragraphs: [
+          "Continue every therapy your child is receiving — speech therapy, occupational therapy, ABA, special education. Do not reduce or stop them in favour of homeopathic treatment. Homeopathy works best as a complement to these interventions, not a replacement for them.",
+          "What constitutional treatment does is improve the child's baseline state — their sleep, their gut, their immunity, their regulation — so that therapies become more effective. A child who sleeps 7 hours and has a comfortable gut is a very different learner from a child who sleeps 3 hours with chronic abdominal pain.",
+          "Expect a minimum 12-month commitment. Progress is gradual and cumulative. There will be months when little seems to be changing, and months when the improvement is suddenly visible and joyful. Stay with it.",
+        ],
+      },
+      {
+        heading: "Should You Try Homeopathy for Your Child?",
+        paragraphs: [
+          "If your child has autism and you are looking for something that is safe, has no pharmacological side effects, and could meaningfully improve their quality of life and your family's quality of life — yes, I believe a genuine trial of constitutional homeopathic treatment is worthwhile.",
+          "Come with realistic expectations, patience, and the understanding that you are supplementing your child's existing care — not replacing it.",
+          "We see autism patients in Jaipur and online. Every case receives the same depth of attention and the same individually prescribed treatment.",
+        ],
+      },
+    ],
+    finalCta: "Book Your Child's Consultation at Yadav Homeo Clinic →",
+    relatedDiseaseSlug: "autism",
+    relatedPostSlugs: ["can-homeopathy-cure-vitiligo", "what-to-expect-first-homeopathy-consultation"],
+    isPublished: true,
+  },
+
+  {
+    slug: "homeopathy-for-high-creatinine-kidney-disease",
+    title: "High Creatinine and Kidney Disease — What Homeopathy Can Do (And What It Cannot)",
+    metaDescription:
+      "Can homeopathy reduce high creatinine and help kidney disease? Dr Anavil Yadav gives an honest clinical answer based on treating hundreds of CKD patients at Yadav Homeo Clinic, Jaipur.",
+    focusKeyword: "homeopathy for high creatinine",
+    secondaryKeywords: [
+      "high creatinine homeopathy",
+      "CKD homeopathy treatment",
+      "kidney disease homeopathy India",
+      "reduce creatinine homeopathy",
+      "avoid dialysis homeopathy",
+    ],
+    category: "Kidney & Renal",
+    tags: ["kidney", "creatinine", "CKD", "renal disease"],
+    readTime: "7 minutes",
+    publishedDate: "2026-08-07",
+    intro: [
+      "If you or someone in your family has chronic kidney disease with rising creatinine levels, you are probably in a state of controlled panic. Dialysis has been mentioned. The nephrologist's options are narrowing. And someone — a neighbour, a relative, a Google search at 2am — has suggested homeopathy.",
+      "You need an honest answer. Not a miracle claim and not a dismissal. So here is what we have actually observed at Yadav Homeo Clinic — after treating hundreds of kidney disease patients over 30 years.",
+    ],
+    sections: [
+      {
+        heading: "First — the Question You Are Really Asking",
+        paragraphs: [
+          "'Can homeopathy bring my creatinine down and help me avoid dialysis?'",
+          "Short answer: in some cases, yes. Not in all. And the cases where yes is most likely are specific — which is why honest expectations matter so much.",
+        ],
+      },
+      {
+        heading: "Why Kidney Disease Is More Than a Kidney Problem",
+        paragraphs: [
+          "This is the first thing I explain to every kidney patient. Chronic kidney disease — CKD — is rarely a disease of the kidney in isolation. In most cases, it is the end result of a systemic process that has been silently damaging renal tissue for years: uncontrolled diabetes, chronic hypertension, autoimmune activity, or a constitutional susceptibility that made the kidneys vulnerable.",
+          "Treating only the kidney while ignoring these systemic drivers is like mopping water from under a leaking pipe without fixing the leak. This is precisely why conventional nephrology — which focuses on managing creatinine, blood pressure and dietary restriction — rarely reverses CKD. It manages the damage; it does not address why the damage is occurring.",
+          "Constitutional homeopathic treatment addresses the whole person. The diabetes control. The blood pressure pattern. The immune activity. The constitutional susceptibility. When this complete picture is treated with the precisely matched constitutional remedy, the kidney — still having functional tissue — sometimes responds by recovering function that was assumed to be permanently lost.",
+        ],
+      },
+      {
+        heading: "What Our Clinical Experience Shows — Stage by Stage",
+        paragraphs: [
+          "CKD Stages 1 to 3 (creatinine typically under 3.5): This is where homeopathic treatment has the strongest potential. We regularly see stabilisation of creatinine in these patients, and in many cases a genuine, measurable reduction over 6 to 12 months of consistent treatment. Several patients in this range have brought their creatinine from borderline levels back into the normal range and maintained that improvement.",
+          "CKD Stage 4 (creatinine 3.5 to 7): Results are less predictable but still meaningful in a proportion of cases. The primary goal at this stage is delaying dialysis — sometimes by years — while improving quality of life. We have several patients whose creatinine was hovering near dialysis threshold and has stabilised or improved over extended periods of constitutional treatment.",
+          "CKD Stage 5 — End Stage Renal Disease (creatinine above 7–8): At this level, I will be honest: homeopathy's role is primarily supportive and palliative. Managing fatigue, nausea, itching, and maintaining quality of life. Reversing advanced end-stage renal disease is generally not achievable. If a nephrologist says dialysis is needed — please begin dialysis. Do not delay life-sustaining treatment based on hope in any alternative therapy.",
+        ],
+      },
+      {
+        heading: "The Story That Comes to Me Most Often",
+        paragraphs: [
+          "A family comes to us with a father whose creatinine is 5.8. The nephrologist has said dialysis should begin within 3 months. They have tried every herbal remedy suggested by neighbours. They arrive desperate.",
+          "We start constitutional treatment alongside their nephrology care. I ask them to get blood reports every 6 weeks without fail. Month 2: creatinine 5.4. Month 4: 4.7. Month 7: 3.9. The nephrologist agrees dialysis can be deferred. The family cannot believe it.",
+          "This is not a miracle. This is what happens when the whole systemic picture is addressed — the blood pressure becomes better controlled, the inflammatory drivers reduce, the diet is properly followed, and the constitutional remedy supports the kidney's own regenerative capacity.",
+        ],
+        note: "I do not share this to make promises. I share it because these families deserve to know this is possible — while understanding clearly that it is not guaranteed and that conventional nephrology care must continue without interruption. Individual results vary; this patient's outcome may not be typical.",
+      },
+      {
+        heading: "What You Must Do Alongside Homeopathic Treatment",
+        list: [
+          "Continue all medications prescribed by your nephrologist — antihypertensives, diuretics, EPO — without interruption",
+          "Follow kidney diet strictly: low protein, low potassium, low sodium, low phosphorus. This is not optional. Diet compliance can make the difference between improving and declining creatinine.",
+          "Get blood tests every 6 to 8 weeks: creatinine, urea, eGFR, electrolytes, albumin. Progress must be tracked objectively.",
+          "Control blood pressure and blood sugar tightly — these are the two biggest accelerators of kidney damage. Creatinine will not improve if BP or sugars are uncontrolled.",
+          "Maintain regular follow-up with your nephrologist. If creatinine rises significantly at any point, immediate nephrological assessment is essential.",
+        ],
+      },
+      {
+        heading: "Should You Try Homeopathic Treatment for CKD?",
+        paragraphs: [
+          "If you are in CKD Stage 1 to 4, have not yet started dialysis, are compliant with your nephrology care and diet, and are looking for something that might help slow or reverse the progression — yes, constitutional homeopathic treatment is worth a serious attempt.",
+          "Bring your complete reports to the first consultation. We will give you an honest assessment of whether your case is one where we believe meaningful improvement is possible.",
+        ],
+      },
+    ],
+    finalCta: "Share Your Reports and Book a Kidney Consultation at Yadav Homeo Clinic →",
+    relatedDiseaseSlug: "renal-diseases",
+    relatedPostSlugs: ["what-to-expect-first-homeopathy-consultation", "myths-about-homeopathy-answered"],
+    isPublished: true,
+  },
+
+  {
+    slug: "what-to-expect-first-homeopathy-consultation",
+    title: "What Happens in Your First Consultation at Yadav Homeo Clinic — A Complete Patient Guide",
+    metaDescription:
+      "Wondering what a first homeopathy consultation is like at Yadav Homeo Clinic? Dr Anavil Yadav walks you through every step — from arrival to prescription. Know before you come.",
+    focusKeyword: "first homeopathy consultation Jaipur",
+    secondaryKeywords: [
+      "homeopathy consultation what to expect",
+      "first homeopathy appointment",
+      "Yadav Homeo Clinic appointment",
+      "how does homeopathy consultation work",
+    ],
+    category: "About Homeopathy",
+    tags: ["consultation", "appointment", "homeopathy process", "new patients"],
+    readTime: "6 minutes",
+    publishedDate: "2026-08-07",
+    intro: [
+      "Many first-time homeopathy patients arrive at our clinic with a mix of curiosity and uncertainty. They have heard about homeopathy. They know someone who was helped. But they do not know what to expect — and that unknown is sometimes what stops people from making the appointment.",
+      "This article is for you if you are thinking about coming to Yadav Homeo Clinic but want to know exactly what will happen before you come.",
+      "Here is the complete picture — from before you arrive to after you receive your prescription.",
+    ],
+    sections: [
+      {
+        heading: "Before You Come — What to Bring",
+        paragraphs: [
+          "The more information you bring, the better your prescription will be. This is not a general principle — it is specific to homeopathy, where the depth of the prescription is directly tied to the depth of the information.",
+        ],
+        list: [
+          "All current and recent medical reports: blood tests, scans, X-rays, biopsy reports, specialist letters",
+          "A written list of all medicines you currently take — name, dosage, and since when",
+          "Previous consultation letters and prescriptions",
+          "A brief timeline of your illness: when it started, how it progressed, what has been tried and what resulted",
+          "Family medical history: what conditions your parents, siblings and grandparents have or had",
+          "For skin patients: clear photographs in natural daylight — especially if the skin is not currently showing at its worst",
+          "For kidney patients: your most recent creatinine, urea, eGFR reports",
+          "For children: any school or therapist observations or reports",
+        ],
+      },
+      {
+        heading: "The First 10 to 15 Minutes — Your Disease History",
+        paragraphs: [
+          "We begin with your main concern — the reason you came. We want to understand the disease itself: when it started, what triggered it or preceded it, how it has developed, what makes it better or worse, what other symptoms accompany it.",
+          "This part is familiar from any medical consultation. What comes next is not.",
+        ],
+      },
+      {
+        heading: "The Next 30 to 40 Minutes — The Part That Surprises People",
+        paragraphs: [
+          "This is where classical homeopathy is fundamentally different from any other medical system — and where the prescription is actually built.",
+          "We will ask about your sleep. What time do you fall asleep and wake up? Do you sleep on one side? Do you have disturbing dreams? Do you wake at a specific time?",
+          "We will ask about your appetite and thirst. Are you someone who craves cold drinks or warm drinks? Do you have strong food preferences or aversions? How is your appetite in the morning versus the evening?",
+          "We will ask about temperature. Do you generally feel hot or cold? Do you sweat easily, and where? Do you need the fan on or do you prefer warmth?",
+          "We will ask about your emotional patterns. Are you by nature an anxious person or a calm one? How do you respond to criticism? How do you handle grief? Are you someone who weeps easily or someone who holds emotions in?",
+          "We will ask about your fears. Heights. Crowds. Disease. The future. Death. These are not psychological profiling questions. In classical homeopathy, a person's deepest fears are among the most medically important pieces of information — they reveal the constitutional type with a precision that no blood test can match.",
+          "I tell every new patient: I am going to ask you questions that no doctor has ever asked you before. Please do not dismiss them as unrelated. In homeopathy, everything is related.",
+        ],
+      },
+      {
+        heading: "The Prescription",
+        paragraphs: [
+          "After the case-taking is complete, the doctor takes time to analyse the case. Sometimes the remedy is clear immediately. Sometimes it requires 10 to 15 minutes of careful consideration — weighing symptoms, looking for the thread that connects the physical, mental and emotional picture into a single coherent constitutional type.",
+          "You will be prescribed a single remedy in a specific potency with a specific schedule. We will explain what we are prescribing and why. We will tell you what to expect — both what improvement might look like and what other changes (not all immediately positive) sometimes occur when a constitutional remedy begins working.",
+          "You will receive clear instructions: how to take the medicine, what to avoid (coffee, strong odours, certain substances that can antidote some remedies), when to follow up and what to report.",
+        ],
+      },
+      {
+        heading: "After the Consultation — What to Expect",
+        paragraphs: [
+          "Constitutional remedies do not always produce immediate dramatic change. More often, the first sign of action is subtle: slightly better sleep, a shift in energy, an improvement in mood. Over weeks, the physical symptoms begin to change.",
+          "Some patients experience what homeopaths call a 'healing aggravation' — a brief and temporary worsening of existing symptoms before improvement begins. This is generally considered a positive sign — evidence that the remedy is working — but we always want to know about it.",
+          "Follow-up is booked for 4 to 6 weeks after the first consultation. At that visit we assess your response and adjust the treatment accordingly. The follow-ups are where the real art of homeopathic prescribing happens — reading the response to the first remedy and deciding what the next step should be.",
+        ],
+      },
+      {
+        heading: "What If You Cannot Come to Jaipur?",
+        paragraphs: [
+          "Our online consultation process is designed to be exactly as thorough as an in-person visit. You complete a detailed intake form, share your reports by WhatsApp, pay the fee online, and receive your prescription within 24 to 48 hours. Follow-ups happen online every 4 to 6 weeks.",
+          "We have been conducting online consultations since 2018 — patients from every state in India and from over 15 countries have been treated this way with the same quality of care.",
+        ],
+      },
+      {
+        heading: "Ready to Come?",
+        paragraphs: [
+          "Our team is happy to answer any questions before you book. You can call us, WhatsApp us, or fill the contact form on our website. We respond to every enquiry personally.",
+        ],
+      },
+    ],
+    finalCta: "Book Your First Consultation at Yadav Homeo Clinic →",
+    relatedDiseaseSlug: "skin-diseases",
+    relatedPostSlugs: ["can-homeopathy-cure-vitiligo", "myths-about-homeopathy-answered"],
+    isPublished: true,
+  },
+
+  {
+    slug: "myths-about-homeopathy-answered",
+    title: "5 Myths About Homeopathy — Answered Honestly by a Doctor With 30 Years of Clinical Experience",
+    metaDescription:
+      "Is homeopathy just a placebo? Only for minor conditions? Dr Anavil Yadav addresses the 5 biggest myths about homeopathy — honestly, with clinical examples. Read before judging.",
+    focusKeyword: "does homeopathy work",
+    secondaryKeywords: [
+      "is homeopathy effective",
+      "homeopathy myths",
+      "homeopathy placebo",
+      "homeopathy scientific evidence India",
+      "is homeopathy safe",
+    ],
+    category: "About Homeopathy",
+    tags: ["homeopathy science", "myths", "FAQ", "homeopathy works"],
+    readTime: "8 minutes",
+    publishedDate: "2026-08-07",
+    intro: [
+      "I want to address something directly.",
+      "I am a second-generation homeopath. I grew up in a clinic where I watched my father, Dr T P Yadav, treat patients with conditions that other systems of medicine had given up on. I have seen vitiligo patches repigment. I have seen creatinine levels fall from 7 to under 3. I have seen non-verbal autistic children begin to speak. I have practised for nearly a decade alongside one of the most experienced homeopaths in Rajasthan.",
+      "And yet — I understand the scepticism about homeopathy. I genuinely do. Some of it is justified. Some of it is based on myths that have nothing to do with what classical homeopathy actually is or does.",
+      "Here are the 5 myths I hear most often — and my honest response to each.",
+    ],
+    sections: [
+      {
+        heading: "Myth 1: Homeopathy Is Just a Placebo",
+        paragraphs: [
+          "This is the most common objection. And it is the one that falls apart most quickly when examined carefully.",
+          "The placebo effect requires patient belief and conscious expectation. It is, by definition, dependent on the patient knowing they are receiving treatment and hoping it will work.",
+          "How, then, do we explain consistent results in infants — who have no conception of homeopathy and no expectations? How do we explain positive effects in animals, where placebo is not a factor? Several well-designed veterinary studies have shown homeopathic treatment producing outcomes that cannot be explained by expectation or belief.",
+          "In our own practice: when a 2-year-old autistic child sleeps through the night for the first time after 3 months of constitutional treatment — that child is not experiencing a placebo effect. When a patient's creatinine drops from 5.8 to 3.1 and nothing else has changed in their management — that is a measurable biochemical change in a blood test. You cannot placebo a creatinine number.",
+          "The question 'is homeopathy placebo?' is not scientific scepticism. It is an assumption dressed as a question. The honest scientific position is: we do not fully understand the mechanism by which homeopathy works. That is not the same as saying it does not work.",
+        ],
+      },
+      {
+        heading: "Myth 2: Homeopathy Only Works for Minor Conditions",
+        paragraphs: [
+          "This may be the most damaging myth — because it stops seriously ill patients from considering a treatment that might genuinely help them.",
+          "Our entire clinical practice is built on the opposite of minor conditions. Vitiligo. Psoriasis. Chronic kidney disease. Autism spectrum disorder. Down syndrome. Thalassemia. Autoimmune diseases. Cancer supportive care. These are not minor conditions by anyone's definition.",
+          "The belief that homeopathy is only for colds and mild complaints probably comes from the fact that homeopathic pharmacies sell combination products for common ailments — and these over-the-counter products are what many people's first exposure to homeopathy is. But a combination product from a pharmacy shelf is not classical homeopathy. It is a mass-produced generic mixture. The two are as different as paracetamol from a chemist's shelf and a carefully individualised prescription from an experienced physician.",
+          "Classical homeopathy, correctly practised, addresses serious and complex chronic conditions. This is where it has the most profound impact — and the least competition from other therapeutic approaches.",
+        ],
+      },
+      {
+        heading: "Myth 3: All Homeopaths Give the Same Medicine for the Same Disease",
+        paragraphs: [
+          "This is a fundamental misunderstanding of how classical homeopathy works — and it explains why studies that test one homeopathic remedy against a specific disease often fail.",
+          "In classical homeopathic prescribing, the remedy is based on the individual — not the diagnosis. Two patients at our clinic with the same diagnosis of psoriasis will, in the majority of cases, receive different remedies. Because they are different people. Their constitutions, their stress responses, their fears, their sleep patterns, their food preferences, their emotional landscapes — all of these are medically relevant to the prescription.",
+          "A standardised clinical trial that gives all psoriasis patients the same homeopathic remedy is not testing homeopathy. It is testing whether one randomly selected homeopathic medicine beats placebo for an entire diagnostic group — which, by the principles of classical homeopathy, it should not. The individualisation IS the treatment.",
+          "This is not an excuse to avoid scrutiny. It is a genuine methodological challenge that requires clinical trial designs that match the individualised nature of the intervention. Such trials are being conducted — and several have shown positive results.",
+        ],
+      },
+      {
+        heading: "Myth 4: Homeopathy Takes Too Long to Work",
+        paragraphs: [
+          "For acute conditions — a sudden high fever, a colicky infant, an acute allergic reaction, food poisoning — correctly prescribed homeopathic remedies work quickly. Very quickly. Sometimes within hours. My father has prescribed for acute conditions in the clinic and had patients call back within an hour reporting significant improvement.",
+          "For chronic conditions — diseases that have been present for months or years — yes, the treatment takes longer. But this is not a homeopathy problem. This is a chronic disease problem. Psoriasis that has been present for 15 years, managed with immunosuppressants, will not resolve in 2 weeks with any treatment system. The expectation of quick results for long-standing chronic disease is unrealistic regardless of what treatment is being used.",
+          "Within the appropriate timeframe for chronic disease — 6 to 18 months — constitutional homeopathic treatment is not slow at all. Many patients see meaningful change within 3 to 4 months. The pace is appropriate to the depth of the healing being produced.",
+        ],
+      },
+      {
+        heading: "Myth 5: Homeopathy Has No Scientific Evidence",
+        paragraphs: [
+          "This is inaccurate — though it is understandable that people believe it, because this is what they are repeatedly told.",
+          "There are hundreds of published peer-reviewed studies on homeopathy. Several systematic reviews and meta-analyses have found effects beyond placebo for specific conditions — including respiratory allergies, childhood diarrhoea, fibromyalgia and rheumatoid arthritis. A 2014 systematic review published in Systematic Reviews (BMC) found 'some evidence that homeopathic treatments are more effective than placebo' for several conditions.",
+          "Is this evidence as conclusive as the evidence base for some pharmaceutical drugs? No. Research funding for homeopathy is a tiny fraction of pharmaceutical research budgets. The methodological challenges of studying individualised treatment are genuine. Publication bias affects homeopathy research as it affects all medical research.",
+          "But 'not fully proven' is not the same as 'disproven'. Aspirin's mechanism of action was not understood for decades after it was in widespread use. Many widely prescribed pharmaceutical interventions have limited or contested evidence bases. The honest position is: the evidence for homeopathy is incomplete, sometimes contradictory, and worth continuing to study — not: homeopathy is proven to be worthless.",
+          "And thirty years of clinical practice with over a lakh patients? That is not nothing. Clinical evidence from experienced practitioners is a form of evidence — not the highest form, but not irrelevant either.",
+        ],
+      },
+      {
+        heading: "One Final Thought",
+        paragraphs: [
+          "I do not ask you to believe in homeopathy. Belief is not required for treatment to work — as the infant cases demonstrate clearly.",
+          "What I ask is this: if you have a condition that has not responded to conventional treatment, or where conventional treatment is producing side effects you cannot tolerate, or where you simply want to try something that works differently — give classical homeopathy a genuine, properly prescribed, patient trial.",
+          "Come with open eyes and realistic expectations. Engage with a classical homeopath who takes the time to truly understand you. Give it at minimum 6 to 12 months for chronic conditions.",
+          "Then make your judgement based on your own experience.",
+          "That is all any honest practitioner can ask.",
+        ],
+      },
+    ],
+    finalCta: "Ready to Experience Classical Homeopathy? Book a Consultation at Yadav Homeo Clinic →",
+    relatedDiseaseSlug: "skin-diseases",
+    relatedPostSlugs: ["can-homeopathy-cure-vitiligo", "homeopathy-for-autism"],
+    isPublished: true,
+  },
+];

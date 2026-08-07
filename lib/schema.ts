@@ -170,6 +170,51 @@ export function buildFAQPageSchema(faqs: { question: string; answer: string }[])
   };
 }
 
+/**
+ * JSON-LD builder for blog posts (e.g. /blog/[slug]/). Structure matches
+ * GIOS_P2_SEO_Schema_WordPress.docx, Section 7's BlogPosting template.
+ */
+export function buildBlogPostingSchema(post: {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  category: string;
+  secondaryKeywords: string[];
+  publishedDate: string;
+}) {
+  const postUrl = `${siteConfig.url}/blog/${post.slug}/`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.metaDescription,
+    url: postUrl,
+    datePublished: post.publishedDate,
+    dateModified: post.publishedDate,
+    author: {
+      "@type": "Person",
+      "@id": physicianId,
+      name: siteConfig.doctors.physician.name,
+      jobTitle: "Homeopathic Physician, BHMS",
+      url: `${siteConfig.url}/our-doctors/${siteConfig.doctors.physician.slug}/`,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": clinicId,
+      name: siteConfig.name,
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+    articleSection: post.category,
+    keywords: post.secondaryKeywords.join(", "),
+    inLanguage: "en-IN",
+    medicalAudience: {
+      "@type": "MedicalAudience",
+      audienceType: "Patient",
+    },
+  };
+}
+
 export function buildPhysicianSchemas() {
   const founder = {
     "@context": "https://schema.org",

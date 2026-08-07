@@ -137,3 +137,34 @@ export interface ContactSubmission {
   heardFrom: string | null;
   message: string | null;
 }
+
+/**
+ * Blog post types. Source: STEP6_Blog_Posts.docx.
+ */
+export interface BlogPostSection {
+  heading: string;
+  paragraphs?: string[];
+  list?: string[];
+  /** Closing caveat/qualifier rendered after the list, e.g. a "results vary" note. */
+  note?: string;
+}
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  focusKeyword: string;
+  secondaryKeywords: string[];
+  category: string;
+  tags: string[];
+  readTime: string;
+  publishedDate: string;
+  intro: string[];
+  sections: BlogPostSection[];
+  finalCta: string;
+  /** Disease page slug this post most naturally links back to, e.g. "skin-diseases". */
+  relatedDiseaseSlug: string;
+  /** Other blog post slugs to surface as "related reading". */
+  relatedPostSlugs: string[];
+  isPublished: boolean;
+}

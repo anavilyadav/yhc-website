@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Doctor } from "@/lib/supabase/queries/doctors";
+import { getInitials } from "@/lib/utils";
 
 interface Props {
   doctor: Doctor;
@@ -40,11 +41,7 @@ export function DoctorProfileSection({ doctor, photoSide, ctaHref, ctaLabel }: P
                 className="flex h-full w-full items-center justify-center bg-navy/5 font-serif text-4xl text-navy/30"
                 aria-label={`Photo of ${doctor.full_name} coming soon`}
               >
-                {doctor.full_name
-                  .split(" ")
-                  .filter((w) => w.length > 1)
-                  .map((w) => w[0])
-                  .join("")}
+                {getInitials(doctor.full_name)}
               </div>
             )}
           </div>
