@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig, telLink, whatsappLink } from "@/lib/site-config";
 
@@ -36,7 +37,14 @@ export default function Footer() {
   return (
     <footer className="bg-navy px-5 py-12 text-cream">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-2 font-serif text-xl">{siteConfig.name}</div>
+        <div className="mb-3 inline-flex flex-col items-start gap-1">
+          <span className="rounded-md bg-cream-bg px-2.5 py-1.5">
+            <Image src="/logo-full.png" alt={siteConfig.name} width={600} height={529} className="h-12 w-auto" />
+          </span>
+          <span className="pl-0.5 text-[10px] tracking-[0.2em] text-amber-light/80 uppercase">
+            Jaipur · Since {siteConfig.foundingYear}
+          </span>
+        </div>
         <p className="mb-8 font-serif text-sm italic text-amber-light">
           Centre for chronic &amp; complex diseases · Est. {siteConfig.foundingYear} · Jaipur, Rajasthan
         </p>

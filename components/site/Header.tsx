@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig, telLink, whatsappLink } from "@/lib/site-config";
 import { trackEvent } from "@/lib/analytics";
@@ -36,10 +37,25 @@ export default function Header() {
       </div>
 
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
-        <Link href="/" className="flex flex-col leading-tight">
-          <span className="font-serif text-lg text-cream">{siteConfig.name}</span>
-          <span className="text-[10px] tracking-[0.2em] text-amber-light/80 uppercase">
-            Classical Homeopathy · Est. {siteConfig.foundingYear}
+        <Link href="/" className="flex shrink-0 flex-col items-start gap-1">
+          {/*
+            The logo's own wordmark is dark navy (near-identical to this
+            header's background), so it needs a light backing to actually
+            be visible — the logo artwork itself is untouched, just given a
+            proper card to sit on instead of floating directly on navy.
+          */}
+          <span className="rounded-md bg-cream-bg px-2.5 py-1.5">
+            <Image
+              src="/logo-full.png"
+              alt={siteConfig.name}
+              width={600}
+              height={529}
+              priority
+              className="h-11 w-auto md:h-12"
+            />
+          </span>
+          <span className="pl-0.5 text-[10px] tracking-[0.2em] text-amber-light/80 uppercase">
+            Jaipur · Since {siteConfig.foundingYear}
           </span>
         </Link>
 

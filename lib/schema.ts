@@ -35,6 +35,8 @@ export function buildClinicSchema() {
     description:
       "Jaipur's most trusted classical homeopathy clinic since 1991. Specialising in vitiligo, autism, kidney disease, autoimmune conditions and all chronic diseases. Founded by Dr T P Yadav. Now led by Dr T P Yadav and Dr Anavil Yadav (BHMS). 1 lakh+ patients treated.",
     url: siteConfig.url,
+    logo: `${siteConfig.url}/logo-full.png`,
+    image: `${siteConfig.url}/logo-full.png`,
     telephone: siteConfig.phone.e164,
     foundingDate: String(siteConfig.foundingYear),
     medicalSpecialty: [
@@ -240,6 +242,7 @@ export function buildBlogPostingSchema(post: {
       "@type": "Organization",
       "@id": clinicId,
       name: siteConfig.name,
+      logo: { "@type": "ImageObject", url: `${siteConfig.url}/logo-full.png` },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
     articleSection: post.category,
