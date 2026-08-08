@@ -13,7 +13,7 @@ import styles from "./contact.module.css";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Contact Yadav Homeo Clinic | Jaipur Homeopathy | +91-8949427254",
+  title: { absolute: "Contact Yadav Homeo Clinic | Jaipur Homeopathy | +91-8949427254" },
   description:
     "Contact Yadav Homeo Clinic in Jaipur. Two clinic locations — main branch & Jagatpura. Call or WhatsApp: +91-8949427254. Online consultations worldwide. We respond to every enquiry.",
   alternates: {
@@ -122,6 +122,13 @@ export default async function ContactPage() {
                 Prefer writing it out? Fill the form and our team will get
                 back to you personally, usually the same day.
               </p>
+              <ul className={styles.trustStats}>
+                {siteConfig.stats.map((stat) => (
+                  <li key={stat.label}>
+                    <strong>{stat.value}</strong> {stat.label}
+                  </li>
+                ))}
+              </ul>
               <div className={styles.socialRow} aria-label="Follow us">
                 {siteConfig.social.facebook && (
                   <a

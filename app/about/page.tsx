@@ -17,7 +17,7 @@ import { siteConfig, whatsappLink } from "@/lib/site-config";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: aboutSeo.title,
+  title: { absolute: aboutSeo.title },
   description: aboutSeo.description,
   alternates: { canonical: `${siteConfig.url}/about/` },
   openGraph: {

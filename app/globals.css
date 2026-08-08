@@ -20,7 +20,14 @@
   --color-green-tint: #f1f6e9;
   --color-white: #ffffff;
   --color-text-mid: #4a5a72;
-  --color-text-light: #8b96a8;
+  /*
+    Darkened from the original #8b96a8 — that value failed WCAG AA contrast
+    (2.8-3.0:1) against both white and cream-bg, the two backgrounds it's
+    most used on (disclaimers, timestamps, meta captions). This value hits
+    ~4.6-5.0:1 on both while staying visually the lightest/most muted tier
+    in the text hierarchy (text-mid stays darker/primary at ~6.5-7:1).
+  */
+  --color-text-light: #697080;
   --color-border: rgba(26, 42, 65, 0.12);
   --color-border-amber: rgba(212, 160, 74, 0.35);
 

@@ -36,10 +36,14 @@ export function PatientStoriesFilter({
       </div>
 
       <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
-        {visible.map((story) => (
+        {visible.map((story, index) => (
           <blockquote
             key={story.id}
-            className="rounded-sm border border-border-amber border-l-4 border-l-amber bg-cream-bg p-6"
+            // A lone leftover card in a 2-column grid (odd count) reads as
+            // a mistake rather than a deliberate layout — widen it instead.
+            className={`rounded-sm border border-border-amber border-l-4 border-l-amber bg-cream-bg p-6 ${
+              visible.length % 2 === 1 && index === visible.length - 1 ? "md:col-span-2" : ""
+            }`}
           >
             <p className="text-xs font-bold uppercase tracking-wide text-amber-dark">{story.title}</p>
             <p className="mt-3 font-serif text-[15px] italic leading-relaxed text-text-mid">

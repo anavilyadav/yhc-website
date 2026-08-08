@@ -20,7 +20,7 @@ export default function FinalCTA() {
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
           <a
-            href={whatsappLink()}
+            href={whatsappLink("Hello, I'd like to book an in-clinic appointment at Yadav Homeo Clinic, Jaipur.")}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full rounded-sm bg-amber px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"

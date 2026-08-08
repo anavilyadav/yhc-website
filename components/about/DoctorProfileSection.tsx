@@ -136,7 +136,7 @@ export function DoctorProfileSection({ doctor, photoSide, ctaHref, ctaLabel }: P
 
           <a
             href={ctaHref}
-            className="mt-10 inline-block rounded-lg bg-amber px-7 py-3.5 text-sm font-bold text-navy transition hover:bg-amber-dark hover:text-cream focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
+            className="mt-10 inline-block rounded-lg bg-amber px-7 py-3.5 text-sm font-bold text-navy transition hover:bg-navy hover:text-cream focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
           >
             {ctaLabel} →
           </a>

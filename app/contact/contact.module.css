@@ -192,6 +192,35 @@
   font-size: 22px;
 }
 
+/* Fills what would otherwise be a large empty gap next to the taller form
+   column when the social icons row has nothing configured yet — reuses the
+   same approved stats shown on the homepage, not new content. */
+.trustStats {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: grid;
+  gap: 14px;
+}
+
+.trustStats li {
+  font-size: 15px;
+  color: var(--text-mid);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.trustStats li:last-child {
+  border-bottom: none;
+}
+
+.trustStats strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: var(--navy);
+}
+
 .socialRow {
   display: flex;
   gap: 12px;

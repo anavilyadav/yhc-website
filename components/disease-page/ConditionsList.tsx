@@ -6,12 +6,15 @@ export default function ConditionsList({ intro, conditions }: { intro: string; c
         <p className="mt-3 text-[15px] leading-relaxed text-text-mid">{intro}</p>
 
         <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-          {conditions.map((condition) => {
+          {conditions.map((condition, index) => {
             const [name, detail] = condition.split(" — ");
+            const isStrandedLast = conditions.length % 2 === 1 && index === conditions.length - 1;
             return (
               <li
                 key={condition}
-                className="flex gap-2.5 rounded-sm border border-border-amber bg-cream-bg p-3.5"
+                className={`flex gap-2.5 rounded-sm border border-border-amber bg-cream-bg p-3.5 ${
+                  isStrandedLast ? "sm:col-span-2" : ""
+                }`}
               >
                 <span aria-hidden className="mt-0.5 text-green">
                   ✔

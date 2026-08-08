@@ -15,11 +15,18 @@ export default function ConditionsGrid({ diseases }: { diseases: Disease[] }) {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {diseases.map((disease) => (
+          {diseases.map((disease, index) => (
             <Link
               key={disease.slug}
               href={`/${disease.slug}/`}
-              className="group relative overflow-hidden rounded-sm border border-border-amber bg-white p-5 transition-colors hover:border-amber"
+              // A lone card left over in the final row (e.g. 16 items in a
+              // 3-column grid) reads as a layout mistake — centre it under
+              // the row above instead of leaving it stranded on the left.
+              className={`group relative overflow-hidden rounded-sm border border-border-amber bg-white p-5 transition-colors hover:border-amber ${
+                diseases.length % 3 === 1 && index === diseases.length - 1
+                  ? "lg:col-start-2"
+                  : ""
+              }`}
             >
               <span
                 className={`absolute inset-x-0 top-0 h-[3px] ${

@@ -59,8 +59,15 @@ export function PreparationChecklist() {
           </p>
         </div>
         <div className={styles.checklistGrid}>
-          {GROUPS.map((group) => (
-            <div className={styles.checklistGroup} key={group.title}>
+          {GROUPS.map((group, index) => (
+            <div
+              className={styles.checklistGroup}
+              key={group.title}
+              // Odd number of groups (5) in a 2-column grid leaves the last
+              // one stranded alone with an empty gap beside it — span it
+              // full-width instead so the row reads intentionally.
+              style={index === GROUPS.length - 1 ? { gridColumn: "1 / -1" } : undefined}
+            >
               <h3>{group.title}</h3>
               <ul>
                 {group.items.map((item) => (

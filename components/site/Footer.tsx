@@ -129,7 +129,7 @@ export default function Footer() {
         <hr className="my-8 border-amber/20" />
 
         <div className="rounded-sm bg-black/20 p-4">
-          <p className="text-[12px] leading-relaxed text-cream/50">
+          <p className="text-[12px] leading-relaxed text-cream/70">
             Medical Disclaimer: Information on this website is for educational purposes only.
             Treatment outcomes vary between individuals. Homeopathic treatment at Yadav Homeo
             Clinic is provided under qualified medical supervision in accordance with the Drug
@@ -139,7 +139,7 @@ export default function Footer() {
 
         <hr className="my-8 border-amber/20" />
 
-        <div className="flex flex-col items-start justify-between gap-2 text-[11px] text-cream/40 sm:flex-row sm:items-center">
+        <div className="flex flex-col items-start justify-between gap-2 text-[11px] text-cream/65 sm:flex-row sm:items-center">
           <span>
             © {new Date().getFullYear()} {siteConfig.name}, Jaipur. All rights reserved.
           </span>
