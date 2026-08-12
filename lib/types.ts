@@ -118,15 +118,25 @@ export interface ClinicLocation {
 
 export interface PricingPlan {
   id: string;
-  code:
-    | "in_clinic_first"
-    | "in_clinic_followup"
-    | "online_first"
-    | "online_followup";
+  /**
+   * Free-form unique slug — not a fixed union. Dr Anavil can add new plans
+   * (packages, seasonal offers) as new Supabase rows without a code change;
+   * the original 4 codes (in_clinic_first, in_clinic_followup, online_first,
+   * online_followup) still exist as the starting seed but aren't the only
+   * ones allowed anymore.
+   */
+  code: string;
   title: string;
   mode: ConsultationMode;
   priceInr: number | null;
+  /** Set alongside a lower priceInr to show a "was ₹X" strikethrough for a discount/seasonal offer. */
+  originalPriceInr?: number | null;
+  /** Small pill shown on the card, e.g. "Most Chosen" or "Festive Offer — 20% Off". */
+  badge?: string | null;
   inclusions: string[];
+  /** Lets Dr Anavil hide a plan without deleting it. Defaults to true. */
+  isActive?: boolean;
+  sortOrder?: number;
 }
 
 export interface FaqItem {

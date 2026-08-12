@@ -596,6 +596,54 @@ misleading way:
   placeholders per the existing pattern; fill in via Vercel env vars
   whenever confirmed.
 
+## What's in this delivery — Razorpay checkout + self-service pricing
+
+The Appointment page's fees were previously hardcoded numbers with a
+static "WhatsApp us" CTA. Dr Anavil asked for pricing he can change
+himself at any time (including running seasonal discounts) plus a real
+online payment option, so this pass makes both possible.
+
+**Pricing is now fully self-service (once Supabase is connected):**
+- `pricing_plans` table gained `original_price_inr` (show a "was ₹X"
+  strikethrough), `badge` (e.g. "Festive Offer — 20% Off"), `is_active`
+  (hide a plan without deleting it), and `sort_order` — all editable
+  directly in the Supabase table editor, no code change or redeploy.
+- The `code` column's old 4-value CHECK constraint is gone — you can add
+  entirely new plans/packages (e.g. a 3-month package) as new rows.
+- Until Supabase is connected, prices come from `lib/data/appointment.ts`'s
+  `FALLBACK_PRICING` — tell me new numbers any time and I'll update it.
+
+**Razorpay checkout** — built, but inert until you provide keys (same
+pattern as GA4/Supabase — nothing breaks with them unset, the page just
+keeps showing the WhatsApp booking flow it has today):
+- Uses Razorpay's **Orders API** (dynamic amount per request), not their
+  static Payment Buttons — this is what lets a price change in Supabase
+  reach checkout immediately with no code change.
+- The amount charged is always looked up server-side from the live plan
+  record (`app/api/razorpay/create-order/route.ts`) — never trusts a
+  number the browser sends, so a tampered request can't pay less than
+  the real price.
+- Payment signature is verified server-side (`app/api/razorpay/verify/route.ts`,
+  HMAC SHA256, constant-time comparison) before the patient is sent to
+  `/booking-confirmed/` — a real payment, not just a client-side callback.
+- `/booking-confirmed/` is a soft-gated page (not in nav, footer, or
+  sitemap.xml, `noindex`) — reachable only via a completed payment,
+  matching the pattern the sitemap master doc specified for this.
+
+**What you need to do:**
+1. Create a Razorpay account, complete KYC, generate API keys (Test Mode
+   first). Add `NEXT_PUBLIC_RAZORPAY_KEY_ID` and `RAZORPAY_KEY_SECRET` in
+   Vercel → Project Settings → Environment Variables.
+2. Decide final pricing (or keep it flexible/promotional — that's exactly
+   what `original_price_inr` + `badge` are for).
+3. **Alerts:** per your choice, no custom notification code was built —
+   Razorpay's own dashboard sends SMS/email for every payment automatically,
+   and their mobile app shows live payments. Turn this on in Razorpay
+   Dashboard → Settings → Notifications once your account exists. Patient
+   name/phone are attached to every order's `notes` field specifically so
+   those native alerts show who paid, not just an amount.
+4. Test in Test Mode end-to-end before flipping to Live keys.
+
 ## Verified
 
 - `npm run build` -- clean. Homepage + all 17 disease pages (STEP4 +

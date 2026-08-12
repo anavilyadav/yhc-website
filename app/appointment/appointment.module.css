@@ -121,19 +121,46 @@
 
 .cardCta {
   display: block;
+  width: 100%;
   text-align: center;
   background: var(--amber);
   color: var(--navy);
   font-weight: bold;
   font-size: 14px;
+  font-family: var(--font-sans);
   padding: 12px;
+  border: none;
   border-radius: var(--radius-sm);
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .cardCta:hover {
   background: var(--amber-dark);
   color: var(--white);
+}
+
+.cardCta:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.payInput {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.payError {
+  font-size: 12.5px;
+  color: #a32d2d;
+  margin: 0 0 8px;
 }
 
 .cardSecondary {
@@ -204,10 +231,32 @@
 }
 
 .priceCard {
+  position: relative;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 22px;
+}
+
+.priceBadge {
+  position: absolute;
+  top: -11px;
+  right: 18px;
+  background: var(--green);
+  color: var(--white);
+  font-size: 10.5px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.3px;
+}
+
+.priceWas {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--text-light);
+  text-decoration: line-through;
+  margin-right: 8px;
 }
 
 .priceCardMode {

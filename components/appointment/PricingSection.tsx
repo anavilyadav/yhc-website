@@ -1,4 +1,7 @@
 import type { PricingPlan } from "@/lib/types";
+import { isRazorpayConfigured } from "@/lib/razorpay";
+import { RazorpayCheckoutButton } from "./RazorpayCheckoutButton";
+import { whatsappLink } from "@/lib/site-config";
 import styles from "@/app/appointment/appointment.module.css";
 
 function formatMode(mode: PricingPlan["mode"]) {
@@ -6,6 +9,8 @@ function formatMode(mode: PricingPlan["mode"]) {
 }
 
 export function PricingSection({ plans }: { plans: PricingPlan[] }) {
+  const razorpayReady = isRazorpayConfigured();
+
   return (
     <section className={styles.section} id="fees">
       <div className="container">
@@ -15,10 +20,16 @@ export function PricingSection({ plans }: { plans: PricingPlan[] }) {
         <div className={styles.pricingGrid}>
           {plans.map((plan) => (
             <div className={styles.priceCard} key={plan.id}>
+              {plan.badge && <div className={styles.priceBadge}>{plan.badge}</div>}
               <div className={styles.priceCardMode}>{formatMode(plan.mode)}</div>
               <h3>{plan.title}</h3>
               {plan.priceInr !== null ? (
                 <div className={styles.priceAmount}>
+                  {plan.originalPriceInr && plan.originalPriceInr > plan.priceInr && (
+                    <span className={styles.priceWas}>
+                      ₹{plan.originalPriceInr.toLocaleString("en-IN")}
+                    </span>
+                  )}
                   ₹{plan.priceInr.toLocaleString("en-IN")}
                 </div>
               ) : (
@@ -31,6 +42,19 @@ export function PricingSection({ plans }: { plans: PricingPlan[] }) {
                   <li key={line}>{line}</li>
                 ))}
               </ul>
+              {plan.priceInr !== null && razorpayReady && (
+                <RazorpayCheckoutButton plan={plan} />
+              )}
+              {plan.priceInr !== null && !razorpayReady && (
+                <a
+                  href={whatsappLink(`Hello, I'd like to book "${plan.title}" (₹${plan.priceInr.toLocaleString("en-IN")}).`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.cardCta}
+                >
+                  Book on WhatsApp →
+                </a>
+              )}
             </div>
           ))}
         </div>

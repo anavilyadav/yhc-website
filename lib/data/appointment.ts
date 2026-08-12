@@ -28,6 +28,8 @@ const FALLBACK_PRICING: PricingPlan[] = [
       "Constitutional remedy prescription",
       "Detailed guidance on diet, lifestyle and what to expect",
     ],
+    isActive: true,
+    sortOrder: 1,
   },
   {
     id: "fallback-in-clinic-followup",
@@ -41,6 +43,8 @@ const FALLBACK_PRICING: PricingPlan[] = [
       "Report review if applicable",
       "Guidance for the next 4 to 6 weeks",
     ],
+    isActive: true,
+    sortOrder: 2,
   },
   {
     id: "fallback-online-first",
@@ -55,6 +59,8 @@ const FALLBACK_PRICING: PricingPlan[] = [
       "Diet and lifestyle instructions",
       "Available to patients across India and internationally",
     ],
+    isActive: true,
+    sortOrder: 3,
   },
   {
     id: "fallback-online-followup",
@@ -68,6 +74,8 @@ const FALLBACK_PRICING: PricingPlan[] = [
       "Report analysis",
       "Guidance for the next follow-up period",
     ],
+    isActive: true,
+    sortOrder: 4,
   },
 ];
 
@@ -158,14 +166,25 @@ const FALLBACK_FAQS: FaqItem[] = [
   },
 ];
 
+/**
+ * Pricing lives in Supabase so Dr Anavil can change any fee, run a
+ * seasonal discount (fill original_price_inr + a lower price_inr + a
+ * badge like "Festive Offer"), add a new package, or hide a plan —
+ * all from the Supabase table editor, no code change or redeploy needed.
+ * Falls back to FALLBACK_PRICING (identical to the confirmed seed) only
+ * when Supabase isn't configured yet or the table is empty.
+ */
 export async function getPricingPlans(): Promise<PricingPlan[]> {
   const supabase = getSupabaseServerClient();
   if (!supabase) return FALLBACK_PRICING;
 
   const { data, error } = await supabase
     .from("pricing_plans")
-    .select("id, code, title, mode, price_inr, inclusions")
-    .order("code");
+    .select(
+      "id, code, title, mode, price_inr, original_price_inr, badge, inclusions, is_active, sort_order"
+    )
+    .eq("is_active", true)
+    .order("sort_order");
 
   if (error || !data || data.length === 0) return FALLBACK_PRICING;
 
@@ -175,8 +194,23 @@ export async function getPricingPlans(): Promise<PricingPlan[]> {
     title: row.title,
     mode: row.mode,
     priceInr: row.price_inr,
+    originalPriceInr: row.original_price_inr,
+    badge: row.badge,
     inclusions: row.inclusions ?? [],
+    isActive: row.is_active,
+    sortOrder: row.sort_order,
   }));
+}
+
+/**
+ * Same as getPricingPlans but looked up by a single plan code, used by
+ * the Razorpay order-creation route — the checkout amount always comes
+ * from this server-side lookup, never from a number the client submits,
+ * so a tampered request can't pay less than the real live price.
+ */
+export async function getPricingPlanByCode(code: string): Promise<PricingPlan | null> {
+  const plans = await getPricingPlans();
+  return plans.find((plan) => plan.code === code) ?? null;
 }
 
 export async function getAppointmentFaqs(): Promise<FaqItem[]> {
