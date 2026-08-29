@@ -6,6 +6,13 @@ import type { DiseaseSubPageContent } from "@/lib/types";
  * testimonial exists for cerebral palsy specifically (the existing
  * nervous-system-disease page testimonial is about migraine) — omitted
  * rather than invented, per the discipline applied in STEP11.
+ *
+ * Expanded from the original 3-section version with "Types and Severity
+ * of Cerebral Palsy" (standard medical classification, not a new clinical
+ * claim), a realistic month-by-month timeline matching the pattern used
+ * on the Vitiligo/Psoriasis/Down Syndrome sub-pages, a "Why Yadav Homeo
+ * Clinic" section, and 2 more FAQs — each appropriately hedged and
+ * consistent with the page's existing "supportive, not curative" stance.
  */
 export const CEREBRAL_PALSY_PAGE: DiseaseSubPageContent = {
   slug: "cerebral-palsy-treatment-jaipur",
@@ -44,6 +51,55 @@ export const CEREBRAL_PALSY_PAGE: DiseaseSubPageContent = {
       note: "Results vary by the type and severity of Cerebral Palsy, age at which treatment begins, and consistency of the accompanying therapy programme. We give an honest, case-specific assessment at the first consultation.",
     },
     {
+      heading: "Types and Severity of Cerebral Palsy We Support",
+      list: [
+        "Spastic Cerebral Palsy — the most common type, involving stiff, tight muscles and exaggerated reflexes; may affect one limb, one side of the body, or all four limbs",
+        "Athetoid (Dyskinetic) Cerebral Palsy — involuntary, uncontrolled movements affecting the hands, arms, feet, legs, and sometimes the face and tongue",
+        "Ataxic Cerebral Palsy — affects balance and coordination, producing an unsteady gait and difficulty with precise movements",
+        "Hypotonic Cerebral Palsy — reduced muscle tone, floppiness, and delayed motor milestones",
+        "Mixed Cerebral Palsy — a combination of the above patterns, most commonly spastic and athetoid features together",
+        "By distribution — Diplegia (legs more affected than arms), Hemiplegia (one side of the body), Quadriplegia (all four limbs, usually the most involved)",
+      ],
+      note: "We take on cases across all severity levels — from a child who walks independently with mild stiffness to a child who is fully dependent for all activities of daily living. The realistic goals of constitutional support are set separately for each severity level at the first consultation.",
+    },
+    {
+      heading: "What to Expect: A Realistic Timeline for Supportive Improvement",
+      subsections: [
+        {
+          label: "Months 1–2",
+          paragraphs: [
+            "Constitutional assessment and first prescription, based on the child's complete history and current status. Sleep and digestive function are usually the first areas where parents notice a shift.",
+          ],
+        },
+        {
+          label: "Months 2–4",
+          paragraphs: [
+            "Many families report reduced drooling, calmer overall demeanour, and — for children with spasticity — some easing of muscle stiffness that physiotherapists often notice during sessions.",
+          ],
+        },
+        {
+          label: "Months 4–8",
+          paragraphs: [
+            "For responding children, alertness and engagement during therapy sessions typically improve further. This is usually when parents and therapists together notice that a given hour of physiotherapy is achieving more than it was before.",
+          ],
+        },
+        {
+          label: "Months 8 and beyond",
+          paragraphs: [
+            "Constitutional treatment continues long-term, adjusted as the child's needs change with growth. This is a sustained support programme, not a fixed course with a defined end point.",
+          ],
+        },
+      ],
+      note: "This timeline describes supportive changes in sleep, digestion, spasticity and engagement — not reversal of the underlying brain injury or guaranteed motor milestones. Every child's pattern is different, and we assess progress honestly at each follow-up.",
+    },
+    {
+      heading: "Why Yadav Homeo Clinic for Cerebral Palsy",
+      paragraphs: [
+        "Supporting children with complex neurological and developmental conditions has been a defining part of our practice since Dr T P Yadav founded the clinic in 1991. Families of children with Cerebral Palsy are among those who come to us specifically because they want a doctor who will sit with the whole child — not only the diagnosis.",
+        "Dr Anavil Yadav now leads most of these consultations, working closely with the physiotherapists, occupational therapists and paediatric neurologists already involved in each child's care, so that the constitutional treatment plan supports — and never conflicts with — the rest of the therapy team.",
+      ],
+    },
+    {
       heading: "What We Ask Families to Continue",
       list: [
         "All prescribed physiotherapy, occupational therapy and speech therapy sessions — without interruption",
@@ -73,6 +129,16 @@ export const CEREBRAL_PALSY_PAGE: DiseaseSubPageContent = {
       question: "Is online consultation possible for a child with Cerebral Palsy?",
       answer:
         "Yes. We take a detailed history from parents covering pregnancy, birth, developmental milestones, current motor and cognitive status, sleep, digestion and behaviour. Video of the child's movement patterns, shared over WhatsApp, is often helpful alongside this history.",
+    },
+    {
+      question: "Can homeopathy reduce spasticity or muscle stiffness?",
+      answer:
+        "In our clinical experience, a number of children show reduced muscle stiffness alongside their physiotherapy once constitutional treatment is underway. This is a supportive effect on the child's overall neuromuscular state, not a structural change to the brain injury causing the spasticity, and it varies from child to child.",
+    },
+    {
+      question: "Does the severity of my child's Cerebral Palsy affect how much homeopathy can help?",
+      answer:
+        "Yes, and we are upfront about this at the first consultation. Children with milder involvement (for example, independent walkers with some stiffness) often show more visible functional gains, while children with more extensive involvement typically see the benefit mainly in comfort, sleep, digestion and reduced infection frequency. Both are valuable outcomes, but they are different, and we set expectations honestly based on your child's specific presentation.",
     },
   ],
   finalCta: "Support Your Child's Progress With Constitutional Care. Book a Consultation.",

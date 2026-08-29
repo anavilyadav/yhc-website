@@ -8,6 +8,11 @@ import type { DiseaseSubPageContent } from "@/lib/types";
  * testimonial exists for psoriasis specifically (the existing skin-
  * diseases page testimonial is about vitiligo) — omitted rather than
  * invented, per the same discipline applied in STEP11.
+ *
+ * Expanded from the original 4-section version with a realistic
+ * month-by-month timeline, "Types of Psoriasis We Treat", a "Why Yadav
+ * Homeo Clinic" section, and 2 more FAQs (including a factual, safe
+ * "is it contagious" question).
  */
 export const PSORIASIS_PAGE: DiseaseSubPageContent = {
   slug: "psoriasis-treatment-jaipur",
@@ -47,6 +52,36 @@ export const PSORIASIS_PAGE: DiseaseSubPageContent = {
       note: "Individual results vary based on disease duration, extent of involvement, type of psoriasis and constitutional factors. We give an honest, case-specific assessment at the first consultation rather than a general promise.",
     },
     {
+      heading: "Psoriasis Treatment Timeline: What to Expect Month by Month",
+      subsections: [
+        {
+          label: "Months 1–3",
+          paragraphs: [
+            "Constitutional assessment and first prescription. Most patients notice reduced itching and slightly less frequent flare-ups within this window — often the first sign that the underlying immune overactivity is responding.",
+          ],
+        },
+        {
+          label: "Months 3–6",
+          paragraphs: [
+            "Existing plaques typically begin to thin and flatten. Scaling reduces. Many patients start tapering their topical steroid use during this period, always gradually and with their dermatologist's agreement.",
+          ],
+        },
+        {
+          label: "Months 6–12",
+          paragraphs: [
+            "Flare frequency continues to drop for responding patients. Scalp and nail involvement — usually the slowest areas to respond — start showing visible improvement. Prescription may be adjusted based on the response pattern seen so far.",
+          ],
+        },
+        {
+          label: "Months 12–18",
+          paragraphs: [
+            "For patients who have responded well, this is where prolonged remission is most commonly seen. For more extensive or long-standing psoriasis, treatment continues with the same constitutional approach, adjusted as needed.",
+          ],
+        },
+      ],
+      note: "Timelines are based on our clinical experience at Yadav Homeo Clinic and are not a guarantee for every individual. Response speed depends on disease duration, extent of body surface involved, type of psoriasis and how consistently treatment is followed.",
+    },
+    {
       heading: "Types of Psoriasis We Treat",
       list: [
         "Plaque Psoriasis — the most common form, thick raised patches with silvery scale, typically on elbows, knees and scalp",
@@ -62,10 +97,16 @@ export const PSORIASIS_PAGE: DiseaseSubPageContent = {
       paragraphs: [
         "Chronic skin disease has been the deepest part of our clinical practice since 1991. Psoriasis patients arrive here after years of managing flares with topical treatment alone, looking for an approach that addresses why the flares keep happening rather than only what to put on them when they do.",
         "The constitutional remedy is never chosen from the diagnosis alone — it is chosen from the complete picture of the individual patient, which is why two psoriasis patients at our clinic will often be prescribed two entirely different remedies. This individualisation is what classical homeopathy offers that a standard topical protocol cannot.",
+        "Dr Anavil Yadav now sees the majority of psoriasis cases at the clinic, working from the same constitutional framework his father built — informed, additionally, by his engagement with current understanding of autoimmune skin disease.",
       ],
     },
   ],
   faqs: [
+    {
+      question: "Is psoriasis contagious?",
+      answer:
+        "No. Psoriasis is an autoimmune condition, not an infection — it cannot spread from person to person through touch, shared clothing, water, or any other form of contact. It is entirely safe to be around someone with psoriasis.",
+    },
     {
       question: "Can homeopathy cure psoriasis permanently?",
       answer:
