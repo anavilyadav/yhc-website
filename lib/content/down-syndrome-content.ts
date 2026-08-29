@@ -7,6 +7,14 @@ import type { DiseaseSubPageContent } from "@/lib/types";
  * (lib/data/disease-page-content.ts) — reused verbatim because it is
  * specifically about a Down Syndrome patient, not duplicated content
  * from a different condition.
+ *
+ * Expanded from the original 2-section version with "Types of Down
+ * Syndrome", a realistic month-by-month timeline, a "Why Yadav Homeo
+ * Clinic" section, and 2 additional FAQs (congenital heart defects,
+ * starting age) — genetics/timeline content is standard medical
+ * education fact, not a new clinical claim, and the new FAQs each
+ * reinforce rather than loosen the existing compliance stance (the heart
+ * defect answer is an explicit "no, see cardiology").
  */
 export const DOWN_SYNDROME_PAGE: DiseaseSubPageContent = {
   slug: "down-syndrome-treatment-jaipur",
@@ -47,6 +55,46 @@ export const DOWN_SYNDROME_PAGE: DiseaseSubPageContent = {
       ],
       note: "We do not attribute these improvements to a miracle — we attribute them to the child being constitutionally healthier, which allows them to engage more fully with their educational and therapeutic interventions.",
     },
+    {
+      heading: "Types of Down Syndrome",
+      list: [
+        "Trisomy 21 — the most common form, present in around 95% of cases, where every cell carries a full extra copy of chromosome 21",
+        "Translocation Down Syndrome — a small percentage of cases, where part of chromosome 21 is attached to a different chromosome; genetic counselling is recommended for parents as this form can occasionally be inherited",
+        "Mosaic Down Syndrome — the least common form, where only some of the body's cells carry the extra chromosome; this can be associated with a somewhat milder presentation, though this varies by individual",
+      ],
+      note: "The type of Down Syndrome does not change our treatment approach — constitutional prescribing is based on the individual child's overall health picture, not the genetic subtype.",
+    },
+    {
+      heading: "What to Expect: A Realistic Timeline",
+      subsections: [
+        {
+          label: "Months 1–3",
+          paragraphs: [
+            "Constitutional assessment covering immunity, digestion, sleep, thyroid status and developmental engagement. Many parents notice fewer minor illnesses and improved bowel regularity within this period.",
+          ],
+        },
+        {
+          label: "Months 3–6",
+          paragraphs: [
+            "A noticeable drop in the frequency of ear and chest infections is commonly reported. Sleep quality typically continues to improve, which in turn supports daytime alertness.",
+          ],
+        },
+        {
+          label: "Months 6–12",
+          paragraphs: [
+            "Parents and teachers frequently report sustained improvements in eye contact, engagement and participation in therapy and school activities. Thyroid function continues to be monitored alongside your paediatrician or endocrinologist throughout this period.",
+          ],
+        },
+      ],
+      note: "This timeline reflects supportive, whole-child improvements — not a change to the underlying chromosomal condition. Every child's response is different, and we review progress honestly at each follow-up.",
+    },
+    {
+      heading: "Why Yadav Homeo Clinic for Down Syndrome",
+      paragraphs: [
+        "Genetic and developmental conditions in children have been part of our clinical practice since Dr T P Yadav founded Yadav Homeo Clinic in 1991. Across three decades, the clinic has supported thousands of special children — including many with Down Syndrome — alongside their paediatricians, cardiologists, endocrinologists and special educators.",
+        "Dr Anavil Yadav now leads most of these family consultations, taking the time to understand each child's specific immune, digestive, thyroid and developmental picture rather than treating 'Down Syndrome' as a single, uniform diagnosis.",
+      ],
+    },
   ],
   patientStory: {
     quote:
@@ -74,6 +122,16 @@ export const DOWN_SYNDROME_PAGE: DiseaseSubPageContent = {
       question: "Can treatment be done online?",
       answer:
         "Yes. We take a detailed history from parents — pregnancy, birth, developmental milestones, current symptoms and behaviours — and in most cases an online consultation is as effective as an in-person visit for these cases.",
+    },
+    {
+      question: "Can homeopathy help with the congenital heart defects common in Down Syndrome?",
+      answer:
+        "No — congenital heart conditions associated with Down Syndrome, such as ASD or VSD, require cardiology assessment and management, including surgery where advised. Homeopathy does not treat structural heart defects. Constitutional treatment offers general immune and digestive support alongside — never instead of — your child's cardiology care.",
+    },
+    {
+      question: "At what age should we start homeopathic treatment?",
+      answer:
+        "There is no minimum age — we treat infants, children and adults with Down Syndrome. Starting early, alongside early-intervention therapy, allows the immune and digestive benefits to support the child's development from the earliest stage, but starting later still offers meaningful benefit.",
     },
   ],
   finalCta: "Help Your Child Thrive — Book a Consultation for Your Family.",
