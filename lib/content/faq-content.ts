@@ -41,7 +41,7 @@ export const faqCategories: FaqCategory[] = [
       {
         question: "Yadav Homeo Clinic mein consultation fee kitni hai?",
         answer:
-          "Consultation fee ke liye please WhatsApp karein +91-8949427254 ya directly clinic visit karein. In-clinic aur online dono ke liye alag fee structure available hai. Package options for longer treatment courses discuss ki jaati hain pehli consultation mein.",
+          "In-clinic consultation ki fee: pehli visit ₹3,500, follow-up ₹2,500. Online consultation ki fee abhi confirm ho rahi hai — please WhatsApp karein +91-8949427254, hum aapko upfront bata denge. Package options for longer treatment courses discuss ki jaati hain pehli consultation mein.",
       },
       {
         question: "Kya online consultation in-clinic jitni effective hai?",

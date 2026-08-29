@@ -7,9 +7,26 @@ interface Props {
   photoSide: "left" | "right";
   ctaHref: string;
   ctaLabel: string;
+  /**
+   * "full" (default) is the dedicated /our-doctors/[slug] profile page —
+   * every bio paragraph, philosophy quote, specialisations, consultation
+   * points. "teaser" is for the About page: first bio paragraph only,
+   * linking to the full profile for the rest. Both pages previously
+   * rendered the exact same doctor record in full, which is duplicate
+   * content across two URLs — teaser mode is the fix.
+   */
+  variant?: "full" | "teaser";
 }
 
-export function DoctorProfileSection({ doctor, photoSide, ctaHref, ctaLabel }: Props) {
+export function DoctorProfileSection({
+  doctor,
+  photoSide,
+  ctaHref,
+  ctaLabel,
+  variant = "full",
+}: Props) {
+  const isTeaser = variant === "teaser";
+  const bioParagraphs = isTeaser ? doctor.bio_paragraphs.slice(0, 1) : doctor.bio_paragraphs;
   const hasCredentialBlock =
     doctor.college_name || doctor.registration_number || doctor.credential_name;
 
@@ -82,14 +99,14 @@ export function DoctorProfileSection({ doctor, photoSide, ctaHref, ctaLabel }: P
           )}
 
           <div className="mt-6 space-y-4">
-            {doctor.bio_paragraphs.map((paragraph, i) => (
+            {bioParagraphs.map((paragraph, i) => (
               <p key={i} className="text-base leading-relaxed text-text-mid">
                 {paragraph}
               </p>
             ))}
           </div>
 
-          {doctor.philosophy_quote && (
+          {!isTeaser && doctor.philosophy_quote && (
             <blockquote className="mt-8 rounded-lg border border-green/25 bg-green-tint px-6 py-5">
               <p className="font-serif text-lg italic leading-relaxed text-navy">
                 &ldquo;{doctor.philosophy_quote}&rdquo;
@@ -100,7 +117,7 @@ export function DoctorProfileSection({ doctor, photoSide, ctaHref, ctaLabel }: P
             </blockquote>
           )}
 
-          {doctor.specializations.length > 0 && (
+          {!isTeaser && doctor.specializations.length > 0 && (
             <div className="mt-8">
               <h3 className="text-sm font-bold uppercase tracking-wide text-navy">
                 Specialisations
@@ -118,7 +135,7 @@ export function DoctorProfileSection({ doctor, photoSide, ctaHref, ctaLabel }: P
             </div>
           )}
 
-          {doctor.consultation_points && doctor.consultation_points.length > 0 && (
+          {!isTeaser && doctor.consultation_points && doctor.consultation_points.length > 0 && (
             <div className="mt-10">
               <h3 className="font-serif text-xl text-navy">
                 What a Consultation With {doctor.full_name.replace("Dr ", "Dr ")} Looks Like

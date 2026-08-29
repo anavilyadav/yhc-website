@@ -1,47 +1,31 @@
-"use client";
-
-import { useState } from "react";
 import type { FaqItem } from "@/lib/types";
 import styles from "./FaqAccordion.module.css";
 
+/**
+ * Native <details>/<summary> — no JS needed, and critically, unlike a
+ * client-toggled `hidden` attribute, browsers and crawlers (Google has
+ * confirmed this explicitly) still index the content of a *closed*
+ * <details> panel. The previous version used React state + the `hidden`
+ * attribute, which is a legitimate "not accessible content" signal that
+ * conservative parsers (including simple AI/LLM text extraction) treat
+ * as absent — so only the first, already-open FAQ was reliably readable.
+ */
 export function FaqAccordion({ items }: { items: FaqItem[] }) {
-  const [openId, setOpenId] = useState<string | null>(items[0]?.id ?? null);
-
   return (
     <div className={styles.accordion}>
-      {items.map((item) => {
-        const isOpen = openId === item.id;
-        const panelId = `faq-panel-${item.id}`;
-        const buttonId = `faq-button-${item.id}`;
-        return (
-          <div key={item.id} className={styles.item}>
-            <h3 className={styles.questionRow}>
-              <button
-                id={buttonId}
-                type="button"
-                className={styles.trigger}
-                aria-expanded={isOpen}
-                aria-controls={panelId}
-                onClick={() => setOpenId(isOpen ? null : item.id)}
-              >
-                <span>{item.question}</span>
-                <span className={styles.icon} aria-hidden="true">
-                  {isOpen ? "−" : "+"}
-                </span>
-              </button>
-            </h3>
-            <div
-              id={panelId}
-              role="region"
-              aria-labelledby={buttonId}
-              className={styles.panel}
-              hidden={!isOpen}
-            >
-              <p>{item.answer}</p>
-            </div>
+      {items.map((item, i) => (
+        <details key={item.id} className={styles.item} open={i === 0}>
+          <summary className={styles.trigger}>
+            <span>{item.question}</span>
+            <span className={styles.icon} aria-hidden="true">
+              +
+            </span>
+          </summary>
+          <div className={styles.panel}>
+            <p>{item.answer}</p>
           </div>
-        );
-      })}
+        </details>
+      ))}
     </div>
   );
 }

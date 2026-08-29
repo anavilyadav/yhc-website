@@ -9,7 +9,7 @@ import { MissionVisionValues } from "@/components/about/MissionVisionValues";
 import { WhyUsGrid } from "@/components/about/WhyUsGrid";
 import { AboutCta } from "@/components/about/AboutCta";
 import { PhysicianSchema } from "@/components/schema/PhysicianSchema";
-import { siteConfig, whatsappLink } from "@/lib/site-config";
+import { siteConfig } from "@/lib/site-config";
 
 // Doctor bios live in Supabase and the doctor edits them via the admin
 // panel — ISR revalidates this page hourly so those edits go live without
@@ -38,12 +38,20 @@ export default async function AboutPage() {
       <PageHero />
       <OurStory />
 
+      {/*
+        variant="teaser" shows only the first bio paragraph and links out
+        to the dedicated /our-doctors/[slug] page for the rest — the full
+        bio, philosophy quote, specialisations and consultation points.
+        Previously both pages rendered the exact same doctor record in
+        full, which is duplicate content across two URLs.
+      */}
       {drTpYadav && (
         <DoctorProfileSection
           doctor={drTpYadav}
           photoSide="left"
-          ctaHref="/appointment"
-          ctaLabel="Book Appointment"
+          variant="teaser"
+          ctaHref={`/our-doctors/${drTpYadav.slug}`}
+          ctaLabel={`Read ${drTpYadav.full_name}'s Full Profile`}
         />
       )}
 
@@ -51,8 +59,9 @@ export default async function AboutPage() {
         <DoctorProfileSection
           doctor={drAnavil}
           photoSide="right"
-          ctaHref={whatsappLink("Hi, I'd like to book a consultation with Dr Anavil.")}
-          ctaLabel="Consult Dr Anavil"
+          variant="teaser"
+          ctaHref={`/our-doctors/${drAnavil.slug}`}
+          ctaLabel={`Read ${drAnavil.full_name}'s Full Profile`}
         />
       )}
 
