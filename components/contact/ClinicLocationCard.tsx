@@ -1,5 +1,5 @@
 import type { ClinicLocation } from "@/lib/types";
-import { whatsappLink } from "@/lib/site-config";
+import { whatsappLinkTo } from "@/lib/site-config";
 import styles from "@/app/contact/contact.module.css";
 
 export function ClinicLocationCard({ clinic }: { clinic: ClinicLocation }) {
@@ -9,7 +9,8 @@ export function ClinicLocationCard({ clinic }: { clinic: ClinicLocation }) {
       }`
     : null;
 
-  const whatsappHref = whatsappLink(
+  const whatsappHref = whatsappLinkTo(
+    clinic.whatsapp,
     `Hello, I would like to enquire about a consultation at ${clinic.name}.`
   );
 
@@ -69,6 +70,13 @@ export function ClinicLocationCard({ clinic }: { clinic: ClinicLocation }) {
           <div className={styles.clinicRow}>
             <strong>Timings:</strong>{" "}
             <span className={styles.pendingText}>To be confirmed</span>
+          </div>
+        )}
+        {clinic.directionsUrl && (
+          <div className={styles.clinicRow}>
+            <a href={clinic.directionsUrl} target="_blank" rel="noopener noreferrer">
+              Get Directions →
+            </a>
           </div>
         )}
       </div>

@@ -4,12 +4,12 @@ import { siteConfig } from "@/lib/site-config";
  * JSON-LD builders for the homepage <head>.
  * Content and structure match GIOS_P2_SEO_Schema_WordPress.docx, Sections 4 & 5.
  *
- * A few fields (address, geo coordinates, social links, aggregate rating)
- * are business details only the clinic owner can supply accurately.
- * These read from environment variables — set them in .env.local (see
- * .env.example) or Vercel project settings. Until set, those optional
- * fields are simply omitted from the schema rather than shipped as fake
- * placeholder data, which would be a Google Schema policy violation.
+ * Address and geo coordinates come from siteConfig.address (confirmed
+ * directly by Dr Anavil, chat, 2026-08-29). Social links and aggregate
+ * rating are still business details only the clinic owner can supply —
+ * those read from environment variables and are omitted until set,
+ * rather than shipped as fake placeholder data (a Google Schema policy
+ * violation).
  */
 
 const clinicId = `${siteConfig.url}/#clinic`;
@@ -50,44 +50,33 @@ export function buildClinicSchema() {
     currenciesAccepted: "INR",
     paymentAccepted: "Cash, UPI, Bank Transfer",
     doctor: [{ "@id": founderId }, { "@id": physicianId }],
-    // Main branch only — per GIOS_P1_GoogleBusinessProfile.docx. Jagatpura
-    // branch timings are not yet confirmed, so are omitted rather than guessed.
+    // Main (Bajaj Nagar) branch only — confirmed directly by Dr Anavil
+    // (chat, 2026-08-29). Strictly appointment-only, closed Sundays; the
+    // Jagatpura branch has its own separate schema, see buildJagatpuraClinicSchema().
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        opens: "09:00",
-        closes: "13:30",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        opens: "17:00",
-        closes: "20:30",
+        opens: "11:00",
+        closes: "20:00",
       },
     ],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.address.streetAddress,
+      addressLocality: siteConfig.address.locality,
+      addressRegion: siteConfig.address.region,
+      postalCode: siteConfig.address.postalCode,
+      addressCountry: siteConfig.address.country,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: siteConfig.address.latitude,
+      longitude: siteConfig.address.longitude,
+    },
   };
 
   if (siteConfig.email) schema.email = siteConfig.email;
-
-  const addressLine = process.env.NEXT_PUBLIC_CLINIC_ADDRESS;
-  const pinCode = process.env.NEXT_PUBLIC_CLINIC_PINCODE;
-  if (addressLine) {
-    schema.address = {
-      "@type": "PostalAddress",
-      streetAddress: addressLine,
-      addressLocality: "Jaipur",
-      addressRegion: "Rajasthan",
-      ...(pinCode ? { postalCode: pinCode } : {}),
-      addressCountry: "IN",
-    };
-  }
-
-  const lat = process.env.NEXT_PUBLIC_CLINIC_LAT;
-  const lng = process.env.NEXT_PUBLIC_CLINIC_LNG;
-  if (lat && lng) {
-    schema.geo = { "@type": "GeoCoordinates", latitude: lat, longitude: lng };
-  }
 
   const links = socialLinks();
   if (links.length > 0) schema.sameAs = links;
@@ -104,6 +93,63 @@ export function buildClinicSchema() {
   }
 
   return schema;
+}
+
+const jagatpuraClinicId = `${siteConfig.url}/homeopathy-clinic-jagatpura-jaipur/#clinic`;
+
+/**
+ * JSON-LD for the Jagatpura branch — a distinct MedicalClinic location
+ * linked to the main clinic via parentOrganization, per the multi-location
+ * pattern in GIOS_P2_SEO_Schema_WordPress.docx. Address, geo and hours
+ * confirmed directly by Dr Anavil (chat, 2026-08-29): open Sundays only,
+ * strictly by appointment.
+ */
+export function buildJagatpuraClinicSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": ["MedicalClinic", "LocalBusiness"],
+    "@id": jagatpuraClinicId,
+    name: `${siteConfig.name} — Jagatpura`,
+    description:
+      "Jagatpura branch of Yadav Homeo Clinic — classical homeopathy for chronic disease, open Sundays. Founded by Dr T P Yadav, now led by Dr T P Yadav and Dr Anavil Yadav (BHMS).",
+    url: `${siteConfig.url}/homeopathy-clinic-jagatpura-jaipur/`,
+    parentOrganization: { "@id": clinicId },
+    logo: `${siteConfig.url}/logo-full.png`,
+    image: `${siteConfig.url}/logo-full.png`,
+    telephone: "+91-9057070705",
+    medicalSpecialty: [
+      "Homeopathy",
+      "Classical Homeopathy",
+      "Chronic Disease Management",
+      "Paediatric Homeopathy",
+      "Autoimmune Disease Treatment",
+    ],
+    priceRange: "₹₹",
+    currenciesAccepted: "INR",
+    paymentAccepted: "Cash, UPI, Bank Transfer",
+    doctor: [{ "@id": founderId }, { "@id": physicianId }],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Sunday"],
+        opens: "11:00",
+        closes: "14:00",
+      },
+    ],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "A-7, Ashish Vihar, Mahal Road, Jagatpura",
+      addressLocality: "Jaipur",
+      addressRegion: "Rajasthan",
+      postalCode: "302017",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "26.82939387669687",
+      longitude: "75.84176887494046",
+    },
+  };
 }
 
 /**

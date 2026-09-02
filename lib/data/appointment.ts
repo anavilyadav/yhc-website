@@ -6,76 +6,113 @@ import type { FaqItem, PricingPlan } from "@/lib/types";
  * Supabase (see supabase/migrations/0002_appointment_contact.sql) or
  * whenever Supabase env vars aren't configured (e.g. local dev).
  *
- * Only two of the four fees are known today. The two figures below
- * (₹3,500 in-clinic first consultation, ₹2,500 in-clinic follow-up)
- * are confirmed in three separate project documents (STEP3 doc's own
- * mockup reference, the CRM sheet, and the Razorpay "Single Visit"
- * price in the Constitution doc), so they're safe defaults. Online
- * fees are genuinely undecided — no document states a number — so
- * they stay null and the UI shows "Fee to be confirmed" instead of
- * guessing.
+ * Real package pricing confirmed directly by Dr Anavil (chat, 2026-08-29).
+ * Price is identical whether the consultation is in-clinic or online —
+ * so plans are no longer split by mode, only by patient type (new vs
+ * follow-up) and package length. `mode` is kept only because the
+ * PricingPlan type still requires it; it is not shown or used anywhere.
+ *
+ * New Patient — 1 month = ₹1,000 one-time registration + ₹2,500
+ * consultation = ₹3,500, includes 1 month of medicine. 2 and 3 month
+ * packages don't re-charge registration, which is why they land at
+ * ₹5,000 and ₹7,500 rather than +₹2,500 with a fresh ₹1,000 each time.
+ * Confirmed pattern continues at ₹2,500/month for longer packages.
+ *
+ * Follow-Up (existing patients, no registration) is a flat ₹2,500/month,
+ * same 1/2/3 month tiers.
  */
 const FALLBACK_PRICING: PricingPlan[] = [
   {
-    id: "fallback-in-clinic-first",
-    code: "in_clinic_first",
-    title: "First Consultation — In Clinic",
+    id: "fallback-new-patient-1m",
+    code: "new_patient_1m",
+    title: "New Patient — 1 Month",
     mode: "in_clinic",
     priceInr: 3500,
     inclusions: [
+      "₹1,000 one-time registration + ₹2,500 consultation",
       "45 to 60 minutes with the doctor",
-      "Full case history and analysis",
-      "Constitutional remedy prescription",
-      "Detailed guidance on diet, lifestyle and what to expect",
+      "Full case history and constitutional analysis",
+      "1 month of medicine included",
+      "Same price online or in-clinic",
     ],
     isActive: true,
     sortOrder: 1,
   },
   {
-    id: "fallback-in-clinic-followup",
-    code: "in_clinic_followup",
-    title: "Follow-Up Consultation — In Clinic",
+    id: "fallback-new-patient-2m",
+    code: "new_patient_2m",
+    title: "New Patient — 2 Months",
     mode: "in_clinic",
-    priceInr: 2500,
+    priceInr: 5000,
     inclusions: [
-      "Review of progress since last visit",
-      "Prescription adjustment as needed",
-      "Report review if applicable",
-      "Guidance for the next 4 to 6 weeks",
+      "Includes one-time registration",
+      "First consultation + 1 follow-up",
+      "2 months of medicine included",
+      "Same price online or in-clinic",
     ],
     isActive: true,
     sortOrder: 2,
   },
   {
-    id: "fallback-online-first",
-    code: "online_first",
-    title: "First Consultation — Online",
-    mode: "online",
-    priceInr: null,
+    id: "fallback-new-patient-3m",
+    code: "new_patient_3m",
+    title: "New Patient — 3 Months",
+    mode: "in_clinic",
+    priceInr: 7500,
+    badge: "Most Chosen",
     inclusions: [
-      "Detailed review of your intake form and medical records",
-      "Full constitutional analysis",
-      "Personalised prescription sent within 24 to 48 hours",
-      "Diet and lifestyle instructions",
-      "Available to patients across India and internationally",
+      "Includes one-time registration",
+      "First consultation + 2 follow-ups",
+      "3 months of medicine included",
+      "Same price online or in-clinic",
     ],
     isActive: true,
     sortOrder: 3,
   },
   {
-    id: "fallback-online-followup",
-    code: "online_followup",
-    title: "Follow-Up Consultation — Online",
-    mode: "online",
-    priceInr: null,
+    id: "fallback-followup-1m",
+    code: "followup_1m",
+    title: "Follow-Up — 1 Month",
+    mode: "in_clinic",
+    priceInr: 2500,
     inclusions: [
-      "Progress review based on your update",
-      "Prescription modification as needed",
-      "Report analysis",
-      "Guidance for the next follow-up period",
+      "Review of progress since last visit",
+      "Prescription adjustment as needed",
+      "1 month of medicine included",
+      "Telephonic support between visits",
     ],
     isActive: true,
     sortOrder: 4,
+  },
+  {
+    id: "fallback-followup-2m",
+    code: "followup_2m",
+    title: "Follow-Up — 2 Months",
+    mode: "in_clinic",
+    priceInr: 5000,
+    inclusions: [
+      "2 follow-up consultations",
+      "Prescription adjustment as needed",
+      "2 months of medicine included",
+      "Telephonic support between visits",
+    ],
+    isActive: true,
+    sortOrder: 5,
+  },
+  {
+    id: "fallback-followup-3m",
+    code: "followup_3m",
+    title: "Follow-Up — 3 Months",
+    mode: "in_clinic",
+    priceInr: 7500,
+    inclusions: [
+      "3 follow-up consultations",
+      "Prescription adjustment as needed",
+      "3 months of medicine included",
+      "Telephonic support between visits",
+    ],
+    isActive: true,
+    sortOrder: 6,
   },
 ];
 

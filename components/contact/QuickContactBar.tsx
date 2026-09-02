@@ -9,7 +9,7 @@ export function QuickContactBar() {
           <div className={styles.quickIcon} aria-hidden="true">📞</div>
           <div className={styles.quickLabel}>Call or WhatsApp</div>
           <div className={styles.quickValue}>{siteConfig.phone.display}</div>
-          <div className={styles.quickSub}>Mon–Sat: 9 AM to 8:30 PM</div>
+          <div className={styles.quickSub}>{siteConfig.hours.weekday}</div>
         </div>
         <div className={styles.quickItem}>
           <div className={styles.quickIcon} aria-hidden="true">📧</div>

@@ -223,7 +223,7 @@ export const homeopathyFaqCategories: FaqCategory[] = [
       {
         question: "How do I book an appointment at Yadav Homeo Clinic?",
         answer:
-          "Three ways: 1) Call +91-8949427254 (Monday-Saturday, 9 AM-8:30 PM). 2) WhatsApp +91-8949427254 with your name, condition and preferred date/time. 3) Fill the appointment form at yadavhomeoclinic.com/appointment/. Our team confirms your slot within a few hours. For online consultations, WhatsApp us to begin.",
+          "Three ways: 1) Call +91-8949427254 (Monday-Saturday, 11 AM-8 PM, strictly by appointment). 2) WhatsApp +91-8949427254 with your name, condition and preferred date/time. 3) Fill the appointment form at yadavhomeoclinic.com/appointment/. Our team confirms your slot within a few hours. For online consultations, WhatsApp us to begin.",
       },
       {
         question: "What should I bring to my first consultation at Yadav Homeo Clinic?",

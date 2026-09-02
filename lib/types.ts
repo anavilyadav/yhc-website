@@ -112,6 +112,8 @@ export interface ClinicLocation {
   whatsapp: string;
   landmark: string | null;
   mapEmbedUrl: string | null;
+  /** "Get Directions" link — the clinic's own Google Maps share link, distinct from mapEmbedUrl (the iframe src). */
+  directionsUrl: string | null;
   timingsWeekday: string;
   timingsSunday: string;
 }

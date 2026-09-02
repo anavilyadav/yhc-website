@@ -4,8 +4,8 @@ import { RazorpayCheckoutButton } from "./RazorpayCheckoutButton";
 import { whatsappLink } from "@/lib/site-config";
 import styles from "@/app/appointment/appointment.module.css";
 
-function formatMode(mode: PricingPlan["mode"]) {
-  return mode === "in_clinic" ? "In Clinic" : "Online";
+function formatCategory(code: string) {
+  return code.startsWith("new_patient") ? "New Patient" : "Follow-Up";
 }
 
 export function PricingSection({ plans }: { plans: PricingPlan[] }) {
@@ -16,12 +16,13 @@ export function PricingSection({ plans }: { plans: PricingPlan[] }) {
       <div className="container">
         <div className={styles.sectionHeading}>
           <h2>Consultation Fees — Transparent and Fair</h2>
+          <p>Fee is the same whether you consult in-clinic or online.</p>
         </div>
         <div className={styles.pricingGrid}>
           {plans.map((plan) => (
             <div className={styles.priceCard} key={plan.id}>
               {plan.badge && <div className={styles.priceBadge}>{plan.badge}</div>}
-              <div className={styles.priceCardMode}>{formatMode(plan.mode)}</div>
+              <div className={styles.priceCardMode}>{formatCategory(plan.code)}</div>
               <h3>{plan.title}</h3>
               {plan.priceInr !== null ? (
                 <div className={styles.priceAmount}>

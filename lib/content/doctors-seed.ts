@@ -6,9 +6,10 @@ import type { Doctor } from "@/lib/supabase/queries/doctors";
  * only when Supabase is unreachable or not yet configured, so /about/ and
  * /our-doctors/ never render empty and `npm run build` always works —
  * same pattern as lib/data/diseases.ts, disease-page-content.ts and
- * blog-posts.ts. college_name / registration_number / socials stay null
- * on purpose, exactly as in the Supabase seed — fill via the admin panel
- * once the real values are confirmed, never invent placeholder data.
+ * blog-posts.ts. college_name and registration_number are confirmed
+ * directly by Dr Anavil (chat, 2026-08-29); registration_council and
+ * socials stay null on purpose — fill via the admin panel once confirmed,
+ * never invent placeholder data.
  */
 export const DOCTOR_SEED: Doctor[] = [
   {
@@ -36,10 +37,10 @@ export const DOCTOR_SEED: Doctor[] = [
     ],
     consultation_points: null,
     philosophy_quote: null,
-    college_name: null,
+    college_name: "Dr. Madan Pratap Khuteta Homoeopathic Medical College, Jaipur",
     credential_name: "BHMS",
     credential_year: null,
-    registration_number: null,
+    registration_number: "3692",
     registration_council: null,
     photo_url: null,
     photo_alt: "Dr T P Yadav, Founder and Chief Homeopathic Physician, Yadav Homeo Clinic Jaipur",
@@ -99,10 +100,10 @@ export const DOCTOR_SEED: Doctor[] = [
     ],
     philosophy_quote:
       "I grew up watching my father give patients their lives back — one carefully chosen remedy at a time. That is the only kind of medicine I ever wanted to practise. The kind where we take the time to truly understand the person, not just the disease.",
-    college_name: null,
+    college_name: "Homoeopathy University, Jaipur",
     credential_name: "BHMS",
     credential_year: "2016",
-    registration_number: null,
+    registration_number: "8181",
     registration_council: null,
     photo_url: null,
     photo_alt: "Dr Anavil Yadav, Homeopathic Physician, Yadav Homeo Clinic Jaipur",

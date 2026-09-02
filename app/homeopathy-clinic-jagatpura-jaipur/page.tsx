@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getClinicLocations } from "@/lib/data/contact";
 import { ClinicLocationCard } from "@/components/contact/ClinicLocationCard";
-import { siteConfig, whatsappLink } from "@/lib/site-config";
+import { siteConfig, whatsappLinkTo } from "@/lib/site-config";
+import { buildJagatpuraClinicSchema } from "@/lib/schema";
 import {
   jagatpuraLocationSeo,
   jagatpuraHero,
@@ -30,9 +31,16 @@ export const metadata: Metadata = {
 export default async function JagatpuraLocationPage() {
   const clinics = await getClinicLocations();
   const jagatpuraClinic = clinics.find((c) => c.slug === "jagatpura");
+  const jagatpuraSchema = buildJagatpuraClinicSchema();
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jagatpuraSchema) }}
+      />
+
       <section className="bg-navy px-5 py-14 text-center md:py-20">
         <div className="mx-auto max-w-3xl">
           <h1 className="font-serif text-2xl leading-snug text-cream md:text-4xl md:leading-tight">
@@ -98,7 +106,10 @@ export default async function JagatpuraLocationPage() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href={whatsappLink("Hello, I would like to book a consultation at the Jagatpura branch.")}
+              href={whatsappLinkTo(
+                jagatpuraClinic?.whatsapp ?? siteConfig.phone.whatsappNumber,
+                "Hello, I would like to book a consultation at the Jagatpura branch."
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full rounded-sm bg-amber px-8 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"
@@ -106,10 +117,10 @@ export default async function JagatpuraLocationPage() {
               Book at Jagatpura Branch →
             </a>
             <a
-              href={`tel:${siteConfig.phone.e164}`}
+              href={`tel:${jagatpuraClinic?.phone ?? siteConfig.phone.display}`}
               className="w-full rounded-sm border-2 border-amber-light px-8 py-3 text-center text-sm font-bold uppercase tracking-wide text-amber-light transition-colors hover:bg-amber-light hover:text-navy sm:w-auto"
             >
-              📞 Call Us: {siteConfig.phone.display}
+              📞 Call Us: {jagatpuraClinic?.phone ?? siteConfig.phone.display}
             </a>
           </div>
         </div>
