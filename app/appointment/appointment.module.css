@@ -319,6 +319,13 @@
   color: var(--navy);
 }
 
+.trustLine {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
 /* Checklist */
 .checklistGrid {
   display: grid;

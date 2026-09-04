@@ -1,4 +1,5 @@
 import type { PricingPlan } from "@/lib/types";
+import type { Doctor } from "@/lib/supabase/queries/doctors";
 import { isRazorpayConfigured } from "@/lib/razorpay";
 import { RazorpayCheckoutButton } from "./RazorpayCheckoutButton";
 import { whatsappLink } from "@/lib/site-config";
@@ -8,8 +9,9 @@ function formatCategory(code: string) {
   return code.startsWith("new_patient") ? "New Patient" : "Follow-Up";
 }
 
-export function PricingSection({ plans }: { plans: PricingPlan[] }) {
+export function PricingSection({ plans, doctors = [] }: { plans: PricingPlan[]; doctors?: Doctor[] }) {
   const razorpayReady = isRazorpayConfigured();
+  const registered = doctors.filter((d) => d.registration_number);
 
   return (
     <section className={styles.section} id="fees">
@@ -68,6 +70,15 @@ export function PricingSection({ plans }: { plans: PricingPlan[] }) {
             from any homeopathy pharmacy.
           </p>
         </div>
+        {registered.length > 0 && (
+          <p className={styles.trustLine}>
+            Registered doctors —{" "}
+            {registered
+              .map((d) => `${d.full_name} (Reg. No. ${d.registration_number})`)
+              .join(" · ")}
+            . Verify anytime.
+          </p>
+        )}
       </div>
     </section>
   );
