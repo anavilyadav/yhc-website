@@ -10,6 +10,7 @@ import FAQAccordion from "@/components/disease-page/FAQAccordion";
 import DiseasePageFinalCTA from "@/components/disease-page/DiseasePageFinalCTA";
 import RelatedConditions from "@/components/disease-page/RelatedConditions";
 import ComparisonTable from "@/components/disease-page/ComparisonTable";
+import WorriesTable from "@/components/disease-page/WorriesTable";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { getDiseasePage, getAllDiseasePageSlugs } from "@/lib/data/disease-pages";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
@@ -112,6 +113,8 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
       )}
 
       <ConditionsList intro={page.conditionsIntro} conditions={page.conditions} />
+
+      <WorriesTable />
 
       {subPageLinks.length > 0 && (
         <div className="mx-auto max-w-4xl px-5 pb-6">
