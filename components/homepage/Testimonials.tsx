@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Testimonial } from "@/lib/types";
+import { siteConfig } from "@/lib/site-config";
 
 export default function Testimonials({ testimonials }: { testimonials: Testimonial[] }) {
   return (
@@ -38,13 +39,23 @@ export default function Testimonials({ testimonials }: { testimonials: Testimoni
           ))}
         </div>
 
-        <div className="mt-8 text-center">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center">
           <Link
             href="/patient-stories"
             className="text-sm font-bold text-amber-dark hover:text-navy"
           >
             Read More Stories →
           </Link>
+          {siteConfig.social.googleBusinessProfile && (
+            <a
+              href={siteConfig.social.googleBusinessProfile}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-bold text-amber-dark hover:text-navy"
+            >
+              Read Our Reviews on Google →
+            </a>
+          )}
         </div>
 
         <p className="mx-auto mt-8 max-w-2xl text-center text-[13px] leading-relaxed text-text-light">

@@ -43,7 +43,13 @@ export const siteConfig = {
     facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || null,
     instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || null,
     youtube: process.env.NEXT_PUBLIC_YOUTUBE_URL || null,
-    googleBusinessProfile: process.env.NEXT_PUBLIC_GBP_URL || null,
+    // Main branch's real Google Business Profile share link (chat,
+    // 2026-08-29). This links to the real profile so a visitor can read
+    // and verify reviews themselves — it is not a live embedded star
+    // widget (that needs a separate service like Elfsight, connected to
+    // the GBP account, which hasn't been set up yet).
+    googleBusinessProfile:
+      process.env.NEXT_PUBLIC_GBP_URL || "https://share.google/w79lFy9J9p50Wu8re",
   },
   doctors: {
     founder: {
