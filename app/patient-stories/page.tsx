@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { PatientStoriesFilter } from "@/components/patient-stories/PatientStoriesFilter";
+import { PageVideo } from "@/components/shared/PageVideo";
+import { getPageVideos } from "@/lib/data/videos";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import {
   patientStoriesSeo,
@@ -26,7 +28,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PatientStoriesPage() {
+export default async function PatientStoriesPage() {
+  const videos = await getPageVideos("patient-stories");
+
   return (
     <>
       <section className="bg-navy px-5 py-14 text-center md:py-20">
@@ -47,6 +51,8 @@ export default function PatientStoriesPage() {
           </p>
         </div>
       </section>
+
+      <PageVideo videos={videos} />
 
       <section className="bg-cream px-5 py-4">
         <p className="mx-auto max-w-2xl text-center text-[13px] leading-relaxed text-text-light">

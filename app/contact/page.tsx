@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { whatsappLinks } from "@/lib/whatsapp";
 import { getClinicLocations } from "@/lib/data/contact";
+import { getPageVideos } from "@/lib/data/videos";
+import { PageVideo } from "@/components/shared/PageVideo";
 import { QuickContactBar } from "@/components/contact/QuickContactBar";
 import { ClinicLocationCard } from "@/components/contact/ClinicLocationCard";
 import { ContactForm } from "@/components/contact/ContactForm";
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ContactPage() {
-  const clinics = await getClinicLocations();
+  const [clinics, videos] = await Promise.all([getClinicLocations(), getPageVideos("contact")]);
 
   const clinicSchemas = clinics.map((clinic) => ({
     "@context": "https://schema.org",
@@ -65,6 +67,8 @@ export default async function ContactPage() {
       </section>
 
       <QuickContactBar />
+
+      <PageVideo videos={videos} />
 
       <section className={styles.section} id="locations">
         <div className="container">

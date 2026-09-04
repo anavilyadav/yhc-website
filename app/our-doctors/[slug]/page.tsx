@@ -4,6 +4,8 @@ import Link from "next/link";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
 import { DoctorProfileSection } from "@/components/about/DoctorProfileSection";
 import PatientStoryCard from "@/components/disease-page/PatientStoryCard";
+import { PageVideo } from "@/components/shared/PageVideo";
+import { getPageVideos } from "@/lib/data/videos";
 import { doctorProfileExtras } from "@/lib/content/doctor-profiles-content";
 import { buildPhysicianSchemas } from "@/lib/schema";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
@@ -46,7 +48,7 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
   const extra = doctorProfileExtras[slug];
   if (!extra) notFound();
 
-  const doctor = await getDoctorBySlug(slug);
+  const [doctor, videos] = await Promise.all([getDoctorBySlug(slug), getPageVideos(slug)]);
   if (!doctor) notFound();
 
   const [founderSchema, physicianSchema] = buildPhysicianSchemas();
@@ -83,6 +85,8 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
         }
         ctaLabel={extra.ctas[0].label.replace(/\s*→$/, "")}
       />
+
+      <PageVideo videos={videos} />
 
       <PatientStoryCard story={extra.testimonial} />
 

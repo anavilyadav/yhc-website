@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageVideo } from "@/components/shared/PageVideo";
+import { getPageVideos } from "@/lib/data/videos";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 
 // Deliberately not linked from any nav, footer, or sitemap — reachable
@@ -17,8 +19,10 @@ export default async function BookingConfirmedPage({
   searchParams: Promise<{ plan?: string }>;
 }) {
   const { plan } = await searchParams;
+  const videos = await getPageVideos("booking-confirmed");
 
   return (
+    <>
     <section className="bg-cream px-5 py-16 text-center md:py-24">
       <div className="mx-auto max-w-xl">
         <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-green text-3xl text-white">
@@ -72,5 +76,7 @@ export default async function BookingConfirmedPage({
         </div>
       </div>
     </section>
+    <PageVideo videos={videos} />
+    </>
   );
 }

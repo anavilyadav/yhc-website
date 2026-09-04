@@ -12,7 +12,9 @@ import RelatedConditions from "@/components/disease-page/RelatedConditions";
 import ComparisonTable from "@/components/disease-page/ComparisonTable";
 import WorriesTable from "@/components/disease-page/WorriesTable";
 import { AuthorBox } from "@/components/blog/AuthorBox";
+import { PageVideo } from "@/components/shared/PageVideo";
 import { getDiseasePage, getAllDiseasePageSlugs } from "@/lib/data/disease-pages";
+import { getPageVideos } from "@/lib/data/videos";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
 import { buildMedicalWebPageSchema, buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
@@ -61,9 +63,10 @@ function formatDate(date: Date): string {
 
 export default async function DiseasePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const [page, doctor] = await Promise.all([
+  const [page, doctor, videos] = await Promise.all([
     getDiseasePage(slug),
     getDoctorBySlug(siteConfig.doctors.physician.slug),
+    getPageVideos(slug),
   ]);
   if (!page) notFound();
 
@@ -113,6 +116,8 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
       )}
 
       <ConditionsList intro={page.conditionsIntro} conditions={page.conditions} />
+
+      <PageVideo videos={videos} />
 
       <WorriesTable />
 

@@ -3,7 +3,9 @@ import Link from "next/link";
 import DisclaimerBanner from "@/components/disease-page/DisclaimerBanner";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { FaqSearch } from "@/components/faq/FaqSearch";
+import { PageVideo } from "@/components/shared/PageVideo";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
+import { getPageVideos } from "@/lib/data/videos";
 import { buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import {
@@ -30,7 +32,10 @@ export const metadata: Metadata = {
 };
 
 export default async function HomeopathyFaqPage() {
-  const doctor = await getDoctorBySlug(siteConfig.doctors.physician.slug);
+  const [doctor, videos] = await Promise.all([
+    getDoctorBySlug(siteConfig.doctors.physician.slug),
+    getPageVideos("homeopathy-faq"),
+  ]);
   const allQuestions = homeopathyFaqCategories.flatMap((cat) => cat.questions);
   const faqPageSchema = buildFAQPageSchema(allQuestions);
   const lastReviewed = new Date().toLocaleDateString("en-IN", {
@@ -73,6 +78,8 @@ export default async function HomeopathyFaqPage() {
           </p>
         </div>
       </div>
+
+      <PageVideo videos={videos} />
 
       <section className="bg-white px-5 py-14">
         <div className="mx-auto max-w-3xl">

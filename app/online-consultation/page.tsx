@@ -5,7 +5,9 @@ import DisclaimerBanner from "@/components/disease-page/DisclaimerBanner";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { ProcessSteps } from "@/components/online-consultation/ProcessSteps";
 import { TestimonialCards } from "@/components/online-consultation/TestimonialCards";
+import { PageVideo } from "@/components/shared/PageVideo";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
+import { getPageVideos } from "@/lib/data/videos";
 import { buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import {
@@ -39,7 +41,10 @@ export const metadata: Metadata = {
 const whatsappCta = whatsappLink("Hello, I would like to book an online consultation at Yadav Homeo Clinic.");
 
 export default async function OnlineConsultationPage() {
-  const doctor = await getDoctorBySlug(siteConfig.doctors.physician.slug);
+  const [doctor, videos] = await Promise.all([
+    getDoctorBySlug(siteConfig.doctors.physician.slug),
+    getPageVideos("online-consultation"),
+  ]);
   const faqPageSchema = buildFAQPageSchema(onlineConsultationFaqs);
 
   return (
@@ -82,6 +87,8 @@ export default async function OnlineConsultationPage() {
           <AuthorBox doctor={doctor} lastReviewed={new Date().toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })} />
         </div>
       </div>
+
+      <PageVideo videos={videos} />
 
       <div className="bg-white pb-6">
         <ContentSections sections={[honestAnswerSection]} />

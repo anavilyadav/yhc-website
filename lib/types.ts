@@ -141,6 +141,21 @@ export interface PricingPlan {
   sortOrder?: number;
 }
 
+/**
+ * One embedded video for a given page — Trust & Sales Playbook ch.8/11.
+ * Added/removed/updated entirely from the Supabase table editor (same
+ * workflow as pricing plans), keyed by pageSlug so any page can carry
+ * any number of videos with no code change.
+ */
+export interface PageVideo {
+  id: string;
+  pageSlug: string;
+  youtubeId: string;
+  title: string;
+  caption: string;
+  sortOrder: number;
+}
+
 export interface FaqItem {
   id: string;
   question: string;

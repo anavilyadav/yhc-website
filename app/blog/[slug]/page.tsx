@@ -9,6 +9,8 @@ import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { BlogContent } from "@/components/blog/BlogContent";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { RelatedPosts } from "@/components/blog/RelatedPosts";
+import { PageVideo } from "@/components/shared/PageVideo";
+import { getPageVideos } from "@/lib/data/videos";
 import DisclaimerBanner from "@/components/disease-page/DisclaimerBanner";
 
 // Blog content is Supabase-backed (see lib/data/blog.ts) — ISR re-fetches
@@ -57,10 +59,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = await getBlogPost(slug);
   if (!post) notFound();
 
-  const [doctor, relatedDisease, allPosts] = await Promise.all([
+  const [doctor, relatedDisease, allPosts, videos] = await Promise.all([
     getDoctorBySlug(siteConfig.doctors.physician.slug),
     getDiseasePage(post.relatedDiseaseSlug),
     getBlogPosts(),
+    getPageVideos(post.slug),
   ]);
 
   const relatedPosts = post.relatedPostSlugs
@@ -100,6 +103,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </p>
         </div>
       </article>
+
+      <PageVideo videos={videos} />
 
       <div className="bg-cream-bg px-5 py-14">
         <BlogContent intro={post.intro} sections={post.sections} />

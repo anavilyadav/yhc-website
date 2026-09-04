@@ -7,8 +7,10 @@ import WhyChooseUs from "@/components/homepage/WhyChooseUs";
 import Testimonials from "@/components/homepage/Testimonials";
 import OnlineConsultation from "@/components/homepage/OnlineConsultation";
 import FinalCTA from "@/components/homepage/FinalCTA";
+import { PageVideo } from "@/components/shared/PageVideo";
 import { getDiseases } from "@/lib/data/diseases";
 import { getTestimonials } from "@/lib/data/testimonials";
+import { getPageVideos } from "@/lib/data/videos";
 import {
   buildClinicSchema,
   buildPhysicianSchemas,
@@ -22,7 +24,11 @@ import {
 export const revalidate = 3600;
 
 export default async function HomePage() {
-  const [diseases, testimonials] = await Promise.all([getDiseases(), getTestimonials()]);
+  const [diseases, testimonials, videos] = await Promise.all([
+    getDiseases(),
+    getTestimonials(),
+    getPageVideos("home"),
+  ]);
 
   const clinicSchema = buildClinicSchema();
   const websiteSchema = buildWebsiteSchema();
@@ -66,6 +72,7 @@ export default async function HomePage() {
 
       <Hero />
       <StatsBar />
+      <PageVideo videos={videos} />
       <AboutTeaser />
       <ConditionsGrid diseases={diseases} />
       <HowWeWork />

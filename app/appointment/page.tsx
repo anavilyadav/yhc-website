@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { whatsappLinks } from "@/lib/whatsapp";
 import { getAppointmentFaqs, getPricingPlans } from "@/lib/data/appointment";
+import { getPageVideos } from "@/lib/data/videos";
 import { getDoctors } from "@/lib/supabase/queries/doctors";
+import { PageVideo } from "@/components/shared/PageVideo";
 import { ConsultationOptions } from "@/components/appointment/ConsultationOptions";
 import { OnlineProcessSteps } from "@/components/appointment/OnlineProcessSteps";
 import { PricingSection } from "@/components/appointment/PricingSection";
@@ -31,10 +33,11 @@ export const metadata: Metadata = {
 };
 
 export default async function AppointmentPage() {
-  const [pricingPlans, faqs, doctors] = await Promise.all([
+  const [pricingPlans, faqs, doctors, videos] = await Promise.all([
     getPricingPlans(),
     getAppointmentFaqs(),
     getDoctors(),
+    getPageVideos("appointment"),
   ]);
 
   const faqSchema = {
@@ -76,6 +79,8 @@ export default async function AppointmentPage() {
           </div>
         </div>
       </section>
+
+      <PageVideo videos={videos} />
 
       <ConsultationOptions />
       <OnlineProcessSteps />
