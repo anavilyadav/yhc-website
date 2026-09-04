@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Lora, Work_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
@@ -34,9 +35,23 @@ export const metadata: Metadata = {
   },
 };
 
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-lora",
+  display: "swap",
+});
+
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-work-sans",
+  display: "swap",
+});
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className={`h-full ${lora.variable} ${workSans.variable}`}>
       <body className="flex min-h-full flex-col antialiased">
         <GoogleAnalytics />
         <Header />

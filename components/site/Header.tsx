@@ -65,7 +65,7 @@ function NavDropdown({ label, links }: { label: string; links: { label: string; 
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex items-center gap-1 text-sm text-cream/70 transition-colors hover:text-amber-light"
+        className="flex items-center gap-1 text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
       >
         {label}
         <span aria-hidden className={`text-[10px] transition-transform ${open ? "rotate-180" : ""}`}>
@@ -159,7 +159,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-cream/70 transition-colors hover:text-amber-light"
+              className="text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
             >
               {link.label}
             </Link>
@@ -170,7 +170,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-cream/70 transition-colors hover:text-amber-light"
+              className="text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
             >
               {link.label}
             </Link>
