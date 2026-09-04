@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { whatsappLinks } from "@/lib/whatsapp";
 
 /**
  * "Your Worries, Answered" — Trust & Sales Playbook ch.9. Every patient
@@ -13,8 +14,20 @@ import Link from "next/link";
 const WORRIES: { worry: string; answer: ReactNode }[] = [
   {
     worry: "Will this actually help my case?",
-    answer:
-      "Every case is different. See the FAQs and (where available) the expected timeline further down this page — we tell you honestly what to expect for your specific case at the first consultation, not a generic promise.",
+    answer: (
+      <>
+        Every case is different — see the FAQs and (where available) the expected timeline
+        further down this page. Still unsure?{" "}
+        <a
+          href={whatsappLinks.freeHealthCheck}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-amber-dark hover:underline"
+        >
+          Get a free 5-minute WhatsApp health check →
+        </a>
+      </>
+    ),
   },
   {
     worry: "Is it too expensive?",

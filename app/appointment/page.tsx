@@ -5,6 +5,7 @@ import { getAppointmentFaqs, getPricingPlans } from "@/lib/data/appointment";
 import { getPageVideos } from "@/lib/data/videos";
 import { getDoctors } from "@/lib/supabase/queries/doctors";
 import { PageVideo } from "@/components/shared/PageVideo";
+import { FreeHealthCheck } from "@/components/shared/FreeHealthCheck";
 import { ConsultationOptions } from "@/components/appointment/ConsultationOptions";
 import { OnlineProcessSteps } from "@/components/appointment/OnlineProcessSteps";
 import { PricingSection } from "@/components/appointment/PricingSection";
@@ -83,6 +84,11 @@ export default async function AppointmentPage() {
       <PageVideo videos={videos} />
 
       <ConsultationOptions />
+
+      <div className="bg-white px-5 pb-12">
+        <FreeHealthCheck />
+      </div>
+
       <OnlineProcessSteps />
       <PricingSection plans={pricingPlans} doctors={doctors} />
       <PreparationChecklist />

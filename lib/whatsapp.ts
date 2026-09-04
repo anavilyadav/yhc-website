@@ -10,4 +10,11 @@ export const whatsappLinks = {
   onlineConsultation: whatsappLink(
     "Hello, I am interested in an online consultation at Yadav Homeo Clinic. My name is [Name] and I am from [City]."
   ),
+  // A distinct, zero-pressure first step for visitors who aren't ready to
+  // book yet — Trust & Sales Playbook ch.9. Deliberately different wording
+  // from the booking messages above, so the team can tell at a glance
+  // that this contact came in "just asking", not ready to pay.
+  freeHealthCheck: whatsappLink(
+    "Hello, I'd like a free 5-minute health check before deciding. My condition is [Condition] and I am from [City]."
+  ),
 };
