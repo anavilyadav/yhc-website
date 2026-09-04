@@ -1,6 +1,13 @@
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type { FaqItem, PricingPlan } from "@/lib/types";
 
+// Keeps display order driven by each plan's own sortOrder field, so
+// editing sortOrder always changes what's shown — the array's own
+// literal order never has to be kept in sync by hand.
+function sortByOrder(plans: PricingPlan[]): PricingPlan[] {
+  return [...plans].sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
+}
+
 /**
  * Fallback pricing used until the `pricing_plans` table is seeded in
  * Supabase (see supabase/migrations/0002_appointment_contact.sql) or
@@ -20,6 +27,12 @@ import type { FaqItem, PricingPlan } from "@/lib/types";
  *
  * Follow-Up (existing patients, no registration) is a flat ₹2,500/month,
  * same 1/2/3 month tiers.
+ *
+ * Cards are ordered longest-to-shortest within each group (anchor
+ * pricing — Trust & Sales Playbook, ch.5): showing the 3-month package
+ * first makes the 1-month price read as the "light" option by
+ * comparison, instead of being the first, most-expensive-feeling number
+ * a visitor sees.
  */
 const FALLBACK_PRICING: PricingPlan[] = [
   {
@@ -36,7 +49,7 @@ const FALLBACK_PRICING: PricingPlan[] = [
       "Same price online or in-clinic",
     ],
     isActive: true,
-    sortOrder: 1,
+    sortOrder: 3,
   },
   {
     id: "fallback-new-patient-2m",
@@ -67,7 +80,7 @@ const FALLBACK_PRICING: PricingPlan[] = [
       "Same price online or in-clinic",
     ],
     isActive: true,
-    sortOrder: 3,
+    sortOrder: 1,
   },
   {
     id: "fallback-followup-1m",
@@ -82,7 +95,7 @@ const FALLBACK_PRICING: PricingPlan[] = [
       "Telephonic support between visits",
     ],
     isActive: true,
-    sortOrder: 4,
+    sortOrder: 6,
   },
   {
     id: "fallback-followup-2m",
@@ -112,7 +125,7 @@ const FALLBACK_PRICING: PricingPlan[] = [
       "Telephonic support between visits",
     ],
     isActive: true,
-    sortOrder: 6,
+    sortOrder: 4,
   },
 ];
 
@@ -213,7 +226,7 @@ const FALLBACK_FAQS: FaqItem[] = [
  */
 export async function getPricingPlans(): Promise<PricingPlan[]> {
   const supabase = getSupabaseServerClient();
-  if (!supabase) return FALLBACK_PRICING;
+  if (!supabase) return sortByOrder(FALLBACK_PRICING);
 
   const { data, error } = await supabase
     .from("pricing_plans")
@@ -223,7 +236,7 @@ export async function getPricingPlans(): Promise<PricingPlan[]> {
     .eq("is_active", true)
     .order("sort_order");
 
-  if (error || !data || data.length === 0) return FALLBACK_PRICING;
+  if (error || !data || data.length === 0) return sortByOrder(FALLBACK_PRICING);
 
   return data.map((row) => ({
     id: row.id,
