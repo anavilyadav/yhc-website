@@ -15,8 +15,8 @@ export function PricingSection({ plans }: { plans: PricingPlan[] }) {
     <section className={styles.section} id="fees">
       <div className="container">
         <div className={styles.sectionHeading}>
-          <h2>Consultation Fees — Transparent and Fair</h2>
-          <p>Fee is the same whether you consult in-clinic or online.</p>
+          <h2>Your Investment in Lasting Health — Transparent and Fair</h2>
+          <p>The same investment whether you consult in-clinic or online.</p>
         </div>
         <div className={styles.pricingGrid}>
           {plans.map((plan) => (
