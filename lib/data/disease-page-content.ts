@@ -1499,6 +1499,12 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
       },
     ],
+    // Sourced verbatim from this page's own sections above: "dust, cold air,
+    // or stress" (hero), "high pollution, dust and allergen exposure" and
+    // "dust, cold air or exercise-induced triggers" (asthma section), "dust,
+    // animal dander or environmental allergens" (rhinitis section) — one
+    // consistent trigger category (bronchial/nasal hypersensitivity).
+    commonTriggers: ["Dust", "Air Pollution", "Cold Air", "Animal Dander", "Exercise-Induced Triggers"],
     patientStory: {
       quote:
         "I had asthma since age 7 and was using a salbutamol inhaler daily and a steroid preventer twice daily by age 25. I started constitutional treatment with Dr Yadav. By month 6, my reliever inhaler use had reduced from daily to once or twice a week. By month 10, I had stopped the steroid preventer entirely under my chest physician's guidance. I still carry my reliever inhaler but I have not used it in 4 months. This is the first time in 18 years I have been genuinely free.",
