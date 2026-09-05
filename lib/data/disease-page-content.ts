@@ -126,6 +126,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         note: "Results vary by individual. Duration of disease, extent of involvement, and overall constitutional health all affect the treatment timeline. We set honest expectations at the first consultation.",
       },
     ],
+    // Pulled verbatim from this page's own first section above ("An
+    // overactive immune system. A constitutional susceptibility. A
+    // hormonal imbalance. An unresolved stress response.") — not a new
+    // claim, just surfaced as scannable chips (Trust & Sales Playbook ch.6).
+    commonTriggers: [
+      "Overactive Immune System",
+      "Constitutional Susceptibility",
+      "Hormonal Imbalance",
+      "Unresolved Stress Response",
+    ],
     comparisonTable: [
       {
         factor: "Treatment approach",
@@ -260,6 +270,17 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "Constitutional homeopathic treatment for RA focuses on the immune system's overall dysregulation — not just the joint inflammation. Correctly prescribed remedies have produced meaningful reductions in morning stiffness and joint pain, lowering of inflammatory markers like CRP and ESR, and in some cases, the ability to reduce conventional medication doses under specialist supervision. Results are gradual — but they are real, measurable, and confirmed in blood tests.",
         ],
       },
+    ],
+    // Pulled verbatim from this page's "What Is an Autoimmune Disease?"
+    // section above ("Genetics, environmental factors, infections, stress
+    // and hormonal changes all appear to play a role") — Trust & Sales
+    // Playbook ch.6.
+    commonTriggers: [
+      "Genetics",
+      "Environmental Factors",
+      "Infections",
+      "Stress",
+      "Hormonal Changes",
     ],
     comparisonTable: [
       {
@@ -532,6 +553,17 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
         note: "We review your blood reports at every follow-up. Progress in kidney cases is always measured objectively — through numbers, not just symptoms. Bring your latest reports to every consultation.",
       },
+    ],
+    // Pulled verbatim from this page's first section above ("years of
+    // uncontrolled diabetes, hypertension, chronic inflammation,
+    // autoimmune activity, or a constitutional vulnerability") — Trust &
+    // Sales Playbook ch.6.
+    commonTriggers: [
+      "Uncontrolled Diabetes",
+      "Hypertension",
+      "Chronic Inflammation",
+      "Autoimmune Activity",
+      "Constitutional Vulnerability",
     ],
     comparisonTable: [
       {

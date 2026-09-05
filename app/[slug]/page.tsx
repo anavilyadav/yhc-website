@@ -11,6 +11,7 @@ import DiseasePageFinalCTA from "@/components/disease-page/DiseasePageFinalCTA";
 import RelatedConditions from "@/components/disease-page/RelatedConditions";
 import ComparisonTable from "@/components/disease-page/ComparisonTable";
 import WorriesTable from "@/components/disease-page/WorriesTable";
+import TriggerChips from "@/components/disease-page/TriggerChips";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { PageVideo } from "@/components/shared/PageVideo";
 import { getDiseasePage, getAllDiseasePageSlugs } from "@/lib/data/disease-pages";
@@ -116,6 +117,8 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
       )}
 
       <ConditionsList intro={page.conditionsIntro} conditions={page.conditions} />
+
+      <TriggerChips triggers={page.commonTriggers ?? []} />
 
       <PageVideo videos={videos} />
 

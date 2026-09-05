@@ -84,6 +84,17 @@ export interface DiseasePageContent {
   sections: DiseasePageSection[];
   /** GIOS Stage1 Final Audit "VALIDATED" item — only on the top 5 highest-traffic pages. */
   comparisonTable?: DiseasePageComparisonRow[];
+  /**
+   * Short, scannable chips of root causes/triggers — Trust & Sales
+   * Playbook ch.6/9 (GEO: AI tools extract short discrete facts far more
+   * reliably than long paragraphs). Each entry must already be stated,
+   * near-verbatim, somewhere in this page's own `sections` prose — never
+   * a new claim invented for the chip. Omitted (not forced) on pages
+   * whose causes are too condition-specific to summarise honestly as one
+   * page-level list (e.g. autism's page deliberately avoids "root cause"
+   * framing; womens-health covers many conditions with different causes).
+   */
+  commonTriggers?: string[];
   /** Optional — omitted for pages with no doc-approved, consented patient testimonial (e.g. STEP11's 3 new pages) rather than inventing one. */
   patientStory?: DiseasePagePatientStory;
   faqs: DiseasePageFAQ[];
