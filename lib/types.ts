@@ -95,6 +95,15 @@ export interface DiseasePageContent {
    * framing; womens-health covers many conditions with different causes).
    */
   commonTriggers?: string[];
+  /**
+   * "Does This Sound Familiar?" — short, relatable checklist shown near the
+   * top of the page, before the visitor has to read anything else. UW
+   * report ch.3.3/Trust & Sales Playbook: get the visitor to self-diagnose
+   * ("that's me") in five seconds. Each line must paraphrase something
+   * already said in this page's own hero or sections — never a new symptom
+   * invented for the checklist.
+   */
+  soundFamiliar?: string[];
   /** Optional — omitted for pages with no doc-approved, consented patient testimonial (e.g. STEP11's 3 new pages) rather than inventing one. */
   patientStory?: DiseasePagePatientStory;
   faqs: DiseasePageFAQ[];

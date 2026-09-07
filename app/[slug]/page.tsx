@@ -12,6 +12,7 @@ import RelatedConditions from "@/components/disease-page/RelatedConditions";
 import ComparisonTable from "@/components/disease-page/ComparisonTable";
 import WorriesTable from "@/components/disease-page/WorriesTable";
 import TriggerChips from "@/components/disease-page/TriggerChips";
+import SoundFamiliar from "@/components/disease-page/SoundFamiliar";
 import PriceTeaser from "@/components/disease-page/PriceTeaser";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { PageVideo } from "@/components/shared/PageVideo";
@@ -101,6 +102,8 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
       />
 
       <DiseaseHero hero={page.hero} conditionName={page.aboutCondition.name} />
+
+      <SoundFamiliar items={page.soundFamiliar ?? []} />
 
       {/*
         Author box near the top, not just the bottom — GIOS_P4 GEO Layer 2

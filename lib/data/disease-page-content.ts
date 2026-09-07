@@ -126,6 +126,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         note: "Results vary by individual. Duration of disease, extent of involvement, and overall constitutional health all affect the treatment timeline. We set honest expectations at the first consultation.",
       },
     ],
+    // Paraphrased from this page's own hero/sections: "the vitiligo is
+    // still spreading, the psoriasis keeps returning, the eczema comes
+    // back every season" (hero) + "profoundly affect confidence, social
+    // life and mental health" (vitiligo section).
+    soundFamiliar: [
+      "White patches that keep spreading no matter which cream you try?",
+      "Psoriasis plaques that clear up, then come back worse than before?",
+      "Eczema that flares up every season like clockwork?",
+      "Skin problems that have started affecting your confidence in public?",
+    ],
     // Pulled verbatim from this page's own first section above ("An
     // overactive immune system. A constitutional susceptibility. A
     // hormonal imbalance. An unresolved stress response.") — not a new
@@ -270,6 +280,17 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "Constitutional homeopathic treatment for RA focuses on the immune system's overall dysregulation — not just the joint inflammation. Correctly prescribed remedies have produced meaningful reductions in morning stiffness and joint pain, lowering of inflammatory markers like CRP and ESR, and in some cases, the ability to reduce conventional medication doses under specialist supervision. Results are gradual — but they are real, measurable, and confirmed in blood tests.",
         ],
       },
+    ],
+    // Paraphrased from this page's own sections: "stiff, swollen, painful
+    // joints — especially in the morning" and "the fatigue, the side
+    // effects, and the knowledge that the disease is still progressing
+    // underneath take a toll" (RA section) + "dry eyes, dry mouth, fatigue"
+    // (Sjögren's, conditions list).
+    soundFamiliar: [
+      "Stiff, swollen, painful joints — especially first thing in the morning?",
+      "On immunosuppressants or biologics that manage it, but leave you fatigued?",
+      "A sense that the disease is 'controlled' on paper but still progressing underneath?",
+      "Dry eyes, dry mouth or persistent fatigue that doesn't fully make sense?",
     ],
     // Pulled verbatim from this page's "What Is an Autoimmune Disease?"
     // section above ("Genetics, environmental factors, infections, stress
@@ -428,6 +449,15 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
       },
     ],
+    // Sourced verbatim from the "During Chemotherapy and Radiation" and
+    // "After Cancer Treatment" lists above — patient-experience symptoms,
+    // not a "causes" claim (this page correctly has no commonTriggers).
+    soundFamiliar: [
+      "Struggling with nausea, vomiting or appetite loss during chemotherapy?",
+      "Constant fatigue making it hard to get through each treatment cycle?",
+      "Painful mouth ulcers or skin reactions from radiation?",
+      "Numbness, tingling, or anxiety that's stayed with you since treatment began?",
+    ],
     patientStory: {
       quote:
         "My mother was diagnosed with breast cancer in 2022 and underwent 6 cycles of chemotherapy. She had severe nausea, could not eat, and was losing weight rapidly. We started homeopathic treatment alongside her chemotherapy from cycle 3. By cycle 4, the nausea had reduced significantly and she was able to eat normal meals. She completed all 6 cycles without the hospitalisation her doctors had warned might be needed. Her oncologist noted that she tolerated the final cycles far better than the first two.",
@@ -553,6 +583,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
         note: "We review your blood reports at every follow-up. Progress in kidney cases is always measured objectively — through numbers, not just symptoms. Bring your latest reports to every consultation.",
       },
+    ],
+    // Sourced from this page's own hero ("High creatinine. Dialysis
+    // suggested.") and sections (nephrotic syndrome's oedema/protein,
+    // "fatigue, nausea, itching, and fluid retention", recurrent UTIs and
+    // kidney stones in the conditions list above).
+    soundFamiliar: [
+      "High creatinine, and doctors already mentioning dialysis?",
+      "Swelling in your legs or face, or protein showing up in urine tests?",
+      "Fatigue, nausea or itching that's quietly become part of daily life?",
+      "Kidney stones or urinary infections that keep coming back?",
     ],
     // Pulled verbatim from this page's first section above ("years of
     // uncontrolled diabetes, hypertension, chronic inflammation,
@@ -699,6 +739,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
       },
     ],
+    // Sourced from the Down syndrome section ("recurring ear and chest
+    // infections", constipation, sleep disturbances) and the Thalassemia
+    // Minor section ("fatigue and mild anaemia") above — not a "causes"
+    // claim (this page correctly has no commonTriggers).
+    soundFamiliar: [
+      "Recurring ear or chest infections that keep your child on antibiotics almost constantly?",
+      "Constipation, bloating or digestion that's always been difficult?",
+      "Sleep disturbances that affect alertness and behaviour the next day?",
+      "Fatigue that's just been accepted as 'part of the condition'?",
+    ],
     patientStory: {
       quote:
         "Our daughter has Down syndrome. She was having 8 to 10 chest infections and ear infections every year — almost constantly on antibiotics. She slept very poorly and had chronic constipation. After 8 months of Dr Yadav's treatment, her infections have reduced to 2 in the past year. Her constipation is resolved. She is sleeping through the night. Her school teacher has commented that she is more alert and engaged in class. We are continuing treatment and the improvement has been real and consistent.",
@@ -841,6 +891,17 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
       },
     ],
+    // Sourced from the "Co-Occurring Conditions" subsections above (Sleep
+    // Disorders, Gastrointestinal Issues, Hyperactivity and Impulsivity,
+    // Aggressive and Self-Injurious Behaviour) — not a "causes" claim (this
+    // page correctly has no commonTriggers, per its own "not a disease to
+    // be cured" framing).
+    soundFamiliar: [
+      "Nights where your child sleeps very little, or wakes up again and again?",
+      "Constipation, loose stools or stomach discomfort your child can't clearly tell you about?",
+      "Hyperactivity or impulsivity that makes therapy and school harder?",
+      "Meltdowns, head-banging or aggression that seem to come out of nowhere?",
+    ],
     comparisonTable: [
       {
         factor: "Treatment approach",
@@ -979,6 +1040,17 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "Parents of CP children who have undergone constitutional treatment at our clinic frequently report that their child's physiotherapy produces better results after the homeopathic treatment begins — because the child's overall neurological and physical health is improved, making them more receptive and responsive to therapeutic input.",
         ],
       },
+    ],
+    // Sourced from the Epilepsy, Migraine and Cerebral Palsy sections above,
+    // plus Vertigo/Trigeminal Neuralgia/Essential Tremor in the conditions
+    // list — this page covers too many distinct mechanisms for a unified
+    // "causes" claim (correctly has no commonTriggers), but these are real,
+    // already-stated symptom experiences.
+    soundFamiliar: [
+      "Seizures that aren't fully controlled even with your current medication?",
+      "Migraines with throbbing pain, nausea or light/sound sensitivity that keep coming back?",
+      "Muscle stiffness, drooling or sleep problems that make daily care harder?",
+      "Tremors, vertigo or nerve pain that conventional medicine only partially controls?",
     ],
     patientStory: {
       quote:
@@ -1121,6 +1193,17 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           },
         ],
       },
+    ],
+    // Sourced from this page's own hero ("Your Child Has Had Antibiotics
+    // Three Times This Year") and the tonsillitis/bed-wetting sections
+    // above — too heterogeneous a page for a unified "causes" claim
+    // (correctly has no commonTriggers), but these are real, stated
+    // parent-facing experiences.
+    soundFamiliar: [
+      "Your child on antibiotics multiple times a year for the same infections?",
+      "Doctors already suggesting tonsillectomy or long-term allergy medication?",
+      "Bed-wetting past age 5 that hasn't resolved with alarms or medication?",
+      "A cycle where the medicine works, but the illness always comes back?",
     ],
     patientStory: {
       quote:
@@ -1282,6 +1365,17 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         homeopathy: "Consultation-based, with medicines that are low-cost",
       },
     ],
+    // Sourced from the PCOD section (irregular periods, cysts, acne, hair
+    // growth), Fibroids section (heavy bleeding, pelvic pressure), and the
+    // conditions list (Menopausal Syndrome, Female Infertility) above —
+    // too heterogeneous a page for a unified "causes" claim (correctly has
+    // no commonTriggers), but these are real, already-stated experiences.
+    soundFamiliar: [
+      "Irregular or missed periods along with acne, weight gain or excess hair growth?",
+      "Heavy, painful periods with pelvic pressure that doctors have linked to fibroids?",
+      "Hot flushes, mood changes or sleep trouble that started with menopause?",
+      "Struggling to conceive, with no clear answer as to why?",
+    ],
     patientStory: {
       quote:
         "I had PCOD for 8 years. My periods came every 3 to 5 months. I had been on hormonal pills since age 22 and was told IVF would be needed to conceive. I started constitutional treatment with Dr Yadav at 29. Within 6 months my cycle had regulated to every 35 to 40 days. By 10 months, my ultrasound showed significant reduction in cyst number. At 14 months of treatment, I conceived naturally — something I had been told was extremely unlikely. My daughter is now 2 years old.",
@@ -1402,6 +1496,17 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
       },
     ],
+    // Sourced from this page's own hero ("You have not said it out loud to
+    // anyone yet") and the BPH/Prostatitis section (difficulty starting
+    // urination, frequent nighttime urge, incomplete emptying) above — too
+    // heterogeneous a page for a unified "causes" claim (correctly has no
+    // commonTriggers).
+    soundFamiliar: [
+      "A fertility issue you haven't said out loud to anyone yet?",
+      "Difficulty achieving or maintaining an erection that's affecting your confidence?",
+      "A weak urine stream or frequent nighttime urges that have quietly gotten worse?",
+      "Persistent low energy or low libido you've just learned to live with?",
+    ],
     patientStory: {
       quote:
         "My semen analysis showed a total sperm count of 3 million per ml and motility of 18 percent. My wife and I had been trying to conceive for 3 years. IVF with ICSI was recommended. I started constitutional treatment with Dr Yadav. After 6 months, my count was 22 million per ml and motility had risen to 41 percent. We conceived naturally in the 8th month of treatment. We have a son now. I still find it difficult to believe.",
@@ -1498,6 +1603,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "For chronic sinusitis — recurring or persistent inflammation of the sinus cavities, often with thick nasal discharge, facial pain and headache — constitutional treatment combined with appropriate dietary guidance (reducing foods that promote mucus production) produces consistent and often dramatic improvement.",
         ],
       },
+    ],
+    // Sourced from the asthma section ("dust, cold air or exercise-induced
+    // triggers") and the rhinitis/sinusitis section ("constant sneezing,
+    // blocked or runny nose, itchy eyes, post-nasal drip" and "thick nasal
+    // discharge, facial pain and headache") above.
+    soundFamiliar: [
+      "Wheezing or breathlessness triggered by dust, cold air or exercise?",
+      "Constant sneezing, a blocked or runny nose, and itchy eyes that never fully go away?",
+      "Relying on your inhaler or antihistamines just to get through the day?",
+      "Sinus headaches or facial pain with thick nasal discharge that keeps returning?",
     ],
     // Sourced verbatim from this page's own sections above: "dust, cold air,
     // or stress" (hero), "high pollution, dust and allergen exposure" and
@@ -1611,6 +1726,17 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         note: "Severe third and fourth degree prolapsed piles, large thrombosed haemorrhoids, or complex fistula-in-ano may still require surgical or procedural management. We assess each case and give an honest recommendation.",
       },
     ],
+    // Sourced from the IBS section ("abdominal cramps, bloating, and
+    // unpredictable bowel habits", "feel dismissed... told it is
+    // stress-related") and the Piles/Fissures section above — too
+    // heterogeneous a page for a unified "causes" claim (correctly has no
+    // commonTriggers).
+    soundFamiliar: [
+      "Bloating and unpredictable bowel habits — sometimes constipation, sometimes diarrhoea?",
+      "Acidity or heartburn that keeps coming back despite antacids?",
+      "Bleeding or pain from piles or fissures that makes you dread the bathroom?",
+      "Being told your tests are 'normal' while your symptoms are very real?",
+    ],
     patientStory: {
       quote:
         "I had IBS for 11 years. Alternating constipation and diarrhoea, severe bloating after every meal, and cramping that affected my work and social life. I had tried every gastroenterologist's recommendation — fibre, probiotics, antispasmodics. Nothing lasted. After 4 months of constitutional treatment with Dr Yadav, my stools normalised for the first time in over a decade. The bloating is 80 percent better. I still have occasional off days but they are nothing like before. My life has genuinely changed.",
@@ -1714,6 +1840,17 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "For Pre-Diabetes — elevated fasting blood sugar or HbA1c in the pre-diabetic range — constitutional treatment alongside dietary and lifestyle changes offers a genuine opportunity to reverse the progression before full diabetes develops.",
         ],
       },
+    ],
+    // Sourced from the conditions list (hypothyroidism's "fatigue, weight
+    // gain, hair loss", Hashimoto's "high anti-TPO antibodies") and the
+    // Thyroxine Dose / Diabetes sections above — too heterogeneous a page
+    // (thyroid, PCOD, diabetes, adrenal, pituitary) for a unified "causes"
+    // claim (correctly has no commonTriggers).
+    soundFamiliar: [
+      "Fatigue, weight gain or hair loss that your thyroid reports keep confirming?",
+      "TSH or anti-TPO numbers that won't come down even with medication?",
+      "Blood sugar that's hard to keep stable despite diet and medication?",
+      "Wondering if you'll need thyroid medication for the rest of your life?",
     ],
     patientStory: {
       quote:
@@ -1832,6 +1969,18 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
       },
     ],
+    // Sourced from the Anxiety section ("the constant background hum of
+    // worry, the physical tension, the what-if thinking"), Depression
+    // section ("persistent low mood, loss of interest... fatigue") and
+    // Insomnia section above — this page's own philosophy is explicitly
+    // individualised, not a unified "causes" claim (correctly has no
+    // commonTriggers).
+    soundFamiliar: [
+      "A constant background hum of worry or 'what-if' thinking that never stops?",
+      "Low mood, loss of interest or fatigue that's lasted for weeks or months?",
+      "Difficulty falling asleep, frequent waking, or waking too early?",
+      "Wanting help, but worried about side effects or dependency on medication?",
+    ],
     patientStory: {
       quote:
         "I had generalised anxiety for 14 years. I was on escitalopram for 6 years — it helped somewhat but I gained weight, had no motivation, and felt emotionally blunted. I wanted to come off it but every time I tried, the anxiety returned worse. I started constitutional treatment with Dr Yadav. After 3 months, my sleep was significantly better and the background anxiety had noticeably reduced. After 6 months, under my psychiatrist's supervision, I began slowly reducing the escitalopram. I am now at half the dose with better anxiety control than I had on the full dose. For the first time in years I feel like myself.",
@@ -1923,6 +2072,17 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
       },
     ],
+    // Sourced from this page's own hero ("Your Joints Have Been Hurting for
+    // Years. Your Painkillers Know It Too.") and the AS/AVN section
+    // ("stiffness and morning pain", "hip replacement surgery") above — the
+    // conditions listed have genuinely different mechanisms, so this page
+    // correctly has no commonTriggers.
+    soundFamiliar: [
+      "Joint pain that's lasted years, managed only with painkillers?",
+      "Morning stiffness that takes a while to loosen up?",
+      "Being told a joint replacement or expensive biological injection is your only option?",
+      "Back or neck pain that radiates and just won't fully go away?",
+    ],
     faqs: [
       {
         question: "Does homeopathy actually work for joint pain?",
@@ -2005,6 +2165,17 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
       },
     ],
+    // Sourced from the "Honest Word" section ("already had surgery but
+    // still have symptoms") and the conditions list (Coronary Artery
+    // Disease's angina, Cardiomyopathy) above — kept deliberately narrow
+    // given this page's own "we do not claim to cure" framing; this page
+    // correctly has no commonTriggers.
+    soundFamiliar: [
+      "Already had heart surgery, but still living with symptoms?",
+      "Blood pressure that's hard to manage even with medication?",
+      "Angina or chest discomfort that limits your daily activity?",
+      "A congenital heart condition where surgery isn't possible or wasn't fully successful?",
+    ],
     faqs: [
       {
         question: "Can homeopathy close an ASD or VSD?",
@@ -2078,6 +2249,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
         note: "Important: Acute bacterial STIs (gonorrhea, chlamydia, syphilis) require antibiotic treatment. We never advise against this. Homeopathy plays a supportive role — for recurrence prevention, constitutional health, and recovery.",
       },
+    ],
+    // Sourced from this page's own hero ("hardest to speak about",
+    // "private", "embarrassing") and conditions list (herpes recurrence,
+    // HPV, loss of libido) above — conditions here have different
+    // causative agents, so this page correctly has no commonTriggers.
+    soundFamiliar: [
+      "A concern you've found too embarrassing to bring up with anyone?",
+      "Herpes or genital wart outbreaks that keep recurring?",
+      "Loss of libido that's affected your confidence or relationship?",
+      "Wanting a private conversation, without an in-person visit?",
     ],
     faqs: [
       {
