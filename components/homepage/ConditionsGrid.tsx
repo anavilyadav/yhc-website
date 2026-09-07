@@ -14,7 +14,7 @@ export default function ConditionsGrid({ diseases }: { diseases: Disease[] }) {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
           {diseases.map((disease, index) => (
             <Link
               key={disease.slug}
@@ -22,7 +22,7 @@ export default function ConditionsGrid({ diseases }: { diseases: Disease[] }) {
               // A lone card left over in the final row (e.g. 16 items in a
               // 3-column grid) reads as a layout mistake — centre it under
               // the row above instead of leaving it stranded on the left.
-              className={`group relative overflow-hidden rounded-sm border border-border-amber bg-white p-5 transition-colors hover:border-amber ${
+              className={`group relative overflow-hidden rounded-sm border border-border-amber bg-white p-3.5 transition-colors hover:border-amber sm:p-5 ${
                 diseases.length % 3 === 1 && index === diseases.length - 1
                   ? "lg:col-start-2"
                   : ""
@@ -33,16 +33,23 @@ export default function ConditionsGrid({ diseases }: { diseases: Disease[] }) {
                   disease.is_specialty ? "bg-green" : "bg-amber"
                 }`}
               />
-              <h3 className="font-serif text-base font-bold text-navy">{disease.title}</h3>
+              <h3 className="font-serif text-[15px] font-bold text-navy sm:text-base">{disease.title}</h3>
               {disease.is_specialty && (
                 <span className="mt-1.5 inline-block bg-green px-2 py-0.5 text-[10px] font-bold tracking-wide text-white">
                   SPECIALITY
                 </span>
               )}
-              <p className="mt-2 text-[14px] leading-relaxed text-text-mid">
+              {/*
+                Full description dropped below sm — 17 cards of headline +
+                badge + full paragraph + link each made the homepage's most
+                visited section by far the longest single scroll on mobile.
+                Title + badge + link is enough to identify and tap through;
+                the description earns its place back once there's room.
+              */}
+              <p className="mt-2 hidden text-[14px] leading-relaxed text-text-mid sm:block">
                 {disease.description}
               </p>
-              <span className="mt-3 block text-xs font-bold text-amber-dark group-hover:text-navy">
+              <span className="mt-2 block text-xs font-bold text-amber-dark group-hover:text-navy sm:mt-3">
                 View →
               </span>
             </Link>

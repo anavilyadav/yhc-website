@@ -4,6 +4,10 @@ const features = [
     text: "Dr T P Yadav has practised classical homeopathy since the early 1990s. Three decades of continuous clinical experience means he has seen — and treated — cases that most homeopaths never encounter.",
   },
   {
+    title: "The Same Two Doctors — Every Single Visit",
+    text: "Some clinics grow by adding more branches and more staff you've never met. We didn't. In 35 years, Yadav Homeo Clinic has been led by exactly two doctors — Dr T P Yadav and Dr Anavil Yadav — and one of them personally sees every patient, every time. No rotating panel. No handoff to a 'research team' instead of the doctor you chose.",
+  },
+  {
     title: "We Treat What Others Call Incurable",
     text: "Vitiligo. High creatinine. Autism. Down syndrome. Psoriasis. These are our everyday cases — not our exceptions. Our entire practice is built around the conditions that mainstream medicine says cannot be fixed.",
   },
