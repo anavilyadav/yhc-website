@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getBlogPosts } from "@/lib/data/blog";
-import { BlogCard } from "@/components/blog/BlogCard";
+import { BlogFilter } from "@/components/blog/BlogFilter";
 import { siteConfig } from "@/lib/site-config";
 
 export const revalidate = 3600;
@@ -41,11 +41,7 @@ export default async function BlogIndexPage() {
       </section>
 
       <section className="bg-cream-bg px-5 py-14 md:py-16">
-        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
-          {posts.map((post) => (
-            <BlogCard key={post.slug} post={post} />
-          ))}
-        </div>
+        <BlogFilter posts={posts} />
       </section>
     </>
   );
