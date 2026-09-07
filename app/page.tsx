@@ -8,6 +8,7 @@ import Testimonials from "@/components/homepage/Testimonials";
 import OnlineConsultation from "@/components/homepage/OnlineConsultation";
 import FinalCTA from "@/components/homepage/FinalCTA";
 import { PageVideo } from "@/components/shared/PageVideo";
+import { QuickCheck } from "@/components/shared/QuickCheck";
 import { getDiseases } from "@/lib/data/diseases";
 import { getTestimonials } from "@/lib/data/testimonials";
 import { getPageVideos } from "@/lib/data/videos";
@@ -75,6 +76,7 @@ export default async function HomePage() {
       <PageVideo videos={videos} />
       <AboutTeaser />
       <ConditionsGrid diseases={diseases} />
+      <QuickCheck />
       <HowWeWork />
       <WhyChooseUs />
       <Testimonials testimonials={testimonials} />
