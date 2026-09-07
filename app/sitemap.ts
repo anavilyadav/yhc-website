@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/site-config";
 import { getAllDiseasePageSlugs } from "@/lib/data/disease-pages";
 import { getAllBlogSlugs } from "@/lib/data/blog";
 import { getDoctors } from "@/lib/supabase/queries/doctors";
+import { getConditionFaqSlugs } from "@/lib/content/homeopathy-faq-content";
 
 const STATIC_ROUTES = [
   "",
@@ -53,5 +54,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(),
   }));
 
-  return [...staticEntries, ...diseaseEntries, ...blogEntries, ...doctorEntries];
+  const conditionFaqEntries = getConditionFaqSlugs().map((slug) => ({
+    url: `${siteConfig.url}/homeopathy-faq/${slug}/`,
+    lastModified: new Date(),
+  }));
+
+  return [
+    ...staticEntries,
+    ...diseaseEntries,
+    ...blogEntries,
+    ...doctorEntries,
+    ...conditionFaqEntries,
+  ];
 }

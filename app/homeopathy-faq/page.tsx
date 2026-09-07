@@ -14,7 +14,9 @@ import {
   homeopathyFaqCategories,
   homeopathyFaqDisclaimer,
   homeopathyFaqFinalCta,
+  getConditionFaqSlugs,
 } from "@/lib/content/homeopathy-faq-content";
+import { getDiseasePage } from "@/lib/data/disease-pages";
 
 export const metadata: Metadata = {
   title: { absolute: homeopathyFaqSeo.pageTitle },
@@ -32,10 +34,15 @@ export const metadata: Metadata = {
 };
 
 export default async function HomeopathyFaqPage() {
-  const [doctor, videos] = await Promise.all([
+  const conditionSlugs = getConditionFaqSlugs();
+  const [doctor, videos, conditionPages] = await Promise.all([
     getDoctorBySlug(siteConfig.doctors.physician.slug),
     getPageVideos("homeopathy-faq"),
+    Promise.all(conditionSlugs.map((slug) => getDiseasePage(slug))),
   ]);
+  const conditionLinks = conditionSlugs
+    .map((slug, i) => ({ slug, name: conditionPages[i]?.aboutCondition.name }))
+    .filter((c): c is { slug: string; name: string } => Boolean(c.name));
   const allQuestions = homeopathyFaqCategories.flatMap((cat) => cat.questions);
   const faqPageSchema = buildFAQPageSchema(allQuestions);
   const lastReviewed = new Date().toLocaleDateString("en-IN", {
@@ -80,6 +87,27 @@ export default async function HomeopathyFaqPage() {
       </div>
 
       <PageVideo videos={videos} />
+
+      {conditionLinks.length > 0 && (
+        <section className="bg-cream px-5 py-10">
+          <div className="mx-auto max-w-3xl">
+            <p className="text-xs font-bold uppercase tracking-wide text-amber-dark">
+              Browse FAQs by Condition
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2.5">
+              {conditionLinks.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/homeopathy-faq/${c.slug}/`}
+                  className="rounded-full border border-border-amber bg-white px-4 py-1.5 text-sm font-medium text-navy transition-colors hover:border-amber hover:text-amber-dark"
+                >
+                  {c.name} →
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="bg-white px-5 py-14">
         <div className="mx-auto max-w-3xl">

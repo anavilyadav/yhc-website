@@ -89,101 +89,121 @@ export const homeopathyFaqCategories: FaqCategory[] = [
         question: "Can homeopathy treat vitiligo (leucoderma/safed daag)?",
         answer:
           "Vitiligo is one of the specialities of Yadav Homeo Clinic, Jaipur, with 30+ years of clinical experience. Constitutional homeopathic treatment for vitiligo works by addressing the underlying immune dysregulation that causes melanocyte destruction. Outcomes vary: most patients achieve halting of new patch formation; approximately 40-60% achieve visible repigmentation of existing patches over 12-18 months. Best results in: early-stage vitiligo (under 7 years), face and trunk patches, actively spreading disease. The treatment takes patience — minimum 12 months for meaningful results.",
+        conditionSlug: "skin-diseases",
       },
       {
         question: "Can homeopathy help with high creatinine and kidney disease?",
         answer:
           "Constitutional homeopathic treatment has produced measurable creatinine reduction in many CKD Stage 1-3 patients at Yadav Homeo Clinic when combined with dietary management and nephrology care. The approach addresses the systemic drivers of kidney damage (hypertension, diabetes, immune activity) rather than treating the kidney in isolation. Blood tests are monitored every 6-8 weeks. Not all cases respond — advanced end-stage disease (creatinine above 7-8) has more limited scope for reversal. Always continue nephrology care alongside homeopathic treatment.",
+        conditionSlug: "renal-diseases",
       },
       {
         question: "Does homeopathy help children with autism spectrum disorder?",
         answer:
           "Homeopathy does not cure autism. It consistently improves the co-occurring conditions that make autism more difficult — chronic sleep disorders, gastrointestinal problems, hyperactivity, aggressive behaviours, and immune susceptibility to infections. Over 5,000 children with autism and developmental conditions have been treated at Yadav Homeo Clinic over 30 years. The most reliable improvements are in sleep (often within 2-3 months), digestive function, and reduction in behavioural dysregulation. Language development, when it occurs, typically comes later. All existing therapies (speech, OT, ABA) must continue alongside homeopathic treatment.",
+        conditionSlug: "autism",
       },
       {
         question: "Can homeopathy treat psoriasis without steroids?",
         answer:
           "Yes. Constitutional homeopathic treatment for psoriasis addresses the immune dysregulation at the root of the condition — the overproduction of skin cells driven by abnormal T-cell activity. Patients do not need to stop steroid treatment immediately; homeopathy is started alongside and conventional treatment is tapered as improvement occurs. Many psoriasis patients at Yadav Homeo Clinic have achieved prolonged remission (years without recurrence) after completing 12-18 months of constitutional treatment.",
+        conditionSlug: "skin-diseases",
       },
       {
         question: "Can homeopathy help with PCOD/PCOS naturally?",
         answer:
           "Constitutional homeopathic treatment for PCOD targets the hypothalamic-pituitary-ovarian axis imbalance rather than substituting missing hormones. Many patients achieve regularisation of menstrual cycles, reduction in ovarian cyst size (confirmed on ultrasound), and improvement in hormonal blood markers over 6-9 months of treatment. Several patients at Yadav Homeo Clinic have achieved natural conception after constitutional treatment when IVF had been the only recommendation. Oral contraceptive pills do not need to be stopped immediately — homeopathy is started alongside and OCPs are tapered as cycles regularise.",
+        conditionSlug: "womens-health",
       },
       {
         question: "Does homeopathy work for thyroid disease?",
         answer:
           "Constitutional homeopathic treatment for hypothyroidism — particularly when the cause is Hashimoto's autoimmune thyroiditis — aims to stimulate the thyroid gland's own function and reduce the autoimmune attack on thyroid tissue. In a proportion of patients with early Hashimoto's, this produces improvement in TSH and reduction in anti-TPO antibodies. Some patients have been able to reduce their thyroxine dose with endocrinologist supervision after sustained TSH normalisation. Do not reduce thyroxine without endocrinologist guidance. TSH must be monitored every 6-8 weeks during treatment.",
+        conditionSlug: "hormonal-diseases",
       },
       {
         question: "Can homeopathy treat migraine?",
         answer:
           "Migraine is one of the conditions where classical homeopathic treatment produces its most consistent results. The constitutional remedy is selected based on the individual's specific migraine pattern — time of onset, side, character of pain, triggers, accompanying symptoms, and constitutional type. Most patients at Yadav Homeo Clinic see meaningful reduction in migraine frequency within 3-4 months. Many become attack-free within 9-12 months. Results tend to be more lasting than prophylactic pharmaceutical treatment because the remedy addresses constitutional hypersensitivity rather than blocking neurochemical pathways.",
+        conditionSlug: "nervous-system-disease",
       },
       {
         question: "Can homeopathy treat epilepsy?",
         answer:
           "Homeopathy works alongside antiepileptic drugs (AEDs) — never as a replacement for them. Never stop or reduce AEDs without neurologist guidance. Constitutional treatment addresses the neurological hypersensitivity underlying seizure disorders. In many patients, consistent constitutional treatment alongside appropriate AED management produces reduction in seizure frequency and severity over 6-18 months. Some patients have been able to reduce AED doses with neurologist supervision after achieving sustained seizure control. EEG monitoring must continue throughout.",
+        conditionSlug: "nervous-system-disease",
       },
       {
         question: "Can homeopathy treat uterine fibroids without surgery?",
         answer:
           "For small to medium fibroids (typically under 5-6 cm) not causing acute obstruction, severe anaemia, or significant fertility impairment, constitutional homeopathic treatment has produced measurable reduction in fibroid size (confirmed on ultrasound) in a number of patients at Yadav Homeo Clinic. Heavy menstrual bleeding associated with fibroids consistently improves. Larger fibroids or those causing serious complications may genuinely require surgical management — we provide honest case-specific assessments.",
+        conditionSlug: "womens-health",
       },
       {
         question: "Does homeopathy work for rheumatoid arthritis?",
         answer:
           "Constitutional homeopathic treatment for RA is used alongside — not instead of — DMARDs and biologics. The treatment addresses the underlying immune dysregulation driving joint inflammation. Improvement is measured objectively in inflammatory markers: CRP, ESR, RF factor, anti-CCP levels. Morning stiffness duration, joint pain scores and grip strength also improve in responding patients. Some patients have been able to reduce their DMARD dose under rheumatologist supervision. Homeopathic treatment for RA requires at least 8-12 months for meaningful objective improvement.",
+        conditionSlug: "autoimmune-diseases",
       },
       {
         question: "Can homeopathy treat IBS (irritable bowel syndrome)?",
         answer:
           "IBS is one of the conditions where classical homeopathic treatment produces very consistent results. The constitutional remedy addresses both the physical gut pathology and the nervous system hypersensitivity and stress-response patterns that drive IBS. Most patients see meaningful improvement in bowel regularity, pain and urgency within 3-4 months. Many achieve complete resolution of symptoms within 6-12 months of constitutional treatment.",
+        conditionSlug: "digestive-diseases",
       },
       {
         question: "Can homeopathy help with male infertility (low sperm count)?",
         answer:
           "Constitutional homeopathic treatment for male infertility addresses the underlying constitutional factors affecting spermatogenesis — hormonal imbalances, immune factors, oxidative stress, chronic infections. Semen parameters are measured at 4-6 months (one full spermatogenesis cycle after starting treatment). Many patients have shown significant improvement in sperm count and motility, with some achieving natural conception when IVF/ICSI had been the recommendation. Complete semen analysis reports are required at the first consultation.",
+        conditionSlug: "mens-health",
       },
       {
         question: "Can homeopathy treat Down syndrome?",
         answer:
           "Homeopathy cannot change chromosomes or reverse genetic conditions. What constitutional treatment consistently achieves in Down syndrome patients: stronger immune function (fewer recurrent infections), better digestive function, improved sleep, thyroid support (Down syndrome has elevated hypothyroidism risk), and improved alertness and cognitive engagement. Parents at Yadav Homeo Clinic consistently report that their children become healthier, more engaged and more able to benefit from educational interventions after constitutional treatment.",
+        conditionSlug: "genetic-diseases",
       },
       {
         question: "Can homeopathy treat thalassemia?",
         answer:
           "Homeopathy cannot change the genetic haemoglobin defect in thalassemia. Constitutional treatment for thalassemia major patients focuses on: improving quality of life between transfusions, strengthening immune function, reducing fatigue burden, and in some cases increasing the interval between required transfusions (not guaranteed). Blood transfusions must never be reduced or delayed based on any alternative therapy. Thalassemia minor patients often experience significant improvement in fatigue and overall energy with constitutional treatment.",
+        conditionSlug: "genetic-diseases",
       },
       {
         question: "Can homeopathy treat asthma in children?",
         answer:
           "Childhood asthma responds particularly well to constitutional homeopathic treatment — better than adult asthma, because the pattern is less entrenched and vital force is stronger. The remedy addresses the bronchial hypersensitivity that allows triggers to cause attacks. Most asthmatic children see meaningful reduction in attack frequency within 3-4 months. Many children achieve complete resolution of asthma before adulthood with proper constitutional treatment. Inhalers must never be stopped without pulmonologist guidance — they are reduced gradually as asthma improves.",
+        conditionSlug: "respiratory-diseases",
       },
       {
         question: "Can homeopathy treat anxiety and depression?",
         answer:
           "Constitutional homeopathic treatment is effective for mild to moderate anxiety and depression — the majority of cases. The remedy is selected based on the specific character of the patient's anxiety or depression, their constitutional type and their unique emotional pattern. Results are typically seen within 4-8 weeks of the correctly prescribed remedy. No dependency. No emotional blunting. No side effects. For severe psychiatric conditions — bipolar disorder, psychosis, severe recurrent depression — psychiatric medication must be continued alongside homeopathic treatment and never replaced by it.",
+        conditionSlug: "mental-health",
       },
       {
         question: "Can homeopathy treat piles (haemorrhoids) without surgery?",
         answer:
           "Yes — many second and third-degree haemorrhoids have been managed without surgery through constitutional homeopathic treatment at Yadav Homeo Clinic. Bleeding reduces, pain resolves, and haemorrhoid size reduces over 3-6 months of treatment. Severely prolapsed, thrombosed or strangulated piles may require surgical management — we provide honest individual assessments.",
+        conditionSlug: "digestive-diseases",
       },
       {
         question: "Can homeopathy help with chronic kidney disease in diabetic patients?",
         answer:
           "Diabetic nephropathy — kidney damage from long-standing diabetes — is one of the most common causes of CKD in India. Constitutional homeopathic treatment works alongside tight diabetic control and nephrology care to slow or reverse CKD progression. The combination of constitutional treatment, strict dietary compliance, and excellent blood sugar and blood pressure control offers the best chance of stabilising kidney function. Blood sugar control is NOT optional alongside homeopathic treatment — it is the most important factor in protecting kidneys.",
+        conditionSlug: "renal-diseases",
       },
       {
         question: "Can homeopathy treat bed-wetting in children?",
         answer:
           "Nocturnal enuresis (bed-wetting) is one of the conditions where classical homeopathic treatment produces the most consistent and rapid results. Constitutional prescribing based on the child's specific pattern — time of wetting, depth of sleep, constitutional type — achieves significant improvement or complete resolution in most cases within 3-6 months. No side effects, no dependency, no alarm devices needed. One of the most rewarding treatment outcomes in paediatric homeopathic practice.",
+        conditionSlug: "childrens-health",
       },
       {
         question: "Can homeopathy support cancer patients during chemotherapy?",
         answer:
           "Homeopathy plays a supportive — not curative — role in cancer care. It is used alongside conventional oncological treatment (surgery, chemotherapy, radiation, biologics) to: reduce nausea and vomiting, improve energy and appetite, strengthen immunity during immunosuppression, manage pain and improve sleep. Never delay or refuse conventional cancer treatment in favour of homeopathy. We coordinate with the patient's oncology team and never interfere with the primary cancer treatment plan.",
+        conditionSlug: "cancer",
       },
     ],
   },
@@ -299,7 +319,30 @@ export const homeopathyFaqCategories: FaqCategory[] = [
   },
 ];
 
+/**
+ * Per-condition slices of the "Specific Conditions" category — powers the
+ * /homeopathy-faq/[slug] sub-pages (UW report ch.5/6: split the mega FAQ
+ * page into pages that can each rank for their own condition, instead of
+ * one page competing with itself). Derived from the same source array
+ * above, never duplicated — editing a question here only ever means
+ * editing it in homeopathyFaqCategories.
+ */
+function specificConditionQuestions(): FaqCategory["questions"] {
+  return homeopathyFaqCategories.find((c) => c.category === "Specific Conditions")?.questions ?? [];
+}
+
+export function getConditionFaqs(conditionSlug: string) {
+  return specificConditionQuestions().filter((q) => q.conditionSlug === conditionSlug);
+}
+
+export function getConditionFaqSlugs(): string[] {
+  const slugs = specificConditionQuestions()
+    .map((q) => q.conditionSlug)
+    .filter((slug): slug is string => Boolean(slug));
+  return Array.from(new Set(slugs));
+}
+
 export const homeopathyFaqDisclaimer =
-  "Medical Disclaimer: The information on this page is written by Dr Anavil Yadav (BHMS) for general educational purposes only. It does not constitute medical advice and should not replace consultation with a qualified healthcare professional. Treatment outcomes vary between individuals. Homeopathic treatment at Yadav Homeo Clinic is provided under qualified medical supervision in accordance with the principles of classical homeopathy. Always consult your primary care physician before changing any prescribed medication.";
+  "The information on this page is written by Dr Anavil Yadav (BHMS) for general educational purposes only. It does not constitute medical advice and should not replace consultation with a qualified healthcare professional. Treatment outcomes vary between individuals. Homeopathic treatment at Yadav Homeo Clinic is provided under qualified medical supervision in accordance with the principles of classical homeopathy. Always consult your primary care physician before changing any prescribed medication.";
 
 export const homeopathyFaqFinalCta = "Have a question this page didn't answer?";

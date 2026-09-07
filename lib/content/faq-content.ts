@@ -9,6 +9,14 @@
 export interface FaqQuestion {
   question: string;
   answer: string;
+  /**
+   * Disease-page slug this question belongs to — only set on
+   * homeopathyFaqCategories' "Specific Conditions" entries, used to
+   * generate the /homeopathy-faq/[slug] per-condition sub-pages (UW
+   * report ch.5/6: splitting one FAQ page that competes with itself
+   * across many keywords into pages that can each rank for their own).
+   */
+  conditionSlug?: string;
 }
 
 export interface FaqCategory {

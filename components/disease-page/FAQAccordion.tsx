@@ -1,10 +1,16 @@
 import type { DiseasePageFAQ } from "@/lib/types";
 
-export default function FAQAccordion({ faqs }: { faqs: DiseasePageFAQ[] }) {
+export default function FAQAccordion({
+  faqs,
+  heading = "Frequently Asked Questions",
+}: {
+  faqs: DiseasePageFAQ[];
+  heading?: string;
+}) {
   return (
     <section className="bg-cream-bg px-5 py-14">
       <div className="mx-auto max-w-3xl">
-        <h2 className="font-serif text-xl text-navy md:text-2xl">Frequently Asked Questions</h2>
+        <h2 className="font-serif text-xl text-navy md:text-2xl">{heading}</h2>
 
         <div className="mt-6 space-y-3">
           {faqs.map((faq) => (
