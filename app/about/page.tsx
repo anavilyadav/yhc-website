@@ -3,6 +3,7 @@ import { getDoctors } from "@/lib/supabase/queries/doctors";
 import { aboutSeo } from "@/lib/content/about-static-content";
 import { PageHero } from "@/components/about/PageHero";
 import { OurStory } from "@/components/about/OurStory";
+import { ConsultationDiagram } from "@/components/about/ConsultationDiagram";
 import { DoctorProfileSection } from "@/components/about/DoctorProfileSection";
 import { ClinicTimeline } from "@/components/about/ClinicTimeline";
 import { MissionVisionValues } from "@/components/about/MissionVisionValues";
@@ -39,6 +40,7 @@ export default async function AboutPage() {
     <main>
       <PageHero />
       <OurStory />
+      <ConsultationDiagram />
       <PageVideo videos={videos} />
 
       {/*
