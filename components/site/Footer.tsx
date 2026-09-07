@@ -23,6 +23,28 @@ const treatmentLinks = [
   { label: "Nervous System Disorders", href: "/nervous-system-disease" },
 ];
 
+// PDM report ch.3: cheap, honest internal linking using each page's own
+// real focusKeyword (already defined in lib/data/disease-page-content.ts
+// for SEO) as the visible link text — never an invented search phrase.
+const popularSearches = [
+  { label: "Homeopathy for Vitiligo in Jaipur", href: "/skin-diseases" },
+  { label: "Homeopathy for Autism in Jaipur", href: "/autism" },
+  { label: "Homeopathy for Kidney Disease in Jaipur", href: "/renal-diseases" },
+  { label: "Homeopathy for PCOD in Jaipur", href: "/womens-health" },
+  { label: "Homeopathy for Thyroid in Jaipur", href: "/hormonal-diseases" },
+  { label: "Homeopathy for Male Infertility in Jaipur", href: "/mens-health" },
+  { label: "Homeopathy for Autoimmune Diseases in Jaipur", href: "/autoimmune-diseases" },
+  { label: "Homeopathy for Anxiety in Jaipur", href: "/mental-health" },
+  { label: "Homeopathy for Asthma in Jaipur", href: "/respiratory-diseases" },
+  { label: "Homeopathy for IBS in Jaipur", href: "/digestive-diseases" },
+  { label: "Homeopathy for Joint Pain in Jaipur", href: "/joint-bone-diseases" },
+  { label: "Homeopathy for Neurological Diseases in Jaipur", href: "/nervous-system-disease" },
+  { label: "Homeopathy for Down Syndrome in Jaipur", href: "/genetic-diseases" },
+  { label: "Homeopathy for Children in Jaipur", href: "/childrens-health" },
+  { label: "Homeopathy Cancer Support in Jaipur", href: "/cancer" },
+  { label: "Homeopathy for Heart Disease in Jaipur", href: "/heart-cardiac-support" },
+];
+
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms of Use", href: "/terms-of-use" },
@@ -131,6 +153,24 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        <hr className="my-8 border-amber/20" />
+
+        <div>
+          <h3 className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-amber-light">
+            Popular Searches
+          </h3>
+          <div className="flex flex-wrap gap-x-2 gap-y-2 text-[12px] text-cream/50">
+            {popularSearches.map((l, i) => (
+              <span key={l.href}>
+                <Link href={l.href} className="hover:text-amber-light">
+                  {l.label}
+                </Link>
+                {i < popularSearches.length - 1 && <span className="ml-2 text-cream/25">·</span>}
+              </span>
+            ))}
           </div>
         </div>
 
