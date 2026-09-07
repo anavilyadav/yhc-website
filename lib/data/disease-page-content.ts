@@ -203,6 +203,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Yes. Constitutional homeopathic treatment addresses the underlying immune hypersensitivity that makes the skin react to food triggers. As the constitutional treatment works, many patients find that their food sensitivities reduce alongside the eczema itself — because both are expressions of the same underlying susceptibility.",
       },
+      {
+        question: "How do we track whether the treatment is actually working?",
+        answer:
+          "Photographs are the most reliable tracker for skin conditions — we ask patients to photograph affected areas in the same lighting every 4 to 6 weeks, so gradual change (which is easy to miss day-to-day) becomes clearly visible over time. For vitiligo specifically, this is how pigment islands are first noticed. We also review your progress at every follow-up consultation.",
+      },
+      {
+        question: "I'm not in Jaipur. Can I still get treated for my skin condition?",
+        answer:
+          "Yes. Online consultation works the same way as in-clinic, at the same price. Share clear photographs of the affected areas over WhatsApp along with your case history, and follow-ups are conducted the same way. Many of our vitiligo and psoriasis patients are treated entirely online.",
+      },
     ],
     finalCta: "Ready to Begin Your Skin Healing Journey? Book a Consultation With Us Today →",
     disclaimer:
@@ -357,6 +367,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "For severe, multi-system SLE with significant organ involvement, homeopathy plays a supportive role alongside specialist rheumatological care — it is not a standalone treatment. For mild to moderate SLE or patients in remission, constitutional homeopathic treatment can meaningfully support immune regulation and quality of life.",
       },
+      {
+        question: "I'm not in Jaipur. Can autoimmune conditions be treated online?",
+        answer:
+          "Yes. Online consultation works the same way as in-clinic, at the same price. Share your latest blood reports and case history over WhatsApp, and follow-ups are conducted the same way — reviewing your lab reports and adjusting the remedy accordingly.",
+      },
+      {
+        question: "Is constitutional treatment safe if I am planning a pregnancy or already pregnant?",
+        answer:
+          "Yes — constitutional homeopathic medicines are safe during pregnancy. This is especially relevant for autoimmune patients planning a pregnancy, since some conventional immunosuppressants must be stopped or changed before conception under specialist guidance. Please always inform us if you are pregnant or planning to be, so we can coordinate carefully with your rheumatologist.",
+      },
     ],
     finalCta: "Book an Autoimmune Consultation at Yadav Homeo Clinic →",
     disclaimer:
@@ -486,6 +506,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "My relative with cancer does not want chemotherapy. Can homeopathy be used instead?",
         answer:
           "We strongly advise against using any alternative therapy, including homeopathy, as a substitute for proven cancer treatment. This is a deeply difficult situation — and we understand the fear and hope that drives it. But delaying or refusing conventional oncological treatment in favour of homeopathy alone can be life-threatening. Our role is to support conventional treatment, not replace it.",
+      },
+      {
+        question: "What information do you need from us to start supportive treatment?",
+        answer:
+          "We ask for the cancer type, stage, current treatment protocol (chemotherapy regimen or radiation schedule), and any ongoing medications. This lets us tailor supportive prescribing to the specific side effect profile of your particular treatment — taxane-based chemotherapy and platinum-based protocols, for example, produce quite different symptom patterns.",
+      },
+      {
+        question: "Can this be managed online if we are travelling for treatment at a cancer centre outside Jaipur?",
+        answer:
+          "Yes. Many of our cancer-support patients are actually travelling between home and a treatment centre, and online consultation lets us stay involved throughout — sharing reports and treatment updates over WhatsApp between cycles, with prescriptions adjusted as your protocol changes.",
       },
     ],
     finalCta: "Speak to Us About Homeopathic Cancer Support →",
@@ -693,6 +723,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "For small kidney stones — typically under 6mm — constitutional homeopathic treatment can support the natural dissolution and passage of stones, and more importantly, can address the constitutional tendency to form stones in the first place, reducing recurrence. Larger stones causing obstruction require urological management.",
       },
+      {
+        question: "I am already on dialysis. Is it too late for homeopathy to help?",
+        answer:
+          "It is not too late, but the goal changes. Once dialysis has started, reversing kidney function is generally not realistic — our role becomes supportive: managing fatigue, nausea, itching and fluid-related symptoms, and supporting overall quality of life alongside your dialysis schedule. We will be honest about this distinction at the first consultation.",
+      },
+      {
+        question: "I'm not in Jaipur. Can kidney disease be managed online?",
+        answer:
+          "Yes. Share your blood reports (creatinine, BUN, eGFR, electrolytes) over WhatsApp every 6 to 8 weeks as instructed, and we adjust your prescription based on the numbers — the same process as an in-clinic follow-up, at the same price.",
+      },
     ],
     finalCta: "Share Your Reports With Us — Book a Kidney Consultation →",
     disclaimer:
@@ -829,6 +869,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "Do we need to stop conventional treatment for our child?",
         answer:
           "Never. Conventional medical care for genetic conditions — whether it is thyroid medication, transfusions, physiotherapy, special education or speech therapy — must continue without interruption. Homeopathy works alongside and in support of all conventional care.",
+      },
+      {
+        question: "My child is on regular blood transfusions for Thalassemia Major. Will homeopathy reduce how often they're needed?",
+        answer:
+          "We cannot promise this, and transfusion therapy must never be reduced or delayed without your haematologist's explicit guidance — it is life-sustaining. What we have observed in some thalassemia patients is improved energy and immune function between transfusions, and in some cases a longer interval between required transfusions, though this varies significantly and is never guaranteed.",
+      },
+      {
+        question: "Is there a minimum age to start constitutional treatment?",
+        answer:
+          "No — we treat genetic conditions from infancy. Younger children often respond well because their overall constitutional pattern is less fixed. The case-taking approach is adapted for age, relying more on parent observation for infants and very young children.",
       },
     ],
     finalCta: "Book a Consultation for Your Family Member With a Genetic Condition →",
@@ -1047,6 +1097,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Yes — continue all prescribed medications. Homeopathy works alongside existing treatments. Do not reduce or stop any psychiatric or neurological medication without your child's physician's guidance.",
       },
+      {
+        question: "We follow a gluten-free/casein-free diet. Does that affect homeopathic treatment?",
+        answer:
+          "No — continue any dietary approach recommended by your child's paediatrician or dietitian. We don't prescribe specific diets ourselves, but the gastrointestinal issues that make many parents consider dietary changes in the first place — constipation, loose stools, food sensitivities — are exactly the kind of co-occurring symptom constitutional treatment addresses directly.",
+      },
+      {
+        question: "Will my child need to stay on homeopathic treatment forever?",
+        answer:
+          "No. Treatment is not intended to be indefinite. As the child's constitutional health stabilises and gains are sustained, the frequency and dosage are gradually reduced under our supervision. Most families see the clearest picture of how long ongoing treatment will realistically be needed by the 12-month mark.",
+      },
     ],
     finalCta: "Book Your Child's Consultation — We Are Listening →",
     disclaimer:
@@ -1195,6 +1255,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "How is homeopathy for migraine different from a regular migraine pill?",
         answer:
           "A migraine pill (triptan or pain medication) treats the attack once it has begun. Constitutional homeopathic treatment works between attacks — gradually reducing the neurological sensitivity that allows attacks to occur. The goal is to reduce how often attacks happen and how severe they are — not just to manage them once they start.",
+      },
+      {
+        question: "Is there an age limit for starting treatment for Cerebral Palsy?",
+        answer:
+          "No. We support CP patients from early childhood through adulthood. Starting earlier tends to allow more responsiveness to physiotherapy and occupational therapy as constitutional health improves, but meaningful support — reduced spasticity, better sleep, improved alertness — is possible at any age.",
+      },
+      {
+        question: "Can neurological conditions be managed through online consultation?",
+        answer:
+          "Yes, for most conditions on this page — epilepsy, migraine, Parkinson's, essential tremor and others — online consultation works the same way as in-clinic, at the same price. For cerebral palsy or conditions where physical observation is genuinely useful, we may request a video call in addition to the written history.",
       },
     ],
     finalCta: "Book a Neurological Consultation at Yadav Homeo Clinic →",
@@ -1350,6 +1420,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "At what age can children start homeopathic treatment?",
         answer:
           "From birth. There is no minimum age. Infants, toddlers, school-age children and teenagers all respond well to constitutional homeopathic treatment.",
+      },
+      {
+        question: "My child is 7 and still wets the bed. Should we be worried, and can homeopathy help?",
+        answer:
+          "Bed-wetting beyond age 5 is common and rarely a sign of anything serious, but it is genuinely distressing for both children and parents. Constitutional treatment — matched to the child's sleep pattern, emotional temperament and family history — regularly resolves bed-wetting completely within 3 to 6 months, without alarms or pressure on the child.",
+      },
+      {
+        question: "Can we do the consultation online, or does my child need to be seen in person?",
+        answer:
+          "Online consultation works well for most childhood conditions — we take a thorough history from parents, covering symptoms, patterns and behaviours in detail. For a small number of cases we may request a video call, but an in-person visit is rarely essential.",
       },
     ],
     finalCta: "Book Your Child's Consultation at Yadav Homeo Clinic →",
@@ -1552,6 +1632,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Absolutely. All consultations at Yadav Homeo Clinic are completely confidential. Women's health conditions — including fertility, gynaecological issues and intimate health concerns — are handled with the highest degree of privacy and professional sensitivity.",
       },
+      {
+        question: "I don't want to go on HRT for menopause. Are there other options?",
+        answer:
+          "Yes. Constitutional homeopathy is well-suited to menopausal symptoms precisely because it doesn't rely on hormone replacement — the remedy is matched to your specific symptom picture and constitutional type. Hot flushes in particular often respond quickly, sometimes within 6 to 8 weeks, with sleep, mood and energy improvements following.",
+      },
+      {
+        question: "Can women's health conditions be treated through online consultation?",
+        answer:
+          "Yes. Online consultation works the same way as in-clinic, at the same price, and is often preferred for the privacy it offers. Share your reports and history over WhatsApp, and follow-ups continue the same way.",
+      },
     ],
     finalCta: "Book a Women's Health Consultation — Private, Compassionate, Effective →",
     disclaimer:
@@ -1709,6 +1799,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Never stop prescribed prostate medication without your urologist's guidance. Continue your medication while starting homeopathic treatment. As symptoms improve under constitutional treatment, any reduction in medication is done under urological supervision.",
       },
+      {
+        question: "Is erectile dysfunction always a sign of a bigger health problem?",
+        answer:
+          "It can be — ED is sometimes an early indicator of cardiovascular or hormonal issues, which is why a proper case history matters. Constitutional treatment addresses the hormonal imbalance, oxidative stress or constitutional susceptibility contributing to it, not just the symptom in isolation. If we suspect an underlying condition needing separate investigation, we will say so honestly.",
+      },
+      {
+        question: "Can I have this consultation online instead of visiting in person?",
+        answer:
+          "Yes — most of our men's health patients specifically choose online consultation for exactly this reason. It works the same way as in-clinic, at the same price, and means this conversation never has to happen in a waiting room.",
+      },
     ],
     finalCta: "Book a Confidential Men's Health Consultation →",
     disclaimer:
@@ -1842,6 +1942,21 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "I have nasal polyps. Can homeopathy avoid surgery?",
         answer:
           "In selected cases — particularly small polyps without severe obstruction — constitutional homeopathic treatment has produced documented reduction in polyp size and associated symptoms without surgical intervention. Large polyps causing significant airway obstruction may still require surgical management. We assess each case individually.",
+      },
+      {
+        question: "I have COPD. Can homeopathy reverse the lung damage?",
+        answer:
+          "No — existing structural lung damage from COPD cannot be reversed by any treatment, homeopathic or otherwise. What constitutional treatment can offer is supportive care: reducing the frequency of exacerbations, improving breathlessness and energy, and supporting overall respiratory function alongside your prescribed inhalers and any oxygen therapy.",
+      },
+      {
+        question: "My allergies are worse in a specific season. Does that affect treatment?",
+        answer:
+          "It's useful information, not an obstacle. The specific pattern of your allergic rhinitis — which season, which triggers, whether symptoms are worse indoors or outdoors — is part of the case-taking that helps us match the correct constitutional remedy.",
+      },
+      {
+        question: "Can respiratory conditions be treated through online consultation?",
+        answer:
+          "Yes. Online consultation works the same way as in-clinic, at the same price. This is especially convenient for ongoing asthma or allergy management, where most follow-ups are about reviewing symptom frequency rather than a physical examination.",
       },
     ],
     finalCta: "Book a Respiratory Disease Consultation at Yadav Homeo Clinic →",
@@ -1986,6 +2101,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Grade 3 haemorrhoids — which prolapse on straining but can be reduced manually — can respond to constitutional homeopathic treatment in many cases. It requires patience and a committed treatment period of 9 to 12 months. Grade 4 prolapsed haemorrhoids or those with complications typically require procedural intervention. We assess each case individually at the first consultation.",
       },
+      {
+        question: "I was diagnosed with fatty liver on an ultrasound. Can homeopathy help?",
+        answer:
+          "Constitutional treatment can support liver function alongside the dietary and lifestyle changes that remain the primary driver of improvement in fatty liver disease — weight management, reduced sugar and alcohol intake, and regular activity. We do not claim homeopathy alone reverses fatty liver; it works best as one part of a broader change.",
+      },
+      {
+        question: "Can digestive conditions be managed through online consultation?",
+        answer:
+          "Yes. Online consultation works the same way as in-clinic, at the same price. Share your reports (endoscopy, colonoscopy, ultrasound) over WhatsApp, and follow-ups continue the same way as an in-person visit.",
+      },
     ],
     finalCta: "Book a Digestive Disease Consultation at Yadav Homeo Clinic →",
     disclaimer:
@@ -2102,6 +2227,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "My TSH is 150 and I have severe hypothyroidism. Can homeopathy help?",
         answer:
           "With very high TSH — indicating severe hypothyroidism — the priority is normalising thyroid function with adequate thyroxine under endocrinologist supervision. Homeopathic treatment can be added as a support, but the first goal must be bringing TSH into a safer range with conventional treatment. We will be honest about the priorities in your specific case.",
+      },
+      {
+        question: "I have hyperthyroidism (Graves' disease), not an underactive thyroid. Does the same approach apply?",
+        answer:
+          "The same constitutional principle applies, but the picture is different — we address the immune and constitutional factors driving the overactive gland rather than an underactive one. Continue your prescribed anti-thyroid medication (like carbimazole) throughout; any change is made only with your endocrinologist's guidance.",
+      },
+      {
+        question: "Can hormonal conditions be managed through online consultation?",
+        answer:
+          "Yes. Online consultation works the same way as in-clinic, at the same price. Share your thyroid or blood sugar reports over WhatsApp every 3 months as instructed, and your prescription is adjusted based on the results.",
       },
     ],
     finalCta: "Book a Hormonal Disease Consultation at Yadav Homeo Clinic →",
@@ -2265,6 +2400,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Grief that persists beyond a year and continues to significantly impair daily functioning is something homeopathy addresses with particular depth and compassion. Constitutional homeopathic treatment for grief — the specific type of grief, how it is expressed, what was lost — can gently and powerfully unlock what has become stuck. Many patients describe this as the most profound change they experience from constitutional treatment.",
       },
+      {
+        question: "I have bipolar disorder / schizophrenia. Is homeopathy right for me instead of psychiatric medication?",
+        answer:
+          "No — for these conditions, psychiatric medication and professional care are essential and must never be replaced. We can offer supportive constitutional care alongside your existing psychiatric treatment, but the priority is always your safety and the continuity of your prescribed care.",
+      },
+      {
+        question: "Can mental health consultations be done online?",
+        answer:
+          "Yes — many patients specifically prefer online consultation for mental health, for the added privacy. It works the same way as in-clinic, at the same price. If you are in a mental health crisis, please contact a mental health professional immediately or call iCall at 9152987821 — this is not an emergency service.",
+      },
     ],
     finalCta: "Book a Confidential Mental Health Consultation at Yadav Homeo Clinic →",
     disclaimer:
@@ -2364,6 +2509,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Constitutional homeopathy supports metabolic regulation. Dietary changes make the biggest difference to uric acid levels. Together — homeopathy and diet — can significantly reduce the frequency of gout attacks.",
       },
+      {
+        question: "I have osteoporosis. Can homeopathy strengthen my bones?",
+        answer:
+          "Constitutional treatment can support bone health alongside proper nutrition (calcium, vitamin D) and any prescribed bone medication, but it does not replace medical management of osteoporosis, particularly in post-menopausal women at fracture risk. Continue your prescribed treatment; we will discuss what a supportive role realistically looks like for your case.",
+      },
+      {
+        question: "Can joint and spine conditions be managed through online consultation?",
+        answer:
+          "Yes. Online consultation works the same way as in-clinic, at the same price. Share your X-ray or MRI reports over WhatsApp along with your symptom history, and follow-ups continue the same way.",
+      },
     ],
     finalCta: "Book a Joint & Spine Consultation at Yadav Homeo Clinic →",
     disclaimer:
@@ -2454,6 +2609,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Constitutional treatment typically shows improvement in BP variability and readings within 2 to 3 months. The long-term goal — reducing antihypertensive dosage — is pursued strictly under your doctor's supervision. Continued monitoring is essential.",
       },
+      {
+        question: "My family member has Eisenmenger's Syndrome. What can homeopathy realistically offer?",
+        answer:
+          "For Eisenmenger's Syndrome, our role is palliative and quality-of-life focused — supporting comfort, energy and overall wellbeing alongside your cardiology team's management. We do not claim any impact on the underlying condition itself, and we will always be honest about what supportive care can and cannot change for your family member's specific situation.",
+      },
+      {
+        question: "Can cardiac support consultations be done online?",
+        answer:
+          "Yes, for ongoing supportive care and follow-up — online consultation works the same way as in-clinic, at the same price. Share your latest cardiology reports over WhatsApp so we can coordinate our supportive prescribing with your treatment plan.",
+      },
     ],
     finalCta: "Book a Cardiac Support Consultation at Yadav Homeo Clinic →",
     disclaimer:
@@ -2533,6 +2698,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       {
         question: "Is this completely confidential?",
         answer: "Yes. No records are shared with anyone. The consultation is strictly between you and your doctor.",
+      },
+      {
+        question: "I get genital herpes outbreaks every few months. Can homeopathy reduce how often they happen?",
+        answer:
+          "Recurrence reduction is our primary goal for genital herpes — constitutional treatment addresses the pattern of susceptibility that allows the virus to reactivate, rather than treating each outbreak in isolation. We assess your specific outbreak frequency and triggers at the first consultation and give an honest sense of what's realistic.",
+      },
+      {
+        question: "Will I be judged or asked uncomfortable questions?",
+        answer:
+          "No. We approach every sexual health consultation with the same clinical professionalism as any other medical condition — no judgment, no unnecessary questions. You share what's relevant to your case, at your own pace.",
       },
     ],
     finalCta: "Ready to Talk? Every Conversation Here Is Completely Confidential.",
