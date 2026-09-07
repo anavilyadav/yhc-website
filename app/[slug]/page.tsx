@@ -128,6 +128,12 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
 
       <TriggerChips triggers={page.commonTriggers ?? []} />
 
+      <TriggerChips
+        triggers={page.commonSymptoms ?? []}
+        heading="Common Symptoms"
+        tint="white"
+      />
+
       <PageVideo videos={videos} />
 
       <WorriesTable />

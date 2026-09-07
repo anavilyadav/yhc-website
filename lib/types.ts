@@ -96,6 +96,18 @@ export interface DiseasePageContent {
    */
   commonTriggers?: string[];
   /**
+   * Short, scannable symptom chips — PDM report ch.3.4 (their "symptom
+   * chips, cause chips, types chips" pattern). Distinct from
+   * `soundFamiliar`: that's relatable narrative questions for persuasion,
+   * this is short noun-phrase facts for GEO/scannability. Deliberately no
+   * separate "types" chip group — the existing `conditions` list already
+   * covers named types/conditions in fuller, better form; a chip cloud of
+   * the same names right below it would be pure duplication, not new
+   * value. Each entry must already be named in this page's own conditions
+   * list or sections — never invented.
+   */
+  commonSymptoms?: string[];
+  /**
    * "Does This Sound Familiar?" — short, relatable checklist shown near the
    * top of the page, before the visitor has to read anything else. UW
    * report ch.3.3/Trust & Sales Playbook: get the visitor to self-diagnose

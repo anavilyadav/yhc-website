@@ -146,6 +146,10 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Hormonal Imbalance",
       "Unresolved Stress Response",
     ],
+    // Short noun-phrase symptoms named in the conditions list/sections
+    // above (white patches, silvery plaques, itching, facial redness,
+    // patchy hair loss) — PDM report ch.3.4.
+    commonSymptoms: ["White Patches", "Itching", "Silvery Plaques", "Facial Redness", "Patchy Hair Loss"],
     comparisonTable: [
       {
         factor: "Treatment approach",
@@ -303,6 +307,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Stress",
       "Hormonal Changes",
     ],
+    // Sourced from the RA and Sjögren's sections/conditions list above.
+    commonSymptoms: ["Joint Swelling & Stiffness", "Dry Eyes & Dry Mouth", "Fatigue", "Joint Deformity"],
     comparisonTable: [
       {
         factor: "Treatment approach",
@@ -458,6 +464,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Painful mouth ulcers or skin reactions from radiation?",
       "Numbness, tingling, or anxiety that's stayed with you since treatment began?",
     ],
+    // Sourced from the "During Chemotherapy" and "Survivorship" lists above.
+    commonSymptoms: ["Nausea & Vomiting", "Fatigue", "Mouth Ulcers", "Numbness & Tingling"],
     patientStory: {
       quote:
         "My mother was diagnosed with breast cancer in 2022 and underwent 6 cycles of chemotherapy. She had severe nausea, could not eat, and was losing weight rapidly. We started homeopathic treatment alongside her chemotherapy from cycle 3. By cycle 4, the nausea had reduced significantly and she was able to eat normal meals. She completed all 6 cycles without the hospitalisation her doctors had warned might be needed. Her oncologist noted that she tolerated the final cycles far better than the first two.",
@@ -605,6 +613,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Autoimmune Activity",
       "Constitutional Vulnerability",
     ],
+    // Sourced from the nephrotic syndrome/end-stage sections above.
+    commonSymptoms: ["Swelling (Oedema)", "Fatigue", "Nausea", "Itching"],
     comparisonTable: [
       {
         factor: "Treatment approach",
@@ -749,6 +759,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Sleep disturbances that affect alertness and behaviour the next day?",
       "Fatigue that's just been accepted as 'part of the condition'?",
     ],
+    // Sourced from the Down syndrome and Thalassemia Minor sections above.
+    commonSymptoms: ["Recurrent Infections", "Constipation", "Sleep Disturbances", "Fatigue"],
     patientStory: {
       quote:
         "Our daughter has Down syndrome. She was having 8 to 10 chest infections and ear infections every year — almost constantly on antibiotics. She slept very poorly and had chronic constipation. After 8 months of Dr Yadav's treatment, her infections have reduced to 2 in the past year. Her constipation is resolved. She is sleeping through the night. Her school teacher has commented that she is more alert and engaged in class. We are continuing treatment and the improvement has been real and consistent.",
@@ -902,6 +914,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Hyperactivity or impulsivity that makes therapy and school harder?",
       "Meltdowns, head-banging or aggression that seem to come out of nowhere?",
     ],
+    // Sourced from the Co-Occurring Conditions subsections above.
+    commonSymptoms: ["Sleep Disturbances", "Digestive Issues", "Hyperactivity", "Meltdowns & Aggression"],
     comparisonTable: [
       {
         factor: "Treatment approach",
@@ -1052,6 +1066,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Muscle stiffness, drooling or sleep problems that make daily care harder?",
       "Tremors, vertigo or nerve pain that conventional medicine only partially controls?",
     ],
+    // Sourced from the Epilepsy, Migraine and Cerebral Palsy sections above.
+    commonSymptoms: ["Seizures", "Migraine Attacks", "Muscle Spasticity", "Tremors"],
     patientStory: {
       quote:
         "I had been having migraines since I was 19. By the time I came to Dr Yadav at age 31, I was getting 2 to 3 attacks per week. I had tried propranolol, topiramate, and amitriptyline — each worked for a few months and then stopped. After 5 months of constitutional treatment at Yadav Homeo Clinic, my attacks came down to 2 to 3 per month. By 9 months I was having maybe one attack per month and much milder. I have been completely migraine-free for 4 months now. Nothing in 12 years had achieved this.",
@@ -1205,6 +1221,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Bed-wetting past age 5 that hasn't resolved with alarms or medication?",
       "A cycle where the medicine works, but the illness always comes back?",
     ],
+    // Sourced from the conditions list and tonsillitis/bed-wetting sections above.
+    commonSymptoms: ["Recurrent Infections", "Bed-Wetting", "Sneezing & Runny Nose", "Poor Appetite"],
     patientStory: {
       quote:
         "My son had tonsillitis every 5 to 6 weeks from age 3 to age 7. The ENT surgeon said the tonsils needed to come out. I wanted to try everything else first. We started constitutional treatment with Dr Yadav. In the first 3 months he had one mild infection — not severe enough for antibiotics. From month 4 onwards he has been completely infection-free. He is now 10 years old and his tonsils are still in. His immunity is completely transformed. The surgery never happened.",
@@ -1376,6 +1394,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Hot flushes, mood changes or sleep trouble that started with menopause?",
       "Struggling to conceive, with no clear answer as to why?",
     ],
+    // Sourced from the PCOD, Fibroids and Menopause sections above.
+    commonSymptoms: ["Irregular Periods", "Hormonal Acne", "Heavy Menstrual Bleeding", "Hot Flushes"],
     patientStory: {
       quote:
         "I had PCOD for 8 years. My periods came every 3 to 5 months. I had been on hormonal pills since age 22 and was told IVF would be needed to conceive. I started constitutional treatment with Dr Yadav at 29. Within 6 months my cycle had regulated to every 35 to 40 days. By 10 months, my ultrasound showed significant reduction in cyst number. At 14 months of treatment, I conceived naturally — something I had been told was extremely unlikely. My daughter is now 2 years old.",
@@ -1507,6 +1527,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "A weak urine stream or frequent nighttime urges that have quietly gotten worse?",
       "Persistent low energy or low libido you've just learned to live with?",
     ],
+    // Sourced from the male infertility and BPH/Prostatitis sections above.
+    commonSymptoms: ["Low Sperm Count", "Erectile Dysfunction", "Urinary Difficulty", "Low Energy"],
     patientStory: {
       quote:
         "My semen analysis showed a total sperm count of 3 million per ml and motility of 18 percent. My wife and I had been trying to conceive for 3 years. IVF with ICSI was recommended. I started constitutional treatment with Dr Yadav. After 6 months, my count was 22 million per ml and motility had risen to 41 percent. We conceived naturally in the 8th month of treatment. We have a son now. I still find it difficult to believe.",
@@ -1620,6 +1642,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     // animal dander or environmental allergens" (rhinitis section) — one
     // consistent trigger category (bronchial/nasal hypersensitivity).
     commonTriggers: ["Dust", "Air Pollution", "Cold Air", "Animal Dander", "Exercise-Induced Triggers"],
+    // Sourced from the asthma and rhinitis/sinusitis sections above.
+    commonSymptoms: ["Wheezing & Breathlessness", "Sneezing & Nasal Congestion", "Sinus Headache", "Chronic Cough"],
     patientStory: {
       quote:
         "I had asthma since age 7 and was using a salbutamol inhaler daily and a steroid preventer twice daily by age 25. I started constitutional treatment with Dr Yadav. By month 6, my reliever inhaler use had reduced from daily to once or twice a week. By month 10, I had stopped the steroid preventer entirely under my chest physician's guidance. I still carry my reliever inhaler but I have not used it in 4 months. This is the first time in 18 years I have been genuinely free.",
@@ -1737,6 +1761,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Bleeding or pain from piles or fissures that makes you dread the bathroom?",
       "Being told your tests are 'normal' while your symptoms are very real?",
     ],
+    // Sourced from the IBS and Piles/Fissures sections above.
+    commonSymptoms: ["Bloating & Cramping", "Acidity & Heartburn", "Rectal Bleeding", "Constipation"],
     patientStory: {
       quote:
         "I had IBS for 11 years. Alternating constipation and diarrhoea, severe bloating after every meal, and cramping that affected my work and social life. I had tried every gastroenterologist's recommendation — fibre, probiotics, antispasmodics. Nothing lasted. After 4 months of constitutional treatment with Dr Yadav, my stools normalised for the first time in over a decade. The bloating is 80 percent better. I still have occasional off days but they are nothing like before. My life has genuinely changed.",
@@ -1852,6 +1878,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Blood sugar that's hard to keep stable despite diet and medication?",
       "Wondering if you'll need thyroid medication for the rest of your life?",
     ],
+    // Sourced from the conditions list (hypothyroidism) and diabetes section above.
+    commonSymptoms: ["Fatigue", "Weight Gain", "Hair Loss", "High Blood Sugar"],
     patientStory: {
       quote:
         "I was diagnosed with Hashimoto's thyroiditis 5 years ago and put on 75mcg of levothyroxine. My TSH was 12.8 and my anti-TPO antibodies were over 600. I started constitutional homeopathic treatment with Dr Yadav alongside my thyroxine. After 8 months, my anti-TPO antibodies had fallen from 600+ to 180. My TSH was 1.8. My endocrinologist reduced my dose to 50mcg. I feel better than I have in years — the fatigue and hair loss that persisted even on thyroxine have significantly improved. We are continuing treatment.",
@@ -1981,6 +2009,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Difficulty falling asleep, frequent waking, or waking too early?",
       "Wanting help, but worried about side effects or dependency on medication?",
     ],
+    // Sourced from the Anxiety, Depression and Insomnia sections above.
+    commonSymptoms: ["Persistent Worry", "Low Mood & Hopelessness", "Insomnia", "Racing Thoughts"],
     patientStory: {
       quote:
         "I had generalised anxiety for 14 years. I was on escitalopram for 6 years — it helped somewhat but I gained weight, had no motivation, and felt emotionally blunted. I wanted to come off it but every time I tried, the anxiety returned worse. I started constitutional treatment with Dr Yadav. After 3 months, my sleep was significantly better and the background anxiety had noticeably reduced. After 6 months, under my psychiatrist's supervision, I began slowly reducing the escitalopram. I am now at half the dose with better anxiety control than I had on the full dose. For the first time in years I feel like myself.",
@@ -2083,6 +2113,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Being told a joint replacement or expensive biological injection is your only option?",
       "Back or neck pain that radiates and just won't fully go away?",
     ],
+    // Sourced from the hero and AS/AVN section above.
+    commonSymptoms: ["Joint Stiffness", "Morning Pain", "Radiating Back Pain", "Restricted Movement"],
     faqs: [
       {
         question: "Does homeopathy actually work for joint pain?",
@@ -2176,6 +2208,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Angina or chest discomfort that limits your daily activity?",
       "A congenital heart condition where surgery isn't possible or wasn't fully successful?",
     ],
+    // Sourced from the "Honest Word" section and conditions list above.
+    commonSymptoms: ["Chest Discomfort (Angina)", "High Blood Pressure", "Persistent Symptoms After Surgery"],
     faqs: [
       {
         question: "Can homeopathy close an ASD or VSD?",
@@ -2260,6 +2294,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Loss of libido that's affected your confidence or relationship?",
       "Wanting a private conversation, without an in-person visit?",
     ],
+    // Sourced from the conditions list above.
+    commonSymptoms: ["Recurring Outbreaks", "Low Libido", "Genital Warts"],
     faqs: [
       {
         question: "Is online consultation available for sexual health?",
