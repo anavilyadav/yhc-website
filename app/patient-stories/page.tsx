@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PatientStoriesFilter } from "@/components/patient-stories/PatientStoriesFilter";
-import { PageVideo } from "@/components/shared/PageVideo";
+import { VideoGallery } from "@/components/patient-stories/VideoGallery";
 import { getPageVideos } from "@/lib/data/videos";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import {
@@ -52,7 +52,7 @@ export default async function PatientStoriesPage() {
         </div>
       </section>
 
-      <PageVideo videos={videos} />
+      <VideoGallery videos={videos} />
 
       <section className="bg-cream px-5 py-4">
         <p className="mx-auto max-w-2xl text-center text-[13px] leading-relaxed text-text-light">
