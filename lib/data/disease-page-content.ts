@@ -2474,6 +2474,21 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "Avascular Necrosis (AVN) — bone tissue damage from reduced blood supply — is typically met with a recommendation for hip replacement surgery. In our clinic, we have experience managing early to moderate AVN cases conservatively, as a supportive approach alongside orthopaedic care.",
         ],
       },
+      {
+        heading: "Rheumatoid Arthritis & Gout — Addressing the Cause, Not Just the Inflammation",
+        paragraphs: [
+          "Rheumatoid Arthritis is an autoimmune condition — the immune system attacking the joints, causing swelling, stiffness and progressive deformity if untreated. Conventional treatment (DMARDs, biologics) controls the inflammation but doesn't correct the immune dysregulation driving it. Constitutional homeopathic treatment targets that underlying dysregulation directly — our clinical experience with RA has been particularly positive, both in reducing joint symptoms and in supporting the immune system more broadly.",
+          "Gout is a different mechanism entirely — uric acid crystals depositing in the joints, most commonly the big toe, causing sudden, severe attacks. Dietary changes remain the single biggest lever for uric acid levels, but constitutional homeopathy supports the body's own metabolic regulation alongside those changes, and together the two can significantly reduce how often attacks occur.",
+        ],
+      },
+      {
+        heading: "Slipped Disc, Spondylosis & Osteoarthritis — A Non-Surgical First Option Worth Trying",
+        paragraphs: [
+          "Slipped disc (disc prolapse) causes pain through nerve compression — the disc material pressing on a spinal nerve, radiating pain down the back or leg. For Grade 1-2 prolapse, conservative treatment (constitutional homeopathy alongside physiotherapy) is a genuinely valid first option before surgery is considered; Grade 3-4 cases typically do need surgical intervention, and we will tell you honestly which category your MRI suggests.",
+          "Cervical and lumbar spondylosis — degeneration of the spine causing neck or lower back stiffness, pain and sometimes tingling into the arms or legs — and frozen shoulder respond to the same constitutional approach: addressing the susceptibility behind the degeneration, not just numbing the pain at the site.",
+          "For Osteoarthritis, we set realistic expectations from the start: homeopathy tends to offer meaningfully better pain relief and improved mobility than it does full reversal of the joint changes already present. For many patients, that pain relief alone — without the long-term risks of continuous painkiller use — is a significant improvement in daily life.",
+        ],
+      },
     ],
     // Sourced from this page's own hero ("Your Joints Have Been Hurting for
     // Years. Your Painkillers Know It Too.") and the AS/AVN section
@@ -2579,6 +2594,20 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "Most ASD/VSD families who come to us have already had surgery but still have symptoms, missed the surgical window, or have multiple conditions that make surgery complex. In these situations, constitutional homeopathic care can become a meaningful additional support.",
         ],
       },
+      {
+        heading: "Hypertension & Coronary Support — Working Alongside Your Cardiologist",
+        paragraphs: [
+          "For hypertension, constitutional treatment supports blood pressure management as an addition to your prescribed antihypertensive medication — never a replacement for it. For patients with Coronary Artery Disease, our focus is on supporting overall cardiovascular health and, where relevant, angina frequency — always with your cardiologist's supervision and full knowledge of your current treatment plan.",
+          "Cardiomyopathy and valvular heart disease that are already being medically managed can also receive constitutional support aimed at overall heart muscle function and quality of life, alongside — never instead of — your prescribed cardiac care.",
+        ],
+      },
+      {
+        heading: "How We Work With Cardiac Patients and Their Cardiologists",
+        paragraphs: [
+          "We ask for the specific diagnosis, current medications and your cardiologist's latest assessment before beginning any supportive treatment. This lets us understand exactly what we're supporting and coordinate honestly around it, rather than working in isolation from your cardiac care team.",
+          "We encourage families to keep their cardiologist informed that they are also pursuing constitutional homeopathic support — full transparency between all your healthcare providers is essential, especially for a condition as serious as heart disease.",
+        ],
+      },
     ],
     // Sourced from the "Honest Word" section ("already had surgery but
     // still have symptoms") and the conditions list (Coronary Artery
@@ -2675,6 +2704,18 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "All consultations for sexual health conditions are conducted with complete confidentiality. Online consultation is available — from your phone, private, with no in-person visit required. No records are shared with anyone without your explicit consent.",
         ],
         note: "Important: Acute bacterial STIs (gonorrhea, chlamydia, syphilis) require antibiotic treatment. We never advise against this. Homeopathy plays a supportive role — for recurrence prevention, constitutional health, and recovery.",
+      },
+      {
+        heading: "Loss of Libido — Treated as an Individual Case, Not a Generic Complaint",
+        paragraphs: [
+          "Loss of libido can come from hormonal changes, psychological stress, relationship strain, or a constitutional pattern unique to the individual — often a combination of more than one. Rather than a single generic remedy for 'low libido,' we take a detailed individual case history to understand which of these is driving it for you specifically, and prescribe accordingly.",
+        ],
+      },
+      {
+        heading: "Genital Herpes & HPV — Reducing Recurrence, Supporting Immunity",
+        paragraphs: [
+          "For genital herpes, our primary goal is recurrence reduction — addressing the constitutional susceptibility that allows the virus to reactivate, rather than treating each outbreak as an isolated event. For genital warts (HPV), constitutional treatment aims to support the body's own immune response to the virus. Neither of these approaches replaces any antiviral treatment your doctor has prescribed.",
+        ],
       },
     ],
     // Sourced from this page's own hero ("hardest to speak about",
