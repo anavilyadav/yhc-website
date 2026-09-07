@@ -591,6 +591,30 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
         note: "We review your blood reports at every follow-up. Progress in kidney cases is always measured objectively — through numbers, not just symptoms. Bring your latest reports to every consultation.",
       },
+      {
+        heading: "What to Expect — Kidney Disease Treatment Timeline",
+        subsections: [
+          {
+            label: "Month 2-3",
+            paragraphs: [
+              "In responsive cases, the first movement in creatinine levels can be seen from the 2nd or 3rd month of treatment.",
+            ],
+          },
+          {
+            label: "Month 4-6",
+            paragraphs: [
+              "More significant changes typically become visible. This is also when we conduct the first honest 6-month review — if the expected response is not appearing, we will tell you directly.",
+            ],
+          },
+          {
+            label: "Month 6-12",
+            paragraphs: [
+              "For CKD Stages 1 to 3, this is the window where genuine reduction in creatinine is most often achieved, with several patients returning from borderline levels to the normal range. For Stage 4, the goal in this period is stable or improving creatinine and delaying dialysis.",
+            ],
+          },
+        ],
+        note: "Results vary significantly by individual and by CKD stage. Duration of diabetes/hypertension, extent of existing kidney damage, and consistency of treatment all affect this timeline. We set honest, stage-specific expectations at the first consultation.",
+      },
     ],
     // Sourced from this page's own hero ("High creatinine. Dialysis
     // suggested.") and sections (nephrotic syndrome's oedema/protein,
@@ -748,6 +772,30 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "For Thalassemia Minor carriers — who may experience fatigue and mild anaemia — constitutional treatment can meaningfully improve energy, reduce symptom burden and support overall health.",
         ],
       },
+      {
+        heading: "What to Expect — Treatment Timeline",
+        subsections: [
+          {
+            label: "Month 3-4",
+            paragraphs: [
+              "The first signs typically appear — usually better sleep and fewer recurrent infections.",
+            ],
+          },
+          {
+            label: "Month 8",
+            paragraphs: [
+              "A substantial reduction in infection frequency is often visible by this stage — several parents report infections dropping from near-constant to only occasional.",
+            ],
+          },
+          {
+            label: "Month 12-24",
+            paragraphs: [
+              "This is a long-term commitment, and the full benefit — cumulative gains in immunity, digestion and developmental engagement — typically becomes clear across this window, not before it.",
+            ],
+          },
+        ],
+        note: "Improvement is gradual and cumulative, not a single turning point. Results vary by individual and by condition. We set honest expectations at the first consultation.",
+      },
     ],
     // Sourced from the Down syndrome section ("recurring ear and chest
     // infections", constipation, sleep disturbances) and the Thalassemia
@@ -902,6 +950,36 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           },
         ],
       },
+      {
+        heading: "What to Expect — Treatment Timeline",
+        subsections: [
+          {
+            label: "Month 2-3",
+            paragraphs: [
+              "Sleep and digestive improvements are usually the first changes parents notice.",
+            ],
+          },
+          {
+            label: "Month 3-6",
+            paragraphs: [
+              "Behavioural improvements often follow — reduced hyperactivity, fewer meltdowns, and for some children, greater tolerance of touch and more eye contact.",
+            ],
+          },
+          {
+            label: "Month 6-12",
+            paragraphs: [
+              "Communication changes, when they come, usually take longer to appear than sleep, gut or behavioural changes.",
+            ],
+          },
+          {
+            label: "Month 12+",
+            paragraphs: [
+              "This is the minimum commitment for a meaningful assessment of the treatment's overall impact — the point at which cumulative gains across sleep, digestion, behaviour and communication are clearest.",
+            ],
+          },
+        ],
+        note: "We cannot promise language development in every case, and results vary significantly between children. We set honest, individual expectations at the first consultation.",
+      },
     ],
     // Sourced from the "Co-Occurring Conditions" subsections above (Sleep
     // Disorders, Gastrointestinal Issues, Hyperactivity and Impulsivity,
@@ -1053,6 +1131,30 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "Constitutional homeopathic treatment for Cerebral Palsy patients works as a meaningful complement to this conventional care. The areas where we most consistently see improvement are: reduction in spasticity (muscle stiffness), improved sleep quality, better digestive function, reduction in drooling (sialorrhoea), improved alertness and cognitive engagement, and in children, better responsiveness to physiotherapy and occupational therapy after the homeopathic treatment has improved their constitutional health.",
           "Parents of CP children who have undergone constitutional treatment at our clinic frequently report that their child's physiotherapy produces better results after the homeopathic treatment begins — because the child's overall neurological and physical health is improved, making them more receptive and responsive to therapeutic input.",
         ],
+      },
+      {
+        // Scoped specifically to Migraine — the one condition on this page
+        // with a genuine, already-stated month-by-month pattern. Not
+        // presented as a timeline for epilepsy, CP or the other conditions
+        // this page covers, which don't have the same stated data.
+        heading: "What to Expect — Migraine Treatment Timeline",
+        subsections: [
+          {
+            label: "Month 3-4",
+            paragraphs: ["Improvement in attack frequency typically begins to appear."],
+          },
+          {
+            label: "Month 6-8",
+            paragraphs: ["Most patients notice a meaningful reduction in frequency and intensity."],
+          },
+          {
+            label: "Month 12",
+            paragraphs: [
+              "A significant proportion of our migraine patients are either attack-free or down to very occasional, mild episodes.",
+            ],
+          },
+        ],
+        note: "This timeline reflects our migraine cases specifically. Epilepsy, cerebral palsy and other neurological conditions on this page follow a different course — we give an honest, condition-specific timeline at the first consultation.",
       },
     ],
     // Sourced from the Epilepsy, Migraine and Cerebral Palsy sections above,
@@ -1355,6 +1457,34 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "Homeopathy does not guarantee conception. No treatment does. But it offers a safe, side-effect-free option that can meaningfully improve the hormonal environment, egg quality and uterine receptivity — either as a standalone approach or as a complement to assisted reproduction.",
         ],
       },
+      {
+        // Scoped to PCOD, fibroids and menopause — the three conditions on
+        // this page with genuine, already-stated timeframes.
+        heading: "What to Expect — Treatment Timeline",
+        subsections: [
+          {
+            label: "Weeks 6-8",
+            paragraphs: ["Hot flushes often reduce significantly in frequency and intensity."],
+          },
+          {
+            label: "Month 4-6",
+            paragraphs: [
+              "Fibroid symptom improvement — particularly reduced heavy bleeding — often appears in this window.",
+            ],
+          },
+          {
+            label: "Month 6-10",
+            paragraphs: ["PCOD cycles frequently begin regulating; fibroid follow-up ultrasounds may show early change."],
+          },
+          {
+            label: "Month 12-18",
+            paragraphs: [
+              "This is the typical window for significant PCOD hormonal normalisation and for measurable fibroid size reduction on ultrasound.",
+            ],
+          },
+        ],
+        note: "Fertility timelines vary too widely between individual causes to generalise honestly — we give a specific, individual timeline at the first consultation. Results vary by individual for all conditions above.",
+      },
     ],
     comparisonTable: [
       {
@@ -1515,6 +1645,30 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "For Chronic Prostatitis — the persistent pelvic pain, perineal discomfort and voiding symptoms that are often unresponsive to prolonged antibiotics — constitutional homeopathic treatment offers a particularly valuable alternative, as it addresses the pattern of susceptibility rather than assuming an ongoing infection.",
         ],
       },
+      {
+        // Scoped to Male Infertility — the condition on this page with a
+        // genuine, already-stated timeframe pattern.
+        heading: "What to Expect — Male Infertility Treatment Timeline",
+        subsections: [
+          {
+            label: "Month 3",
+            paragraphs: ["First follow-up semen analysis, at the standard 3-month monitoring interval."],
+          },
+          {
+            label: "Month 3-6",
+            paragraphs: [
+              "Many men see measurable improvement in sperm parameters within this window, since the sperm production cycle itself takes approximately 74 days.",
+            ],
+          },
+          {
+            label: "Month 9-12",
+            paragraphs: [
+              "A realistic full treatment commitment, with follow-up semen analysis every 3 months to track objective progress.",
+            ],
+          },
+        ],
+        note: "Results vary between individuals. We assess your specific case honestly at the first consultation.",
+      },
     ],
     // Sourced from this page's own hero ("You have not said it out loud to
     // anyone yet") and the BPH/Prostatitis section (difficulty starting
@@ -1624,6 +1778,30 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "Constitutional homeopathic treatment for allergic rhinitis addresses the hyper-reactive immune response that is causing the allergy — rather than blocking the histamine that the immune system releases. Over a course of treatment, the immune response to allergens gradually becomes less intense, and many patients find that substances that previously triggered significant symptoms cause little or no reaction.",
           "For chronic sinusitis — recurring or persistent inflammation of the sinus cavities, often with thick nasal discharge, facial pain and headache — constitutional treatment combined with appropriate dietary guidance (reducing foods that promote mucus production) produces consistent and often dramatic improvement.",
         ],
+      },
+      {
+        // Scoped to Asthma — the condition on this page with a genuine,
+        // already-stated month-by-month pattern.
+        heading: "What to Expect — Asthma Treatment Timeline",
+        subsections: [
+          {
+            label: "Month 6",
+            paragraphs: ["Reliever inhaler use often begins reducing from daily to only occasional use."],
+          },
+          {
+            label: "Month 10",
+            paragraphs: [
+              "Some patients are able to stop a steroid preventer entirely, always under their chest physician's guidance.",
+            ],
+          },
+          {
+            label: "Month 12-24",
+            paragraphs: [
+              "This is the window for significant, lasting reduction in inhaler dependency — a genuinely less reactive respiratory system, not just a suppressed inflammatory response. Children who begin treatment early sometimes achieve complete resolution within this period.",
+            ],
+          },
+        ],
+        note: "Never stop or reduce any inhaler without your chest physician's guidance. Results vary by individual.",
       },
     ],
     // Sourced from the asthma section ("dust, cold air or exercise-induced
@@ -1748,6 +1926,30 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "For anal fissures — painful cracks in the anal canal that bleed on defecation and cause significant spasm — homeopathic treatment is often dramatically effective. Patients who have suffered for months or years find significant relief within 4 to 6 weeks, and complete healing within 3 to 4 months.",
         ],
         note: "Severe third and fourth degree prolapsed piles, large thrombosed haemorrhoids, or complex fistula-in-ano may still require surgical or procedural management. We assess each case and give an honest recommendation.",
+      },
+      {
+        // Scoped to IBS and anal fissures — the two conditions on this page
+        // with genuine, already-stated timeframes.
+        heading: "What to Expect — Treatment Timeline",
+        subsections: [
+          {
+            label: "Weeks 4-6",
+            paragraphs: ["Anal fissure pain and bleeding often show significant relief."],
+          },
+          {
+            label: "Month 3-4",
+            paragraphs: [
+              "Most IBS patients see meaningful improvement in this window; anal fissures are often completely healed by this point.",
+            ],
+          },
+          {
+            label: "Month 6-9",
+            paragraphs: [
+              "Many IBS patients achieve resolution of symptoms, or a reduction to only very occasional, mild episodes.",
+            ],
+          },
+        ],
+        note: "Other conditions on this page — IBD, fatty liver, gallstones and others — follow their own individual course. We give an honest, condition-specific timeline at the first consultation.",
       },
     ],
     // Sourced from the IBS section ("abdominal cramps, bloating, and
@@ -1995,6 +2197,32 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
           "Constitutional homeopathic treatment for insomnia works by addressing the specific type of sleep disturbance and the specific person experiencing it. The time of waking matters. Whether thoughts race or the body is restless matters. Whether the cause is anxiety, grief, overwork or physical pain matters. Whether the patient is a light sleeper or has never slept well in their life matters. Each of these details points toward the remedy that matches this specific sleep pattern.",
           "In our experience, insomnia — particularly anxiety-driven or grief-driven insomnia — responds very well to constitutional treatment. Most patients notice improvement in sleep quality within 2 to 4 weeks of the correctly prescribed remedy. Long-standing insomnia may take longer, but the improvement — when it comes — is genuine, natural sleep, not chemical sedation.",
         ],
+      },
+      {
+        // Scoped to Anxiety and Insomnia — the two conditions on this page
+        // with genuine, already-stated timeframes.
+        heading: "What to Expect — Treatment Timeline",
+        subsections: [
+          {
+            label: "Weeks 2-4",
+            paragraphs: ["Sleep quality often improves; early signs of anxiety relief may begin."],
+          },
+          {
+            label: "Weeks 4-6",
+            paragraphs: ["Most anxiety patients notice meaningful change after the first correctly prescribed remedy."],
+          },
+          {
+            label: "Month 3-4",
+            paragraphs: ["The anxiety pattern has usually shifted significantly by this stage."],
+          },
+          {
+            label: "Month 6-9",
+            paragraphs: [
+              "Many patients find the anxiety no longer governs their daily life, functioning with a freedom they had forgotten was possible.",
+            ],
+          },
+        ],
+        note: "Depression, OCD and grief follow their own individual course and are not reflected in this timeline. Never stop or reduce psychiatric medication without your psychiatrist's guidance. Results vary by individual.",
       },
     ],
     // Sourced from the Anxiety section ("the constant background hum of
