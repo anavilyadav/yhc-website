@@ -45,7 +45,7 @@ export default function DiseaseHero({
           </p>
         )}
 
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row print:hidden">
           <a
             href={whatsappLink(`Hello, I would like to book a consultation for ${conditionName}.`)}
             target="_blank"

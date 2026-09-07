@@ -15,7 +15,7 @@ export function PageVideo({ videos }: { videos: PageVideoData[] }) {
   if (videos.length === 0) return null;
 
   return (
-    <section className="bg-cream-bg px-5 py-12">
+    <section className="bg-cream-bg px-5 py-12 print:hidden">
       <div className="mx-auto max-w-4xl space-y-10">
         {videos.map((video) => {
           const videoSchema = {

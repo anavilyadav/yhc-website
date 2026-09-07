@@ -111,7 +111,7 @@ export default function Header() {
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-0 z-50 bg-navy">
+    <header className="sticky top-0 z-50 bg-navy print:hidden">
       {/*
         Clinic hours + click-to-call phone visible on every page — GIOS_P4
         GEO Layer 2 EXP-11 (contact info must be visible site-wide) and the

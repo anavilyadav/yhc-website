@@ -8,7 +8,7 @@ export default function DiseasePageFinalCTA({
   conditionName: string;
 }) {
   return (
-    <section className="bg-navy px-5 py-14 md:py-16">
+    <section className="bg-navy px-5 py-14 md:py-16 print:hidden">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="font-serif text-xl leading-snug text-cream md:text-3xl">{finalCta}</h2>
 

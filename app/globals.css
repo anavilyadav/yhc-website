@@ -122,6 +122,25 @@ body {
   line-height: 1.6;
 }
 
+/*
+ * PDF summary print styles — UW report ch.5. The page-specific
+ * print:hidden classes (nav, footer, CTAs, video embeds) strip
+ * interactive chrome; these rules polish what remains for paper: real
+ * margins, no odd internal scrollbars, and no card/table split mid-row
+ * across a page break.
+ */
+@media print {
+  body {
+    background: #fff;
+  }
+  @page {
+    margin: 1.5cm;
+  }
+  section {
+    break-inside: avoid;
+  }
+}
+
 /* Respect reduced motion everywhere */
 @media (prefers-reduced-motion: reduce) {
   html {

@@ -57,7 +57,7 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy px-5 py-12 text-cream">
+    <footer className="bg-navy px-5 py-12 text-cream print:hidden">
       <div className="mx-auto max-w-6xl">
         <div className="mb-3 inline-flex flex-col items-start gap-1">
           <span className="rounded-md bg-cream-bg px-2.5 py-1.5">

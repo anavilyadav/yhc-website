@@ -14,6 +14,8 @@ import WorriesTable from "@/components/disease-page/WorriesTable";
 import TriggerChips from "@/components/disease-page/TriggerChips";
 import SoundFamiliar from "@/components/disease-page/SoundFamiliar";
 import PriceTeaser from "@/components/disease-page/PriceTeaser";
+import { PdfSummaryButton } from "@/components/disease-page/PdfSummaryButton";
+import { PrintLetterhead } from "@/components/disease-page/PrintLetterhead";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { PageVideo } from "@/components/shared/PageVideo";
 import { getDiseasePage, getAllDiseasePageSlugs } from "@/lib/data/disease-pages";
@@ -101,6 +103,8 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
 
+      <PrintLetterhead />
+
       <DiseaseHero hero={page.hero} conditionName={page.aboutCondition.name} />
 
       <SoundFamiliar items={page.soundFamiliar ?? []} />
@@ -117,6 +121,17 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
           reviewedBy={`${siteConfig.doctors.founder.name}, BHMS — Founder, 35+ years of clinical practice.`}
         />
       </div>
+
+      {/*
+        PDF summary — UW ch.5 "low-effort lead magnet built from content
+        already on the site". Scoped to the same 5 flagship pages that
+        already have a comparisonTable, not every disease page.
+      */}
+      {page.comparisonTable && (
+        <div className="mx-auto max-w-4xl px-5 pt-4 text-center sm:text-left">
+          <PdfSummaryButton conditionName={page.aboutCondition.name} />
+        </div>
+      )}
 
       {page.disclaimerProminent && (
         <DisclaimerBanner text={page.disclaimer} prominent />

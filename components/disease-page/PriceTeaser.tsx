@@ -27,7 +27,7 @@ export default function PriceTeaser({ plans }: { plans: PricingPlan[] }) {
         </p>
         <Link
           href="/appointment#fees"
-          className="whitespace-nowrap rounded-sm bg-amber px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90"
+          className="whitespace-nowrap rounded-sm bg-amber px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 print:hidden"
         >
           See Full Pricing →
         </Link>

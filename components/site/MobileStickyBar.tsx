@@ -5,7 +5,7 @@ import { trackEvent } from "@/lib/analytics";
 
 export default function MobileStickyBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 flex md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-50 flex md:hidden print:hidden">
       <a
         href={telLink()}
         onClick={() => trackEvent("phone_click", { click_source: "sticky_bar" })}
