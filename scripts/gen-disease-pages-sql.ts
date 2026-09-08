@@ -10,6 +10,14 @@ function dq(value: unknown): string {
 function dqText(value: string): string {
   return `$v$${value}$v$`;
 }
+// Optional JSONB fields (comparisonTable, commonTriggers, commonSymptoms,
+// soundFamiliar) are genuinely absent on many pages by design (e.g. cancer
+// has no commonTriggers) — emit SQL NULL rather than a JSON "null" or an
+// empty array, so a missing field reads the same in Postgres as it does
+// as `undefined` in the TypeScript fallback.
+function dqOptional(value: unknown): string {
+  return value === undefined ? "null" : `${dq(value)}::jsonb`;
+}
 
 const rows = DISEASE_PAGE_SEED.map((p, i) => {
   const cols = [
@@ -22,7 +30,7 @@ const rows = DISEASE_PAGE_SEED.map((p, i) => {
     dqText(p.conditionsIntro),
     `${dq(p.conditions)}::jsonb`,
     `${dq(p.sections)}::jsonb`,
-    `${dq(p.patientStory)}::jsonb`,
+    dqOptional(p.patientStory),
     `${dq(p.faqs)}::jsonb`,
     dqText(p.finalCta),
     dqText(p.disclaimer),
@@ -30,6 +38,10 @@ const rows = DISEASE_PAGE_SEED.map((p, i) => {
     `${dq(p.aboutCondition)}::jsonb`,
     "true",
     String(i + 1),
+    dqOptional(p.comparisonTable),
+    dqOptional(p.commonTriggers),
+    dqOptional(p.commonSymptoms),
+    dqOptional(p.soundFamiliar),
   ];
   return `(\n  ${cols.join(",\n  ")}\n)`;
 }).join(",\n");
@@ -38,7 +50,8 @@ const sql = `insert into public.disease_pages (
   slug, page_title, meta_description, focus_keyword, secondary_keywords,
   hero, conditions_intro, conditions, sections, patient_story, faqs,
   final_cta, disclaimer, disclaimer_prominent, about_condition,
-  is_published, display_order
+  is_published, display_order, comparison_table, common_triggers,
+  common_symptoms, sound_familiar
 ) values
 ${rows}
 on conflict (slug) do nothing;

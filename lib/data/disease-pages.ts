@@ -17,7 +17,7 @@ export async function getDiseasePage(slug: string): Promise<DiseasePageContent |
   const { data, error } = await supabase
     .from("disease_pages")
     .select(
-      "slug, page_title, meta_description, focus_keyword, secondary_keywords, hero, conditions_intro, conditions, sections, patient_story, faqs, final_cta, disclaimer, disclaimer_prominent, about_condition, is_published",
+      "slug, page_title, meta_description, focus_keyword, secondary_keywords, hero, conditions_intro, conditions, sections, patient_story, faqs, final_cta, disclaimer, disclaimer_prominent, about_condition, is_published, comparison_table, common_triggers, common_symptoms, sound_familiar",
     )
     .eq("slug", slug)
     .eq("is_published", true)
@@ -42,6 +42,10 @@ export async function getDiseasePage(slug: string): Promise<DiseasePageContent |
     disclaimerProminent: data.disclaimer_prominent,
     aboutCondition: data.about_condition,
     isPublished: data.is_published,
+    comparisonTable: data.comparison_table ?? undefined,
+    commonTriggers: data.common_triggers ?? undefined,
+    commonSymptoms: data.common_symptoms ?? undefined,
+    soundFamiliar: data.sound_familiar ?? undefined,
   };
 }
 
