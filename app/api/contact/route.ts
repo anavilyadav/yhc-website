@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getSupabaseServiceClient } from "@/lib/supabase/server";
+import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type { ContactSubmission } from "@/lib/types";
 
 const VALID_CONSULTATION_TYPES: ContactSubmission["consultationType"][] = [
@@ -40,10 +40,13 @@ export async function POST(request: Request) {
     );
   }
 
-  const supabase = getSupabaseServiceClient();
+  // Uses the anon client, not the service role — the "Anyone can submit
+  // the contact form" RLS insert policy on contact_submissions already
+  // permits this write publicly, so no privileged key is needed here.
+  const supabase = getSupabaseServerClient();
   if (!supabase) {
     console.error(
-      "Contact form submitted but Supabase is not configured (missing SUPABASE_SERVICE_ROLE_KEY)."
+      "Contact form submitted but Supabase is not configured (missing NEXT_PUBLIC_SUPABASE_URL/ANON_KEY)."
     );
     return NextResponse.json(
       { error: "We couldn't save your message right now. Please WhatsApp us instead." },
