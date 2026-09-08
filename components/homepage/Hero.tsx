@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { whatsappLink } from "@/lib/site-config";
 
 export default function Hero() {
   return (
@@ -16,14 +15,12 @@ export default function Hero() {
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <a
-            href={whatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full rounded-sm bg-amber px-8 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"
+          <Link
+            href="/appointment"
+            className="w-full rounded-sm bg-amber px-8 py-3 text-center text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"
           >
             Book Your Consultation →
-          </a>
+          </Link>
           <Link
             href="/about"
             className="w-full rounded-sm border-2 border-navy px-8 py-3 text-center text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-navy hover:text-cream sm:w-auto"

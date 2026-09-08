@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { siteConfig, telLink, whatsappLink } from "@/lib/site-config";
 
 export default function DiseasePageFinalCTA({
@@ -28,6 +29,13 @@ export default function DiseasePageFinalCTA({
             📞 Call {siteConfig.phone.display}
           </a>
         </div>
+
+        <p className="mt-5 text-sm text-cream/70">
+          Already decided?{" "}
+          <Link href="/appointment" className="font-semibold text-amber-light underline underline-offset-2">
+            Book &amp; pay online →
+          </Link>
+        </p>
       </div>
     </section>
   );

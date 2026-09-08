@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { telLink, whatsappLink } from "@/lib/site-config";
 import { trackEvent } from "@/lib/analytics";
 
@@ -9,19 +10,26 @@ export default function MobileStickyBar() {
       <a
         href={telLink()}
         onClick={() => trackEvent("phone_click", { click_source: "sticky_bar" })}
-        className="flex flex-1 items-center justify-center gap-2 bg-navy py-3 text-sm font-bold text-amber-light"
+        className="flex flex-1 items-center justify-center gap-1 bg-navy py-3 text-xs font-bold text-amber-light"
       >
-        📞 Call Now
+        📞 Call
       </a>
       <a
         href={whatsappLink()}
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackEvent("whatsapp_click", { entry_point: "sticky_bar" })}
-        className="flex flex-1 items-center justify-center gap-2 bg-green py-3 text-sm font-bold text-white"
+        className="flex flex-1 items-center justify-center gap-1 bg-green py-3 text-xs font-bold text-white"
       >
         💬 WhatsApp
       </a>
+      <Link
+        href="/appointment"
+        onClick={() => trackEvent("book_click", { entry_point: "sticky_bar" })}
+        className="flex flex-1 items-center justify-center gap-1 bg-amber py-3 text-xs font-bold text-navy"
+      >
+        📅 Book & Pay
+      </Link>
     </div>
   );
 }

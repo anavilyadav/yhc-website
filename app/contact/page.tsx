@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { whatsappLinks } from "@/lib/whatsapp";
 import { getClinicLocations } from "@/lib/data/contact";
@@ -110,9 +111,14 @@ export default async function ContactPage() {
                 hours.
               </li>
             </ol>
-            <a href={whatsappLinks.onlineConsultation} className={styles.whatsappCta}>
-              WhatsApp Us to Begin →
-            </a>
+            <div className={styles.onlineCtaRow}>
+              <a href={whatsappLinks.onlineConsultation} className={styles.whatsappCta}>
+                WhatsApp Us to Begin →
+              </a>
+              <Link href="/appointment" className={styles.bookCta}>
+                Already Decided? Book &amp; Pay Online →
+              </Link>
+            </div>
           </div>
         </div>
       </section>

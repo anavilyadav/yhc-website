@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { siteConfig, telLink, whatsappLink } from "@/lib/site-config";
+import { siteConfig, telLink } from "@/lib/site-config";
 import { trackEvent } from "@/lib/analytics";
 
 const primaryLinks = [
@@ -178,15 +178,13 @@ export default function Header() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-3">
-          <a
-            href={whatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackEvent("whatsapp_click", { entry_point: "header" })}
+          <Link
+            href="/appointment"
+            onClick={() => trackEvent("book_click", { entry_point: "header" })}
             className="hidden shrink-0 rounded-sm bg-amber px-4 py-2 text-xs font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:block"
           >
             Book Consultation
-          </a>
+          </Link>
 
           <button
             type="button"
@@ -251,15 +249,13 @@ export default function Header() {
               >
                 📞 {siteConfig.phone.display}
               </a>
-              <a
-                href={whatsappLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackEvent("whatsapp_click", { entry_point: "mobile_menu" })}
+              <Link
+                href="/appointment"
+                onClick={() => trackEvent("book_click", { entry_point: "mobile_menu" })}
                 className="rounded-sm bg-amber px-4 py-3 text-center text-sm font-bold uppercase tracking-wide text-navy"
               >
                 Book Consultation
-              </a>
+              </Link>
             </div>
           </nav>
         </div>
