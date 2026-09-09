@@ -20,6 +20,8 @@ const STATIC_ROUTES = [
   "homeopathy-clinic-jagatpura-jaipur",
   "skin-diseases/vitiligo-treatment-jaipur",
   "skin-diseases/psoriasis-treatment-jaipur",
+  "skin-diseases/eczema-treatment-jaipur",
+  "respiratory-diseases/asthma-treatment-jaipur",
   "nervous-system-disease/cerebral-palsy-treatment-jaipur",
   "genetic-diseases/down-syndrome-treatment-jaipur",
   "privacy-policy",
