@@ -17,7 +17,7 @@ export function AuthorBox({
 }: {
   doctor: Doctor | null;
   lastReviewed: string;
-  /** e.g. "Dr T P Yadav, BHMS — Founder, 35+ years of clinical practice." Omitted when not applicable (e.g. Dr T P Yadav's own pages). */
+  /** e.g. "Dr T P Yadav, BHMS, MD — Founder, 35+ years of clinical practice." Omitted when not applicable (e.g. Dr T P Yadav's own pages). */
   reviewedBy?: string;
 }) {
   const name = doctor?.full_name ?? siteConfig.doctors.physician.name;

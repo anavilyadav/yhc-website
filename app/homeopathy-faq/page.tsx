@@ -75,7 +75,7 @@ export default async function HomeopathyFaqPage() {
           <AuthorBox
             doctor={doctor}
             lastReviewed={lastReviewed}
-            reviewedBy={`${siteConfig.doctors.founder.name}, BHMS — Founder, 35+ years of clinical practice.`}
+            reviewedBy={`${siteConfig.doctors.founder.name}, BHMS, MD — Founder, 35+ years of clinical practice.`}
           />
           <p className="mt-4 text-[12px] leading-relaxed text-text-light">
             Looking for our quick-answer FAQ instead? Visit the{" "}

@@ -159,7 +159,7 @@ export const medicalDisclaimerPage: LegalPageContent = {
     {
       heading: "Overview",
       body: [
-        "The information provided on this website (yadavhomeoclinic.com) and through our consultation services is written and reviewed by Dr T P Yadav (BHMS, Founder) and Dr Anavil Yadav (BHMS, 2016) for general educational purposes.",
+        "The information provided on this website (yadavhomeoclinic.com) and through our consultation services is written and reviewed by Dr T P Yadav (BHMS, MD, Founder) and Dr Anavil Yadav (BHMS, 2016) for general educational purposes.",
       ],
     },
     {
@@ -190,7 +190,7 @@ export const medicalDisclaimerPage: LegalPageContent = {
     {
       heading: "Scope of Practice",
       body: [
-        "Dr T P Yadav and Dr Anavil Yadav are registered homeopathic practitioners (BHMS). They do not practice allopathic medicine and do not prescribe allopathic drugs.",
+        "Dr T P Yadav (BHMS, MD) and Dr Anavil Yadav (BHMS) are registered homeopathic practitioners. They do not practice allopathic medicine and do not prescribe allopathic drugs.",
       ],
     },
     {

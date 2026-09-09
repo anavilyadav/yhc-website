@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { siteConfig } from "@/lib/site-config";
+import { trackEvent } from "@/lib/analytics";
 import styles from "@/app/contact/contact.module.css";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -42,6 +43,7 @@ export function ContactForm() {
       }
 
       setStatus("success");
+      trackEvent("form_submit", { form_type: "contact", consultation_type: payload.consultationType });
       form.reset();
     } catch (err) {
       setStatus("error");

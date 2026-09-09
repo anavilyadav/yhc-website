@@ -16,7 +16,7 @@ export const DOCTOR_SEED: Doctor[] = [
     slug: "dr-tp-yadav",
     display_order: 1,
     full_name: "Dr T P Yadav",
-    role_title: "Founder & Chief Homeopathic Physician | BHMS",
+    role_title: "Founder & Chief Homeopathic Physician | BHMS, MD",
     header_subline: "35 Years of Clinical Practice | Yadav Homeo Clinic, Jaipur",
     bio_paragraphs: [
       "Dr T P Yadav is the founder of Yadav Homeo Clinic and one of the most experienced classical homeopathic physicians in Rajasthan. His practice, which began in 1991, has been built entirely on one principle: that every patient — regardless of how severe or long-standing their condition — deserves a precise, individualised, properly prescribed homeopathic remedy. Not a generic formula. Not a symptomatic fix. A constitutional remedy that addresses the whole person.",
@@ -38,7 +38,7 @@ export const DOCTOR_SEED: Doctor[] = [
     consultation_points: null,
     philosophy_quote: null,
     college_name: "Dr. Madan Pratap Khuteta Homoeopathic Medical College, Jaipur",
-    credential_name: "BHMS",
+    credential_name: "BHMS, MD",
     credential_year: null,
     registration_number: "3692",
     registration_council: null,

@@ -1,13 +1,18 @@
 -- ============================================================================
--- Seed: Dr T P Yadav + Dr Anavil Yadav
--- Source: STEP2_AboutUs_DoctorProfiles.docx (approved copy — do not paraphrase)
--- Superseded/applied live via supabase/migrations/0010_doctors_seed.sql
--- (2026-09-09) — kept here for reference and local re-seeding.
--- registration_number / college_name confirmed directly by Dr Anavil
--- (chat, 2026-08-29). Dr T P Yadav's credential corrected to "BHMS, MD" per
--- Dr Anavil's note (2026-09-09) — do not shorten back to "BHMS" alone.
--- registration_council and socials stay NULL on purpose — fill via the
--- admin panel once confirmed, never invent placeholder data.
+-- Doctors seed — the `doctors` table was created by migration 0001 but was
+-- never actually populated (confirmed empty, 2026-09-09). The site has been
+-- rendering entirely from the code-level DOCTOR_SEED fallback in
+-- lib/content/doctors-seed.ts this whole time. This migration brings the
+-- live database in line with that (now-corrected) fallback, so registration
+-- numbers / college names / the BHMS, MD credential fix are the same in
+-- both places, exactly the seed-fallback pattern used by every other table
+-- on this site (disease_pages, pricing_plans, clinic_locations, etc.).
+--
+-- Source: STEP2_AboutUs_DoctorProfiles.docx (approved copy), corrected per
+-- Dr Anavil's note (2026-09-09) that Dr T P Yadav holds BHMS, MD — not BHMS
+-- alone. registration_number / college_name confirmed directly by Dr Anavil
+-- (chat, 2026-08-29). registration_council and socials stay NULL on purpose
+-- — fill via the admin panel once confirmed, never invent placeholder data.
 -- ============================================================================
 
 insert into public.doctors (

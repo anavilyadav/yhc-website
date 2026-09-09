@@ -105,7 +105,7 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
 
       <PrintLetterhead />
 
-      <DiseaseHero hero={page.hero} conditionName={page.aboutCondition.name} />
+      <DiseaseHero hero={page.hero} conditionName={page.aboutCondition.name} doctor={doctor} />
 
       <SoundFamiliar items={page.soundFamiliar ?? []} />
 
@@ -118,7 +118,7 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
         <AuthorBox
           doctor={doctor}
           lastReviewed={formatDate(new Date())}
-          reviewedBy={`${siteConfig.doctors.founder.name}, BHMS — Founder, 35+ years of clinical practice.`}
+          reviewedBy={`${siteConfig.doctors.founder.name}, BHMS, MD — Founder, 35+ years of clinical practice.`}
         />
       </div>
 

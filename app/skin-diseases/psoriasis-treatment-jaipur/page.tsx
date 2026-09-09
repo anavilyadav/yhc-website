@@ -56,6 +56,7 @@ export default async function PsoriasisPage() {
       <DiseaseHero
         hero={page.hero}
         conditionName={page.aboutCondition.name}
+        doctor={doctor}
         breadcrumbParent={{ label: page.parentLabel, href: `/${page.parentSlug}` }}
       />
 
@@ -63,7 +64,7 @@ export default async function PsoriasisPage() {
         <AuthorBox
           doctor={doctor}
           lastReviewed={new Date().toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}
-          reviewedBy={`${siteConfig.doctors.founder.name}, BHMS — Founder, 35+ years of clinical practice.`}
+          reviewedBy={`${siteConfig.doctors.founder.name}, BHMS, MD — Founder, 35+ years of clinical practice.`}
         />
       </div>
 

@@ -33,7 +33,7 @@ export function buildClinicSchema() {
     name: siteConfig.name,
     alternateName: ["Yadav Homeopathy Clinic", "YHC Jaipur"],
     description:
-      "Jaipur's most trusted classical homeopathy clinic since 1991. Specialising in vitiligo, autism, kidney disease, autoimmune conditions and all chronic diseases. Founded by Dr T P Yadav. Now led by Dr T P Yadav and Dr Anavil Yadav (BHMS). 1 lakh+ patients treated.",
+      "Jaipur's most trusted classical homeopathy clinic since 1991. Specialising in vitiligo, autism, kidney disease, autoimmune conditions and all chronic diseases. Founded by Dr T P Yadav. Now led by Dr T P Yadav (BHMS, MD) and Dr Anavil Yadav (BHMS). 1 lakh+ patients treated.",
     url: siteConfig.url,
     logo: `${siteConfig.url}/logo-full.png`,
     image: `${siteConfig.url}/logo-full.png`,
@@ -111,7 +111,7 @@ export function buildJagatpuraClinicSchema() {
     "@id": jagatpuraClinicId,
     name: `${siteConfig.name} — Jagatpura`,
     description:
-      "Jagatpura branch of Yadav Homeo Clinic — classical homeopathy for chronic disease, open Sundays. Founded by Dr T P Yadav, now led by Dr T P Yadav and Dr Anavil Yadav (BHMS).",
+      "Jagatpura branch of Yadav Homeo Clinic — classical homeopathy for chronic disease, open Sundays. Founded by Dr T P Yadav, now led by Dr T P Yadav (BHMS, MD) and Dr Anavil Yadav (BHMS).",
     url: `${siteConfig.url}/homeopathy-clinic-jagatpura-jaipur/`,
     parentOrganization: { "@id": clinicId },
     logo: `${siteConfig.url}/logo-full.png`,
@@ -315,7 +315,7 @@ export function buildPhysicianSchemas() {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "degree",
-      name: "BHMS",
+      name: "BHMS, MD",
       recognizedBy: { "@type": "Organization", name: "Central Council of Homeopathy, India" },
     },
     medicalSpecialty: [

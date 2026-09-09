@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { whatsappLink } from "@/lib/site-config";
+import { trackEvent } from "@/lib/analytics";
 
 const SESSION_KEY = "yhc_exit_intent_shown";
 
@@ -20,6 +21,7 @@ export default function ExitIntentPopup() {
     function handleMouseLeave(e: MouseEvent) {
       if (e.clientY > 0) return;
       setVisible(true);
+      trackEvent("exit_intent_triggered");
       sessionStorage.setItem(SESSION_KEY, "1");
       document.removeEventListener("mouseleave", handleMouseLeave);
     }
@@ -53,7 +55,10 @@ export default function ExitIntentPopup() {
           href={whatsappLink("Hello, I was on your website and have a question about my condition.")}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => setVisible(false)}
+          onClick={() => {
+            trackEvent("exit_intent_converted");
+            setVisible(false);
+          }}
           className="mt-5 block rounded-sm bg-amber px-6 py-3 text-center text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90"
         >
           💬 Ask Us on WhatsApp

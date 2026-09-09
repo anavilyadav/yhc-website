@@ -8,6 +8,7 @@ import { buildBlogPostingSchema } from "@/lib/schema";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { BlogContent } from "@/components/blog/BlogContent";
 import { AuthorBox } from "@/components/blog/AuthorBox";
+import { BlogEngagementTracker } from "@/components/blog/BlogEngagementTracker";
 import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { PageVideo } from "@/components/shared/PageVideo";
 import { getPageVideos } from "@/lib/data/videos";
@@ -116,6 +117,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="mx-auto mt-6 max-w-3xl">
           <DisclaimerBanner text="This article is written by Dr Anavil Yadav (BHMS), Homeopathic Physician at Yadav Homeo Clinic, Jaipur, for educational purposes only. Clinical outcomes described are from the author's practice experience. Individual results vary. This is not a substitute for professional medical advice." />
         </div>
+
+        <BlogEngagementTracker blogTitle={post.title} blogCategory={post.category} />
 
         {relatedDisease && (
           <div className="mx-auto mt-8 max-w-3xl">
