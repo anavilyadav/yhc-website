@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import DiseaseHero from "@/components/disease-page/DiseaseHero";
+import SectionJumpNav from "@/components/disease-page/SectionJumpNav";
 import ContentSections from "@/components/disease-page/ContentSections";
 import PatientStoryCard from "@/components/disease-page/PatientStoryCard";
 import FAQAccordion from "@/components/disease-page/FAQAccordion";
@@ -11,6 +12,7 @@ import { DOWN_SYNDROME_PAGE } from "@/lib/content/down-syndrome-content";
 import { buildMedicalWebPageSchema, buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
+import { slugify, autoShortenHeading } from "@/lib/utils";
 
 const page = DOWN_SYNDROME_PAGE;
 
@@ -39,6 +41,11 @@ export default async function DownSyndromePage() {
     breadcrumbParent: { label: page.parentLabel, href: `/${page.parentSlug}` },
   });
   const faqPageSchema = buildFAQPageSchema(page.faqs);
+  const jumpNavItems = [
+    ...page.sections.map((s) => ({ id: slugify(s.heading), label: s.navLabel ?? autoShortenHeading(s.heading) })),
+    ...(page.patientStory ? [{ id: "patient-story", label: "Patient Story" }] : []),
+    { id: "faq", label: "FAQ" },
+  ];
 
   return (
     <>
@@ -59,6 +66,8 @@ export default async function DownSyndromePage() {
         doctor={doctor}
         breadcrumbParent={{ label: page.parentLabel, href: `/${page.parentSlug}` }}
       />
+
+      <SectionJumpNav items={jumpNavItems} />
 
       <div className="mx-auto max-w-4xl px-5 pt-8">
         <AuthorBox

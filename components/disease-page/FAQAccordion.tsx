@@ -8,7 +8,7 @@ export default function FAQAccordion({
   heading?: string;
 }) {
   return (
-    <section className="bg-cream-bg px-5 py-14">
+    <section id="faq" className="scroll-mt-32 bg-cream-bg px-5 py-14">
       <div className="mx-auto max-w-3xl">
         <h2 className="font-serif text-xl text-navy md:text-2xl">{heading}</h2>
 

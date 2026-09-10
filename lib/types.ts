@@ -33,8 +33,10 @@ export interface DiseasePageHero {
   /**
    * YouTube video ID for the hero's video slot (e.g. "dQw4w9WgXcQ" from
    * youtube.com/watch?v=dQw4w9WgXcQ) — not a full URL. Optional and left
-   * unset until a real video exists for this page; VideoEmbed renders
-   * nothing when it's absent rather than showing a placeholder to patients.
+   * unset until a real video exists for this page; VideoEmbed shows a
+   * visible "Video Pending" placeholder naming the video when it's absent,
+   * per Dr. Anavil's instruction (2026-09-10) that pending media should be
+   * easy to spot while shoots are in progress, not hidden.
    */
   youtubeId?: string;
 }
@@ -46,6 +48,15 @@ export interface DiseasePageSubsection {
   list?: string[];
 }
 
+/** A photo or video break inserted mid-section — layout #8 "Visual Proof Strip". */
+export interface DiseasePageMedia {
+  type: "video" | "photo";
+  /** YouTube video ID (video type) or image URL (photo type) — left unset until real media exists. */
+  youtubeId?: string;
+  photoUrl?: string;
+  caption: string;
+}
+
 export interface DiseasePageSection {
   heading: string;
   paragraphs?: string[];
@@ -53,6 +64,18 @@ export interface DiseasePageSection {
   subsections?: DiseasePageSubsection[];
   /** Small-print note, e.g. "Results vary by individual..." */
   note?: string;
+  /** Short chip label for the section jump-nav (e.g. "Why It Spreads"). Falls back to an auto-shortened heading when unset. */
+  navLabel?: string;
+  /**
+   * How to render `list` — "bullets" (default) for plain prose lists;
+   * "stats" for short "Label — description" results-style lists rendered
+   * as big number/label tiles; "cards" for "Name — description" lists
+   * (e.g. named sub-types) rendered as a 2-column card grid. Only applies
+   * when every list item actually follows the "X — description" shape.
+   */
+  listStyle?: "bullets" | "stats" | "cards";
+  /** Photo/video break shown after this section's paragraphs, before its list/subsections. */
+  media?: DiseasePageMedia;
 }
 
 export interface DiseasePageFAQ {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import DiseaseHero from "@/components/disease-page/DiseaseHero";
+import SectionJumpNav from "@/components/disease-page/SectionJumpNav";
 import DisclaimerBanner from "@/components/disease-page/DisclaimerBanner";
 import ConditionsList from "@/components/disease-page/ConditionsList";
 import ContentSections from "@/components/disease-page/ContentSections";
@@ -25,6 +26,7 @@ import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
 import { buildMedicalWebPageSchema, buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 import { RELATED_CONDITIONS, SUB_PAGE_LINKS } from "@/lib/content/related-conditions";
+import { slugify, autoShortenHeading } from "@/lib/utils";
 
 // ISR: re-fetch Supabase-backed page content at most once per hour, so
 // admin-panel edits go live without a redeploy while pages still serve as
@@ -81,6 +83,11 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
   const faqPageSchema = buildFAQPageSchema(page.faqs);
   const relatedConditions = RELATED_CONDITIONS[page.slug] ?? [];
   const subPageLinks = SUB_PAGE_LINKS[page.slug] ?? [];
+  const jumpNavItems = [
+    ...page.sections.map((s) => ({ id: slugify(s.heading), label: s.navLabel ?? autoShortenHeading(s.heading) })),
+    ...(page.patientStory ? [{ id: "patient-story", label: "Patient Story" }] : []),
+    { id: "faq", label: "FAQ" },
+  ];
 
   return (
     <>
@@ -106,6 +113,8 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
       <PrintLetterhead />
 
       <DiseaseHero hero={page.hero} conditionName={page.aboutCondition.name} doctor={doctor} />
+
+      <SectionJumpNav items={jumpNavItems} />
 
       <SoundFamiliar items={page.soundFamiliar ?? []} />
 

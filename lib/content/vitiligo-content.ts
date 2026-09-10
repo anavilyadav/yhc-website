@@ -34,16 +34,20 @@ export const VITILIGO_PAGE: DiseaseSubPageContent = {
   sections: [
     {
       heading: "Understanding Why Vitiligo Spreads — and Why Creams Cannot Stop It",
+      navLabel: "Why It Spreads",
       paragraphs: [
         "Vitiligo — called safed daag or leucoderma in Hindi — occurs when the immune system mistakenly destroys melanocytes, the cells responsible for producing skin pigment. The result is white patches that appear unpredictably, spread without warning, and affect the face, hands, elbows, knees, lips, and other body areas most visibly.",
         "The question patients always ask is: why does it keep spreading even when I am using creams?",
         "The answer is that creams — steroid-based, tacrolimus-based, or otherwise — address the skin from outside. They can sometimes slow local progression or even stimulate some repigmentation in a treated area. But they do not address why the immune system is attacking melanocytes in the first place. As soon as the cream is stopped, or in untreated areas, the destruction continues.",
         "Constitutional homeopathy works at the level where vitiligo actually originates — the immune dysregulation. By identifying and correcting the specific immune imbalance in the individual patient, it aims to stop the destruction at its source. When this happens, the skin's own melanocytes — wherever they survive — can begin functioning again. Repigmentation follows not because we applied something to the skin, but because the body's own intelligence was restored.",
       ],
+      media: { type: "video", caption: "Dr. Anavil explains: why vitiligo spreads and why creams alone can't stop it" },
     },
     {
       heading: "What Our 30 Years of Vitiligo Cases Actually Show — No Exaggeration",
+      navLabel: "What We See",
       paragraphs: ["Based on our clinical experience at Yadav Homeo Clinic across hundreds of vitiligo cases:"],
+      listStyle: "stats",
       list: [
         "Halting of Spread — seen in the majority of patients who complete a full course of constitutional treatment. This is the most consistent and reliable outcome. New patches stop appearing. Existing patches stabilise.",
         "Visible Repigmentation — seen in approximately 40 to 60 percent of patients who complete 12 or more months of treatment. Repigmentation typically begins as small brown pigment dots (called 'pigment islands') appearing inside the white patches, which gradually enlarge and coalesce. It is visible — patients can photograph and track the progress.",
@@ -54,6 +58,7 @@ export const VITILIGO_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Vitiligo Treatment Timeline: What to Expect Month by Month",
+      navLabel: "Timeline",
       subsections: [
         {
           label: "Months 1–2",
@@ -89,6 +94,8 @@ export const VITILIGO_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Types of Vitiligo We Treat",
+      navLabel: "Types We Treat",
+      listStyle: "cards",
       list: [
         "Segmental Vitiligo — patches confined to one body segment. Often responds earlier and more completely to constitutional treatment.",
         "Non-segmental (Generalised) Vitiligo — the most common type. Bilateral, often symmetrical. Variable response depending on stage and duration.",
@@ -100,6 +107,8 @@ export const VITILIGO_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Why Yadav Homeo Clinic for Vitiligo?",
+      navLabel: "Why Us",
+      media: { type: "photo", caption: "Constitutional case-taking session, in progress" },
       paragraphs: [
         "Our vitiligo experience is the deepest part of our clinical identity. Dr T P Yadav began treating vitiligo cases in 1991 when Jaipur had very few classical homeopaths. For 30 years, patients with vitiligo have come from across Rajasthan, from Delhi, from abroad — many of them referred by other patients who recovered here.",
         "Dr Anavil Yadav now leads vitiligo cases with the same constitutional approach — deepened by his own clinical training and updated by his engagement with current immunological understanding of the disease.",
