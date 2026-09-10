@@ -7,6 +7,7 @@ import { trackEvent } from "@/lib/analytics";
 import { getInitials } from "@/lib/utils";
 import type { Doctor } from "@/lib/supabase/queries/doctors";
 import type { DiseasePageHero } from "@/lib/types";
+import VideoEmbed from "@/components/shared/VideoEmbed";
 
 export default function DiseaseHero({
   hero,
@@ -77,6 +78,8 @@ export default function DiseaseHero({
         <h1 className="font-serif text-2xl leading-snug text-navy md:text-4xl md:leading-tight">
           {hero.headline}
         </h1>
+
+        <VideoEmbed youtubeId={hero.youtubeId} title={`${conditionName} — Yadav Homeo Clinic`} />
 
         <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-text-mid md:text-base">
           {hero.subheadline}

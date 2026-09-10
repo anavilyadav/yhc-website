@@ -30,6 +30,13 @@ export interface DiseasePageHero {
   subheadline: string;
   /** Only present where STEP8 added a trust line to the hero (e.g. skin-diseases). */
   trustLine?: string;
+  /**
+   * YouTube video ID for the hero's video slot (e.g. "dQw4w9WgXcQ" from
+   * youtube.com/watch?v=dQw4w9WgXcQ) — not a full URL. Optional and left
+   * unset until a real video exists for this page; VideoEmbed renders
+   * nothing when it's absent rather than showing a placeholder to patients.
+   */
+  youtubeId?: string;
 }
 
 export interface DiseasePageSubsection {

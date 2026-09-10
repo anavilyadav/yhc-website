@@ -12,9 +12,9 @@ export default function DiseasePageFinalCTA({
   conditionName: string;
 }) {
   return (
-    <section className="bg-navy px-5 py-14 md:py-16 print:hidden">
+    <section className="border-t-2 border-amber bg-amber-tint px-5 py-14 md:py-16 print:hidden">
       <div className="mx-auto max-w-3xl text-center">
-        <h2 className="font-serif text-xl leading-snug text-cream md:text-3xl">{finalCta}</h2>
+        <h2 className="font-serif text-xl leading-snug text-navy md:text-3xl">{finalCta}</h2>
 
         <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
           <a
@@ -29,18 +29,18 @@ export default function DiseasePageFinalCTA({
           <a
             href={telLink()}
             onClick={() => trackEvent("phone_click", { click_source: "disease_final_cta" })}
-            className="w-full rounded-sm border-2 border-amber-light px-7 py-3 text-sm font-bold uppercase tracking-wide text-amber-light transition-colors hover:bg-amber-light hover:text-navy sm:w-auto"
+            className="w-full rounded-sm border-2 border-navy px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-navy hover:text-cream sm:w-auto"
           >
             📞 Call {siteConfig.phone.display}
           </a>
         </div>
 
-        <p className="mt-5 text-sm text-cream/70">
+        <p className="mt-5 text-sm text-text-mid">
           Already decided?{" "}
           <Link
             href="/appointment"
             onClick={() => trackEvent("book_click", { entry_point: "disease_final_cta", condition: conditionName })}
-            className="font-semibold text-amber-light underline underline-offset-2"
+            className="font-semibold text-amber-dark underline underline-offset-2"
           >
             Book &amp; pay online →
           </Link>

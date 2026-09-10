@@ -6,9 +6,19 @@
   Do not change these values without updating the constitution doc first.
 */
 :root {
-  --color-cream: #f5deb3;
-  --color-cream-bg: #fbf6ea;
-  --color-cream-deep: #efe2bf;
+  /*
+    Rebalanced 2026-09-10 per Dr. Anavil's review of the color-proposal
+    mockup: keep the same navy/amber/cream brand family (matches print
+    material and signage) but lighten the deeper cream/beige tones, and
+    retarget green to amber-dark so every existing green usage (trust
+    badges, WhatsApp buttons, checkmarks) becomes amber without having to
+    touch each consuming component individually. Big navy background
+    *blocks* (Stats bar, Final CTAs, About hero) are addressed separately
+    in their own components — this file only fixes token values.
+  */
+  --color-cream: #f5eedb;
+  --color-cream-bg: #fbf7ec;
+  --color-cream-deep: #f5eedb;
   --color-navy: #1a2a41;
   --color-navy-light: #2c4162;
   --color-navy-2: #233a57;
@@ -16,8 +26,8 @@
   --color-amber-dark: #a97b2e;
   --color-amber-light: #facb7a;
   --color-amber-tint: #fbf1df;
-  --color-green: #5b8a2d;
-  --color-green-tint: #f1f6e9;
+  --color-green: #a97b2e;
+  --color-green-tint: #fbf1df;
   --color-white: #ffffff;
   --color-text-mid: #4a5a72;
   /*

@@ -70,6 +70,11 @@ export const siteConfig = {
     { value: "16+", label: "Disease Specialities" },
     { value: "2", label: "Clinic Locations in Jaipur" },
   ],
+  // YouTube video IDs (not full URLs) for the video-hero slots — left null
+  // until a real video exists, per the video-first layout plan (2026-09-10).
+  videos: {
+    homepageIntro: null as string | null,
+  },
 } as const;
 
 /**

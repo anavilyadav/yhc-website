@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { siteConfig } from "@/lib/site-config";
+import VideoEmbed from "@/components/shared/VideoEmbed";
 
 export default function Hero() {
   return (
@@ -7,6 +9,8 @@ export default function Hero() {
         <h1 className="hero-text font-serif text-2xl leading-snug text-navy sm:text-3xl md:text-5xl md:leading-tight">
           When Every Treatment Has Failed — Homeopathy Still Has an Answer.
         </h1>
+
+        <VideoEmbed youtubeId={siteConfig.videos.homepageIntro ?? undefined} title="Welcome to Yadav Homeo Clinic" />
 
         <p className="clinic-intro mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-mid md:mt-6 md:text-lg">
           Yadav Homeo Clinic has been Jaipur&apos;s most trusted name in classical homeopathy for
