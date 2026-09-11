@@ -60,6 +60,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       {
         heading:
           "Why Conventional Treatment Does Not Cure Chronic Skin Disease — and What Homeopathy Does Differently",
+        navLabel: "Why Creams Fail",
+        media: { type: "video", caption: "Dr. Anavil explains: why chronic skin disease needs more than a topical cream" },
         paragraphs: [
           "If you have been living with vitiligo, psoriasis or eczema for months or years, you already know the conventional route: steroid creams, antihistamines, immunosuppressants, light therapy. These treatments manage symptoms — sometimes very effectively. But the moment treatment stops, the disease returns. Often worse than before.",
           "This happens because conventional medicine treats skin disease from outside-in. It targets the visible symptom — the inflamed patch, the white spot, the itching — without addressing why the skin is behaving this way in the first place.",
@@ -69,6 +71,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Vitiligo — 30 Years of Clinical Experience, Hundreds of Cases Treated",
+        navLabel: "Vitiligo",
+        listStyle: "stats",
         paragraphs: [
           "Vitiligo — known in Hindi as safed daag or leucoderma — is the condition we are most frequently consulted for, and the one where our clinical track record is strongest. White patches appear when melanocytes — the cells that produce skin pigment — are destroyed by the immune system. The patches are painless but profoundly affect confidence, social life and mental health.",
           "Conventional dermatology offers PUVA light therapy, tacrolimus cream, steroid applications and skin grafting. These can produce results in certain cases — but they do not address why the immune system is attacking melanocytes. Constitutional homeopathy does.",
@@ -84,6 +88,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Psoriasis — Clearing the Skin Without Suppressing the Immune System",
+        navLabel: "Psoriasis",
         paragraphs: [
           "Psoriasis is one of the most distressing chronic skin conditions — not just physically, but psychologically. The thick, silvery plaques on the elbows, knees, scalp and body are visible to the world. Psoriatic arthritis, which affects up to 30 percent of psoriasis patients, adds joint pain and stiffness to the burden. Conventional treatment — methotrexate, biologics, UV therapy — can produce significant clearing but typically requires lifelong continuation and comes with side effects that worry many patients.",
           "Constitutional homeopathic treatment for psoriasis works by addressing the immune dysregulation at the root of the condition — the overproduction of skin cells driven by an abnormal immune response. The individually selected remedy gradually quiets this dysregulation, allowing the skin to normalise without external suppression. Many of our psoriasis patients achieve prolonged remission — sometimes years without recurrence — after completing a proper course of treatment.",
@@ -91,6 +96,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "What to Expect — Skin Disease Treatment Timeline",
+        navLabel: "Timeline",
         subsections: [
           {
             label: "Month 1-2",
@@ -266,6 +272,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "What Is an Autoimmune Disease?",
+        navLabel: "What It Is",
+        media: { type: "video", caption: "Dr. Anavil explains: what actually happens in an autoimmune disease" },
         paragraphs: [
           "In a healthy immune system, white blood cells identify and destroy foreign invaders — bacteria, viruses, parasites. In an autoimmune condition, this system misfires. The immune system mistakes the body's own cells for foreign threats and attacks them. Which cells are attacked determines the diagnosis: joints become Rheumatoid Arthritis. The thyroid becomes Hashimoto's or Graves' disease. The skin and joints become Lupus. The spine becomes Ankylosing Spondylitis.",
           "Modern medicine does not fully understand what triggers this immune malfunction. Genetics, environmental factors, infections, stress and hormonal changes all appear to play a role. What is known is that once triggered, autoimmune conditions tend to be lifelong — managed with immunosuppressant drugs that control the inflammation but do not address the underlying immune dysregulation.",
@@ -274,6 +282,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "How We Approach Autoimmune Cases at Yadav Homeo Clinic",
+        navLabel: "Our Approach",
         paragraphs: [
           "Every autoimmune patient at our clinic receives a thorough constitutional analysis — one that goes far beyond the diagnosis and the inflammation markers. We look at the whole person: the pattern of their illness, what makes it better or worse, their emotional landscape, their response to stress, their constitutional type, their family history of immune conditions.",
           "The remedy selected from this analysis works on the whole system — not just the inflamed joint or the thyroid gland. This is why patients frequently report improvements not just in their primary autoimmune symptoms, but in their energy levels, sleep quality, mood and general wellbeing — all simultaneously. Because the remedy is working at the level of the whole person, not at the level of one organ or one symptom.",
@@ -289,6 +298,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Rheumatoid Arthritis — Beyond Joint Pain Management",
+        navLabel: "Rheumatoid Arthritis",
         paragraphs: [
           "RA is one of the most common autoimmune conditions we treat. Patients arrive with stiff, swollen, painful joints — especially in the morning. Many are on methotrexate, hydroxychloroquine or biologics. Their disease is being managed — but the fatigue, the side effects, and the knowledge that the disease is still progressing underneath take a toll.",
           "Constitutional homeopathic treatment for RA focuses on the immune system's overall dysregulation — not just the joint inflammation. Correctly prescribed remedies have produced meaningful reductions in morning stiffness and joint pain, lowering of inflammatory markers like CRP and ESR, and in some cases, the ability to reduce conventional medication doses under specialist supervision. Results are gradual — but they are real, measurable, and confirmed in blood tests.",
@@ -432,6 +442,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "An Honest Word About Homeopathy and Cancer",
+        navLabel: "An Honest Word",
+        media: { type: "video", caption: "Dr. Anavil explains: what homeopathy can honestly offer cancer patients" },
         paragraphs: [
           "We must be completely clear about this: homeopathy is not a standalone treatment for cancer. Cancer is a serious, life-threatening condition that requires expert oncological care — surgery, chemotherapy, radiation therapy, targeted therapy or immunotherapy — prescribed and supervised by qualified oncologists.",
           "Any practitioner who claims to cure cancer with homeopathy alone is not being honest with you. Please never delay or substitute proven oncological treatment with any alternative therapy — including homeopathy.",
@@ -440,6 +452,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "What Homeopathy Can Do For Cancer Patients — Evidence From Our Practice",
+        navLabel: "What We Can Do",
         subsections: [
           {
             label: "During Chemotherapy and Radiation",
@@ -468,6 +481,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "How We Work With Cancer Patients at Yadav Homeo Clinic",
+        navLabel: "Our Approach",
         paragraphs: [
           "We work in complete coordination with the patient's oncology team. We request details of the cancer type, stage, current treatment protocol and any ongoing medications. Our homeopathic prescribing is tailored to the specific treatment the patient is receiving — because the side effect profile differs significantly between, for example, taxane-based chemotherapy and platinum-based protocols.",
           "The constitutional remedy selected is based on the whole person — their vital force, their constitutional strength, their psychological response to the diagnosis and treatment, and their specific side effect burden. As treatment cycles change, the prescription is reviewed and adjusted.",
@@ -571,6 +585,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "Why the Kidney Is Not the Only Problem — and Why This Matters",
+        navLabel: "Why It Matters",
+        media: { type: "video", caption: "Dr. Anavil explains: why kidney disease is never just about the kidney" },
         paragraphs: [
           "In classical homeopathic thinking, chronic kidney disease is rarely a disease of the kidney alone. The kidney's declining function is almost always the end result of a systemic process — years of uncontrolled diabetes, hypertension, chronic inflammation, autoimmune activity, or a constitutional vulnerability — that has been silently damaging renal tissue for a long time.",
           "Treating only the kidney while ignoring these systemic drivers is like mopping water from under a leaking pipe without sealing the leak. This is why conventional nephrology — which focuses primarily on managing creatinine and protecting remaining kidney function through diet and medication — rarely reverses CKD.",
@@ -580,6 +596,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "What You Can Realistically Expect — Based on Our Clinical Experience",
+        navLabel: "What to Expect",
         subsections: [
           {
             label: "CKD Stages 1 to 3 (creatinine typically under 3.5)",
@@ -609,6 +626,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Blood Tests We Track — Every 6 to 8 Weeks",
+        navLabel: "Tests We Track",
         list: [
           "Serum Creatinine — our primary marker of kidney function improvement",
           "Blood Urea Nitrogen (BUN) or Urea",
@@ -623,6 +641,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "What to Expect — Kidney Disease Treatment Timeline",
+        navLabel: "Timeline",
         subsections: [
           {
             label: "Month 2-3",
@@ -783,6 +802,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "Being Honest About What Homeopathy Can and Cannot Do",
+        navLabel: "Being Honest",
+        media: { type: "video", caption: "Dr. Anavil explains: what constitutional treatment can and cannot do for genetic conditions" },
         paragraphs: [
           "We believe in complete honesty with families of patients with genetic conditions — because they have already been through enough difficult conversations.",
           "Homeopathy cannot change DNA. It cannot remove the extra chromosome in Down syndrome or repair the haemoglobin gene in thalassemia. Any practitioner who claims this is not being truthful.",
@@ -792,6 +813,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "What Constitutional Treatment Does for Children With Down Syndrome",
+        navLabel: "What It Does",
+        listStyle: "stats",
         paragraphs: [
           "Down syndrome children often struggle with recurring ear and chest infections, digestive issues including constipation, thyroid problems, sleep disturbances, and the challenges of cognitive development. Each of these co-occurring conditions reduces the child's quality of life and limits their developmental potential.",
           "Constitutional homeopathic treatment for Down syndrome patients focuses on:",
@@ -807,6 +830,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Thalassemia — What Homeopathy Can Offer Alongside Transfusion Therapy",
+        navLabel: "Thalassemia",
         paragraphs: [
           "For Thalassemia Major patients who require regular blood transfusions, constitutional homeopathic treatment cannot substitute transfusion therapy — which is life-sustaining and must be continued. What we have observed in a number of thalassemia patients is: improved energy levels and quality of life between transfusions, improved immune function leading to fewer infections, and in some cases an increase in the interval between required transfusions — though this is not guaranteed and varies significantly between individuals.",
           "For Thalassemia Minor carriers — who may experience fatigue and mild anaemia — constitutional treatment can meaningfully improve energy, reduce symptom burden and support overall health.",
@@ -814,6 +838,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "What to Expect — Treatment Timeline",
+        navLabel: "Timeline",
         subsections: [
           {
             label: "Month 3-4",
@@ -933,6 +958,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "We Know Where You Are — And We Want to Be Honest With You",
+        navLabel: "We Understand",
+        media: { type: "video", caption: "Dr. Anavil explains: an honest first conversation about autism treatment" },
         paragraphs: [
           "If you are reading this page, you have probably been through a difficult journey already. The diagnosis. The grief. The research. The therapists. The well-meaning advice from relatives. The sleepless nights. The moments of joy and the moments of exhaustion.",
           "We want to be honest with you — as we are honest with every parent who comes to us.",
@@ -942,6 +969,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "The Co-Occurring Conditions That Homeopathy Helps Most",
+        navLabel: "Co-Occurring Conditions",
         paragraphs: [
           "Autism is rarely 'just' autism. Most autistic children have one or more significant co-occurring conditions that compound their difficulties and reduce their quality of life. These co-occurring conditions are where constitutional homeopathic treatment delivers its most consistent and significant results:",
         ],
@@ -986,6 +1014,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "What Your Child's First Consultation Looks Like",
+        navLabel: "First Consultation",
         paragraphs: [
           "The first consultation for an autistic child takes 1 to 1.5 hours. It is done with the parents — the child's presence is helpful but not essential if they are not comfortable in a new environment.",
           "We take a complete history: the pregnancy and birth, any complications during delivery, early developmental milestones, vaccination reactions, when parents first noticed differences, dietary history and current food preferences and aversions, sleep patterns, bowel habits, sensory sensitivities, specific behaviours that concern the parents most, school or therapy observations, and the complete family medical history.",
@@ -1002,6 +1031,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "What to Expect — Treatment Timeline",
+        navLabel: "Timeline",
         subsections: [
           {
             label: "Month 2-3",
@@ -1170,6 +1200,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "Epilepsy — Reducing Seizures, Not Just Counting Them",
+        navLabel: "Epilepsy",
+        media: { type: "video", caption: "Dr. Anavil explains: our constitutional approach to epilepsy and nervous system disorders" },
         paragraphs: [
           "Epilepsy is one of the neurological conditions where constitutional homeopathic treatment has produced the most meaningful results at our clinic. Patients arrive on one or more antiepileptic drugs (AEDs) — carbamazepine, valproate, levetiracetam, phenobarbitone — with seizures that remain incompletely controlled despite medication. For them, constitutional homeopathic treatment offers the possibility of better seizure control alongside their existing medication.",
           "Our approach does not suggest reducing or stopping AEDs. Seizure management requires consistent antiepileptic medication, and any change to that medication must be made by a neurologist. What constitutional treatment does is address the neurological susceptibility that underlies the seizure disorder — the constitutional predisposition to neurological hypersensitivity. In many patients, this produces a gradual but real reduction in seizure frequency and severity over 6 to 18 months of treatment.",
@@ -1178,6 +1210,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Migraine — Why Constitutional Homeopathy Often Works When Prophylactic Medications Don't",
+        navLabel: "Migraine",
         paragraphs: [
           "Migraine is one of the conditions where homeopathic treatment produces some of its most dramatic and consistent results. Patients who have suffered for years — weekly or monthly attacks of throbbing pain, nausea, light and sound sensitivity, visual auras — often find that constitutional treatment produces a profound reduction in frequency and intensity, and in some cases a complete cessation of migraine attacks.",
           "The reason for this strong response lies in how homeopathy approaches migraine. Conventional prophylactic treatment — beta-blockers, topiramate, amitriptyline — addresses the neurochemistry of migraine attacks. Constitutional homeopathic treatment addresses the underlying constitutional hypersensitivity of the nervous system that makes migraine attacks possible. When this deeper sensitivity is corrected through the precisely chosen constitutional remedy, the trigger threshold rises — and attacks become less frequent, less severe, and eventually absent.",
@@ -1186,6 +1219,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Cerebral Palsy — Improving Quality of Life and Supporting Development",
+        navLabel: "Cerebral Palsy",
         paragraphs: [
           "Cerebral Palsy presents in many forms — spastic, athetoid, ataxic — with varying degrees of motor, cognitive and communication involvement. Conventional management focuses on physiotherapy, occupational therapy, speech therapy, orthopaedic interventions and management of associated epilepsy.",
           "Constitutional homeopathic treatment for Cerebral Palsy patients works as a meaningful complement to this conventional care. The areas where we most consistently see improvement are: reduction in spasticity (muscle stiffness), improved sleep quality, better digestive function, reduction in drooling (sialorrhoea), improved alertness and cognitive engagement, and in children, better responsiveness to physiotherapy and occupational therapy after the homeopathic treatment has improved their constitutional health.",
@@ -1198,6 +1232,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         // presented as a timeline for epilepsy, CP or the other conditions
         // this page covers, which don't have the same stated data.
         heading: "What to Expect — Migraine Treatment Timeline",
+        navLabel: "Timeline",
         subsections: [
           {
             label: "Month 3-4",
@@ -1330,6 +1365,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "Why Thousands of Parents Choose Homeopathy for Their Children",
+        navLabel: "Why Parents Choose Us",
+        media: { type: "video", caption: "Dr. Anavil explains: why parents choose classical homeopathy for their children" },
         paragraphs: [
           "Every parent worries about giving their child strong medicines — especially repeatedly. Antibiotics for every infection. Antihistamines for every allergy. Steroids for every asthma attack. Each time, the medicine works — and each time, the illness returns. Sometimes sooner. Sometimes worse. Parents begin to feel they are managing a cycle, not treating a problem.",
           "This is exactly where constitutional homeopathy makes its most important contribution to child health. Children have a naturally strong vital force — their bodies want to heal, and they respond faster and more deeply to homeopathic treatment than most adults. A child with recurrent tonsillitis who might otherwise need surgery often becomes completely infection-free within 6 to 12 months of constitutional treatment. A child with chronic eczema who has been on steroid creams since infancy begins to develop genuinely healthy skin. A child with chronic allergies who was on daily antihistamines starts reacting less to previously triggering substances.",
@@ -1338,6 +1375,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Recurrent Tonsillitis — When Homeopathy Can Replace the Surgeon's Knife",
+        navLabel: "Tonsillitis",
         paragraphs: [
           "Tonsillectomy — surgical removal of the tonsils — is one of the most commonly performed surgeries in children worldwide. It is recommended for children who have frequent, severe tonsil infections that are not responding to antibiotics. The surgery is generally safe — but many parents instinctively feel that removing a part of their child's immune system is not the ideal solution.",
           "Constitutional homeopathic treatment for chronic tonsillitis has a strong and consistent track record at our clinic. By addressing the underlying immune susceptibility that makes the child prone to repeated throat infections — rather than removing the tonsils that are expressing this susceptibility — homeopathy allows many children to become genuinely free of recurrent tonsil infections over 6 to 12 months of treatment.",
@@ -1347,6 +1385,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Nocturnal Enuresis (Bed-Wetting) — Gently, Without Pressure",
+        navLabel: "Bed-Wetting",
         paragraphs: [
           "Bed-wetting — involuntary urination during sleep — is a source of significant distress for children and families. Children feel embarrassed. Parents feel frustrated, even though they know the child cannot help it. Conventional treatment involves bladder training, alarms and medication (desmopressin) — which helps while the medication is taken but rarely produces long-term resolution.",
           "Constitutional homeopathic treatment for nocturnal enuresis is one of the most consistently successful and satisfying treatment areas in paediatric homeopathy. By identifying the specific constitutional pattern of the child — the type of sleep, the emotional patterns, the family history, the specific circumstances around bed-wetting — and prescribing the precisely matching remedy, we regularly see resolution of bed-wetting within 3 to 6 months. Completely. Without alarms, without medication, without pressure on the child.",
@@ -1354,6 +1393,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Treatment Timeline — What to Expect",
+        navLabel: "Timeline",
         subsections: [
           {
             label: "Month 1",
@@ -1493,6 +1533,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "PCOD — Reversing the Root Cause, Not Just Managing the Hormone Report",
+        navLabel: "PCOD",
+        media: { type: "video", caption: "Dr. Anavil explains: treating the root cause of PCOD, not just the hormone report" },
+        listStyle: "stats",
         paragraphs: [
           "Polycystic Ovarian Disease has become one of the most common hormonal conditions affecting young Indian women today. The combination of irregular or absent periods, multiple ovarian cysts on ultrasound, elevated androgens (male hormones), insulin resistance, weight gain, hormonal acne and excess body hair has become almost epidemic — driven by stress, sedentary lifestyles, dietary changes and environmental factors.",
           "Conventional treatment for PCOD typically involves hormonal contraceptive pills to regulate the cycle, metformin for insulin resistance, and specific medications for symptoms like acne. These manage the symptoms effectively while the medication is taken. When the pills are stopped — for planning a pregnancy or simply because long-term hormonal medication raises concerns — the irregular cycles return, the cysts reform, and the same pattern reasserts itself.",
@@ -1509,6 +1552,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Fibroids — When Homeopathy Can Help You Avoid the Operating Table",
+        navLabel: "Fibroids",
+        listStyle: "stats",
         paragraphs: [
           "Uterine fibroids are non-cancerous growths in the muscle wall of the uterus. They affect a significant proportion of women in their 30s and 40s and are one of the most common reasons for hysterectomy worldwide. Symptoms range from heavy and prolonged menstrual bleeding, to pelvic pressure and pain, to urinary frequency from fibroid pressure on the bladder.",
           "Constitutional homeopathic treatment for fibroids has a meaningful track record at our clinic — particularly in cases of small to medium fibroids detected early, before they cause severe or acute complications. In these cases, we have documented:",
@@ -1523,6 +1568,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Menopause — Supported Gently, Without Hormonal Therapy",
+        navLabel: "Menopause",
         paragraphs: [
           "Menopause is a natural biological transition — not a disease. But for many women, the symptoms of perimenopause and menopause — hot flushes, night sweats, mood swings, insomnia, vaginal dryness, joint pain, memory lapses, and the emotional adjustment to this stage of life — can be significantly disruptive.",
           "Many women seek homeopathic treatment during menopause specifically because they want to manage their symptoms without Hormone Replacement Therapy (HRT) — whether due to concerns about breast cancer risk, blood clot risk, or simply a preference for a more natural approach. Constitutional homeopathy is particularly well-suited to menopausal care because of how it works: by matching the remedy to the whole person — her specific symptom picture, her constitutional type, her emotional experience of this transition — rather than applying a blanket hormonal replacement.",
@@ -1531,6 +1577,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Fertility — When IVF Is Not the Only Option",
+        navLabel: "Fertility",
         paragraphs: [
           "Female infertility — whether due to PCOD, blocked tubes, endometriosis, hormonal imbalance, or unexplained causes — is one of the most emotionally charged conditions we treat. Couples arrive after months or years of trying to conceive, often after one or more failed IVF cycles, carrying a weight of hope and grief that is unlike almost any other medical situation.",
           "Constitutional homeopathic treatment for female infertility works by improving the overall hormonal and constitutional health of the woman — creating the optimal internal environment for conception. We have seen natural conceptions in women diagnosed with PCOD, unexplained infertility, thin endometrium, poor egg quality in early-stage Premature Ovarian Insufficiency, and recurrent miscarriage after constitutional treatment.",
@@ -1541,6 +1588,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         // Scoped to PCOD, fibroids and menopause — the three conditions on
         // this page with genuine, already-stated timeframes.
         heading: "What to Expect — Treatment Timeline",
+        navLabel: "Timeline",
         subsections: [
           {
             label: "Weeks 6-8",
@@ -1706,12 +1754,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "An Honest Word About Male Infertility and Stigma",
+        navLabel: "An Honest Word",
+        media: { type: "video", caption: "Dr. Anavil explains: an honest conversation about male infertility" },
         paragraphs: [
           "Before we discuss treatment — let us address what most men feel but rarely say: male infertility carries a weight that female infertility, for cultural reasons, often does not. Men are told — sometimes explicitly, more often implicitly — that fertility is tied to identity and masculinity. It is not. Low sperm count, poor motility, or azoospermia are conditions of the reproductive system, caused by hormonal imbalance, oxidative stress, nutritional factors, or constitutional susceptibility. They say nothing about who you are as a man. They respond to treatment. In our clinical experience, many men see measurable improvement in sperm parameters within 3 to 6 months of correct constitutional homeopathic treatment. The first step is an honest conversation.",
         ],
       },
       {
         heading: "Male Infertility — What Homeopathy Does That No Other Treatment Does",
+        navLabel: "Male Infertility",
+        listStyle: "stats",
         paragraphs: [
           "Male infertility contributes to approximately 40 to 50 percent of all infertility cases — yet it remains significantly under-diagnosed and under-discussed. Many couples pursue years of female fertility investigations and treatments before a semen analysis is done and the male factor is identified.",
           "The most common findings on semen analysis are low sperm count, poor motility, abnormal morphology, or a combination of these. Conventional medicine's primary answer for these findings is assisted reproduction — IUI or IVF with ICSI. These are effective but invasive, expensive, and emotionally demanding.",
@@ -1728,6 +1780,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "BPH and Prostatitis — Without Lifelong Medication or Surgery",
+        navLabel: "BPH & Prostatitis",
         paragraphs: [
           "Benign Prostatic Hyperplasia — the non-cancerous enlargement of the prostate gland — is extremely common in men over 50. The enlarged prostate narrows the urinary channel, producing a characteristic cluster of symptoms: difficulty starting urination, a weak stream, frequent urge to urinate especially at night (nocturia), incomplete bladder emptying, and a constant sense of urinary urgency.",
           "Conventional management involves alpha-blockers (like tamsulosin) and 5-alpha reductase inhibitors — effective at managing symptoms but not at reversing the prostate enlargement, and associated with side effects including sexual dysfunction.",
@@ -1739,6 +1792,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         // Scoped to Male Infertility — the condition on this page with a
         // genuine, already-stated timeframe pattern.
         heading: "What to Expect — Male Infertility Treatment Timeline",
+        navLabel: "Timeline",
         subsections: [
           {
             label: "Month 3",
@@ -1864,6 +1918,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "Asthma — Why the Inhaler Is Not the Complete Answer",
+        navLabel: "Asthma",
+        media: { type: "video", caption: "Dr. Anavil explains: why the inhaler doesn't reduce bronchial hypersensitivity" },
         paragraphs: [
           "Asthma affects millions of Indians — particularly children, and particularly in urban environments with high pollution, dust and allergen exposure. The standard treatment approach — salbutamol reliever inhalers for acute attacks, inhaled corticosteroid preventers for daily control — is safe, effective and life-saving in acute situations. We fully support its use.",
           "However, this approach has a fundamental limitation: it controls the airway inflammation at the moment of the attack, but does not reduce the bronchial hypersensitivity that causes attacks to occur in the first place. The patient remains just as sensitive to dust, cold air or exercise-induced triggers after years of inhaler use as they were at the beginning — which is why asthma management is typically lifelong.",
@@ -1873,6 +1929,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Chronic Nasal Allergy and Sinusitis — Treated at the Root",
+        navLabel: "Allergy & Sinusitis",
         paragraphs: [
           "Perennial allergic rhinitis — constant sneezing, blocked or runny nose, itchy eyes, post-nasal drip triggered by dust, animal dander or environmental allergens — is one of the most common chronic conditions we treat. Antihistamines provide daily symptomatic relief but must be taken continuously. The allergy itself does not reduce.",
           "Constitutional homeopathic treatment for allergic rhinitis addresses the hyper-reactive immune response that is causing the allergy — rather than blocking the histamine that the immune system releases. Over a course of treatment, the immune response to allergens gradually becomes less intense, and many patients find that substances that previously triggered significant symptoms cause little or no reaction.",
@@ -1883,6 +1940,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         // Scoped to Asthma — the condition on this page with a genuine,
         // already-stated month-by-month pattern.
         heading: "What to Expect — Asthma Treatment Timeline",
+        navLabel: "Timeline",
         subsections: [
           {
             label: "Month 6",
@@ -2018,6 +2076,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "IBS — Why Constitutional Homeopathy Often Succeeds Where Conventional Medicine Has Failed",
+        navLabel: "IBS",
+        media: { type: "video", caption: "Dr. Anavil explains: why constitutional treatment often succeeds with IBS" },
         paragraphs: [
           "Irritable Bowel Syndrome is one of those conditions that conventional medicine manages very poorly. IBS affects an estimated 10 to 15 percent of the population and is characterised by abdominal cramps, bloating, and unpredictable bowel habits — sometimes constipation, sometimes diarrhoea, often both. There is no structural damage visible on colonoscopy or imaging — which leads many patients to feel dismissed, told it is stress-related, and handed fibre supplements.",
           "The conventional treatment for IBS is largely symptomatic: antispasmodics for pain, laxatives for constipation, antidiarrhoeals for loose stools, antidepressants (paradoxically) for gut-brain axis modulation. None of these address why the bowel is behaving abnormally. And so the condition continues, indefinitely.",
@@ -2027,6 +2087,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Inflammatory Bowel Disease — Reducing Inflammation Without Lifelong Immunosuppression",
+        navLabel: "IBD",
         paragraphs: [
           "Ulcerative Colitis and Crohn's Disease are serious inflammatory bowel conditions that significantly impact quality of life. Conventional treatment — aminosalicylates, steroids, immunosuppressants and biological agents — is effective at managing flares but typically requires lifelong continuation, and carries significant side effect profiles with long-term use.",
           "Constitutional homeopathic treatment for IBD works alongside conventional treatment — never as a replacement for it, especially in active or severe disease. In patients in remission or with mild to moderate disease, homeopathic treatment has helped to extend remission, reduce flare frequency, improve quality of life during remission and in some cases allow reduction of conventional medication doses under gastroenterologist supervision.",
@@ -2035,6 +2096,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Piles, Fissures, Fistula — Treated Without Surgery in Many Cases",
+        navLabel: "Piles & Fissures",
         paragraphs: [
           "Haemorrhoids (piles) and anal fissures are among the most common and most uncomfortable conditions that bring patients to us — and among those where homeopathy has the strongest and most consistent track record.",
           "For first and second degree piles — where haemorrhoids are internal and do not prolapse outside the anal canal — constitutional homeopathic treatment produces consistent reduction in bleeding, pain and discomfort, with gradual shrinkage of the haemorrhoids themselves. Surgery is frequently avoided entirely in these cases.",
@@ -2046,6 +2108,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         // Scoped to IBS and anal fissures — the two conditions on this page
         // with genuine, already-stated timeframes.
         heading: "What to Expect — Treatment Timeline",
+        navLabel: "Timeline",
         subsections: [
           {
             label: "Weeks 4-6",
@@ -2170,6 +2233,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "Thyroid Disease — The Question Conventional Medicine Does Not Ask",
+        navLabel: "Thyroid Disease",
+        media: { type: "video", caption: "Dr. Anavil explains: the question conventional medicine doesn't ask about thyroid disease" },
         paragraphs: [
           "Thyroid disease — particularly hypothyroidism and Hashimoto's thyroiditis — has reached near-epidemic proportions in India. The standard treatment is levothyroxine (thyroxine) supplementation — a synthetic version of the thyroid hormone that the gland is no longer producing adequately. This treatment is effective at normalising TSH and T4 levels on blood tests, and at managing symptoms like fatigue, weight gain and hair loss.",
           "But it does not address the question: why did the thyroid gland stop functioning? What caused the immune system to begin attacking thyroid tissue in Hashimoto's? What factors are driving the progressive decline in gland function? These questions are rarely asked in conventional thyroid management — because conventional treatment has no answers for them. The thyroid is simply replaced with external hormone indefinitely.",
@@ -2178,6 +2243,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Can You Reduce Your Thyroxine Dose? — An Honest Answer",
+        navLabel: "Reducing Thyroxine",
         paragraphs: [
           "Can you reduce or come off your thyroxine with homeopathic treatment? This is the question we are asked more frequently than any other by thyroid patients. The honest answer:",
           "In early Hashimoto's — where the gland retains significant residual function and anti-TPO antibodies are the primary finding, with TSH mildly to moderately elevated — yes, constitutional treatment has helped many patients reduce their required thyroxine dose, and a small proportion have been able to taper off medication entirely with TSH remaining within the normal range.",
@@ -2187,6 +2253,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Type 2 Diabetes — Homeopathy as a Meaningful Supportive Tool",
+        navLabel: "Type 2 Diabetes",
         paragraphs: [
           "We are clear that homeopathy is not a standalone treatment for diabetes, and it does not replace insulin, metformin, or other prescribed antidiabetic medications. Diabetes management requires strict dietary control, regular monitoring, physical activity and appropriate medication — and none of this should be compromised.",
           "What constitutional homeopathic treatment can offer diabetic patients is a meaningful support to their conventional management. In our clinical experience, constitutional treatment has supported improvement in insulin sensitivity in many patients, alongside a reduced inflammatory burden, improved energy and quality of life, and support for the pancreatic function that remains. Many of our diabetic patients who pursue constitutional treatment alongside proper dietary control find their blood sugar management becomes easier and more stable over time.",
@@ -2300,6 +2367,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "How We Approach Mental Health — With Honesty and Care",
+        navLabel: "Our Approach",
+        media: { type: "video", caption: "Dr. Anavil explains: our honest, careful approach to mental health" },
         paragraphs: [
           "Mental health treatment at Yadav Homeo Clinic is built on two foundations: honesty about what homeopathy can and cannot do, and genuine commitment to the whole person sitting across from us.",
           "Homeopathy has a meaningful and well-documented role in mild to moderate mental health conditions — anxiety disorders, mild to moderate depression, OCD, grief reactions, insomnia and stress-related physical symptoms. In these cases, constitutional homeopathic treatment can produce significant improvement without the side effects, sexual dysfunction, weight gain, or dependency concerns that accompany many psychiatric medications.",
@@ -2309,6 +2378,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Anxiety — Homeopathy's Strongest Mental Health Result",
+        navLabel: "Anxiety",
         paragraphs: [
           "Anxiety is the most common mental health condition we treat — and one of the most rewarding. Generalised anxiety — the constant background hum of worry, the physical tension, the what-if thinking that never stops — responds beautifully to correctly prescribed constitutional homeopathic treatment.",
           "The reason homeopathy works so well for anxiety is fundamental to how it prescribes. In conventional psychiatry, anxiety is treated primarily by modulating brain chemistry — SSRIs, SNRIs, benzodiazepines. These alter the neurochemical environment. They are effective — but they work the same way for every anxious patient.",
@@ -2318,6 +2388,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Depression — Lifting the Weight Without Antidepressants",
+        navLabel: "Depression",
         paragraphs: [
           "For mild to moderate depression — persistent low mood, loss of interest and pleasure, fatigue, self-criticism, withdrawal and hopelessness — constitutional homeopathic treatment offers a genuine, evidence-supported alternative to antidepressants. Many patients come to us specifically because they want to address their depression without going on antidepressants — due to concerns about side effects, dependency or stigma — or because they have tried antidepressants that were partially effective or caused intolerable side effects.",
           "Constitutional prescribing for depression is exquisitely individualised. The pattern of depression — when it started, what triggered it, whether it is worse in the morning or evening, whether grief or anger or self-blame dominates, whether the patient weeps or cannot weep, whether they are consolable or aggravated by consolation — all of these are prescribing symptoms that guide us to the specific remedy matching this specific person's depression.",
@@ -2327,6 +2398,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Insomnia — Constitutional Homeopathy for Genuine, Natural Sleep",
+        navLabel: "Insomnia",
         paragraphs: [
           "Insomnia — difficulty falling asleep, frequent waking, early morning waking, or simply non-restorative sleep — affects a huge proportion of the population and has devastating effects on health, mood, cognitive function and quality of life. Sleeping pills (benzodiazepines, zolpidem) work immediately but lose effectiveness within weeks, create dependency, and produce a sedated sleep that is neurologically different from natural sleep.",
           "Constitutional homeopathic treatment for insomnia works by addressing the specific type of sleep disturbance and the specific person experiencing it. The time of waking matters. Whether thoughts race or the body is restless matters. Whether the cause is anxiety, grief, overwork or physical pain matters. Whether the patient is a light sleeper or has never slept well in their life matters. Each of these details points toward the remedy that matches this specific sleep pattern.",
@@ -2337,6 +2409,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         // Scoped to Anxiety and Insomnia — the two conditions on this page
         // with genuine, already-stated timeframes.
         heading: "What to Expect — Treatment Timeline",
+        navLabel: "Timeline",
         subsections: [
           {
             label: "Weeks 2-4",
@@ -2468,6 +2541,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "Ankylosing Spondylitis & Avascular Necrosis — Where Conventional Medicine Has Limited Options",
+        navLabel: "AS & AVN",
+        media: { type: "video", caption: "Dr. Anavil explains: options when conventional medicine has little left to offer" },
         paragraphs: [
           "Ankylosing Spondylitis (AS) — a condition in which the spine gradually stiffens and fuses — is one where conventional medicine offers primarily painkillers and biological injections. These biological injections are expensive — ₹40,000 to ₹80,000 per injection — and typically need to be taken for life.",
           "In our clinical experience, constitutional homeopathic treatment can support improvement in stiffness and morning pain in AS cases. Slowing disease progression is our primary goal. This is a difficult condition to treat — but a worthwhile one to pursue.",
@@ -2476,6 +2551,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Rheumatoid Arthritis & Gout — Addressing the Cause, Not Just the Inflammation",
+        navLabel: "RA & Gout",
         paragraphs: [
           "Rheumatoid Arthritis is an autoimmune condition — the immune system attacking the joints, causing swelling, stiffness and progressive deformity if untreated. Conventional treatment (DMARDs, biologics) controls the inflammation but doesn't correct the immune dysregulation driving it. Constitutional homeopathic treatment targets that underlying dysregulation directly — our clinical experience with RA has been particularly positive, both in reducing joint symptoms and in supporting the immune system more broadly.",
           "Gout is a different mechanism entirely — uric acid crystals depositing in the joints, most commonly the big toe, causing sudden, severe attacks. Dietary changes remain the single biggest lever for uric acid levels, but constitutional homeopathy supports the body's own metabolic regulation alongside those changes, and together the two can significantly reduce how often attacks occur.",
@@ -2483,6 +2559,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Slipped Disc, Spondylosis & Osteoarthritis — A Non-Surgical First Option Worth Trying",
+        navLabel: "Disc & Spondylosis",
         paragraphs: [
           "Slipped disc (disc prolapse) causes pain through nerve compression — the disc material pressing on a spinal nerve, radiating pain down the back or leg. For Grade 1-2 prolapse, conservative treatment (constitutional homeopathy alongside physiotherapy) is a genuinely valid first option before surgery is considered; Grade 3-4 cases typically do need surgical intervention, and we will tell you honestly which category your MRI suggests.",
           "Cervical and lumbar spondylosis — degeneration of the spine causing neck or lower back stiffness, pain and sometimes tingling into the arms or legs — and frozen shoulder respond to the same constitutional approach: addressing the susceptibility behind the degeneration, not just numbing the pain at the site.",
@@ -2589,6 +2666,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "An Honest Word About Homeopathy and Heart Disease",
+        navLabel: "An Honest Word",
+        media: { type: "video", caption: "Dr. Anavil explains: an honest word about homeopathy and heart disease" },
         paragraphs: [
           "We do not claim to cure cardiac conditions. Our role is to improve quality of life, manage symptoms, and support overall constitutional health — always alongside your cardiologist's care.",
           "Most ASD/VSD families who come to us have already had surgery but still have symptoms, missed the surgical window, or have multiple conditions that make surgery complex. In these situations, constitutional homeopathic care can become a meaningful additional support.",
@@ -2596,6 +2675,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Hypertension & Coronary Support — Working Alongside Your Cardiologist",
+        navLabel: "Hypertension & Cardiac",
         paragraphs: [
           "For hypertension, constitutional treatment supports blood pressure management as an addition to your prescribed antihypertensive medication — never a replacement for it. For patients with Coronary Artery Disease, our focus is on supporting overall cardiovascular health and, where relevant, angina frequency — always with your cardiologist's supervision and full knowledge of your current treatment plan.",
           "Cardiomyopathy and valvular heart disease that are already being medically managed can also receive constitutional support aimed at overall heart muscle function and quality of life, alongside — never instead of — your prescribed cardiac care.",
@@ -2603,6 +2683,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "How We Work With Cardiac Patients and Their Cardiologists",
+        navLabel: "Our Approach",
         paragraphs: [
           "We ask for the specific diagnosis, current medications and your cardiologist's latest assessment before beginning any supportive treatment. This lets us understand exactly what we're supporting and coordinate honestly around it, rather than working in isolation from your cardiac care team.",
           "We encourage families to keep their cardiologist informed that they are also pursuing constitutional homeopathic support — full transparency between all your healthcare providers is essential, especially for a condition as serious as heart disease.",
@@ -2700,6 +2781,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     sections: [
       {
         heading: "Complete Confidentiality — Always",
+        navLabel: "Confidentiality",
+        media: { type: "video", caption: "Dr. Anavil explains: how confidentiality works for sexual health consultations" },
         paragraphs: [
           "All consultations for sexual health conditions are conducted with complete confidentiality. Online consultation is available — from your phone, private, with no in-person visit required. No records are shared with anyone without your explicit consent.",
         ],
@@ -2707,12 +2790,14 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       },
       {
         heading: "Loss of Libido — Treated as an Individual Case, Not a Generic Complaint",
+        navLabel: "Loss of Libido",
         paragraphs: [
           "Loss of libido can come from hormonal changes, psychological stress, relationship strain, or a constitutional pattern unique to the individual — often a combination of more than one. Rather than a single generic remedy for 'low libido,' we take a detailed individual case history to understand which of these is driving it for you specifically, and prescribe accordingly.",
         ],
       },
       {
         heading: "Genital Herpes & HPV — Reducing Recurrence, Supporting Immunity",
+        navLabel: "Herpes & HPV",
         paragraphs: [
           "For genital herpes, our primary goal is recurrence reduction — addressing the constitutional susceptibility that allows the virus to reactivate, rather than treating each outbreak as an isolated event. For genital warts (HPV), constitutional treatment aims to support the body's own immune response to the virus. Neither of these approaches replaces any antiviral treatment your doctor has prescribed.",
         ],

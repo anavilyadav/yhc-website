@@ -31,6 +31,8 @@ export const ASTHMA_PAGE: DiseaseSubPageContent = {
   sections: [
     {
       heading: "Why the Inhaler Is Not the Complete Answer",
+      navLabel: "Beyond the Inhaler",
+      media: { type: "video", caption: "Dr. Anavil explains: why the inhaler doesn't reduce bronchial hypersensitivity" },
       paragraphs: [
         "Asthma affects millions of Indians — particularly children, and particularly in urban environments with high pollution, dust and allergen exposure. The standard treatment approach — salbutamol reliever inhalers for acute attacks, inhaled corticosteroid preventers for daily control — is safe, effective and life-saving in acute situations. We fully support its use.",
         "However, this approach has a fundamental limitation: it controls the airway inflammation at the moment of the attack, but does not reduce the bronchial hypersensitivity that causes attacks to occur in the first place. The patient remains just as sensitive to dust, cold air or exercise-induced triggers after years of inhaler use as they were at the beginning — which is why asthma management is typically lifelong.",
@@ -39,6 +41,7 @@ export const ASTHMA_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "What We Realistically Expect — No Exaggeration",
+      navLabel: "What to Expect",
       paragraphs: [
         "This process takes time — typically 12 to 24 months for significant reduction in inhaler dependency. But the result is a genuinely less reactive respiratory system, not just a suppressed inflammatory response. And for children who begin treatment early, complete resolution of asthma is achieved in a meaningful proportion of cases.",
       ],
@@ -46,6 +49,7 @@ export const ASTHMA_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Asthma Treatment Timeline: What to Expect Month by Month",
+      navLabel: "Timeline",
       subsections: [
         {
           label: "Month 6",
@@ -68,6 +72,8 @@ export const ASTHMA_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Types of Asthma We Treat",
+      navLabel: "Types We Treat",
+      listStyle: "cards",
       list: [
         "Allergic (Atopic) Asthma — triggered by dust, pollen, animal dander or other allergens",
         "Exercise-Induced Asthma — bronchospasm triggered by physical exertion",
@@ -80,6 +86,8 @@ export const ASTHMA_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Why Yadav Homeo Clinic for Asthma",
+      navLabel: "Why Us",
+      media: { type: "photo", caption: "Constitutional case-taking session, in progress" },
       paragraphs: [
         "Chronic respiratory disease has been part of our clinical practice since 1991. Asthma patients arrive here after years of managing attacks with inhalers alone, looking for an approach that addresses why the lungs remain reactive rather than only what to do once an attack has started.",
         "The constitutional remedy is never chosen from the diagnosis alone — it is chosen from the complete picture of the individual patient, including specific triggers, the pattern and timing of attacks, and the patient's overall constitution. This individualisation is what classical homeopathy offers that a standard inhaler protocol cannot.",

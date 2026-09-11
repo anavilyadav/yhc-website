@@ -37,6 +37,8 @@ export const CEREBRAL_PALSY_PAGE: DiseaseSubPageContent = {
   sections: [
     {
       heading: "Where Constitutional Treatment Fits Alongside Conventional Care",
+      navLabel: "Where It Fits",
+      media: { type: "video", caption: "Dr. Anavil explains: how constitutional treatment supports Cerebral Palsy therapy" },
       paragraphs: [
         "Cerebral Palsy presents differently in every child — spastic, athetoid, ataxic — with varying degrees of motor, cognitive and communication involvement. Conventional management rightly centres on physiotherapy, occupational therapy, speech therapy, orthopaedic care and management of associated epilepsy where present. None of this changes with constitutional homeopathic treatment.",
         "What constitutional treatment offers is support underneath that care. In our clinical experience at Yadav Homeo Clinic, the areas where we most consistently see improvement are: reduction in spasticity (muscle stiffness), improved sleep quality, better digestive function, reduced drooling (sialorrhoea), and improved alertness and cognitive engagement.",
@@ -44,6 +46,7 @@ export const CEREBRAL_PALSY_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Why a Healthier Baseline Changes What Therapy Can Achieve",
+      navLabel: "Why It Helps",
       paragraphs: [
         "Parents of CP children treated at our clinic frequently report that physiotherapy sessions produce better results once constitutional treatment has been running for a few months — not because the therapy changed, but because the child's overall neurological and physical state improved, making them more receptive and responsive to therapeutic input.",
         "This is the same principle we apply across all developmental and neurological conditions: the constitutional remedy addresses the whole child — sleep, digestion, immune resilience, comfort — rather than any single symptom in isolation.",
@@ -52,6 +55,8 @@ export const CEREBRAL_PALSY_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Types and Severity of Cerebral Palsy We Support",
+      navLabel: "Types We Support",
+      listStyle: "cards",
       list: [
         "Spastic Cerebral Palsy — the most common type, involving stiff, tight muscles and exaggerated reflexes; may affect one limb, one side of the body, or all four limbs",
         "Athetoid (Dyskinetic) Cerebral Palsy — involuntary, uncontrolled movements affecting the hands, arms, feet, legs, and sometimes the face and tongue",
@@ -64,6 +69,7 @@ export const CEREBRAL_PALSY_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "What to Expect: A Realistic Timeline for Supportive Improvement",
+      navLabel: "Timeline",
       subsections: [
         {
           label: "Months 1–2",
@@ -94,6 +100,8 @@ export const CEREBRAL_PALSY_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Why Yadav Homeo Clinic for Cerebral Palsy",
+      navLabel: "Why Us",
+      media: { type: "photo", caption: "Constitutional case-taking session, in progress" },
       paragraphs: [
         "Supporting children with complex neurological and developmental conditions has been a defining part of our practice since Dr T P Yadav founded the clinic in 1991. Families of children with Cerebral Palsy are among those who come to us specifically because they want a doctor who will sit with the whole child — not only the diagnosis.",
         "Dr Anavil Yadav now leads most of these consultations, working closely with the physiotherapists, occupational therapists and paediatric neurologists already involved in each child's care, so that the constitutional treatment plan supports — and never conflicts with — the rest of the therapy team.",
@@ -101,6 +109,7 @@ export const CEREBRAL_PALSY_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "What We Ask Families to Continue",
+      navLabel: "What Continues",
       list: [
         "All prescribed physiotherapy, occupational therapy and speech therapy sessions — without interruption",
         "Any anti-epileptic medication, exactly as prescribed by the neurologist, if epilepsy co-exists",

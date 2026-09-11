@@ -38,6 +38,8 @@ export const PSORIASIS_PAGE: DiseaseSubPageContent = {
   sections: [
     {
       heading: "Why Psoriasis Keeps Coming Back",
+      navLabel: "Why It Returns",
+      media: { type: "video", caption: "Dr. Anavil explains: why psoriasis keeps returning after steroid creams" },
       paragraphs: [
         "Psoriasis is an autoimmune condition in which the immune system drives skin cells to multiply far faster than normal, producing the thick, silvery-scaled plaques most patients recognise. Topical steroids and tar preparations reduce the visible plaque by suppressing local inflammation, but they do not correct the immune signalling causing the overproduction in the first place — which is why flares return, often in the same or new locations, once the cream is reduced or stopped.",
         "Constitutional homeopathic treatment works at the level of that immune dysregulation. By identifying the individual patient's specific pattern — triggers, stress response, constitutional type, family history — the correctly chosen remedy aims to correct the underlying overactivity rather than repeatedly suppressing its surface expression.",
@@ -45,6 +47,7 @@ export const PSORIASIS_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "What We Realistically Expect — No Exaggeration",
+      navLabel: "What to Expect",
       paragraphs: [
         "In our clinical experience at Yadav Homeo Clinic, patients who complete 12 to 18 months of constitutional treatment for psoriasis commonly see: a reduction in the frequency and severity of flares, thinning and fading of existing plaques, and — in a number of cases — prolonged remission lasting years without recurrence.",
         "You do not need to stop your current steroid cream, biologic, or phototherapy schedule to begin. Homeopathic treatment is started alongside your existing care, and conventional treatment is tapered gradually as improvement occurs — always under your dermatologist's guidance, never abruptly.",
@@ -53,6 +56,7 @@ export const PSORIASIS_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Psoriasis Treatment Timeline: What to Expect Month by Month",
+      navLabel: "Timeline",
       subsections: [
         {
           label: "Months 1–3",
@@ -83,6 +87,8 @@ export const PSORIASIS_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Types of Psoriasis We Treat",
+      navLabel: "Types We Treat",
+      listStyle: "cards",
       list: [
         "Plaque Psoriasis — the most common form, thick raised patches with silvery scale, typically on elbows, knees and scalp",
         "Guttate Psoriasis — small drop-shaped lesions, often triggered by a preceding throat infection",
@@ -94,6 +100,8 @@ export const PSORIASIS_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Why Yadav Homeo Clinic for Psoriasis",
+      navLabel: "Why Us",
+      media: { type: "photo", caption: "Constitutional case-taking session, in progress" },
       paragraphs: [
         "Chronic skin disease has been the deepest part of our clinical practice since 1991. Psoriasis patients arrive here after years of managing flares with topical treatment alone, looking for an approach that addresses why the flares keep happening rather than only what to put on them when they do.",
         "The constitutional remedy is never chosen from the diagnosis alone — it is chosen from the complete picture of the individual patient, which is why two psoriasis patients at our clinic will often be prescribed two entirely different remedies. This individualisation is what classical homeopathy offers that a standard topical protocol cannot.",

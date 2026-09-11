@@ -30,6 +30,8 @@ export const ECZEMA_PAGE: DiseaseSubPageContent = {
   sections: [
     {
       heading: "Why Eczema Keeps Flaring Up",
+      navLabel: "Why It Flares",
+      media: { type: "video", caption: "Dr. Anavil explains: why eczema keeps flaring up after creams and antihistamines" },
       paragraphs: [
         "Eczema — atopic dermatitis — causes chronic itching, dryness and inflammation because the immune system reacts too strongly to ordinary triggers: weather changes, certain fabrics, soaps, stress, and in many patients, specific foods. Steroid creams and antihistamines calm this reaction from the outside, which is why they work quickly — and why the relief does not last once the underlying hypersensitivity remains untouched.",
         "Constitutional homeopathic treatment works at the level of that hypersensitivity itself. By identifying the individual patient's complete pattern — the specific triggers, the type and location of the flare, sleep disruption from itching, and the patient's overall constitutional picture — the correctly chosen remedy aims to reduce the immune system's tendency to over-react, rather than repeatedly suppressing the reaction after it starts.",
@@ -38,6 +40,7 @@ export const ECZEMA_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "What We Realistically Expect — No Exaggeration",
+      navLabel: "What to Expect",
       paragraphs: [
         "In our clinical experience at Yadav Homeo Clinic, patients who complete 9 to 12 months of constitutional treatment for eczema commonly see: less frequent and less severe flares, improved skin texture between flares, reduced itching (especially the itching that disrupts sleep), and — in many cases — long stretches without needing steroid cream at all.",
         "You do not need to stop your current moisturiser or steroid cream to begin. Homeopathic treatment is started alongside your existing skincare routine, and topical treatment is reduced gradually as improvement occurs — never abruptly, and always at your own pace.",
@@ -46,6 +49,7 @@ export const ECZEMA_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Eczema Treatment Timeline: What to Expect Month by Month",
+      navLabel: "Timeline",
       subsections: [
         {
           label: "Months 1–2",
@@ -80,6 +84,8 @@ export const ECZEMA_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Types of Eczema We Treat",
+      navLabel: "Types We Treat",
+      listStyle: "cards",
       list: [
         "Atopic Dermatitis — the most common form, often starting in childhood and linked with allergies or asthma in the family",
         "Contact Dermatitis — a reaction to a specific irritant or allergen, such as soaps, metals or fragrances",
@@ -91,6 +97,8 @@ export const ECZEMA_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Why Yadav Homeo Clinic for Eczema",
+      navLabel: "Why Us",
+      media: { type: "photo", caption: "Constitutional case-taking session, in progress" },
       paragraphs: [
         "Chronic skin disease has been the deepest part of our clinical practice since 1991. Eczema patients arrive here after years of managing flares with moisturisers and steroid creams alone, looking for an approach that addresses why the flares keep happening rather than only what to apply when they do.",
         "The constitutional remedy is never chosen from the diagnosis alone — it is chosen from the complete picture of the individual patient, including known triggers, family history of allergies or asthma, and how the skin behaves across seasons. This individualisation is what classical homeopathy offers that a standard moisturiser-and-steroid routine cannot.",

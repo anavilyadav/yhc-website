@@ -39,6 +39,8 @@ export const DOWN_SYNDROME_PAGE: DiseaseSubPageContent = {
   sections: [
     {
       heading: "Being Honest About What This Treatment Can and Cannot Do",
+      navLabel: "Being Honest",
+      media: { type: "video", caption: "Dr. Anavil explains: what constitutional treatment can and cannot do for Down syndrome" },
       paragraphs: [
         "We believe families of children with Down syndrome deserve complete honesty, because they have already been through enough difficult conversations. Homeopathy cannot change chromosomes. It cannot remove the extra copy of chromosome 21. Any practitioner who suggests otherwise is not being truthful.",
         "What constitutional homeopathic treatment consistently achieves, in our clinical experience, is improvement in the whole child: stronger immune function with fewer recurrent infections, better digestive function and appetite, thyroid support (Down syndrome carries an elevated risk of hypothyroidism), improved sleep quality, and — reported consistently by parents and teachers — improved alertness, eye contact and social engagement.",
@@ -46,6 +48,8 @@ export const DOWN_SYNDROME_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "What We Focus On",
+      navLabel: "What We Focus On",
+      listStyle: "cards",
       list: [
         "Strengthening immune function — reducing the frequency and severity of recurrent ear and chest infections",
         "Improving digestive function — addressing constipation, bloating and nutritional absorption",
@@ -57,6 +61,8 @@ export const DOWN_SYNDROME_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Types of Down Syndrome",
+      navLabel: "Types",
+      listStyle: "cards",
       list: [
         "Trisomy 21 — the most common form, present in around 95% of cases, where every cell carries a full extra copy of chromosome 21",
         "Translocation Down Syndrome — a small percentage of cases, where part of chromosome 21 is attached to a different chromosome; genetic counselling is recommended for parents as this form can occasionally be inherited",
@@ -66,6 +72,7 @@ export const DOWN_SYNDROME_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "What to Expect: A Realistic Timeline",
+      navLabel: "Timeline",
       subsections: [
         {
           label: "Months 1–3",
@@ -90,6 +97,8 @@ export const DOWN_SYNDROME_PAGE: DiseaseSubPageContent = {
     },
     {
       heading: "Why Yadav Homeo Clinic for Down Syndrome",
+      navLabel: "Why Us",
+      media: { type: "photo", caption: "Constitutional case-taking session, in progress" },
       paragraphs: [
         "Genetic and developmental conditions in children have been part of our clinical practice since Dr T P Yadav founded Yadav Homeo Clinic in 1991. Across three decades, the clinic has supported thousands of special children — including many with Down Syndrome — alongside their paediatricians, cardiologists, endocrinologists and special educators.",
         "Dr Anavil Yadav now leads most of these family consultations, taking the time to understand each child's specific immune, digestive, thyroid and developmental picture rather than treating 'Down Syndrome' as a single, uniform diagnosis.",
