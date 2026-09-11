@@ -1,7 +1,7 @@
 // Source: dr-anavil-step10-remaining-pages-2026-07-12.docx, Pages 6-8.
 // "[clinic email]" placeholders are resolved at render time from
-// siteConfig.email (falls back to "email to be confirmed" — never
-// invented) rather than baked into this static text.
+// siteConfig.email — dropped entirely (never shown as filler text) when
+// no real address is confirmed yet. See LegalPageBody's resolveEmail().
 
 export interface LegalSection {
   heading: string;
