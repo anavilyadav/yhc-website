@@ -19,8 +19,11 @@ import { PdfSummaryButton } from "@/components/disease-page/PdfSummaryButton";
 import { PrintLetterhead } from "@/components/disease-page/PrintLetterhead";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { PageVideo } from "@/components/shared/PageVideo";
+import RelatedVideosGallery from "@/components/shared/RelatedVideosGallery";
 import { getDiseasePage, getAllDiseasePageSlugs } from "@/lib/data/disease-pages";
 import { getPageVideos } from "@/lib/data/videos";
+import { getRelatedVideos } from "@/lib/data/related-videos";
+import { CATEGORY_VIDEO_TAG_CLUSTERS } from "@/lib/data/condition-video-tags";
 import { getPricingPlans } from "@/lib/data/appointment";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
 import { buildMedicalWebPageSchema, buildFAQPageSchema } from "@/lib/schema";
@@ -71,11 +74,12 @@ function formatDate(date: Date): string {
 
 export default async function DiseasePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const [page, doctor, videos, pricingPlans] = await Promise.all([
+  const [page, doctor, videos, pricingPlans, relatedVideos] = await Promise.all([
     getDiseasePage(slug),
     getDoctorBySlug(siteConfig.doctors.physician.slug),
     getPageVideos(slug),
     getPricingPlans(),
+    getRelatedVideos(CATEGORY_VIDEO_TAG_CLUSTERS[slug] ?? []),
   ]);
   if (!page) notFound();
 
@@ -187,6 +191,7 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
       )}
       {page.patientStory && <PatientStoryCard story={page.patientStory} />}
       <FAQAccordion faqs={page.faqs} />
+      <RelatedVideosGallery videos={relatedVideos} />
       {relatedConditions.length > 0 && <RelatedConditions items={relatedConditions} />}
 
       {!page.disclaimerProminent && <DisclaimerBanner text={page.disclaimer} />}

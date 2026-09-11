@@ -217,6 +217,20 @@ export interface PageVideo {
   sortOrder: number;
 }
 
+/**
+ * One entry in the tag-scoped Related Videos Gallery (distinct from
+ * PageVideo, which matches a video to one exact page_slug instead of a
+ * condition tag). See lib/data/condition-video-tags.ts for how a page
+ * resolves its own tag or tag cluster.
+ */
+export interface RelatedVideo {
+  id: string;
+  youtubeId: string;
+  title: string;
+  conditionTags: string[];
+  displayOrder: number;
+}
+
 export interface FaqItem {
   id: string;
   question: string;

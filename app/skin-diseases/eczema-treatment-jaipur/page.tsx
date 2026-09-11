@@ -8,10 +8,13 @@ import FAQAccordion from "@/components/disease-page/FAQAccordion";
 import DisclaimerBanner from "@/components/disease-page/DisclaimerBanner";
 import DiseasePageFinalCTA from "@/components/disease-page/DiseasePageFinalCTA";
 import { AuthorBox } from "@/components/blog/AuthorBox";
+import RelatedVideosGallery from "@/components/shared/RelatedVideosGallery";
 import { ECZEMA_PAGE } from "@/lib/content/eczema-content";
 import { buildMedicalWebPageSchema, buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
+import { getRelatedVideos } from "@/lib/data/related-videos";
+import { SUB_PAGE_VIDEO_TAG } from "@/lib/data/condition-video-tags";
 import { slugify, autoShortenHeading } from "@/lib/utils";
 
 const page = ECZEMA_PAGE;
@@ -32,7 +35,10 @@ export const metadata: Metadata = {
 };
 
 export default async function EczemaPage() {
-  const doctor = await getDoctorBySlug(siteConfig.doctors.physician.slug);
+  const [doctor, relatedVideos] = await Promise.all([
+    getDoctorBySlug(siteConfig.doctors.physician.slug),
+    getRelatedVideos([SUB_PAGE_VIDEO_TAG[page.slug]]),
+  ]);
   const medicalWebPageSchema = buildMedicalWebPageSchema({
     slug: `${page.parentSlug}/${page.slug}`,
     pageTitle: page.pageTitle,
@@ -90,6 +96,7 @@ export default async function EczemaPage() {
 
       {page.patientStory && <PatientStoryCard story={page.patientStory} />}
       <FAQAccordion faqs={page.faqs} />
+      <RelatedVideosGallery videos={relatedVideos} />
       <DisclaimerBanner text={page.disclaimer} />
       <DiseasePageFinalCTA finalCta={page.finalCta} conditionName={page.aboutCondition.name} />
     </>
