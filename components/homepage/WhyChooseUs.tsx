@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
           {features.map((f) => (
             <div
               key={f.title}
-              className="rounded-sm border border-border-amber bg-white p-6"
+              className="rounded-lg border border-border-amber bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-lg"
             >
               <h3 className="mb-2 font-serif text-base font-bold text-navy">{f.title}</h3>
               <p className="text-[14px] leading-relaxed text-text-mid">{f.text}</p>

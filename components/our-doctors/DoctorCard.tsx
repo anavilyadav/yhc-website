@@ -4,7 +4,7 @@ import type { Doctor } from "@/lib/supabase/queries/doctors";
 
 export function DoctorCard({ doctor }: { doctor: Doctor }) {
   return (
-    <div className="flex h-full flex-col rounded-xl border border-navy/10 bg-white p-6 text-center">
+    <div className="flex h-full flex-col rounded-xl border border-navy/10 bg-white p-6 text-center shadow-sm transition-shadow duration-200 hover:shadow-lg">
       <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-full border border-navy/10 bg-cream-bg">
         {doctor.photo_url ? (
           <Image src={doctor.photo_url} alt={doctor.photo_alt ?? doctor.full_name} fill sizes="112px" className="object-cover" />

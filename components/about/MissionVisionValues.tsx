@@ -9,7 +9,7 @@ export function MissionVisionValues() {
         </h2>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          <div className="rounded-xl border border-navy/10 bg-white p-6">
+          <div className="rounded-xl border border-navy/10 bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-lg">
             <h3 className="text-sm font-bold uppercase tracking-wide text-amber-dark">
               Our Mission
             </h3>
@@ -17,7 +17,7 @@ export function MissionVisionValues() {
               {missionVisionValues.mission}
             </p>
           </div>
-          <div className="rounded-xl border border-navy/10 bg-white p-6">
+          <div className="rounded-xl border border-navy/10 bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-lg">
             <h3 className="text-sm font-bold uppercase tracking-wide text-amber-dark">
               Our Vision
             </h3>

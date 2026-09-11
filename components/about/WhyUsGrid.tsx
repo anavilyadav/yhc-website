@@ -10,7 +10,7 @@ export function WhyUsGrid() {
           {whyUs.points.map((point) => (
             <div
               key={point.title}
-              className="rounded-xl border border-navy/10 bg-cream-bg p-6"
+              className="rounded-xl border border-navy/10 bg-cream-bg p-6 shadow-sm transition-shadow duration-200 hover:shadow-lg"
             >
               <p className="text-xs font-bold uppercase tracking-wide text-amber-dark">
                 {point.eyebrow}

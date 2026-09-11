@@ -22,7 +22,7 @@ export default function ConditionsGrid({ diseases }: { diseases: Disease[] }) {
               // A lone card left over in the final row (e.g. 16 items in a
               // 3-column grid) reads as a layout mistake — centre it under
               // the row above instead of leaving it stranded on the left.
-              className={`group relative overflow-hidden rounded-sm border border-border-amber bg-white p-3.5 transition-colors hover:border-amber sm:p-5 ${
+              className={`group relative overflow-hidden rounded-lg border border-border-amber bg-white p-3.5 shadow-sm transition-[box-shadow,transform,border-color] duration-200 hover:-translate-y-1 hover:border-amber hover:shadow-lg sm:p-5 ${
                 diseases.length % 3 === 1 && index === diseases.length - 1
                   ? "lg:col-start-2"
                   : ""
