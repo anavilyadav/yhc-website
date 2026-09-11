@@ -20,9 +20,11 @@ import { PrintLetterhead } from "@/components/disease-page/PrintLetterhead";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { PageVideo } from "@/components/shared/PageVideo";
 import RelatedVideosGallery from "@/components/shared/RelatedVideosGallery";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
 import { getDiseasePage, getAllDiseasePageSlugs } from "@/lib/data/disease-pages";
 import { getPageVideos } from "@/lib/data/videos";
 import { getRelatedVideos } from "@/lib/data/related-videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { CATEGORY_VIDEO_TAG_CLUSTERS } from "@/lib/data/condition-video-tags";
 import { getPricingPlans } from "@/lib/data/appointment";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
@@ -74,12 +76,13 @@ function formatDate(date: Date): string {
 
 export default async function DiseasePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const [page, doctor, videos, pricingPlans, relatedVideos] = await Promise.all([
+  const [page, doctor, videos, pricingPlans, relatedVideos, photos] = await Promise.all([
     getDiseasePage(slug),
     getDoctorBySlug(siteConfig.doctors.physician.slug),
     getPageVideos(slug),
     getPricingPlans(),
     getRelatedVideos(CATEGORY_VIDEO_TAG_CLUSTERS[slug] ?? []),
+    getGalleryPhotos(slug),
   ]);
   if (!page) notFound();
 
@@ -163,6 +166,7 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
       />
 
       <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
 
       <WorriesTable />
 

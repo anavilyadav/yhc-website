@@ -11,7 +11,9 @@ import { WhyUsGrid } from "@/components/about/WhyUsGrid";
 import { AboutCta } from "@/components/about/AboutCta";
 import { PhysicianSchema } from "@/components/schema/PhysicianSchema";
 import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
 import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { siteConfig } from "@/lib/site-config";
 
 // Doctor bios live in Supabase and the doctor edits them via the admin
@@ -32,7 +34,11 @@ export const metadata: Metadata = {
 };
 
 export default async function AboutPage() {
-  const [doctors, videos] = await Promise.all([getDoctors(), getPageVideos("about")]);
+  const [doctors, videos, photos] = await Promise.all([
+    getDoctors(),
+    getPageVideos("about"),
+    getGalleryPhotos("about"),
+  ]);
   const drTpYadav = doctors.find((d) => d.slug === siteConfig.doctors.founder.slug);
   const drAnavil = doctors.find((d) => d.slug === siteConfig.doctors.physician.slug);
 
@@ -42,6 +48,7 @@ export default async function AboutPage() {
       <OurStory />
       <ConsultationDiagram />
       <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
 
       {/*
         variant="teaser" shows only the first bio paragraph and links out

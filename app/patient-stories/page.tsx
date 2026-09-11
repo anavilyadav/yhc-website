@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { PatientStoriesFilter } from "@/components/patient-stories/PatientStoriesFilter";
 import { VideoGallery } from "@/components/patient-stories/VideoGallery";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
 import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import {
   patientStoriesSeo,
@@ -29,7 +31,10 @@ export const metadata: Metadata = {
 };
 
 export default async function PatientStoriesPage() {
-  const videos = await getPageVideos("patient-stories");
+  const [videos, photos] = await Promise.all([
+    getPageVideos("patient-stories"),
+    getGalleryPhotos("patient-stories"),
+  ]);
 
   return (
     <>
@@ -53,6 +58,7 @@ export default async function PatientStoriesPage() {
       </section>
 
       <VideoGallery videos={videos} />
+      <PhotoGallery photos={photos} />
 
       <section className="bg-cream px-5 py-4">
         <p className="mx-auto max-w-2xl text-center text-[13px] leading-relaxed text-text-light">

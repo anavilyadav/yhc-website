@@ -6,8 +6,10 @@ import { AuthorBox } from "@/components/blog/AuthorBox";
 import { ProcessSteps } from "@/components/online-consultation/ProcessSteps";
 import { TestimonialCards } from "@/components/online-consultation/TestimonialCards";
 import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
 import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import {
@@ -41,9 +43,10 @@ export const metadata: Metadata = {
 const whatsappCta = whatsappLink("Hello, I would like to book an online consultation at Yadav Homeo Clinic.");
 
 export default async function OnlineConsultationPage() {
-  const [doctor, videos] = await Promise.all([
+  const [doctor, videos, photos] = await Promise.all([
     getDoctorBySlug(siteConfig.doctors.physician.slug),
     getPageVideos("online-consultation"),
+    getGalleryPhotos("online-consultation"),
   ]);
   const faqPageSchema = buildFAQPageSchema(onlineConsultationFaqs);
 
@@ -89,6 +92,7 @@ export default async function OnlineConsultationPage() {
       </div>
 
       <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
 
       <div className="bg-white pb-6">
         <ContentSections sections={[honestAnswerSection]} />

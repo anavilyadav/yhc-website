@@ -11,7 +11,9 @@ import { AuthorBox } from "@/components/blog/AuthorBox";
 import { BlogEngagementTracker } from "@/components/blog/BlogEngagementTracker";
 import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
 import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import DisclaimerBanner from "@/components/disease-page/DisclaimerBanner";
 
 // Blog content is Supabase-backed (see lib/data/blog.ts) — ISR re-fetches
@@ -60,11 +62,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = await getBlogPost(slug);
   if (!post) notFound();
 
-  const [doctor, relatedDisease, allPosts, videos] = await Promise.all([
+  const [doctor, relatedDisease, allPosts, videos, photos] = await Promise.all([
     getDoctorBySlug(siteConfig.doctors.physician.slug),
     getDiseasePage(post.relatedDiseaseSlug),
     getBlogPosts(),
     getPageVideos(post.slug),
+    getGalleryPhotos(post.slug),
   ]);
 
   const relatedPosts = post.relatedPostSlugs
@@ -106,6 +109,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </article>
 
       <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
 
       <div className="bg-cream-bg px-5 py-14">
         <BlogContent intro={post.intro} sections={post.sections} />

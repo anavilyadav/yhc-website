@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
 import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 
 // Deliberately not linked from any nav, footer, or sitemap — reachable
@@ -19,7 +21,10 @@ export default async function BookingConfirmedPage({
   searchParams: Promise<{ plan?: string }>;
 }) {
   const { plan } = await searchParams;
-  const videos = await getPageVideos("booking-confirmed");
+  const [videos, photos] = await Promise.all([
+    getPageVideos("booking-confirmed"),
+    getGalleryPhotos("booking-confirmed"),
+  ]);
 
   return (
     <>
@@ -77,6 +82,7 @@ export default async function BookingConfirmedPage({
       </div>
     </section>
     <PageVideo videos={videos} />
+    <PhotoGallery photos={photos} />
     </>
   );
 }

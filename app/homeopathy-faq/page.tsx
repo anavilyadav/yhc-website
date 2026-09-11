@@ -4,8 +4,10 @@ import DisclaimerBanner from "@/components/disease-page/DisclaimerBanner";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { FaqSearch } from "@/components/faq/FaqSearch";
 import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
 import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import {
@@ -35,10 +37,11 @@ export const metadata: Metadata = {
 
 export default async function HomeopathyFaqPage() {
   const conditionSlugs = getConditionFaqSlugs();
-  const [doctor, videos, conditionPages] = await Promise.all([
+  const [doctor, videos, conditionPages, photos] = await Promise.all([
     getDoctorBySlug(siteConfig.doctors.physician.slug),
     getPageVideos("homeopathy-faq"),
     Promise.all(conditionSlugs.map((slug) => getDiseasePage(slug))),
+    getGalleryPhotos("homeopathy-faq"),
   ]);
   const conditionLinks = conditionSlugs
     .map((slug, i) => ({ slug, name: conditionPages[i]?.aboutCondition.name }))
@@ -87,6 +90,7 @@ export default async function HomeopathyFaqPage() {
       </div>
 
       <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
 
       {conditionLinks.length > 0 && (
         <section className="bg-cream px-5 py-10">

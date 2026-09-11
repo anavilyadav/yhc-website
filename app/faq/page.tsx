@@ -4,8 +4,10 @@ import DisclaimerBanner from "@/components/disease-page/DisclaimerBanner";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { FaqSearch } from "@/components/faq/FaqSearch";
 import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
 import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
 import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { faqSeo, faqHero, faqCategories, faqFinalCta, faqDisclaimer } from "@/lib/content/faq-content";
@@ -26,9 +28,10 @@ export const metadata: Metadata = {
 };
 
 export default async function FaqPage() {
-  const [doctor, videos] = await Promise.all([
+  const [doctor, videos, photos] = await Promise.all([
     getDoctorBySlug(siteConfig.doctors.physician.slug),
     getPageVideos("faq"),
+    getGalleryPhotos("faq"),
   ]);
   const allQuestions = faqCategories.flatMap((cat) => cat.questions);
   const faqPageSchema = buildFAQPageSchema(allQuestions);
@@ -72,6 +75,7 @@ export default async function FaqPage() {
       </div>
 
       <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
 
       <section className="bg-white px-5 py-14">
         <div className="mx-auto max-w-3xl">

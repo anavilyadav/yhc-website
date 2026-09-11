@@ -8,10 +8,12 @@ import Testimonials from "@/components/homepage/Testimonials";
 import OnlineConsultation from "@/components/homepage/OnlineConsultation";
 import FinalCTA from "@/components/homepage/FinalCTA";
 import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
 import { QuickCheck } from "@/components/shared/QuickCheck";
 import { getDiseases } from "@/lib/data/diseases";
 import { getTestimonials } from "@/lib/data/testimonials";
 import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import {
   buildClinicSchema,
   buildPhysicianSchemas,
@@ -25,10 +27,11 @@ import {
 export const revalidate = 3600;
 
 export default async function HomePage() {
-  const [diseases, testimonials, videos] = await Promise.all([
+  const [diseases, testimonials, videos, photos] = await Promise.all([
     getDiseases(),
     getTestimonials(),
     getPageVideos("home"),
+    getGalleryPhotos("home"),
   ]);
 
   const clinicSchema = buildClinicSchema();
@@ -74,6 +77,7 @@ export default async function HomePage() {
       <Hero />
       <StatsBar />
       <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
       <AboutTeaser />
       <ConditionsGrid diseases={diseases} />
       <QuickCheck />

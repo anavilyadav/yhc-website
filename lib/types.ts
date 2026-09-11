@@ -242,6 +242,20 @@ export interface RelatedVideo {
   displayOrder: number;
 }
 
+/**
+ * One photo shown in the page-level photo gallery (see
+ * supabase/migrations/0018_gallery_photos.sql) — the photo counterpart to
+ * PageVideo, matched by exact page_association, distinct from the inline
+ * `media: {type:"photo"}` break inside a disease page's own sections.
+ */
+export interface GalleryPhoto {
+  id: string;
+  pageAssociation: string;
+  imageUrl: string;
+  caption: string;
+  displayOrder: number;
+}
+
 export interface FaqItem {
   id: string;
   question: string;

@@ -3,8 +3,10 @@ import { siteConfig } from "@/lib/site-config";
 import { whatsappLinks } from "@/lib/whatsapp";
 import { getAppointmentFaqs, getPricingPlans } from "@/lib/data/appointment";
 import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { getDoctors } from "@/lib/supabase/queries/doctors";
 import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
 import { FreeHealthCheck } from "@/components/shared/FreeHealthCheck";
 import { ConsultationOptions } from "@/components/appointment/ConsultationOptions";
 import { OnlineProcessSteps } from "@/components/appointment/OnlineProcessSteps";
@@ -34,11 +36,12 @@ export const metadata: Metadata = {
 };
 
 export default async function AppointmentPage() {
-  const [pricingPlans, faqs, doctors, videos] = await Promise.all([
+  const [pricingPlans, faqs, doctors, videos, photos] = await Promise.all([
     getPricingPlans(),
     getAppointmentFaqs(),
     getDoctors(),
     getPageVideos("appointment"),
+    getGalleryPhotos("appointment"),
   ]);
 
   const faqSchema = {
@@ -82,6 +85,7 @@ export default async function AppointmentPage() {
       </section>
 
       <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
 
       <ConsultationOptions />
 
