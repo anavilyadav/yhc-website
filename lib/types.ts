@@ -218,6 +218,17 @@ export interface PageVideo {
 }
 
 /**
+ * Site-wide settings singleton (see supabase/migrations/0017_settings.sql)
+ * — editable from the admin panel with no redeploy. A null field hides
+ * that platform's icon everywhere it would otherwise appear.
+ */
+export interface SiteSettings {
+  facebookUrl: string | null;
+  instagramUrl: string | null;
+  youtubeUrl: string | null;
+}
+
+/**
  * One entry in the tag-scoped Related Videos Gallery (distinct from
  * PageVideo, which matches a video to one exact page_slug instead of a
  * condition tag). See lib/data/condition-video-tags.ts for how a page

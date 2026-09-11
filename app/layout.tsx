@@ -8,6 +8,9 @@ import FloatingWhatsApp from "@/components/site/FloatingWhatsApp";
 import ExitIntentPopup from "@/components/site/ExitIntentPopup";
 import GoogleAnalytics from "@/components/site/GoogleAnalytics";
 import { siteConfig } from "@/lib/site-config";
+import { getSiteSettings } from "@/lib/data/settings";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -49,14 +52,16 @@ const workSans = Work_Sans({
   display: "swap",
 });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const settings = await getSiteSettings();
+
   return (
     <html lang="en" className={`h-full ${lora.variable} ${workSans.variable}`}>
       <body className="flex min-h-full flex-col antialiased">
         <GoogleAnalytics />
-        <Header />
+        <Header settings={settings} />
         <main className="flex-1 pb-16 md:pb-0">{children}</main>
-        <Footer />
+        <Footer settings={settings} />
         <MobileStickyBar />
         <FloatingWhatsApp />
         <ExitIntentPopup />

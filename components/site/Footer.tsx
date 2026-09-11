@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig, telLink, whatsappLink } from "@/lib/site-config";
+import SocialLinks from "@/components/shared/SocialLinks";
+import type { SiteSettings } from "@/lib/types";
 
 const exploreLinks = [
   { label: "Home", href: "/" },
@@ -55,7 +57,7 @@ const legalLinks = [
   { label: "Sexual Health (Confidential)", href: "/sexual-health" },
 ];
 
-export default function Footer() {
+export default function Footer({ settings }: { settings: SiteSettings }) {
   return (
     <footer className="bg-navy px-5 py-12 pb-28 text-cream print:hidden md:pb-12">
       <div className="mx-auto max-w-6xl">
@@ -70,6 +72,7 @@ export default function Footer() {
         <p className="mb-8 font-serif text-sm italic text-amber-light">
           Centre for chronic &amp; complex diseases · Est. {siteConfig.foundingYear} · Jaipur, Rajasthan
         </p>
+        <SocialLinks settings={settings} className="-mt-4 mb-8" iconClassName="h-[22px] w-[22px]" />
 
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div>

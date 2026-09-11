@@ -6,6 +6,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig, telLink } from "@/lib/site-config";
 import { trackEvent } from "@/lib/analytics";
+import SocialLinks from "@/components/shared/SocialLinks";
+import type { SiteSettings } from "@/lib/types";
 
 const primaryLinks = [
   { label: "About Us", href: "/about" },
@@ -90,7 +92,7 @@ function NavDropdown({ label, links }: { label: string; links: { label: string; 
   );
 }
 
-export default function Header() {
+export default function Header({ settings }: { settings: SiteSettings }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const [lastPathname, setLastPathname] = useState(pathname);
@@ -122,13 +124,16 @@ export default function Header() {
         <span>
           {siteConfig.hours.weekday} · {siteConfig.hours.sunday}
         </span>
-        <a
-          href={telLink()}
-          onClick={() => trackEvent("phone_click", { click_source: "header" })}
-          className="font-semibold text-amber-light hover:text-amber"
-        >
-          📞 {siteConfig.phone.display}
-        </a>
+        <div className="flex items-center gap-4">
+          <a
+            href={telLink()}
+            onClick={() => trackEvent("phone_click", { click_source: "header" })}
+            className="font-semibold text-amber-light hover:text-amber"
+          >
+            📞 {siteConfig.phone.display}
+          </a>
+          <SocialLinks settings={settings} iconClassName="h-4 w-4" />
+        </div>
       </div>
 
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
@@ -215,7 +220,7 @@ export default function Header() {
 
       {mobileOpen && (
         <div className="max-h-[calc(100vh-64px)] overflow-y-auto border-t border-amber/20 bg-navy lg:hidden">
-          <nav className="mx-auto max-w-6xl px-5 py-6">
+          <nav className="mx-auto max-w-6xl px-5 pb-24 pt-6">
             {mobileGroups.map((group) => (
               <div key={group.heading} className="mb-6">
                 <h3 className="mb-2 text-xs font-bold uppercase tracking-[0.15em] text-amber-light/80">
@@ -256,6 +261,7 @@ export default function Header() {
               >
                 Book Consultation
               </Link>
+              <SocialLinks settings={settings} />
             </div>
           </nav>
         </div>
