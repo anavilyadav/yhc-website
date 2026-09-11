@@ -23,9 +23,10 @@
 
 .quickBarGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 24px;
   padding: 28px 0;
+  justify-items: center;
 }
 
 .quickItem {
@@ -101,13 +102,6 @@
   display: block;
 }
 
-.mapPending {
-  font-size: 12.5px;
-  color: var(--text-light);
-  padding: 20px;
-  text-align: center;
-}
-
 .clinicBody {
   padding: 22px;
 }
@@ -127,11 +121,6 @@
 
 .clinicRow strong {
   color: var(--navy);
-}
-
-.pendingText {
-  color: var(--text-light);
-  font-style: italic;
 }
 
 /* Online contact */

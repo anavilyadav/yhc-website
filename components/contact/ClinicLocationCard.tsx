@@ -16,29 +16,24 @@ export function ClinicLocationCard({ clinic }: { clinic: ClinicLocation }) {
 
   return (
     <div className={styles.clinicCard}>
-      <div className={styles.mapWrap}>
-        {clinic.mapEmbedUrl ? (
+      {clinic.mapEmbedUrl && (
+        <div className={styles.mapWrap}>
           <iframe
             src={clinic.mapEmbedUrl}
             title={`Map to ${clinic.name}`}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
-        ) : (
-          <p className={styles.mapPending}>
-            Map for this location will be added once the clinic confirms the
-            exact pin (Google Maps → Share → Embed a map).
-          </p>
-        )}
-      </div>
+        </div>
+      )}
       <div className={styles.clinicBody}>
         <h3>{clinic.name}</h3>
-        <div className={styles.clinicRow}>
-          <strong>Address:</strong>
-          <span className={fullAddress ? undefined : styles.pendingText}>
-            {fullAddress ?? "To be confirmed"}
-          </span>
-        </div>
+        {fullAddress && (
+          <div className={styles.clinicRow}>
+            <strong>Address:</strong>
+            <span>{fullAddress}</span>
+          </div>
+        )}
         {clinic.landmark && (
           <div className={styles.clinicRow}>
             <strong>Landmark:</strong> <span>{clinic.landmark}</span>
@@ -54,7 +49,7 @@ export function ClinicLocationCard({ clinic }: { clinic: ClinicLocation }) {
             {clinic.phone}
           </a>
         </div>
-        {clinic.timingsWeekday ? (
+        {clinic.timingsWeekday && (
           <>
             <div className={styles.clinicRow}>
               <strong>Timings:</strong> <span>{clinic.timingsWeekday}</span>
@@ -66,11 +61,6 @@ export function ClinicLocationCard({ clinic }: { clinic: ClinicLocation }) {
               </div>
             )}
           </>
-        ) : (
-          <div className={styles.clinicRow}>
-            <strong>Timings:</strong>{" "}
-            <span className={styles.pendingText}>To be confirmed</span>
-          </div>
         )}
         {clinic.directionsUrl && (
           <div className={styles.clinicRow}>

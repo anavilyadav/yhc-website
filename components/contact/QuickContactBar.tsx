@@ -11,14 +11,14 @@ export function QuickContactBar() {
           <div className={styles.quickValue}>{siteConfig.phone.display}</div>
           <div className={styles.quickSub}>{siteConfig.hours.weekday}</div>
         </div>
-        <div className={styles.quickItem}>
-          <div className={styles.quickIcon} aria-hidden="true">📧</div>
-          <div className={styles.quickLabel}>Email Us</div>
-          <div className={styles.quickValue}>
-            {siteConfig.email ?? "Email — coming soon"}
+        {siteConfig.email && (
+          <div className={styles.quickItem}>
+            <div className={styles.quickIcon} aria-hidden="true">📧</div>
+            <div className={styles.quickLabel}>Email Us</div>
+            <div className={styles.quickValue}>{siteConfig.email}</div>
+            <div className={styles.quickSub}>We reply within 24 hours</div>
           </div>
-          <div className={styles.quickSub}>We reply within 24 hours</div>
-        </div>
+        )}
         <div className={styles.quickItem}>
           <div className={styles.quickIcon} aria-hidden="true">💻</div>
           <div className={styles.quickLabel}>Online Consultation</div>

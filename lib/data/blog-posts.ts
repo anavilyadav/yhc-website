@@ -206,7 +206,7 @@ export const BLOG_POST_SEED: BlogPost[] = [
       "CKD homeopathy treatment",
       "kidney disease homeopathy India",
       "reduce creatinine homeopathy",
-      "avoid dialysis homeopathy",
+      "kidney function support homeopathy",
     ],
     category: "Kidney & Renal",
     tags: ["kidney", "creatinine", "CKD", "renal disease"],
@@ -220,8 +220,8 @@ export const BLOG_POST_SEED: BlogPost[] = [
       {
         heading: "First — the Question You Are Really Asking",
         paragraphs: [
-          "'Can homeopathy bring my creatinine down and help me avoid dialysis?'",
-          "Short answer: in some cases, yes. Not in all. And the cases where yes is most likely are specific — which is why honest expectations matter so much.",
+          "'Can homeopathy bring my creatinine down and support my kidney health?'",
+          "Short answer: constitutional treatment has, in our clinical experience, been able to meaningfully support kidney function in some patients — though not all, and never as a substitute for your nephrologist's ongoing care. The cases where a meaningful response is most likely are specific — which is why honest expectations matter so much.",
         ],
       },
       {
@@ -243,8 +243,8 @@ export const BLOG_POST_SEED: BlogPost[] = [
       {
         heading: "The Story That Comes to Me Most Often",
         paragraphs: [
-          "A family comes to us with a father whose creatinine is 5.8. The nephrologist has said dialysis should begin within 3 months. They have tried every herbal remedy suggested by neighbours. They arrive desperate.",
-          "We start constitutional treatment alongside their nephrology care. I ask them to get blood reports every 6 weeks without fail. Month 2: creatinine 5.4. Month 4: 4.7. Month 7: 3.9. The nephrologist agrees dialysis can be deferred. The family cannot believe it.",
+          "A family comes to us with a father whose kidney function has declined significantly. The nephrologist has raised serious concerns about the road ahead. They have tried every herbal remedy suggested by neighbours. They arrive desperate.",
+          "We start constitutional treatment alongside their nephrology care. I ask them to get blood reports every 6 weeks without fail. Over the following months, his kidney function shows steady, meaningful improvement on repeat testing. His nephrologist continues to monitor him closely. The family cannot believe it.",
           "This is not a miracle. This is what happens when the whole systemic picture is addressed — the blood pressure becomes better controlled, the inflammatory drivers reduce, the diet is properly followed, and the constitutional remedy supports the kidney's own regenerative capacity.",
         ],
         note: "I do not share this to make promises. I share it because these families deserve to know this is possible — while understanding clearly that it is not guaranteed and that conventional nephrology care must continue without interruption. Individual results vary; this patient's outcome may not be typical.",
