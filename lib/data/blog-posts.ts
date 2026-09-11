@@ -385,7 +385,7 @@ export const BLOG_POST_SEED: BlogPost[] = [
     publishedDate: "2026-08-07",
     intro: [
       "I want to address something directly.",
-      "I am a second-generation homeopath. I grew up in a clinic where I watched my father, Dr T P Yadav, treat patients with conditions that other systems of medicine had given up on. I have seen vitiligo patches repigment. I have seen creatinine levels fall from 7 to under 3. I have seen non-verbal autistic children begin to speak. I have practised for nearly a decade alongside one of the most experienced homeopaths in Rajasthan.",
+      "I am a second-generation homeopath. I grew up in a clinic where I watched my father, Dr T P Yadav, treat patients with conditions that other systems of medicine had given up on. I have seen vitiligo patches repigment. I have seen creatinine levels fall substantially in patients who complete consistent treatment. I have seen non-verbal autistic children begin to speak. I have practised for nearly a decade alongside one of the most experienced homeopaths in Rajasthan.",
       "And yet — I understand the scepticism about homeopathy. I genuinely do. Some of it is justified. Some of it is based on myths that have nothing to do with what classical homeopathy actually is or does.",
       "Here are the 5 myths I hear most often — and my honest response to each.",
     ],
@@ -396,7 +396,7 @@ export const BLOG_POST_SEED: BlogPost[] = [
           "This is the most common objection. And it is the one that falls apart most quickly when examined carefully.",
           "The placebo effect requires patient belief and conscious expectation. It is, by definition, dependent on the patient knowing they are receiving treatment and hoping it will work.",
           "How, then, do we explain consistent results in infants — who have no conception of homeopathy and no expectations? How do we explain positive effects in animals, where placebo is not a factor? Several well-designed veterinary studies have shown homeopathic treatment producing outcomes that cannot be explained by expectation or belief.",
-          "In our own practice: when a 2-year-old autistic child sleeps through the night for the first time after 3 months of constitutional treatment — that child is not experiencing a placebo effect. When a patient's creatinine drops from 5.8 to 3.1 and nothing else has changed in their management — that is a measurable biochemical change in a blood test. You cannot placebo a creatinine number.",
+          "In our own practice: when a 2-year-old autistic child sleeps through the night for the first time after 3 months of constitutional treatment — that child is not experiencing a placebo effect. When a patient's creatinine falls substantially on repeat testing and nothing else has changed in their management — that is a measurable biochemical change in a blood test. You cannot placebo a creatinine number.",
           "The question 'is homeopathy placebo?' is not scientific scepticism. It is an assumption dressed as a question. The honest scientific position is: we do not fully understand the mechanism by which homeopathy works. That is not the same as saying it does not work.",
         ],
       },

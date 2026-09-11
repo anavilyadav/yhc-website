@@ -358,7 +358,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     ],
     patientStory: {
       quote:
-        "I had Rheumatoid Arthritis for 6 years and was on methotrexate and steroids. My ESR was consistently above 90 and I had morning stiffness for 2 to 3 hours every day. After 10 months of constitutional treatment with Dr Yadav alongside my rheumatologist's care, my ESR came down to 34 and morning stiffness is now 20 to 30 minutes. My rheumatologist has reduced my methotrexate dose. I have more energy than I have had in years.",
+        "I had Rheumatoid Arthritis for 6 years and was on methotrexate and steroids. My inflammatory markers were consistently elevated and I had morning stiffness for 2 to 3 hours every day. After 10 months of constitutional treatment with Dr Yadav alongside my rheumatologist's care, my inflammatory markers had improved substantially and morning stiffness is now 20 to 30 minutes. My rheumatologist has reduced my methotrexate dose. I have more energy than I have had in years. Individual results vary.",
       attribution: "Patient, Jaipur — Rheumatoid Arthritis, 10 months of treatment",
     },
     faqs: [
@@ -552,13 +552,13 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     slug: "renal-diseases",
     pageTitle: "Homeopathy for Kidney Disease & High Creatinine in Jaipur | CKD Treatment | Yadav Homeo Clinic",
     metaDescription:
-      "Homeopathic treatment for CKD, high creatinine, nephrotic syndrome and renal diseases in Jaipur. Proven results in reducing creatinine. 30+ years experience. Book now.",
+      "Homeopathic support for CKD, high creatinine, nephrotic syndrome and renal diseases in Jaipur, alongside your nephrologist's care. 30+ years experience. Book now.",
     focusKeyword: "homeopathy for kidney disease Jaipur",
     secondaryKeywords: [
       "high creatinine homeopathy treatment",
       "CKD homeopathy India",
       "reduce creatinine naturally",
-      "avoid dialysis homeopathy",
+      "kidney function support homeopathy",
       "nephrotic syndrome homeopathy Jaipur",
     ],
     hero: {
@@ -2196,7 +2196,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     pageTitle:
       "Homeopathy for Hormonal Disorders in Jaipur | Thyroid, PCOD, Diabetes | Yadav Homeo Clinic",
     metaDescription:
-      "Constitutional homeopathic treatment for thyroid disorders, PCOD, hormonal imbalances and diabetes management in Jaipur. Yadav Homeo Clinic — 30+ years of proven results.",
+      "Constitutional homeopathic treatment for thyroid disorders, PCOD, hormonal imbalances and diabetes management in Jaipur. Yadav Homeo Clinic — 30+ years of clinical experience.",
     focusKeyword: "homeopathy for thyroid Jaipur",
     secondaryKeywords: [
       "hypothyroidism homeopathy Jaipur",
