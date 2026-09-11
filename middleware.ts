@@ -1,5 +1,6 @@
-import { NextResponse, type NextRequest } from "next/server";
+import type { NextRequest } from "next/server";
 import { siteConfig } from "@/lib/site-config";
+import { updateSession } from "@/lib/supabase/middleware";
 
 const productionHost = new URL(siteConfig.url).hostname;
 
@@ -11,11 +12,15 @@ const productionHost = new URL(siteConfig.url).hostname;
  * index it as a separate, confusing entry. This blocks indexing on any
  * host other than the real production domain, with no Vercel dashboard
  * configuration required.
+ *
+ * Also refreshes the Supabase Auth session and gates /admin/* behind
+ * login (see lib/supabase/middleware.ts) — the admin panel for the
+ * videos/settings/gallery_photos tables added in this session.
  */
-export function middleware(request: NextRequest) {
-  const response = NextResponse.next();
+export async function middleware(request: NextRequest) {
+  const response = await updateSession(request);
 
-  if (request.nextUrl.hostname !== productionHost) {
+  if (request.nextUrl.hostname !== productionHost || request.nextUrl.pathname.startsWith("/admin")) {
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
   }
 
