@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getClinicLocations } from "@/lib/data/contact";
 import { ClinicLocationCard } from "@/components/contact/ClinicLocationCard";
+import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
+import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { siteConfig, whatsappLinkTo } from "@/lib/site-config";
 import { buildJagatpuraClinicSchema } from "@/lib/schema";
 import {
@@ -29,7 +33,11 @@ export const metadata: Metadata = {
 };
 
 export default async function JagatpuraLocationPage() {
-  const clinics = await getClinicLocations();
+  const [clinics, videos, photos] = await Promise.all([
+    getClinicLocations(),
+    getPageVideos("homeopathy-clinic-jagatpura-jaipur"),
+    getGalleryPhotos("homeopathy-clinic-jagatpura-jaipur"),
+  ]);
   const jagatpuraClinic = clinics.find((c) => c.slug === "jagatpura");
   const jagatpuraSchema = buildJagatpuraClinicSchema();
 
@@ -59,6 +67,9 @@ export default async function JagatpuraLocationPage() {
           </div>
         </section>
       )}
+
+      <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
 
       {/*
         Same clinic-wide facts already approved for the Jaipur (Main

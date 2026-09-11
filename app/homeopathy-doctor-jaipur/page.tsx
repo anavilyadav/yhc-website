@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getClinicLocations } from "@/lib/data/contact";
 import { ClinicLocationCard } from "@/components/contact/ClinicLocationCard";
+import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
+import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { jaipurLocationSeo, jaipurHero, whyChooseUsJaipur, conditionsTreatedLinks } from "@/lib/content/location-content";
 
@@ -23,7 +27,11 @@ export const metadata: Metadata = {
 };
 
 export default async function JaipurLocationPage() {
-  const clinics = await getClinicLocations();
+  const [clinics, videos, photos] = await Promise.all([
+    getClinicLocations(),
+    getPageVideos("homeopathy-doctor-jaipur"),
+    getGalleryPhotos("homeopathy-doctor-jaipur"),
+  ]);
   const mainClinic = clinics.find((c) => c.slug === "main") ?? clinics[0];
 
   return (
@@ -46,6 +54,9 @@ export default async function JaipurLocationPage() {
           </div>
         </section>
       )}
+
+      <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
 
       <section className="bg-white px-5 py-14">
         <div className="mx-auto max-w-3xl">
