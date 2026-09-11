@@ -64,7 +64,7 @@ export const faqCategories: FaqCategory[] = [
       {
         question: "Dr Anavil Yadav ka experience kitna hai?",
         answer:
-          "Dr Anavil Yadav BHMS qualified hain, 2016 se practice kar rahe hain. Unke paas 10+ saal ka clinical observation experience hai kyunki unhone apne father Dr T P Yadav ke saath unke BHMS studies ke dauran bhi consult kiya. Woh chronic, genetic aur autoimmune diseases mein specialise karte hain aur Yadav Homeo Clinic ke online consultation program ko lead karte hain.",
+          "Dr Anavil Yadav BHMS qualified hain, 2016 se practice kar rahe hain. Unke paas 10+ saal ka clinical observation experience hai kyunki unhone apne father Dr T P Yadav ke saath unke BHMS studies ke dauran bhi consult kiya. Unka clinical focus chronic, genetic aur autoimmune diseases par hai aur woh Yadav Homeo Clinic ke online consultation program ko lead karte hain.",
       },
       {
         question: "Kya homeopathy aur allopathy saath le sakte hain?",

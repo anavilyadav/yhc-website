@@ -8,7 +8,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: { absolute: "Our Doctors | Dr T P Yadav & Dr Anavil Yadav | Yadav Homeo Clinic Jaipur" },
   description:
-    "Meet the doctors of Yadav Homeo Clinic — Dr T P Yadav (35+ years, founder) and Dr Anavil Yadav (BHMS). Classical homeopathy specialists in Jaipur.",
+    "Meet the doctors of Yadav Homeo Clinic — Dr T P Yadav (35+ years, founder) and Dr Anavil Yadav (BHMS). Classical homeopathy practitioners in Jaipur.",
   keywords: ["homeopathy doctor Jaipur"],
   alternates: { canonical: `${siteConfig.url}/our-doctors/` },
   openGraph: {

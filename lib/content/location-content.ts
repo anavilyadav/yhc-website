@@ -25,7 +25,7 @@ export const jaipurHero = {
 export const whyChooseUsJaipur = [
   "35+ years of unbroken classical homeopathic practice in Jaipur",
   "Two qualified physicians — Dr T P Yadav (founder) and Dr Anavil Yadav (BHMS 2016)",
-  "Specialists in conditions others call difficult — vitiligo, kidney disease, autism, autoimmune",
+  "Deep clinical experience in conditions others call difficult — vitiligo, kidney disease, autism, autoimmune",
   "Strictly constitutional approach — one patient, one precise remedy",
   "1 lakh+ patients treated across Rajasthan and beyond",
   "Both branches easily accessible — main city + Jagatpura",

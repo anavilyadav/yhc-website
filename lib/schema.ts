@@ -342,7 +342,7 @@ export function buildPhysicianSchemas() {
     givenName: "Anavil",
     familyName: "Yadav",
     description:
-      "Homeopathic physician (BHMS 2016) at Yadav Homeo Clinic, Jaipur. Second-generation classical homeopath. Son of Dr T P Yadav (35+ years experience). Specialist in chronic skin diseases, autoimmune conditions, autism and online homeopathy consultations pan-India and internationally.",
+      "Homeopathic physician (BHMS 2016) at Yadav Homeo Clinic, Jaipur. Second-generation classical homeopath. Son of Dr T P Yadav (35+ years experience). Extensive clinical experience in chronic skin diseases, autoimmune conditions, autism and online homeopathy consultations pan-India and internationally.",
     url: `${siteConfig.url}/our-doctors/${siteConfig.doctors.physician.slug}/`,
     jobTitle: siteConfig.doctors.physician.title,
     worksFor: { "@id": clinicId },

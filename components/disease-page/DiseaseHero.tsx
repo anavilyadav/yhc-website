@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { trackEvent } from "@/lib/analytics";
-import { getInitials } from "@/lib/utils";
 import type { Doctor } from "@/lib/supabase/queries/doctors";
 import type { DiseasePageHero } from "@/lib/types";
 import VideoEmbed from "@/components/shared/VideoEmbed";
@@ -41,20 +40,21 @@ export default function DiseaseHero({
         {/*
           Doctor thumbnail above the fold — GIOS_P5 Zone 1 spec ("small
           circular photo of Dr. Anavil with name and qualification").
-          Falls back to initials (never a stock photo) until a real photo
-          exists in Supabase, same graceful pattern as AuthorBox. The
-          "Read Reviews on Google" link goes to the real, verifiable GBP
-          profile rather than a fabricated star rating — there is no
-          live-embedded review count on this site yet (that needs an
-          Elfsight-style widget connected to the GBP account, not done),
-          so a real number should never be invented here.
+          Renders a plain neutral fill (never a stock photo, never initials
+          text) until a real photo exists in Supabase, per the 2026-09-11
+          build spec's content-degradation rule. The "Read Reviews on
+          Google" link goes to the real, verifiable GBP profile rather
+          than a fabricated star rating — there is no live-embedded review
+          count on this site yet (that needs an Elfsight-style widget
+          connected to the GBP account, not done), so a real number should
+          never be invented here.
         */}
         <div className="mb-5 flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-3">
-          <div className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-navy/10 font-serif text-sm text-navy/50">
+          <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full bg-navy/10">
             {doctorPhoto ? (
               <Image src={doctorPhoto} alt={doctorName} fill sizes="44px" className="object-cover" />
             ) : (
-              getInitials(doctorName)
+              <div className="h-full w-full bg-gradient-to-br from-navy/10 to-amber/10" />
             )}
           </div>
           <p className="text-sm font-semibold text-navy">

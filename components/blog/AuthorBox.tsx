@@ -1,7 +1,6 @@
 import Image from "next/image";
 import type { Doctor } from "@/lib/supabase/queries/doctors";
 import { siteConfig } from "@/lib/site-config";
-import { getInitials } from "@/lib/utils";
 
 /**
  * Mandatory on every blog post and disease page per GIOS_P7_Governance_
@@ -27,15 +26,14 @@ export function AuthorBox({
   const registrationNumber = doctor?.registration_number;
   const registrationCouncil = doctor?.registration_council;
   const photoUrl = doctor?.photo_url ?? null;
-  const initials = getInitials(name);
 
   return (
     <div className="mt-10 flex items-start gap-4 rounded-xl border border-navy/10 bg-cream-bg p-5">
-      <div className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-navy/10 font-serif text-lg text-navy/50">
+      <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full bg-navy/10">
         {photoUrl ? (
           <Image src={photoUrl} alt={doctor?.photo_alt ?? name} fill sizes="56px" className="object-cover" />
         ) : (
-          initials
+          <div className="h-full w-full bg-gradient-to-br from-navy/10 to-amber/10" />
         )}
       </div>
       <div>

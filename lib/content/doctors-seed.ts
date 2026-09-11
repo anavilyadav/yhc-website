@@ -54,7 +54,7 @@ export const DOCTOR_SEED: Doctor[] = [
     full_name: "Dr Anavil Yadav",
     role_title: "Homeopathic Physician | BHMS | Yadav Homeo Clinic, Jaipur",
     header_subline:
-      "Specialist in Chronic, Genetic & Autoimmune Diseases | Online Consultations — Pan India & International",
+      "Area of Clinical Focus: Chronic, Genetic & Autoimmune Diseases | Online Consultations — Pan India & International",
     bio_paragraphs: [
       "Some doctors choose medicine. Dr Anavil Yadav grew up inside it.",
       "As the son of Dr T P Yadav — one of Jaipur's most respected homeopathic physicians — Anavil spent his childhood watching something that most people never see: a doctor who could change a patient's life not with surgery or a powerful drug, but with a tiny white pill selected through 60 minutes of careful, listening-based diagnosis. He watched vitiligo patches repigment. He saw autism children begin to speak. He witnessed kidney patients' health improve alongside their nephrologist's care. He grew up knowing that what happened in his father's consultation room was extraordinary — and real.",
@@ -66,7 +66,7 @@ export const DOCTOR_SEED: Doctor[] = [
       "He carries one belief into every consultation — the same belief that has defined Yadav Homeo Clinic for 35 years: that every patient who walks through the door deserves the time, the attention, and the precision of a truly individualised prescription. That is the only kind of homeopathy worth practising.",
     ],
     short_bio:
-      "Dr Anavil Yadav — Classical Homeopath, Yadav Homeo Clinic Jaipur. Son of Dr T P Yadav. BHMS, 9+ years practice. Specialising in chronic, genetic & autoimmune diseases. Online consultations — Pan India.",
+      "Dr Anavil Yadav — Classical Homeopath, Yadav Homeo Clinic Jaipur. Son of Dr T P Yadav. BHMS, 9+ years practice. Extensive experience in chronic, genetic & autoimmune diseases. Online consultations — Pan India.",
     specializations: [
       "Chronic Skin Diseases — Vitiligo, Psoriasis, Eczema, Lichen Planus",
       "Autoimmune Diseases — Rheumatoid Arthritis, Lupus, Thyroid, Scleroderma",

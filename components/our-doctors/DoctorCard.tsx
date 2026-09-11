@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Doctor } from "@/lib/supabase/queries/doctors";
-import { getInitials } from "@/lib/utils";
 
 export function DoctorCard({ doctor }: { doctor: Doctor }) {
   return (
@@ -10,9 +9,7 @@ export function DoctorCard({ doctor }: { doctor: Doctor }) {
         {doctor.photo_url ? (
           <Image src={doctor.photo_url} alt={doctor.photo_alt ?? doctor.full_name} fill sizes="112px" className="object-cover" />
         ) : (
-          <div className="flex h-full w-full items-center justify-center font-serif text-2xl text-navy/30">
-            {getInitials(doctor.full_name)}
-          </div>
+          <div className="h-full w-full bg-gradient-to-br from-navy/10 to-amber/10" />
         )}
       </div>
 

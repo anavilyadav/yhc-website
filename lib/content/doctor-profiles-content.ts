@@ -40,7 +40,7 @@ export const doctorProfileExtras: Record<string, DoctorProfileExtra> = {
     seo: {
       pageTitle: "Dr Anavil Yadav — Homeopathic Physician BHMS | Yadav Homeo Clinic Jaipur | Online Consultations",
       metaDescription:
-        "Dr Anavil Yadav BHMS — second-generation classical homeopath at Yadav Homeo Clinic Jaipur. Specialist in chronic, genetic & autoimmune diseases. Online consultations pan-India & international.",
+        "Dr Anavil Yadav BHMS — second-generation classical homeopath at Yadav Homeo Clinic Jaipur. Extensive experience in chronic, genetic & autoimmune diseases. Online consultations pan-India & international.",
       focusKeyword: "Dr Anavil Yadav homeopath Jaipur",
       secondaryKeywords: [
         "online homeopathy consultation India",

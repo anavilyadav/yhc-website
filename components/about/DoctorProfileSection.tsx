@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { Doctor } from "@/lib/supabase/queries/doctors";
-import { getInitials } from "@/lib/utils";
 
 interface Props {
   doctor: Doctor;
@@ -54,12 +53,7 @@ export function DoctorProfileSection({
                 priority={doctor.display_order === 1}
               />
             ) : (
-              <div
-                className="flex h-full w-full items-center justify-center bg-navy/5 font-serif text-4xl text-navy/30"
-                aria-label={`Photo of ${doctor.full_name} coming soon`}
-              >
-                {getInitials(doctor.full_name)}
-              </div>
+              <div className="h-full w-full bg-gradient-to-br from-navy/10 to-amber/10" />
             )}
           </div>
 
@@ -120,7 +114,7 @@ export function DoctorProfileSection({
           {!isTeaser && doctor.specializations.length > 0 && (
             <div className="mt-8">
               <h3 className="text-sm font-bold uppercase tracking-wide text-navy">
-                Specialisations
+                Areas of Clinical Focus
               </h3>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {doctor.specializations.map((spec) => (

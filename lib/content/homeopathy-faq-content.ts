@@ -218,7 +218,7 @@ export const homeopathyFaqCategories: FaqCategory[] = [
       {
         question: "Who is Dr Anavil Yadav?",
         answer:
-          "Dr Anavil Yadav is the son of Dr T P Yadav and practices alongside his father at Yadav Homeo Clinic, Jaipur. He completed his BHMS degree in 2016 and joined full-time practice at the clinic. He grew up in the clinic environment from childhood, giving him 15+ years of clinical exposure alongside his formal 9+ years of practice. He specialises in classical homeopathy for chronic skin diseases, autoimmune conditions, autism, PCOD and online consultations. He is leading the clinic's digital expansion, making its expertise available to patients across India and internationally.",
+          "Dr Anavil Yadav is the son of Dr T P Yadav and practices alongside his father at Yadav Homeo Clinic, Jaipur. He completed his BHMS degree in 2016 and joined full-time practice at the clinic. He grew up in the clinic environment from childhood, giving him 15+ years of clinical exposure alongside his formal 9+ years of practice. His clinical focus is classical homeopathy for chronic skin diseases, autoimmune conditions, autism, PCOD and online consultations. He is leading the clinic's digital expansion, making its expertise available to patients across India and internationally.",
       },
       {
         question: "How many patients has Yadav Homeo Clinic treated?",
