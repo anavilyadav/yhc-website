@@ -36,7 +36,7 @@ const DISEASE_SEED: Disease[] = [
     slug: "renal-diseases",
     title: "Kidney & Renal Diseases",
     description:
-      "High creatinine, CKD, kidney failure, nephrotic syndrome — renal conditions with proven homeopathic management. We have helped many patients avoid dialysis.",
+      "High creatinine, CKD, kidney failure, nephrotic syndrome — renal conditions with constitutional homeopathic support alongside your nephrologist's care.",
     is_specialty: true,
     display_order: 4,
   },

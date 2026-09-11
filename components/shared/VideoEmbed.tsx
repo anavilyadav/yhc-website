@@ -4,15 +4,14 @@ import { useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 
 /**
- * Video-hero slot — the #1 layout from the video-first redesign plan
- * (2026-09-10): every page gets a video right after its headline, before
- * the long-form text. Until a real youtubeId is added, renders a visible
- * placeholder naming exactly which video goes here — deliberately visible
- * (not hidden) per Dr. Anavil's instruction, so every page's pending video
- * is easy to spot while the real shoots/uploads are still in progress.
- * Once a youtubeId is set, this same slot becomes a real click-to-load
- * YouTube embed (thumbnail first, no iframe) so pages with a video hero
- * don't pay YouTube's script weight on every load.
+ * Video-hero slot — the #1 layout from the video-first redesign plan.
+ * Per the 2026-09-11 build spec's content-degradation rule: renders
+ * nothing at all when no youtubeId exists yet — no placeholder box, no
+ * "pending" label, no gap. The surrounding layout is written to look
+ * complete without it. The moment a real youtubeId is supplied (from
+ * Supabase or a content file), this same slot becomes a real click-to-
+ * load YouTube embed (thumbnail first, no iframe) so pages with a video
+ * hero don't pay YouTube's script weight on every load.
  */
 export default function VideoEmbed({
   youtubeId,
@@ -23,17 +22,7 @@ export default function VideoEmbed({
 }) {
   const [playing, setPlaying] = useState(false);
 
-  if (!youtubeId) {
-    return (
-      <div className="mx-auto my-6 flex aspect-video max-w-2xl flex-col items-center justify-center gap-2 rounded-lg border-2 border-dashed border-amber-dark/50 bg-navy/5 px-6 text-center">
-        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-navy/10">
-          <span className="ml-1 h-0 w-0 border-y-[8px] border-l-[13px] border-y-transparent border-l-navy/40" />
-        </span>
-        <p className="text-xs font-bold uppercase tracking-wide text-amber-dark">Video Pending</p>
-        <p className="max-w-sm text-sm font-medium text-navy/70">{title}</p>
-      </div>
-    );
-  }
+  if (!youtubeId) return null;
 
   return (
     <div className="mx-auto my-6 max-w-2xl overflow-hidden rounded-lg border border-navy/10 bg-navy shadow-md">

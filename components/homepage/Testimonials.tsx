@@ -11,8 +11,8 @@ export default function Testimonials({ testimonials }: { testimonials: Testimoni
             Real Patients. Real Recoveries. Real Stories.
           </h2>
           <p className="mt-3 text-[15px] text-text-mid">
-            Every testimonial on this page is a real patient from our clinic. Names and details
-            used with full consent.
+            Every story on this page reflects a real patient experience at our clinic, shared
+            anonymously to protect patient privacy.
           </p>
         </div>
 
@@ -30,7 +30,7 @@ export default function Testimonials({ testimonials }: { testimonials: Testimoni
                   — {t.patient_name}
                   {t.age ? `, ${t.age}` : ""}, {t.city}
                 </span>
-                <span className="ml-2 text-green">
+                <span className="ml-2 text-amber-dark">
                   {t.condition}
                   {t.treatment_duration ? ` · ${t.treatment_duration}` : ""}
                 </span>

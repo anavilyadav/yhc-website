@@ -81,17 +81,17 @@ export const onlinePatientTestimonials: {
   {
     quote:
       "I was sceptical about online consultation. How can a doctor prescribe without seeing me? But the intake form was so detailed that Dr Anavil understood my case better than any doctor who had examined me in person. My patches stopped spreading in 2 months. After 10 months, I am seeing genuine repigmentation. All of this happened entirely online.",
-    attribution: "Rekha M., 34, Delhi — Vitiligo, 4 years — 10 months of treatment",
+    attribution: "Patient, Delhi — Vitiligo, 4 years — 10 months of treatment",
   },
   {
     quote:
-      "My father in India has chronic kidney disease. We were managing it from the UK and were terrified of the trajectory. Dr Anavil's online process was professional and thorough. The intake form asked questions no other doctor had asked. Creatinine has come down from 5.1 to 3.4 in 8 months. We send reports every 6 weeks and adjustments are made promptly.",
-    attribution: "Suresh K. family, UK — CKD, High Creatinine — 8 months of treatment",
+      "My father in India has chronic kidney disease. We were managing it from the UK and were terrified of the trajectory. Dr Anavil's online process was professional and thorough. The intake form asked questions no other doctor had asked. His kidney function has shown meaningful improvement over 8 months. We send reports every 6 weeks and adjustments are made promptly. Individual results vary.",
+    attribution: "Family, UK — CKD, High Creatinine — 8 months of treatment",
   },
   {
     quote:
       "I had seen three gynaecologists and two other homeopaths. Nobody had spent as much time understanding my full history as this intake form forced me to articulate. Within 4 months my cycles became regular for the first time in 6 years. The WhatsApp support throughout has been exceptional.",
-    attribution: "Ananya P., 27, Mumbai — PCOS, 6 years — 4 months of treatment",
+    attribution: "Patient, Mumbai — PCOS, 6 years — 4 months of treatment",
   },
 ];
 

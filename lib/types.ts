@@ -33,10 +33,9 @@ export interface DiseasePageHero {
   /**
    * YouTube video ID for the hero's video slot (e.g. "dQw4w9WgXcQ" from
    * youtube.com/watch?v=dQw4w9WgXcQ) — not a full URL. Optional and left
-   * unset until a real video exists for this page; VideoEmbed shows a
-   * visible "Video Pending" placeholder naming the video when it's absent,
-   * per Dr. Anavil's instruction (2026-09-10) that pending media should be
-   * easy to spot while shoots are in progress, not hidden.
+   * unset until a real video exists for this page; VideoEmbed renders
+   * nothing when it's absent, per the 2026-09-11 build spec's content-
+   * degradation rule (no placeholder box or "pending" label).
    */
   youtubeId?: string;
 }

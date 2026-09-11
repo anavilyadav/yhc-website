@@ -98,7 +98,7 @@ export const ASTHMA_PAGE: DiseaseSubPageContent = {
   patientStory: {
     quote:
       "I had asthma since age 7 and was using a salbutamol inhaler daily and a steroid preventer twice daily by age 25. I started constitutional treatment with Dr Yadav. By month 6, my reliever inhaler use had reduced from daily to once or twice a week. By month 10, I had stopped the steroid preventer entirely under my chest physician's guidance. I still carry my reliever inhaler but I have not used it in 4 months. This is the first time in 18 years I have been genuinely free.",
-    attribution: "Rahul Sharma, 28, Jaipur — Chronic asthma since childhood, off daily inhalers at 10 months",
+    attribution: "Patient, Jaipur — Chronic asthma since childhood, reduced inhaler dependence by month 10",
     note: "Individual results vary. This patient's outcome may not be typical.",
   },
   faqs: [

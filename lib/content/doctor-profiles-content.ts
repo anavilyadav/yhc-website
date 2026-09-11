@@ -31,8 +31,8 @@ export const doctorProfileExtras: Record<string, DoctorProfileExtra> = {
     },
     testimonial: {
       quote:
-        "I had seen 4 doctors in 3 cities before my family brought me to Dr T P Yadav. My creatinine was 6.1, my nephrologist had said dialysis was within 6 months. Dr Yadav took 70 minutes to take my case — no one had spent more than 10 with me. In 8 months, creatinine came to 3.8. That was 2 years ago. Still no dialysis. I don't know what he does. I just know what the report shows.",
-      attribution: "Ramesh K., 58, Jaipur — CKD, 2 years of treatment",
+        "I had seen several doctors in different cities before my family brought me to Dr T P Yadav. My kidney function had declined significantly and my nephrologist had raised serious concerns about the road ahead. Dr Yadav took over an hour to take my case — no one had spent that long with me before. Over the following months, my kidney function showed meaningful, sustained improvement, tracked through regular reports with my nephrologist. That was 2 years ago. I don't know what he does. I just know what the reports show. Individual results vary.",
+      attribution: "Patient, Jaipur — CKD, 2 years of treatment",
     },
     ctas: [{ label: "Book Consultation with Dr T P Yadav →" }],
   },
@@ -51,7 +51,7 @@ export const doctorProfileExtras: Record<string, DoctorProfileExtra> = {
     testimonial: {
       quote:
         "I was sceptical about online consultation — but Dr Anavil's intake form was more thorough than any in-person consultation I had ever had. He asked questions about my personality, my fears, my reactions to things — questions that felt irrelevant but somehow weren't. Six months later my PCOS cycles are regular for the first time in 5 years. I now refer everyone I know.",
-      attribution: "Pooja M., 29, Delhi — PCOS, Online consultation, 6 months",
+      attribution: "Patient, Delhi — PCOS, online consultation, 6 months",
     },
     ctas: [
       { label: "Book In-Clinic Consultation →" },

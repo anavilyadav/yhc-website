@@ -11,8 +11,8 @@ export default function FinalCTA() {
         <div className="mx-auto mt-6 max-w-2xl space-y-4 text-[15px] leading-relaxed text-text-mid">
           <p>
             Thousands of patients who were told their condition was permanent — vitiligo that
-            could never repigment, kidneys that would need dialysis, children who would never
-            speak — found their answer at Yadav Homeo Clinic. We do not promise miracles. We
+            could never repigment, kidney function that would only decline, children who would
+            never speak — found support at Yadav Homeo Clinic. We do not promise miracles. We
             promise our best — and our best has transformed thousands of lives.
           </p>
           <p>Take the first step today. Call us, WhatsApp us, or book online. We respond to every enquiry personally.</p>

@@ -118,8 +118,8 @@ export const VITILIGO_PAGE: DiseaseSubPageContent = {
   ],
   patientStory: {
     quote:
-      "Six years of watching the white patches spread across my face and hands. Every morning checking the mirror for new spots. Three dermatologists. Two other homeopaths. PUVA therapy twice a week for 8 months. Nothing stopped it. I came to Yadav Homeo Clinic with almost no hope left — just wanting to try one more thing. The consultation was unlike any other — an hour of questions that went far beyond my skin. Within 3 months the spreading stopped. By the 7th month I saw the first pigment dots returning to my cheek patch. I photographed every change. It has been 14 months now. My face is 60% recovered. My hands are responding more slowly — but they are responding. I do not have words for what this means.",
-    attribution: "Sunita V., 31, Delhi — Vitiligo, Face and Hands, 14 months of treatment",
+      "Six years of watching the white patches spread across my face and hands. Every morning checking the mirror for new spots. Three dermatologists. Two other homeopaths. PUVA therapy twice a week for 8 months. Nothing stopped it. I came to Yadav Homeo Clinic with almost no hope left — just wanting to try one more thing. The consultation was unlike any other — an hour of questions that went far beyond my skin. Within 3 months the spreading stopped. By the 7th month I saw the first pigment dots returning to my cheek patch. I photographed every change. It has been 14 months now. My face has shown substantial repigmentation. My hands are responding more slowly — but they are responding. I do not have words for what this means.",
+    attribution: "Patient, Delhi — Vitiligo, Face and Hands, 14 months of treatment",
     note: "Individual results vary. This patient's outcome may not be typical.",
   },
   faqs: [

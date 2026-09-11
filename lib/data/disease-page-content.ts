@@ -185,8 +185,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     ],
     patientStory: {
       quote:
-        "I had vitiligo spreading on my face and both hands for nearly 9 years. I had visited three dermatologists and two other homeopaths before coming to Dr Yadav. Nothing had stopped the spread. Within 4 months of starting treatment at Yadav Homeo Clinic, I noticed that no new patches were forming — for the first time in years. By the 8th month I could see small brown dots forming inside the patches on my cheek. By 14 months the facial patches are approximately 65 percent repigmented. My hands are showing slower progress but are improving. I wish I had come here first.",
-      attribution: "Sunita Verma, 34, Delhi — Vitiligo patient, 14 months treatment",
+        "I had vitiligo spreading on my face and both hands for nearly 9 years. I had visited three dermatologists and two other homeopaths before coming to Dr Yadav. Nothing had stopped the spread. Within 4 months of starting treatment at Yadav Homeo Clinic, I noticed that no new patches were forming — for the first time in years. By the 8th month I could see small brown dots forming inside the patches on my cheek. By 14 months the facial patches have shown substantial repigmentation. My hands are showing slower progress but are improving. I wish I had come here first. Individual results vary.",
+      attribution: "Patient, Delhi — Vitiligo, 14 months of treatment",
     },
     faqs: [
       {
@@ -359,7 +359,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     patientStory: {
       quote:
         "I had Rheumatoid Arthritis for 6 years and was on methotrexate and steroids. My ESR was consistently above 90 and I had morning stiffness for 2 to 3 hours every day. After 10 months of constitutional treatment with Dr Yadav alongside my rheumatologist's care, my ESR came down to 34 and morning stiffness is now 20 to 30 minutes. My rheumatologist has reduced my methotrexate dose. I have more energy than I have had in years.",
-      attribution: "Meena Agarwal, 48, Jaipur — RA patient, 10 months treatment",
+      attribution: "Patient, Jaipur — Rheumatoid Arthritis, 10 months of treatment",
     },
     faqs: [
       {
@@ -717,8 +717,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     ],
     patientStory: {
       quote:
-        "My father's creatinine was 6.8 in January 2023. Our nephrologist said dialysis was the next step and we should prepare for it. My aunt suggested Dr Yadav. We were not hopeful but we had nothing to lose. We started treatment in February. I shared reports every 6 weeks as instructed. By August — just 6 months later — creatinine had come down to 3.2. He has not started dialysis. He is eating, he is active. His nephrologist is surprised and monitoring him closely. We thank God every day.",
-      attribution: "Ajay Sharma, 44, Jaipur — Son of CKD patient, Creatinine 6.8 → 3.2 in 6 months",
+        "My father's kidney health had declined significantly and our nephrologist raised serious concerns about the road ahead. My aunt suggested Dr Yadav. We were not hopeful but we had nothing to lose. We started treatment soon after, alongside his nephrologist's ongoing care. I shared reports every 6 weeks as instructed. Over the following 6 months, his kidney function showed meaningful, sustained improvement. He is eating, he is active. His nephrologist continues to monitor him closely. We thank God every day. Individual results vary.",
+      attribution: "Family member, Jaipur — CKD patient, meaningful improvement in kidney function over 6 months",
       note: "This patient's outcome may not be typical. Results vary based on kidney function at treatment start, underlying cause, and compliance with nephrologist's care.",
     },
     faqs: [
@@ -1268,7 +1268,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     patientStory: {
       quote:
         "I had been having migraines since I was 19. By the time I came to Dr Yadav at age 31, I was getting 2 to 3 attacks per week. I had tried propranolol, topiramate, and amitriptyline — each worked for a few months and then stopped. After 5 months of constitutional treatment at Yadav Homeo Clinic, my attacks came down to 2 to 3 per month. By 9 months I was having maybe one attack per month and much milder. I have been completely migraine-free for 4 months now. Nothing in 12 years had achieved this.",
-      attribution: "Rohit Mehta, 33, Jaipur — Chronic migraine patient, 9 months constitutional treatment",
+      attribution: "Patient, Jaipur — Chronic migraine, 9 months of constitutional treatment",
     },
     faqs: [
       {
@@ -1657,7 +1657,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     patientStory: {
       quote:
         "I had PCOD for 8 years. My periods came every 3 to 5 months. I had been on hormonal pills since age 22 and was told IVF would be needed to conceive. I started constitutional treatment with Dr Yadav at 29. Within 6 months my cycle had regulated to every 35 to 40 days. By 10 months, my ultrasound showed significant reduction in cyst number. At 14 months of treatment, I conceived naturally — something I had been told was extremely unlikely. My daughter is now 2 years old.",
-      attribution: "Patient, 32, Jaipur — PCOD, natural conception after 14 months of constitutional treatment",
+      attribution: "Patient, Jaipur — PCOD, natural conception after 14 months of constitutional treatment",
     },
     faqs: [
       {
@@ -1829,8 +1829,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     commonSymptoms: ["Low Sperm Count", "Erectile Dysfunction", "Urinary Difficulty", "Low Energy"],
     patientStory: {
       quote:
-        "My semen analysis showed a total sperm count of 3 million per ml and motility of 18 percent. My wife and I had been trying to conceive for 3 years. IVF with ICSI was recommended. I started constitutional treatment with Dr Yadav. After 6 months, my count was 22 million per ml and motility had risen to 41 percent. We conceived naturally in the 8th month of treatment. We have a son now. I still find it difficult to believe.",
-      attribution: "Patient, 34, Rajasthan — Severe oligospermia, natural conception in month 8 of treatment",
+        "My semen analysis had shown a very low sperm count and low motility. My wife and I had been trying to conceive for 3 years. IVF with ICSI was recommended. I started constitutional treatment with Dr Yadav. Over the following months, my sperm count and motility both showed substantial improvement on repeat testing. We conceived naturally in the 8th month of treatment. We have a son now. I still find it difficult to believe. Individual results vary.",
+      attribution: "Patient, Rajasthan — Severe oligospermia, natural conception in month 8 of treatment",
     },
     faqs: [
       {
@@ -1983,7 +1983,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     patientStory: {
       quote:
         "I had asthma since age 7 and was using a salbutamol inhaler daily and a steroid preventer twice daily by age 25. I started constitutional treatment with Dr Yadav. By month 6, my reliever inhaler use had reduced from daily to once or twice a week. By month 10, I had stopped the steroid preventer entirely under my chest physician's guidance. I still carry my reliever inhaler but I have not used it in 4 months. This is the first time in 18 years I have been genuinely free.",
-      attribution: "Rahul Sharma, 28, Jaipur — Chronic asthma since childhood, off daily inhalers at 10 months",
+      attribution: "Patient, Jaipur — Chronic asthma since childhood, reduced inhaler dependence by month 10",
     },
     faqs: [
       {
@@ -2145,8 +2145,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     commonSymptoms: ["Bloating & Cramping", "Acidity & Heartburn", "Rectal Bleeding", "Constipation"],
     patientStory: {
       quote:
-        "I had IBS for 11 years. Alternating constipation and diarrhoea, severe bloating after every meal, and cramping that affected my work and social life. I had tried every gastroenterologist's recommendation — fibre, probiotics, antispasmodics. Nothing lasted. After 4 months of constitutional treatment with Dr Yadav, my stools normalised for the first time in over a decade. The bloating is 80 percent better. I still have occasional off days but they are nothing like before. My life has genuinely changed.",
-      attribution: "Neha Gupta, 37, Jaipur — IBS for 11 years, significant resolution at 4 months",
+        "I had IBS for 11 years. Alternating constipation and diarrhoea, severe bloating after every meal, and cramping that affected my work and social life. I had tried every gastroenterologist's recommendation — fibre, probiotics, antispasmodics. Nothing lasted. After 4 months of constitutional treatment with Dr Yadav, my stools normalised for the first time in over a decade. The bloating is far better than before. I still have occasional off days but they are nothing like before. My life has genuinely changed. Individual results vary.",
+      attribution: "Patient, Jaipur — IBS for 11 years, significant improvement at 4 months",
     },
     faqs: [
       {
@@ -2276,8 +2276,8 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     commonSymptoms: ["Fatigue", "Weight Gain", "Hair Loss", "High Blood Sugar"],
     patientStory: {
       quote:
-        "I was diagnosed with Hashimoto's thyroiditis 5 years ago and put on 75mcg of levothyroxine. My TSH was 12.8 and my anti-TPO antibodies were over 600. I started constitutional homeopathic treatment with Dr Yadav alongside my thyroxine. After 8 months, my anti-TPO antibodies had fallen from 600+ to 180. My TSH was 1.8. My endocrinologist reduced my dose to 50mcg. I feel better than I have in years — the fatigue and hair loss that persisted even on thyroxine have significantly improved. We are continuing treatment.",
-      attribution: "Patient, 38, Jaipur — Hashimoto's thyroiditis, anti-TPO antibodies 600+ to 180 in 8 months",
+        "I was diagnosed with Hashimoto's thyroiditis 5 years ago and put on levothyroxine. My thyroid antibody levels and TSH were both significantly elevated. I started constitutional homeopathic treatment with Dr Yadav alongside my thyroxine. After 8 months, my antibody levels and TSH had both improved substantially on repeat testing. My endocrinologist reduced my thyroxine dose. I feel better than I have in years — the fatigue and hair loss that persisted even on thyroxine have significantly improved. We are continuing treatment. Individual results vary.",
+      attribution: "Patient, Jaipur — Hashimoto's thyroiditis, significant reduction in antibody levels over 8 months",
     },
     faqs: [
       {
@@ -2450,7 +2450,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     patientStory: {
       quote:
         "I had generalised anxiety for 14 years. I was on escitalopram for 6 years — it helped somewhat but I gained weight, had no motivation, and felt emotionally blunted. I wanted to come off it but every time I tried, the anxiety returned worse. I started constitutional treatment with Dr Yadav. After 3 months, my sleep was significantly better and the background anxiety had noticeably reduced. After 6 months, under my psychiatrist's supervision, I began slowly reducing the escitalopram. I am now at half the dose with better anxiety control than I had on the full dose. For the first time in years I feel like myself.",
-      attribution: "Patient, 41, Jaipur — Generalised Anxiety Disorder, 6 months treatment",
+      attribution: "Patient, Jaipur — Generalised Anxiety Disorder, 6 months of treatment",
     },
     faqs: [
       {
