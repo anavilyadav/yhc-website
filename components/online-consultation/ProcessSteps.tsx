@@ -1,6 +1,6 @@
 export function ProcessSteps({ steps }: { steps: { title: string; body: string }[] }) {
   return (
-    <section className="bg-cream-bg px-5 py-14">
+    <section id="process" className="scroll-mt-32 bg-cream-bg px-5 py-14">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-center font-serif text-xl text-navy md:text-2xl">
           How Online Consultation Works — 6 Simple Steps
@@ -8,7 +8,7 @@ export function ProcessSteps({ steps }: { steps: { title: string; body: string }
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, i) => (
-            <div key={step.title} className="rounded-sm border border-navy/10 bg-white p-5">
+            <div key={step.title} className="rounded-lg border border-navy/10 bg-white p-5 shadow-sm transition-shadow duration-200 hover:shadow-lg">
               <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-green font-serif text-sm font-bold text-white">
                 {i + 1}
               </div>

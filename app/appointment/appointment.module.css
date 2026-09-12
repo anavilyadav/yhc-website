@@ -54,6 +54,7 @@
 .section {
   padding: 56px 0;
   border-bottom: 1px solid var(--border);
+  scroll-margin-top: 8rem;
 }
 
 .sectionHeading {
@@ -85,6 +86,12 @@
   border-top: 3px solid var(--amber);
   border-radius: var(--radius-md);
   padding: 28px;
+  box-shadow: 0 1px 3px rgba(26, 42, 65, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(26, 42, 65, 0.12);
 }
 
 .card h3 {
@@ -182,6 +189,12 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 24px 20px;
+  box-shadow: 0 1px 3px rgba(26, 42, 65, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.step:hover {
+  box-shadow: 0 8px 24px rgba(26, 42, 65, 0.12);
 }
 
 .stepNum {
@@ -236,6 +249,12 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 22px;
+  box-shadow: 0 1px 3px rgba(26, 42, 65, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.priceCard:hover {
+  box-shadow: 0 8px 24px rgba(26, 42, 65, 0.12);
 }
 
 .priceBadge {
@@ -331,6 +350,19 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+}
+
+.checklistGroup {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  box-shadow: 0 1px 3px rgba(26, 42, 65, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.checklistGroup:hover {
+  box-shadow: 0 8px 24px rgba(26, 42, 65, 0.12);
 }
 
 .checklistGroup h3 {

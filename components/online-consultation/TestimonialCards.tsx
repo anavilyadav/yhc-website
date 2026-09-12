@@ -4,7 +4,7 @@ export function TestimonialCards({
   testimonials: { quote: string; attribution: string }[];
 }) {
   return (
-    <section className="bg-white px-5 py-14">
+    <section id="patient-experiences" className="scroll-mt-32 bg-white px-5 py-14">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center font-serif text-xl text-navy md:text-2xl">
           What Our Online Patients Say
@@ -14,7 +14,7 @@ export function TestimonialCards({
           {testimonials.map((t) => (
             <blockquote
               key={t.attribution}
-              className="rounded-sm border border-border-amber border-l-4 border-l-amber bg-cream-bg p-6"
+              className="rounded-lg border border-border-amber border-l-4 border-l-amber bg-cream-bg p-6 shadow-sm transition-shadow duration-200 hover:shadow-lg"
             >
               <p className="font-serif text-[15px] italic leading-relaxed text-text-mid">
                 &ldquo;{t.quote}&rdquo;

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { PageVideo as PageVideoType } from "@/lib/types";
+import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlaceholder";
 
 function thumbnailUrl(youtubeId: string): string {
   return `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
@@ -9,11 +10,21 @@ function thumbnailUrl(youtubeId: string): string {
  * Patient-story videos as a browsable thumbnail grid, each linking directly
  * to the video on YouTube — not embedded — so every watch counts as a real
  * visit to the clinic's own channel (Dr Anavil's explicit preference: real
- * YouTube links only, so his subscriber/view counts benefit too). Renders
- * nothing when there are no videos yet, same fallback pattern as PageVideo.
+ * YouTube links only, so his subscriber/view counts benefit too). Shows a
+ * visible "Video Needed" card when empty (per his 2026-09-12 instruction),
+ * not nothing — this slot was missed in the earlier site-wide pass.
  */
 export function VideoGallery({ videos }: { videos: PageVideoType[] }) {
-  if (videos.length === 0) return null;
+  if (videos.length === 0) {
+    return (
+      <div className="bg-white px-5 py-8">
+        <ContentNeededPlaceholder
+          kind="video"
+          description="Add 3-4 patient-story videos — real patients talking about their treatment journey, uploaded to your YouTube channel — via /admin/videos with page 'patient-stories'."
+        />
+      </div>
+    );
+  }
 
   return (
     <section className="bg-white px-5 py-14">
@@ -32,7 +43,7 @@ export function VideoGallery({ videos }: { videos: PageVideoType[] }) {
               href={`https://www.youtube.com/watch?v=${video.youtubeId}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group overflow-hidden rounded-sm border border-border-amber bg-cream-bg transition-colors hover:border-amber"
+              className="group overflow-hidden rounded-lg border border-border-amber bg-cream-bg shadow-sm transition-[box-shadow,border-color,transform] duration-200 hover:-translate-y-1 hover:border-amber hover:shadow-lg"
             >
               <div className="relative aspect-video w-full overflow-hidden bg-navy">
                 <Image

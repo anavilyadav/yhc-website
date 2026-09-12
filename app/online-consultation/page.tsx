@@ -13,6 +13,8 @@ import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { CheckIcon, WhatsAppIcon } from "@/components/shared/icons";
+import SectionJumpNav from "@/components/disease-page/SectionJumpNav";
+import { slugify } from "@/lib/utils";
 import {
   onlineConsultationSeo,
   onlineConsultationHero,
@@ -50,6 +52,13 @@ export default async function OnlineConsultationPage() {
     getGalleryPhotos("online-consultation"),
   ]);
   const faqPageSchema = buildFAQPageSchema(onlineConsultationFaqs);
+  const jumpNavItems = [
+    { id: slugify(honestAnswerSection.heading), label: "Does It Work?" },
+    { id: "process", label: "The Process" },
+    { id: slugify(suitabilitySection.heading), label: "Is It For You?" },
+    { id: "patient-experiences", label: "Patient Experiences" },
+    { id: "faq", label: "FAQ" },
+  ];
 
   return (
     <>
@@ -91,6 +100,8 @@ export default async function OnlineConsultationPage() {
         </div>
       </div>
 
+      <SectionJumpNav items={jumpNavItems} />
+
       <PageVideo videos={videos} />
       <PhotoGallery photos={photos} />
 
@@ -105,7 +116,7 @@ export default async function OnlineConsultationPage() {
       </div>
 
       <section className="bg-amber-tint px-5 py-8">
-        <div className="mx-auto max-w-3xl rounded-sm border border-border-amber bg-white p-5">
+        <div className="mx-auto max-w-3xl rounded-lg border border-border-amber bg-white p-5 shadow-sm">
           <h2 className="text-sm font-bold uppercase tracking-wide text-navy">
             Telemedicine Compliance
           </h2>

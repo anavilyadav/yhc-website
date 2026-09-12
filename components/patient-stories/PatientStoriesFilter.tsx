@@ -41,7 +41,7 @@ export function PatientStoriesFilter({
             key={story.id}
             // A lone leftover card in a 2-column grid (odd count) reads as
             // a mistake rather than a deliberate layout — widen it instead.
-            className={`rounded-sm border border-border-amber border-l-4 border-l-amber bg-cream-bg p-6 ${
+            className={`rounded-lg border border-border-amber border-l-4 border-l-amber bg-cream-bg p-6 shadow-sm transition-shadow duration-200 hover:shadow-lg ${
               visible.length % 2 === 1 && index === visible.length - 1 ? "md:col-span-2" : ""
             }`}
           >

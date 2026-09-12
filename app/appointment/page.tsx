@@ -15,7 +15,16 @@ import { PreparationChecklist } from "@/components/appointment/PreparationCheckl
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { MapPinIcon, GlobeIcon } from "@/components/shared/icons";
+import SectionJumpNav from "@/components/disease-page/SectionJumpNav";
 import styles from "./appointment.module.css";
+
+const jumpNavItems = [
+  { id: "choose-consultation", label: "Choose Type" },
+  { id: "online-process", label: "Online Process" },
+  { id: "fees", label: "Fees" },
+  { id: "preparation", label: "Preparation" },
+  { id: "faq", label: "FAQ" },
+];
 
 // Content is Supabase-backed (pricing, FAQs) — ISR keeps the page static-fast
 // while picking up edits the doctor makes in Supabase within 60 seconds.
@@ -84,6 +93,8 @@ export default async function AppointmentPage() {
           </div>
         </div>
       </section>
+
+      <SectionJumpNav items={jumpNavItems} />
 
       <PageVideo videos={videos} />
       <PhotoGallery photos={photos} />
