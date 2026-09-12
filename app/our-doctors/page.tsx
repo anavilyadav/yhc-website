@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { getDoctors } from "@/lib/supabase/queries/doctors";
 import { DoctorCard } from "@/components/our-doctors/DoctorCard";
+import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
+import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { siteConfig } from "@/lib/site-config";
 
 export const revalidate = 3600;
@@ -23,7 +27,11 @@ export const metadata: Metadata = {
 };
 
 export default async function OurDoctorsPage() {
-  const doctors = await getDoctors();
+  const [doctors, videos, photos] = await Promise.all([
+    getDoctors(),
+    getPageVideos("our-doctors"),
+    getGalleryPhotos("our-doctors"),
+  ]);
 
   return (
     <>
@@ -41,6 +49,9 @@ export default async function OurDoctorsPage() {
           </p>
         </div>
       </section>
+
+      <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
 
       <section className="bg-cream-bg px-5 py-14 md:py-16">
         {doctors.length > 0 ? (

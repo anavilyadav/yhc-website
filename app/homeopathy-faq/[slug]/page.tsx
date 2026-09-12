@@ -3,9 +3,16 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import DisclaimerBanner from "@/components/disease-page/DisclaimerBanner";
 import FAQAccordion from "@/components/disease-page/FAQAccordion";
+import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
+import RelatedVideosGallery from "@/components/shared/RelatedVideosGallery";
 import { buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 import { getDiseasePage } from "@/lib/data/disease-pages";
+import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
+import { getRelatedVideos } from "@/lib/data/related-videos";
+import { CATEGORY_VIDEO_TAG_CLUSTERS } from "@/lib/data/condition-video-tags";
 import {
   getConditionFaqs,
   getConditionFaqSlugs,
@@ -57,6 +64,13 @@ export default async function ConditionFaqPage({ params }: { params: Promise<{ s
   const faqs = getConditionFaqs(slug);
   if (!page || faqs.length === 0) notFound();
 
+  const pageMediaSlug = `homeopathy-faq-${slug}`;
+  const [videos, photos, relatedVideos] = await Promise.all([
+    getPageVideos(pageMediaSlug),
+    getGalleryPhotos(pageMediaSlug),
+    getRelatedVideos(CATEGORY_VIDEO_TAG_CLUSTERS[slug] ?? []),
+  ]);
+
   const faqPageSchema = buildFAQPageSchema(faqs);
 
   return (
@@ -79,6 +93,10 @@ export default async function ConditionFaqPage({ params }: { params: Promise<{ s
       </section>
 
       <FAQAccordion faqs={faqs} heading={`${page.aboutCondition.name} — Frequently Asked Questions`} />
+
+      <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
+      <RelatedVideosGallery videos={relatedVideos} />
 
       <div className="bg-cream-bg">
         <DisclaimerBanner text={homeopathyFaqDisclaimer} />

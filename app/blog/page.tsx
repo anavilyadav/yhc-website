@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { getBlogPosts } from "@/lib/data/blog";
 import { BlogFilter } from "@/components/blog/BlogFilter";
+import { PageVideo } from "@/components/shared/PageVideo";
+import { PhotoGallery } from "@/components/shared/PhotoGallery";
+import { getPageVideos } from "@/lib/data/videos";
+import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { siteConfig } from "@/lib/site-config";
 
 export const revalidate = 3600;
@@ -20,7 +24,11 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogIndexPage() {
-  const posts = await getBlogPosts();
+  const [posts, videos, photos] = await Promise.all([
+    getBlogPosts(),
+    getPageVideos("blog"),
+    getGalleryPhotos("blog"),
+  ]);
 
   return (
     <>
@@ -39,6 +47,9 @@ export default async function BlogIndexPage() {
           </p>
         </div>
       </section>
+
+      <PageVideo videos={videos} />
+      <PhotoGallery photos={photos} />
 
       <section className="bg-cream-bg px-5 py-14 md:py-16">
         <BlogFilter posts={posts} />
