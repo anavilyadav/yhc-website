@@ -1,3 +1,5 @@
+import { WarningIcon } from "@/components/shared/icons";
+
 export default function DisclaimerBanner({
   text,
   prominent = false,
@@ -9,9 +11,7 @@ export default function DisclaimerBanner({
     return (
       <div className="border-y border-border-amber bg-amber-tint px-5 py-5">
         <div className="mx-auto flex max-w-4xl items-start gap-3">
-          <span aria-hidden className="mt-0.5 text-lg">
-            ⚠️
-          </span>
+          <WarningIcon className="mt-0.5 h-5 w-5 shrink-0 text-amber-dark" />
           <p className="text-sm font-medium leading-relaxed text-navy">{text}</p>
         </div>
       </div>

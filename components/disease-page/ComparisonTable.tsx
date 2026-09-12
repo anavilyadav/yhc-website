@@ -19,7 +19,7 @@ export default function ComparisonTable({
         <h2 className="font-serif text-xl text-navy md:text-2xl">
           Conventional Medicine vs Classical Homeopathy for {conditionName}
         </h2>
-        <div className="mt-6 overflow-x-auto rounded-sm border border-border-amber">
+        <div className="mt-6 overflow-x-auto rounded-lg border border-border-amber shadow-sm">
           <table className="w-full min-w-[560px] border-collapse text-left text-sm">
             <thead>
               <tr className="bg-navy text-cream">

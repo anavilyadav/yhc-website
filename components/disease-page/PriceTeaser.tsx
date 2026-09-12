@@ -20,7 +20,7 @@ export default function PriceTeaser({ plans }: { plans: PricingPlan[] }) {
 
   return (
     <section className="bg-white px-5 py-6">
-      <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 rounded-sm border border-border-amber bg-cream-bg px-6 py-5 sm:flex-row">
+      <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 rounded-lg border border-border-amber bg-cream-bg px-6 py-5 shadow-sm sm:flex-row">
         <p className="text-center text-sm text-navy sm:text-left">
           <span className="font-bold">Consultations start at {formatPrice(cheapest.priceInr)}</span>{" "}
           — same price online or in-clinic. No hidden costs.

@@ -1,5 +1,7 @@
 "use client";
 
+import { DocumentIcon } from "@/components/shared/icons";
+
 /**
  * "Download PDF Summary" — UW report ch.5, a low-effort lead magnet built
  * from content already on the page rather than a separate document to
@@ -16,9 +18,9 @@ export function PdfSummaryButton({ conditionName }: { conditionName: string }) {
       <button
         type="button"
         onClick={() => window.print()}
-        className="rounded-sm border-2 border-navy px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-navy hover:text-cream"
+        className="flex items-center gap-2 rounded-sm border-2 border-navy px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-navy hover:text-cream"
       >
-        📄 Download {conditionName} Summary (PDF)
+        <DocumentIcon className="h-4 w-4" /> Download {conditionName} Summary (PDF)
       </button>
     </div>
   );

@@ -5,7 +5,7 @@ import { PhotoGallery } from "@/components/shared/PhotoGallery";
 import { getPageVideos } from "@/lib/data/videos";
 import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
-import { WhatsAppIcon } from "@/components/shared/icons";
+import { WhatsAppIcon, CheckIcon } from "@/components/shared/icons";
 
 // Deliberately not linked from any nav, footer, or sitemap — reachable
 // only via a successful Razorpay redirect. noindex since it's not a
@@ -31,8 +31,8 @@ export default async function BookingConfirmedPage({
     <>
     <section className="bg-cream px-5 py-16 text-center md:py-24">
       <div className="mx-auto max-w-xl">
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-green text-3xl text-white">
-          ✓
+        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-green text-white">
+          <CheckIcon className="h-8 w-8" />
         </div>
         <h1 className="font-serif text-2xl text-navy md:text-3xl">Payment Received — Thank You</h1>
         {plan && (
@@ -41,7 +41,7 @@ export default async function BookingConfirmedPage({
           </p>
         )}
 
-        <div className="mt-8 rounded-xl border border-border-amber bg-white p-6 text-left">
+        <div className="mt-8 rounded-xl border border-border-amber bg-white p-6 text-left shadow-sm">
           <h2 className="font-serif text-lg text-navy">What Happens Next</h2>
           <ol className="mt-4 space-y-3 text-[15px] leading-relaxed text-text-mid">
             <li>

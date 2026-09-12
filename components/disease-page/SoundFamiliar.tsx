@@ -10,7 +10,7 @@ export default function SoundFamiliar({ items }: { items: string[] }) {
 
   return (
     <section className="bg-white px-5 py-10">
-      <div className="mx-auto max-w-3xl rounded-sm border border-border-amber bg-cream-bg p-6 sm:p-8">
+      <div className="mx-auto max-w-3xl rounded-lg border border-border-amber bg-cream-bg p-6 shadow-sm sm:p-8">
         <h2 className="font-serif text-xl text-navy sm:text-2xl">Does This Sound Familiar?</h2>
         <ul className="mt-5 space-y-3">
           {items.map((item) => (

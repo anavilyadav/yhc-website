@@ -2,6 +2,7 @@ import type { DiseasePageSection } from "@/lib/types";
 import { slugify } from "@/lib/utils";
 import VideoEmbed from "@/components/shared/VideoEmbed";
 import PhotoEmbed from "@/components/shared/PhotoEmbed";
+import { InfoIcon } from "@/components/shared/icons";
 
 /** Splits a "Label — description" list item into its two halves for stat/card rendering. */
 function splitLabelItem(item: string): { label: string; body: string } | null {
@@ -196,7 +197,9 @@ export default function ContentSections({ sections }: { sections: DiseasePageSec
             {section.subsections && <Timeline subsections={section.subsections} />}
 
             {section.note && (
-              <p className="mt-4 text-[13px] italic leading-relaxed text-text-light">📌 {section.note}</p>
+              <p className="mt-4 flex items-start gap-1.5 text-[13px] italic leading-relaxed text-text-light">
+                <InfoIcon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-dark" /> {section.note}
+              </p>
             )}
           </div>
         </details>

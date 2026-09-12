@@ -74,14 +74,14 @@ export default function WorriesTable() {
         */}
         <div className="mt-6 space-y-3 md:hidden">
           {WORRIES.map((row) => (
-            <div key={row.worry} className="rounded-sm border border-border-amber bg-cream-bg p-4">
+            <div key={row.worry} className="rounded-lg border border-border-amber bg-cream-bg p-4 shadow-sm">
               <p className="font-bold text-navy">{row.worry}</p>
               <p className="mt-1.5 text-sm text-text-mid">{row.answer}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-6 hidden overflow-x-auto rounded-sm border border-border-amber md:block">
+        <div className="mt-6 hidden overflow-x-auto rounded-lg border border-border-amber shadow-sm md:block">
           <table className="w-full min-w-[480px] border-collapse text-left text-sm">
             <thead>
               <tr className="bg-navy text-cream">
