@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { siteConfig, telLink } from "@/lib/site-config";
 import { trackEvent } from "@/lib/analytics";
 import SocialLinks from "@/components/shared/SocialLinks";
+import { PhoneIcon } from "@/components/shared/icons";
 import type { SiteSettings } from "@/lib/types";
 
 const primaryLinks = [
@@ -128,9 +129,9 @@ export default function Header({ settings }: { settings: SiteSettings }) {
           <a
             href={telLink()}
             onClick={() => trackEvent("phone_click", { click_source: "header" })}
-            className="font-semibold text-amber-light hover:text-amber"
+            className="flex items-center gap-1.5 font-semibold text-amber-light hover:text-amber"
           >
-            📞 {siteConfig.phone.display}
+            <PhoneIcon className="h-3.5 w-3.5" /> {siteConfig.phone.display}
           </a>
           <SocialLinks settings={settings} iconClassName="h-4 w-4" />
         </div>
@@ -250,9 +251,9 @@ export default function Header({ settings }: { settings: SiteSettings }) {
               <a
                 href={telLink()}
                 onClick={() => trackEvent("phone_click", { click_source: "mobile_menu" })}
-                className="font-semibold text-amber-light"
+                className="flex items-center gap-1.5 font-semibold text-amber-light"
               >
-                📞 {siteConfig.phone.display}
+                <PhoneIcon className="h-4 w-4" /> {siteConfig.phone.display}
               </a>
               <Link
                 href="/appointment"

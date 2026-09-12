@@ -1,24 +1,26 @@
+import { ClipboardIcon, CompassIcon, PillIcon, RefreshIcon } from "@/components/shared/icons";
+
 const steps = [
   {
-    icon: "📋",
+    icon: ClipboardIcon,
     title: "Case-Taking",
     duration: "45–60 minutes",
     body: "A full history — your symptoms, sleep, emotions, food, family history. Not a 5-minute prescription.",
   },
   {
-    icon: "🧭",
+    icon: CompassIcon,
     title: "Constitutional Analysis",
     duration: "Before your remedy is chosen",
     body: "We study the whole person behind the disease — what makes your case uniquely yours.",
   },
   {
-    icon: "💊",
+    icon: PillIcon,
     title: "Remedy Selection",
     duration: "One medicine, precisely matched",
     body: "The single most appropriate remedy for you — no combinations, no shortcuts, no guesswork.",
   },
   {
-    icon: "🔄",
+    icon: RefreshIcon,
     title: "Follow-Up & Monitoring",
     duration: "Every 4–6 weeks",
     body: "We track your response with reports and symptoms, adjusting the remedy as you progress.",
@@ -54,8 +56,8 @@ export function ConsultationDiagram() {
 
           {steps.map((step, i) => (
             <div key={step.title} className="relative flex flex-1 flex-col items-center text-center">
-              <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-2 border-amber bg-cream-bg text-2xl">
-                {step.icon}
+              <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-2 border-amber bg-cream-bg text-amber-dark">
+                <step.icon className="h-7 w-7" />
               </div>
               <p className="mt-4 text-[11px] font-bold uppercase tracking-wide text-amber-dark">
                 Step {i + 1}

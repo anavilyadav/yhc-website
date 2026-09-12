@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { whatsappLink } from "@/lib/site-config";
 import { trackEvent } from "@/lib/analytics";
+import { WhatsAppIcon } from "@/components/shared/icons";
 
 const SESSION_KEY = "yhc_exit_intent_shown";
 
@@ -59,9 +60,9 @@ export default function ExitIntentPopup() {
             trackEvent("exit_intent_converted");
             setVisible(false);
           }}
-          className="mt-5 block rounded-sm bg-amber px-6 py-3 text-center text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90"
+          className="mt-5 flex items-center justify-center gap-2 rounded-sm bg-amber px-6 py-3 text-center text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90"
         >
-          💬 Ask Us on WhatsApp
+          <WhatsAppIcon className="h-4 w-4" /> Ask Us on WhatsApp
         </a>
       </div>
     </div>
