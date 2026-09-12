@@ -40,21 +40,24 @@ export default function DiseaseHero({
         {/*
           Doctor thumbnail above the fold — GIOS_P5 Zone 1 spec ("small
           circular photo of Dr. Anavil with name and qualification").
-          Renders a plain neutral fill (never a stock photo, never initials
-          text) until a real photo exists in Supabase, per the 2026-09-11
-          build spec's content-degradation rule. The "Read Reviews on
-          Google" link goes to the real, verifiable GBP profile rather
-          than a fabricated star rating — there is no live-embedded review
-          count on this site yet (that needs an Elfsight-style widget
-          connected to the GBP account, not done), so a real number should
-          never be invented here.
+          Shows a visible camera icon (never a stock photo, never initials
+          text) until a real photo exists in Supabase — per Dr Anavil's
+          instruction (2026-09-12), empty media slots must be visibly
+          marked, not hidden. The "Read Reviews on Google" link goes to
+          the real, verifiable GBP profile rather than a fabricated star
+          rating — there is no live-embedded review count on this site yet
+          (that needs an Elfsight-style widget connected to the GBP
+          account, not done), so a real number should never be invented
+          here.
         */}
         <div className="mb-5 flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-3">
           <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full bg-navy/10">
             {doctorPhoto ? (
               <Image src={doctorPhoto} alt={doctorName} fill sizes="44px" className="object-cover" />
             ) : (
-              <div className="h-full w-full bg-gradient-to-br from-navy/10 to-amber/10" />
+              <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy/10 to-amber/10" title="Photo needed">
+                <span className="text-base" aria-hidden>📷</span>
+              </div>
             )}
           </div>
           <p className="text-sm font-semibold text-navy">
@@ -79,7 +82,10 @@ export default function DiseaseHero({
           {hero.headline}
         </h1>
 
-        <VideoEmbed youtubeId={hero.youtubeId} title={`${conditionName} — Yadav Homeo Clinic`} />
+        <VideoEmbed
+          youtubeId={hero.youtubeId}
+          title={`Hero intro video for ${conditionName} — a short (1-2 min) welcome from Dr Anavil introducing this page's topic, why patients come to Yadav Homeo Clinic for it, and what to expect.`}
+        />
 
         <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-text-mid md:text-base">
           {hero.subheadline}

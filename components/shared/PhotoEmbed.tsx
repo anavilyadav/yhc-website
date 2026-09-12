@@ -1,12 +1,19 @@
+import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlaceholder";
+
 /**
  * Photo-break slot — layout #8 ("Visual Proof Strip"), the photo
- * counterpart to VideoEmbed. Per the 2026-09-11 build spec's content-
- * degradation rule: renders nothing when no photoUrl exists yet — no
- * placeholder box, no "pending" label. The surrounding layout is written
- * to look complete without it.
+ * counterpart to VideoEmbed. Per Dr Anavil's instruction (2026-09-12):
+ * shows a visible "Photo Needed" placeholder naming what to shoot when no
+ * photoUrl exists yet, rather than rendering nothing.
  */
 export default function PhotoEmbed({ photoUrl, caption }: { photoUrl?: string; caption: string }) {
-  if (!photoUrl) return null;
+  if (!photoUrl) {
+    return (
+      <div className="mx-auto my-6 max-w-2xl">
+        <ContentNeededPlaceholder kind="photo" description={caption} />
+      </div>
+    );
+  }
 
   return (
     <div className="mx-auto my-6 max-w-2xl overflow-hidden rounded-lg border border-navy/10 shadow-md">

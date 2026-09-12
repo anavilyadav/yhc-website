@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { JsonLd } from "@/components/shared/JsonLd";
+import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlaceholder";
 import type { RelatedVideo } from "@/lib/types";
 
 function VideoCard({ video }: { video: RelatedVideo }) {
@@ -55,10 +56,10 @@ function VideoCard({ video }: { video: RelatedVideo }) {
 
 /**
  * Tag-scoped video gallery (2026-09-11 build spec, Section 4B) — distinct
- * from PageVideo (exact page_slug match). Renders nothing at all when the
- * caller's condition tag(s) matched zero active videos, per the spec's
- * content-degradation rule, so this is safe to drop into any disease page
- * template unconditionally.
+ * from PageVideo (exact page_slug match). Per Dr Anavil's instruction
+ * (2026-09-12): shows a visible "Video Needed" card prompting 3-4 tagged
+ * videos instead of nothing when zero active videos match, so this is
+ * safe to drop into any disease page template unconditionally either way.
  */
 export default function RelatedVideosGallery({
   videos,
@@ -67,7 +68,21 @@ export default function RelatedVideosGallery({
   videos: RelatedVideo[];
   heading?: string;
 }) {
-  if (videos.length === 0) return null;
+  if (videos.length === 0) {
+    return (
+      <section className="bg-cream-bg px-5 py-12 print:hidden">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="font-serif text-2xl text-navy md:text-3xl">{heading}</h2>
+          <div className="mt-6">
+            <ContentNeededPlaceholder
+              kind="video"
+              description="Add 3-4 videos tagged with this condition via /admin/videos — patients browsing this page should see a choice of videos, not just one."
+            />
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="bg-cream-bg px-5 py-12 print:hidden">

@@ -10,7 +10,10 @@ export default function Hero() {
           When Every Treatment Has Failed — Homeopathy Still Has an Answer.
         </h1>
 
-        <VideoEmbed youtubeId={siteConfig.videos.homepageIntro ?? undefined} title="Welcome to Yadav Homeo Clinic" />
+        <VideoEmbed
+          youtubeId={siteConfig.videos.homepageIntro ?? undefined}
+          title="Homepage welcome video — a short (1-2 min) intro from Dr Anavil or Dr T P Yadav: who the clinic is for, what makes classical homeopathy different, and an invitation to book a consultation."
+        />
 
         <p className="clinic-intro mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-mid md:mt-6 md:text-lg">
           Yadav Homeo Clinic has been Jaipur&apos;s most trusted name in classical homeopathy for

@@ -9,7 +9,9 @@ export function DoctorCard({ doctor }: { doctor: Doctor }) {
         {doctor.photo_url ? (
           <Image src={doctor.photo_url} alt={doctor.photo_alt ?? doctor.full_name} fill sizes="112px" className="object-cover" />
         ) : (
-          <div className="h-full w-full bg-gradient-to-br from-navy/10 to-amber/10" />
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy/10 to-amber/10" title="Photo needed">
+            <span className="text-2xl" aria-hidden>📷</span>
+          </div>
         )}
       </div>
 

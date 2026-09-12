@@ -53,7 +53,11 @@ export function DoctorProfileSection({
                 priority={doctor.display_order === 1}
               />
             ) : (
-              <div className="h-full w-full bg-gradient-to-br from-navy/10 to-amber/10" />
+              <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-navy/10 to-amber/10 px-4 text-center">
+                <span className="text-3xl" aria-hidden>📷</span>
+                <span className="text-[11px] font-bold uppercase tracking-wide text-amber-dark">Photo Needed</span>
+                <span className="text-xs text-navy/70">A real photo of {doctor.full_name}</span>
+              </div>
             )}
           </div>
 

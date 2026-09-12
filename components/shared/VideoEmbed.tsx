@@ -2,16 +2,17 @@
 
 import { useState } from "react";
 import { trackEvent } from "@/lib/analytics";
+import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlaceholder";
 
 /**
  * Video-hero slot — the #1 layout from the video-first redesign plan.
- * Per the 2026-09-11 build spec's content-degradation rule: renders
- * nothing at all when no youtubeId exists yet — no placeholder box, no
- * "pending" label, no gap. The surrounding layout is written to look
- * complete without it. The moment a real youtubeId is supplied (from
- * Supabase or a content file), this same slot becomes a real click-to-
- * load YouTube embed (thumbnail first, no iframe) so pages with a video
- * hero don't pay YouTube's script weight on every load.
+ * Per Dr Anavil's instruction (2026-09-12): shows a visible "Video Needed"
+ * placeholder naming exactly what to film when no youtubeId exists yet,
+ * rather than rendering nothing — so browsing the live site itself is the
+ * shooting list. The moment a real youtubeId is supplied (from Supabase
+ * or a content file), this same slot becomes a real click-to-load YouTube
+ * embed (thumbnail first, no iframe) so pages with a video hero don't pay
+ * YouTube's script weight on every load.
  */
 export default function VideoEmbed({
   youtubeId,
@@ -22,7 +23,13 @@ export default function VideoEmbed({
 }) {
   const [playing, setPlaying] = useState(false);
 
-  if (!youtubeId) return null;
+  if (!youtubeId) {
+    return (
+      <div className="mx-auto my-6 max-w-2xl">
+        <ContentNeededPlaceholder kind="video" description={title} />
+      </div>
+    );
+  }
 
   return (
     <div className="mx-auto my-6 max-w-2xl overflow-hidden rounded-lg border border-navy/10 bg-navy shadow-md">

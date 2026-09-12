@@ -1,18 +1,30 @@
 import type { PageVideo as PageVideoData } from "@/lib/types";
 import { JsonLd } from "@/components/shared/JsonLd";
+import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlaceholder";
 
 /**
  * Renders every video attached to a page (via the page_videos Supabase
- * table — see supabase/migrations/0005_page_videos.sql). Renders
- * nothing at all when a page has no video yet, so this is safe to drop
- * into any page template unconditionally.
+ * table — see supabase/migrations/0005_page_videos.sql). Per Dr Anavil's
+ * instruction (2026-09-12): shows a visible "Video Needed" card instead
+ * of nothing when a page has no video yet, prompting 3-4 videos to be
+ * added via /admin/videos, so this is safe to drop into any page
+ * template unconditionally either way.
  *
  * Uses the standard youtube.com embed domain (not youtube-nocookie.com)
  * on purpose — plays here count toward the real YouTube video's view
  * count, which is the whole point for a doctor building his own channel.
  */
 export function PageVideo({ videos }: { videos: PageVideoData[] }) {
-  if (videos.length === 0) return null;
+  if (videos.length === 0) {
+    return (
+      <div className="bg-cream-bg px-5 py-8 print:hidden">
+        <ContentNeededPlaceholder
+          kind="video"
+          description="Add 3-4 videos for this page — e.g. a doctor introduction, a condition explainer, a patient-experience walkthrough. Add via /admin/videos."
+        />
+      </div>
+    );
+  }
 
   return (
     <section className="bg-cream-bg px-5 py-12 print:hidden">
