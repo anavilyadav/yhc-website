@@ -6,6 +6,7 @@ import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
 import { getDiseasePage } from "@/lib/data/disease-pages";
 import { buildBlogPostingSchema } from "@/lib/schema";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
+import { WhatsAppIcon } from "@/components/shared/icons";
 import { BlogContent } from "@/components/blog/BlogContent";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { BlogEngagementTracker } from "@/components/blog/BlogEngagementTracker";
@@ -150,9 +151,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               href={whatsappLink(`Hello, I read your blog post "${post.title}" and would like to book a consultation.`)}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full rounded-sm bg-amber px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"
+              className="flex w-full items-center justify-center gap-2 rounded-sm bg-amber px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"
             >
-              💬 WhatsApp Us Now
+              <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us Now
             </a>
             <Link
               href="/appointment"

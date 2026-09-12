@@ -5,6 +5,7 @@ import { PhotoGallery } from "@/components/shared/PhotoGallery";
 import { getPageVideos } from "@/lib/data/videos";
 import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
+import { WhatsAppIcon } from "@/components/shared/icons";
 
 // Deliberately not linked from any nav, footer, or sitemap — reachable
 // only via a successful Razorpay redirect. noindex since it's not a
@@ -68,9 +69,9 @@ export default async function BookingConfirmedPage({
             href={whatsappLink("Hello, I just completed my payment and wanted to share my details.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full rounded-sm bg-amber px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"
+            className="flex w-full items-center justify-center gap-2 rounded-sm bg-amber px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"
           >
-            💬 WhatsApp Us Your Details
+            <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us Your Details
           </a>
           <Link
             href="/"

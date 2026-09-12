@@ -1,3 +1,5 @@
+import { CheckIcon } from "@/components/shared/icons";
+
 export default function ConditionsList({ intro, conditions }: { intro: string; conditions: string[] }) {
   return (
     <section className="bg-white px-5 py-14">
@@ -16,9 +18,7 @@ export default function ConditionsList({ intro, conditions }: { intro: string; c
                   isStrandedLast ? "sm:col-span-2" : ""
                 }`}
               >
-                <span aria-hidden className="mt-0.5 text-green">
-                  ✔
-                </span>
+                <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-green" />
                 <p className="text-[15px] leading-relaxed text-text-mid">
                   <span className="font-bold text-navy">{name}</span>
                   {detail ? ` — ${detail}` : ""}

@@ -12,6 +12,7 @@ import { getPageVideos } from "@/lib/data/videos";
 import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
+import { CheckIcon, WhatsAppIcon } from "@/components/shared/icons";
 import {
   onlineConsultationSeo,
   onlineConsultationHero,
@@ -66,11 +67,10 @@ export default async function OnlineConsultationPage() {
           <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-cream/80 md:text-base">
             {onlineConsultationHero.subheadline}
           </p>
-          <p className="mt-6 text-sm font-medium text-cream/70">
-            {onlineConsultationHero.trustLine.split("|").map((item, i, arr) => (
-              <span key={item}>
-                ✔ {item.trim()}
-                {i < arr.length - 1 && <>&nbsp;&nbsp;</>}
+          <p className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-sm font-medium text-cream/70">
+            {onlineConsultationHero.trustLine.split("|").map((item) => (
+              <span key={item} className="inline-flex items-center gap-1.5">
+                <CheckIcon className="h-3.5 w-3.5 shrink-0 text-amber-light" /> {item.trim()}
               </span>
             ))}
           </p>
@@ -131,9 +131,9 @@ export default async function OnlineConsultationPage() {
               href={whatsappCta}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-sm bg-amber px-8 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90"
+              className="flex items-center gap-2 rounded-sm bg-amber px-8 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90"
             >
-              💬 WhatsApp Us Now
+              <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us Now
             </a>
           </div>
         </div>

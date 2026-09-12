@@ -14,6 +14,7 @@ import { PricingSection } from "@/components/appointment/PricingSection";
 import { PreparationChecklist } from "@/components/appointment/PreparationChecklist";
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { JsonLd } from "@/components/shared/JsonLd";
+import { MapPinIcon, GlobeIcon } from "@/components/shared/icons";
 import styles from "./appointment.module.css";
 
 // Content is Supabase-backed (pricing, FAQs) — ISR keeps the page static-fast
@@ -72,13 +73,13 @@ export default async function AppointmentPage() {
           </p>
           <div className={styles.heroButtons}>
             <a href="#choose-consultation" className={`${styles.heroBtn} ${styles.heroBtnPrimary}`}>
-              📍 Book In-Clinic Appointment — Jaipur
+              <MapPinIcon className="h-4 w-4" /> Book In-Clinic Appointment — Jaipur
             </a>
             <a
               href={whatsappLinks.onlineConsultation}
               className={`${styles.heroBtn} ${styles.heroBtnSecondary}`}
             >
-              💻 Start Online Consultation — Pan India &amp; International
+              <GlobeIcon className="h-4 w-4" /> Start Online Consultation — Pan India &amp; International
             </a>
           </div>
         </div>

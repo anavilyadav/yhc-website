@@ -1,4 +1,5 @@
 import { whatsappLinks } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/shared/icons";
 
 /**
  * A zero-pressure first step for visitors who aren't ready to pay yet —
@@ -25,9 +26,9 @@ export function FreeHealthCheck() {
         href={whatsappLinks.freeHealthCheck}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 inline-block rounded-sm border-2 border-navy px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-navy hover:text-cream"
+        className="mt-4 inline-flex items-center gap-2 rounded-sm border-2 border-navy px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-navy hover:text-cream"
       >
-        💬 Ask Us Free on WhatsApp
+        <WhatsAppIcon className="h-4 w-4" /> Ask Us Free on WhatsApp
       </a>
     </div>
   );

@@ -7,6 +7,7 @@ import { trackEvent } from "@/lib/analytics";
 import type { Doctor } from "@/lib/supabase/queries/doctors";
 import type { DiseasePageHero } from "@/lib/types";
 import VideoEmbed from "@/components/shared/VideoEmbed";
+import { CheckIcon } from "@/components/shared/icons";
 
 export default function DiseaseHero({
   hero,
@@ -92,11 +93,10 @@ export default function DiseaseHero({
         </p>
 
         {hero.trustLine && (
-          <p className="mt-6 text-sm font-medium text-text-mid">
-            {hero.trustLine.split("|").map((item, i, arr) => (
-              <span key={item}>
-                ✔ {item.trim()}
-                {i < arr.length - 1 && <>&nbsp;&nbsp;</>}
+          <p className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-sm font-medium text-text-mid">
+            {hero.trustLine.split("|").map((item) => (
+              <span key={item} className="inline-flex items-center gap-1.5">
+                <CheckIcon className="h-3.5 w-3.5 shrink-0 text-green" /> {item.trim()}
               </span>
             ))}
           </p>

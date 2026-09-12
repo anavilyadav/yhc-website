@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { siteConfig, telLink, whatsappLink } from "@/lib/site-config";
 import { trackEvent } from "@/lib/analytics";
+import { WhatsAppIcon, PhoneIcon } from "@/components/shared/icons";
 
 export default function DiseasePageFinalCTA({
   finalCta,
@@ -22,16 +23,16 @@ export default function DiseasePageFinalCTA({
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("whatsapp_click", { entry_point: "disease_final_cta", condition: conditionName })}
-            className="w-full rounded-sm bg-amber px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"
+            className="flex w-full items-center justify-center gap-2 rounded-sm bg-amber px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"
           >
-            💬 WhatsApp Us Now
+            <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us Now
           </a>
           <a
             href={telLink()}
             onClick={() => trackEvent("phone_click", { click_source: "disease_final_cta" })}
-            className="w-full rounded-sm border-2 border-navy px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-navy hover:text-cream sm:w-auto"
+            className="flex w-full items-center justify-center gap-2 rounded-sm border-2 border-navy px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-navy hover:text-cream sm:w-auto"
           >
-            📞 Call {siteConfig.phone.display}
+            <PhoneIcon className="h-4 w-4" /> Call {siteConfig.phone.display}
           </a>
         </div>
 

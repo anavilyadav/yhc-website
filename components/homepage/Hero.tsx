@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import VideoEmbed from "@/components/shared/VideoEmbed";
+import { CheckIcon } from "@/components/shared/icons";
+
+const trustPoints = [
+  "35+ Years of Practice",
+  "1 Lakh+ Patients Treated",
+  "5,000+ Special Children Helped",
+  "2 Clinics in Jaipur",
+];
 
 export default function Hero() {
   return (
@@ -36,9 +44,12 @@ export default function Hero() {
           </Link>
         </div>
 
-        <p className="mt-8 text-sm font-medium text-text-mid">
-          ✔ 35+ Years of Practice &nbsp; ✔ 1 Lakh+ Patients Treated &nbsp; ✔ 5,000+ Special
-          Children Helped &nbsp; ✔ 2 Clinics in Jaipur
+        <p className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-sm font-medium text-text-mid">
+          {trustPoints.map((point) => (
+            <span key={point} className="inline-flex items-center gap-1.5">
+              <CheckIcon className="h-3.5 w-3.5 shrink-0 text-green" /> {point}
+            </span>
+          ))}
         </p>
       </div>
     </section>

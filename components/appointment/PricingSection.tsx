@@ -4,6 +4,7 @@ import { isRazorpayConfigured } from "@/lib/razorpay";
 import { RazorpayCheckoutButton } from "./RazorpayCheckoutButton";
 import { whatsappLink } from "@/lib/site-config";
 import styles from "@/app/appointment/appointment.module.css";
+import { PillIcon } from "@/components/shared/icons";
 
 function formatCategory(code: string) {
   return code.startsWith("new_patient") ? "New Patient" : "Follow-Up";
@@ -63,7 +64,7 @@ export function PricingSection({ plans, doctors = [] }: { plans: PricingPlan[]; 
         </div>
         <div className={styles.medicineNote}>
           <p>
-            💊 <strong>Note on Medicine Cost:</strong> Homeopathic medicines
+            <PillIcon className="mr-1 inline-block h-4 w-4 align-text-bottom" /> <strong>Note on Medicine Cost:</strong> Homeopathic medicines
             are extremely affordable — typically ₹50 to ₹300 per medicine
             depending on the potency and bottle size. Medicines are NOT
             included in the consultation fee and are purchased separately

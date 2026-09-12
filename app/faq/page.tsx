@@ -10,6 +10,7 @@ import { getPageVideos } from "@/lib/data/videos";
 import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
+import { WhatsAppIcon } from "@/components/shared/icons";
 import { faqSeo, faqHero, faqCategories, faqFinalCta, faqDisclaimer } from "@/lib/content/faq-content";
 
 export const metadata: Metadata = {
@@ -95,9 +96,9 @@ export default async function FaqPage() {
               href={whatsappLink("Hello, I have a question about treatment at Yadav Homeo Clinic.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full rounded-sm bg-amber px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"
+              className="flex w-full items-center justify-center gap-2 rounded-sm bg-amber px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"
             >
-              💬 WhatsApp Us Directly
+              <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us Directly
             </a>
             <Link
               href="/appointment"

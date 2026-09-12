@@ -1,4 +1,5 @@
 import { siteConfig, telLink, whatsappLink } from "@/lib/site-config";
+import { WhatsAppIcon, PhoneIcon, MapPinIcon, GlobeIcon } from "@/components/shared/icons";
 
 export default function FinalCTA() {
   return (
@@ -39,18 +40,24 @@ export default function FinalCTA() {
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full rounded-sm border-2 border-navy bg-transparent px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-navy hover:text-cream sm:w-auto"
+            className="flex w-full items-center justify-center gap-2 rounded-sm border-2 border-navy bg-transparent px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-navy hover:text-cream sm:w-auto"
           >
-            💬 WhatsApp Us Now
+            <WhatsAppIcon className="h-4 w-4" /> WhatsApp Us Now
           </a>
         </div>
 
-        <p className="mt-8 text-sm text-text-mid">
-          📞{" "}
-          <a href={telLink()} className="hover:text-amber-dark">
-            {siteConfig.phone.display}
-          </a>{" "}
-          &nbsp;|&nbsp; 📍 Jaipur, Rajasthan &nbsp;|&nbsp; 🌐 yadavhomeoclinic.com
+        <p className="mt-8 flex flex-wrap items-center justify-center gap-x-2 gap-y-1.5 text-sm text-text-mid">
+          <a href={telLink()} className="inline-flex items-center gap-1.5 hover:text-amber-dark">
+            <PhoneIcon className="h-3.5 w-3.5" /> {siteConfig.phone.display}
+          </a>
+          <span aria-hidden>|</span>
+          <span className="inline-flex items-center gap-1.5">
+            <MapPinIcon className="h-3.5 w-3.5" /> Jaipur, Rajasthan
+          </span>
+          <span aria-hidden>|</span>
+          <span className="inline-flex items-center gap-1.5">
+            <GlobeIcon className="h-3.5 w-3.5" /> yadavhomeoclinic.com
+          </span>
         </p>
       </div>
     </section>

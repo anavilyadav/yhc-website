@@ -8,6 +8,7 @@ import { getPageVideos } from "@/lib/data/videos";
 import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { jaipurLocationSeo, jaipurHero, whyChooseUsJaipur, conditionsTreatedLinks } from "@/lib/content/location-content";
+import { CheckIcon, PhoneIcon } from "@/components/shared/icons";
 
 export const revalidate = 3600;
 
@@ -66,9 +67,7 @@ export default async function JaipurLocationPage() {
           <ul className="mt-6 space-y-3">
             {whyChooseUsJaipur.map((item) => (
               <li key={item} className="flex gap-2.5 text-[15px] leading-relaxed text-text-mid">
-                <span aria-hidden className="mt-1 text-green">
-                  ✔
-                </span>
+                <CheckIcon className="mt-1 h-4 w-4 shrink-0 text-green" />
                 <span>{item}</span>
               </li>
             ))}
@@ -106,9 +105,9 @@ export default async function JaipurLocationPage() {
             </a>
             <a
               href={`tel:${siteConfig.phone.e164}`}
-              className="w-full rounded-sm border-2 border-amber-light px-8 py-3 text-center text-sm font-bold uppercase tracking-wide text-amber-light transition-colors hover:bg-amber-light hover:text-navy sm:w-auto"
+              className="flex w-full items-center justify-center gap-2 rounded-sm border-2 border-amber-light px-8 py-3 text-center text-sm font-bold uppercase tracking-wide text-amber-light transition-colors hover:bg-amber-light hover:text-navy sm:w-auto"
             >
-              📞 Call Us: {siteConfig.phone.display}
+              <PhoneIcon className="h-4 w-4" /> Call Us: {siteConfig.phone.display}
             </a>
           </div>
         </div>
