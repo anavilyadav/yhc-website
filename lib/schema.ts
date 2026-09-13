@@ -220,7 +220,12 @@ export function buildMedicalWebPageSchema(page: {
         description: "Constitutional homeopathic treatment at Yadav Homeo Clinic, Jaipur",
       },
     },
-    author: { "@id": founderId },
+    // Matches the visible AuthorBox on every disease page: Dr Anavil
+    // Yadav is the "Written by" author, Dr T P Yadav the "Medically
+    // reviewed by" reviewer — this schema previously credited the
+    // founder as both, which contradicted what patients actually see
+    // and gave AI/Google's E-E-A-T signals no author credit at all.
+    author: { "@id": physicianId },
     reviewedBy: { "@id": founderId },
     publisher: { "@id": clinicId },
     inLanguage: "en-IN",
