@@ -15,6 +15,7 @@ import WorriesTable from "@/components/disease-page/WorriesTable";
 import TriggerChips from "@/components/disease-page/TriggerChips";
 import SoundFamiliar from "@/components/disease-page/SoundFamiliar";
 import PriceTeaser from "@/components/disease-page/PriceTeaser";
+import { PricingSection } from "@/components/appointment/PricingSection";
 import { PdfSummaryButton } from "@/components/disease-page/PdfSummaryButton";
 import { PrintLetterhead } from "@/components/disease-page/PrintLetterhead";
 import { AuthorBox } from "@/components/blog/AuthorBox";
@@ -27,7 +28,7 @@ import { getRelatedVideos } from "@/lib/data/related-videos";
 import { getGalleryPhotos } from "@/lib/data/gallery-photos";
 import { CATEGORY_VIDEO_TAG_CLUSTERS } from "@/lib/data/condition-video-tags";
 import { getPricingPlans } from "@/lib/data/appointment";
-import { getDoctorBySlug } from "@/lib/supabase/queries/doctors";
+import { getDoctorBySlug, getDoctors } from "@/lib/supabase/queries/doctors";
 import { buildMedicalWebPageSchema, buildFAQPageSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 import { RELATED_CONDITIONS, SUB_PAGE_LINKS } from "@/lib/content/related-conditions";
@@ -76,13 +77,14 @@ function formatDate(date: Date): string {
 
 export default async function DiseasePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const [page, doctor, videos, pricingPlans, relatedVideos, photos] = await Promise.all([
+  const [page, doctor, videos, pricingPlans, relatedVideos, photos, allDoctors] = await Promise.all([
     getDiseasePage(slug),
     getDoctorBySlug(siteConfig.doctors.physician.slug),
     getPageVideos(slug),
     getPricingPlans(),
     getRelatedVideos(CATEGORY_VIDEO_TAG_CLUSTERS[slug] ?? []),
     getGalleryPhotos(slug),
+    getDoctors(),
   ]);
   if (!page) notFound();
 
@@ -92,6 +94,7 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
   const subPageLinks = SUB_PAGE_LINKS[page.slug] ?? [];
   const jumpNavItems = [
     ...page.sections.map((s) => ({ id: slugify(s.heading), label: s.navLabel ?? autoShortenHeading(s.heading) })),
+    { id: "fees", label: "Fees" },
     ...(page.patientStory ? [{ id: "patient-story", label: "Patient Story" }] : []),
     { id: "faq", label: "FAQ" },
   ];
@@ -193,6 +196,7 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
       {page.comparisonTable && (
         <ComparisonTable rows={page.comparisonTable} conditionName={page.aboutCondition.name} />
       )}
+      <PricingSection plans={pricingPlans} doctors={allDoctors} />
       {page.patientStory && <PatientStoryCard story={page.patientStory} />}
       <FAQAccordion faqs={page.faqs} />
       <RelatedVideosGallery videos={relatedVideos} />
