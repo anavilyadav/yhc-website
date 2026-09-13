@@ -50,8 +50,8 @@ export default async function AdminPhotosPage() {
       <p className="mt-1 text-sm text-text-mid">
         Appears as a photo grid on the page named by &quot;Page&quot; below — use a disease page&apos;s URL slug
         (e.g. <code className="text-xs">skin-diseases</code>, <code className="text-xs">vitiligo-treatment-jaipur</code>)
-        or a fixed name like <code className="text-xs">home</code>, <code className="text-xs">about</code>. The
-        image must already be hosted somewhere (e.g. uploaded to Supabase Storage) — paste its URL below.
+        or a fixed name like <code className="text-xs">home</code>, <code className="text-xs">about</code>. Either
+        upload a photo directly from your device, or paste the URL of one already hosted elsewhere.
       </p>
 
       <datalist id="page-associations">
@@ -60,7 +60,11 @@ export default async function AdminPhotosPage() {
         ))}
       </datalist>
 
-      <form action={createPhoto} className="mt-8 rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+      <form
+        action={createPhoto}
+        encType="multipart/form-data"
+        className="mt-8 rounded-xl border border-navy/10 bg-white p-5 shadow-sm"
+      >
         <h2 className="font-serif text-lg text-navy">Add a Photo</h2>
         <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
@@ -74,11 +78,21 @@ export default async function AdminPhotosPage() {
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-navy">Image URL</label>
+            <label className="block text-sm font-semibold text-navy">Upload a Photo</label>
+            <input
+              name="image_file"
+              type="file"
+              accept="image/*"
+              className="mt-1.5 w-full rounded-sm border border-navy/20 px-3 py-1.5 text-sm focus:border-amber focus:outline-none"
+            />
+          </div>
+          <div className="sm:col-span-2">
+            <label className="block text-sm font-semibold text-navy">
+              Or Paste an Image URL <span className="font-normal normal-case text-text-mid">(skip if you uploaded a photo above)</span>
+            </label>
             <input
               name="image_url"
               type="url"
-              required
               placeholder="https://..."
               className="mt-1.5 w-full rounded-sm border border-navy/20 px-3 py-2 text-sm focus:border-amber focus:outline-none"
             />
@@ -116,6 +130,7 @@ export default async function AdminPhotosPage() {
           <form
             key={photo.id}
             action={updatePhoto}
+            encType="multipart/form-data"
             className="flex flex-col gap-4 rounded-xl border border-navy/10 bg-white p-5 shadow-sm sm:flex-row"
           >
             <input type="hidden" name="id" value={photo.id} />
@@ -134,6 +149,17 @@ export default async function AdminPhotosPage() {
                     defaultValue={photo.page_association}
                     list="page-associations"
                     className="mt-1 w-full rounded-sm border border-navy/20 px-3 py-1.5 text-sm focus:border-amber focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold uppercase tracking-wide text-text-mid">
+                    Replace Photo (upload a new file, or leave blank to keep the current one)
+                  </label>
+                  <input
+                    name="image_file"
+                    type="file"
+                    accept="image/*"
+                    className="mt-1 w-full rounded-sm border border-navy/20 px-3 py-1 text-sm focus:border-amber focus:outline-none"
                   />
                 </div>
                 <div>
