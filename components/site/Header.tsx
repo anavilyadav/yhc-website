@@ -10,9 +10,35 @@ import SocialLinks from "@/components/shared/SocialLinks";
 import { PhoneIcon } from "@/components/shared/icons";
 import type { SiteSettings } from "@/lib/types";
 
+// All 16 public disease categories, direct from the header — previously
+// "Treatments" only linked to the homepage's #conditions grid, so
+// reaching any specific category from elsewhere on the site took 3+
+// clicks (home → scroll/click category card → sub-page). One click now,
+// from any page. Sexual Health is deliberately excluded here too (see
+// app/[slug]/page.tsx's "quiet placement" comment) — same reasoning:
+// no main-nav exposure, reachable only via its one required link from
+// Men's Health.
+const treatmentLinks = [
+  { label: "Skin Diseases", href: "/skin-diseases" },
+  { label: "Autoimmune Diseases", href: "/autoimmune-diseases" },
+  { label: "Cancer Support", href: "/cancer" },
+  { label: "Kidney Disease", href: "/renal-diseases" },
+  { label: "Genetic Diseases", href: "/genetic-diseases" },
+  { label: "Autism & Child Development", href: "/autism" },
+  { label: "Nervous System Disorders", href: "/nervous-system-disease" },
+  { label: "Children's Health", href: "/childrens-health" },
+  { label: "Women's Health", href: "/womens-health" },
+  { label: "Men's Health", href: "/mens-health" },
+  { label: "Respiratory Diseases", href: "/respiratory-diseases" },
+  { label: "Digestive Diseases", href: "/digestive-diseases" },
+  { label: "Hormonal Disorders", href: "/hormonal-diseases" },
+  { label: "Mental Health", href: "/mental-health" },
+  { label: "Joint & Bone Diseases", href: "/joint-bone-diseases" },
+  { label: "Cardiac Support", href: "/heart-cardiac-support" },
+];
+
 const primaryLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Treatments", href: "/#conditions" },
   { label: "Our Doctors", href: "/our-doctors" },
 ];
 
@@ -27,6 +53,7 @@ const resourceLinks = [
   { label: "FAQ", href: "/faq" },
   { label: "Homeopathy FAQ (50 Q&A)", href: "/homeopathy-faq" },
   { label: "Online Consultation", href: "/online-consultation" },
+  { label: "International Patients", href: "/international-patients" },
 ];
 
 const trailingLinks = [
@@ -39,6 +66,7 @@ const trailingLinks = [
 // of hover dropdowns (which don't work well with touch).
 const mobileGroups = [
   { heading: "Explore", links: [...primaryLinks, ...trailingLinks] },
+  { heading: "Treatments", links: treatmentLinks },
   { heading: "Locations", links: locationLinks },
   { heading: "Resources", links: resourceLinks },
 ];
@@ -87,6 +115,58 @@ function NavDropdown({ label, links }: { label: string; links: { label: string; 
               {link.label}
             </Link>
           ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function NavMegaMenu({ label, links }: { label: string; links: { label: string; href: string }[] }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function onClickOutside(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    function onEscape(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    document.addEventListener("mousedown", onClickOutside);
+    document.addEventListener("keydown", onEscape);
+    return () => {
+      document.removeEventListener("mousedown", onClickOutside);
+      document.removeEventListener("keydown", onEscape);
+    };
+  }, []);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex items-center gap-1 text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
+      >
+        {label}
+        <span aria-hidden className={`text-[10px] transition-transform ${open ? "rotate-180" : ""}`}>
+          ▾
+        </span>
+      </button>
+      {open && (
+        <div className="absolute left-1/2 top-full mt-3 w-[560px] -translate-x-1/2 rounded-sm border border-amber/20 bg-navy p-4 shadow-lg">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-0.5">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block rounded-sm px-3 py-2 text-sm text-cream/70 hover:bg-black/20 hover:text-amber-light"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       )}
     </div>
@@ -161,6 +241,7 @@ export default function Header({ settings }: { settings: SiteSettings }) {
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
+          <NavMegaMenu label="Treatments" links={treatmentLinks} />
           {primaryLinks.map((link) => (
             <Link
               key={link.href}
