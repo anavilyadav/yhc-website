@@ -12,6 +12,10 @@ declare global {
   }
 }
 
+const REGISTRATION_FEE_INR = 1000;
+
+type PaymentMode = "full" | "registration";
+
 function loadRazorpayScript(): Promise<boolean> {
   return new Promise((resolve) => {
     if (window.Razorpay) {
@@ -29,6 +33,7 @@ function loadRazorpayScript(): Promise<boolean> {
 export function RazorpayCheckoutButton({ plan }: { plan: PricingPlan }) {
   const router = useRouter();
   const [step, setStep] = useState<"idle" | "form" | "processing">("idle");
+  const [mode, setMode] = useState<PaymentMode>("full");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [includeCourier, setIncludeCourier] = useState(false);
@@ -40,6 +45,16 @@ export function RazorpayCheckoutButton({ plan }: { plan: PricingPlan }) {
   // than baked into the plan price itself.
   const courierFee = getCourierFeeForPlanCode(plan.code);
   const totalInr = (plan.priceInr ?? 0) + (includeCourier ? courierFee ?? 0 : 0);
+
+  // In-clinic Option B — New Patient only (Follow-Up plans have no
+  // registration component to pay separately from the rest of the fee).
+  const canPayRegistrationOnly = plan.code.startsWith("new_patient");
+
+  function openForm(nextMode: PaymentMode) {
+    setMode(nextMode);
+    setError(null);
+    setStep("form");
+  }
 
   async function handlePay() {
     if (!name.trim() || !phone.trim()) {
@@ -57,14 +72,18 @@ export function RazorpayCheckoutButton({ plan }: { plan: PricingPlan }) {
     }
 
     try {
-      const orderRes = await fetch("/api/razorpay/create-order", {
+      const endpoint =
+        mode === "registration"
+          ? "/api/razorpay/create-registration-order"
+          : "/api/razorpay/create-order";
+      const orderRes = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           planCode: plan.code,
           patientName: name,
           patientPhone: phone,
-          includeCourier,
+          ...(mode === "full" ? { includeCourier } : {}),
         }),
       });
       const order = await orderRes.json();
@@ -73,13 +92,16 @@ export function RazorpayCheckoutButton({ plan }: { plan: PricingPlan }) {
         throw new Error(order?.error ?? "Something went wrong.");
       }
 
+      const description =
+        mode === "registration" ? `${order.planTitle} — Registration Only` : order.planTitle;
+
       const razorpay = new window.Razorpay({
         key: order.keyId,
         amount: order.amount,
         currency: order.currency,
         order_id: order.orderId,
         name: "Yadav Homeo Clinic",
-        description: order.planTitle,
+        description,
         prefill: { name, contact: phone },
         theme: { color: "#1a2a41" },
         handler: async (response: {
@@ -93,7 +115,7 @@ export function RazorpayCheckoutButton({ plan }: { plan: PricingPlan }) {
             body: JSON.stringify(response),
           });
           if (verifyRes.ok) {
-            router.push(`/booking-confirmed?plan=${encodeURIComponent(plan.title)}`);
+            router.push(`/booking-confirmed?plan=${encodeURIComponent(description)}`);
           } else {
             setError("Payment succeeded but couldn't be verified. Please WhatsApp us your payment ID.");
             setStep("form");
@@ -112,14 +134,33 @@ export function RazorpayCheckoutButton({ plan }: { plan: PricingPlan }) {
 
   if (step === "idle") {
     return (
-      <button type="button" className={styles.cardCta} onClick={() => setStep("form")}>
-        Pay ₹{plan.priceInr?.toLocaleString("en-IN")} Online →
-      </button>
+      <div>
+        <button type="button" className={styles.cardCta} onClick={() => openForm("full")}>
+          Pay ₹{plan.priceInr?.toLocaleString("en-IN")} Online →
+        </button>
+        {canPayRegistrationOnly && (
+          <button
+            type="button"
+            className={styles.linkButton}
+            onClick={() => openForm("registration")}
+          >
+            Or pay ₹{REGISTRATION_FEE_INR.toLocaleString("en-IN")} registration only — rest at
+            the clinic →
+          </button>
+        )}
+      </div>
     );
   }
 
   return (
     <div>
+      {mode === "registration" && (
+        <p className={styles.courierCheckbox}>
+          Pay ₹{REGISTRATION_FEE_INR.toLocaleString("en-IN")} now to register — the rest of your
+          package fee is settled at the clinic after your consultation, by cash or online,
+          whichever suits you.
+        </p>
+      )}
       <input
         type="text"
         placeholder="Your full name"
@@ -134,7 +175,7 @@ export function RazorpayCheckoutButton({ plan }: { plan: PricingPlan }) {
         onChange={(e) => setPhone(e.target.value)}
         className={styles.payInput}
       />
-      {courierFee !== null && (
+      {mode === "full" && courierFee !== null && (
         <label className={styles.courierCheckbox}>
           <input
             type="checkbox"
@@ -155,8 +196,21 @@ export function RazorpayCheckoutButton({ plan }: { plan: PricingPlan }) {
       >
         {step === "processing"
           ? "Opening payment window…"
-          : `Proceed to Pay ₹${totalInr.toLocaleString("en-IN")} →`}
+          : mode === "registration"
+            ? `Proceed to Pay ₹${REGISTRATION_FEE_INR.toLocaleString("en-IN")} →`
+            : `Proceed to Pay ₹${totalInr.toLocaleString("en-IN")} →`}
       </button>
+      {canPayRegistrationOnly && step === "form" && (
+        <button
+          type="button"
+          className={styles.linkButton}
+          onClick={() => openForm(mode === "full" ? "registration" : "full")}
+        >
+          {mode === "full"
+            ? `Or pay ₹${REGISTRATION_FEE_INR.toLocaleString("en-IN")} registration only instead →`
+            : "Or pay the full amount instead →"}
+        </button>
+      )}
     </div>
   );
 }
