@@ -2,6 +2,11 @@ import Link from "next/link";
 
 const sections = [
   {
+    href: "/admin/leads",
+    title: "Leads",
+    description: "Everyone who submitted the Contact form or completed the Root Cause Assessment, newest first.",
+  },
+  {
     href: "/admin/videos",
     title: "Related Videos",
     description: "Add YouTube videos, tagged by condition, to the Related Videos Gallery shown on disease pages.",

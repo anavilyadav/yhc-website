@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 const navLinks = [
   { label: "Dashboard", href: "/admin" },
+  { label: "Leads", href: "/admin/leads" },
   { label: "Related Videos", href: "/admin/videos" },
   { label: "Photo Gallery", href: "/admin/photos" },
   { label: "Social Links", href: "/admin/settings" },
