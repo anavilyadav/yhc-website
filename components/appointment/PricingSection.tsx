@@ -28,14 +28,23 @@ export function PricingSection({ plans, doctors = [] }: { plans: PricingPlan[]; 
               <div className={styles.priceCardMode}>{formatCategory(plan.code)}</div>
               <h3>{plan.title}</h3>
               {plan.priceInr !== null ? (
-                <div className={styles.priceAmount}>
+                <>
+                  <div className={styles.priceAmount}>
+                    {plan.originalPriceInr && plan.originalPriceInr > plan.priceInr && (
+                      <span className={styles.priceWas}>
+                        ₹{plan.originalPriceInr.toLocaleString("en-IN")}
+                      </span>
+                    )}
+                    ₹{plan.priceInr.toLocaleString("en-IN")}
+                  </div>
                   {plan.originalPriceInr && plan.originalPriceInr > plan.priceInr && (
-                    <span className={styles.priceWas}>
-                      ₹{plan.originalPriceInr.toLocaleString("en-IN")}
-                    </span>
+                    <div className={styles.priceSave}>
+                      Save ₹{(plan.originalPriceInr - plan.priceInr).toLocaleString("en-IN")} (
+                      {Math.round(((plan.originalPriceInr - plan.priceInr) / plan.originalPriceInr) * 100)}
+                      %) vs. paying month-to-month
+                    </div>
                   )}
-                  ₹{plan.priceInr.toLocaleString("en-IN")}
-                </div>
+                </>
               ) : (
                 <div className={styles.priceAmountPending}>
                   Fee to be confirmed — WhatsApp us and we&apos;ll tell you upfront.

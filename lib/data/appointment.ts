@@ -13,23 +13,27 @@ function sortByOrder(plans: PricingPlan[]): PricingPlan[] {
  * Supabase (see supabase/migrations/0002_appointment_contact.sql) or
  * whenever Supabase env vars aren't configured (e.g. local dev).
  *
- * Real package pricing confirmed directly by Dr Anavil (chat, 2026-08-29).
- * Price is identical whether the consultation is in-clinic or online —
- * so plans are no longer split by mode, only by patient type (new vs
- * follow-up) and package length. `mode` is kept only because the
- * PricingPlan type still requires it; it is not shown or used anywhere.
+ * Real package pricing confirmed directly by Dr Anavil (chat, 2026-08-29,
+ * revised to "Plan B" duration tiers 2026-09-15). Price is identical
+ * whether the consultation is in-clinic or online — so plans are no
+ * longer split by mode, only by patient type (new vs follow-up) and
+ * package length. `mode` is kept only because the PricingPlan type
+ * still requires it; it is not shown or used anywhere.
  *
- * New Patient — 1 month = ₹1,000 one-time registration + ₹2,500
- * consultation = ₹3,500, includes 1 month of medicine. 2 and 3 month
- * packages don't re-charge registration, which is why they land at
- * ₹5,000 and ₹7,500 rather than +₹2,500 with a fresh ₹1,000 each time.
- * Confirmed pattern continues at ₹2,500/month for longer packages.
+ * New Patient — month 1 = ₹1,000 one-time registration + ₹2,500
+ * consultation = ₹3,500 (includes 1 month of medicine). Every month
+ * after that is ₹2,500 (consultation + that month's medicine), so
+ * "pay separately" for N months = ₹1,000 + N×₹2,500. Follow-Up
+ * (existing patients, no registration) is a flat ₹2,500/month.
  *
- * Follow-Up (existing patients, no registration) is a flat ₹2,500/month,
- * same 1/2/3 month tiers.
+ * Plan B durations are 1/3/6/9/12 months, each priced below the
+ * "pay separately" total by an increasing discount (0% -> ~13%) —
+ * `originalPriceInr` carries that pay-separately reference so the UI
+ * can show a "Save ₹X (Y%)" line (see PricingSection.tsx). The 2-month
+ * tier was retired in this revision.
  *
  * Cards are ordered longest-to-shortest within each group (anchor
- * pricing — Trust & Sales Playbook, ch.5): showing the 3-month package
+ * pricing — Trust & Sales Playbook, ch.5): showing the 12-month package
  * first makes the 1-month price read as the "light" option by
  * comparison, instead of being the first, most-expensive-feeling number
  * a visitor sees.
@@ -49,35 +53,70 @@ const FALLBACK_PRICING: PricingPlan[] = [
       "Same price online or in-clinic",
     ],
     isActive: true,
-    sortOrder: 3,
-  },
-  {
-    id: "fallback-new-patient-2m",
-    code: "new_patient_2m",
-    title: "New Patient — 2 Months",
-    mode: "in_clinic",
-    priceInr: 5000,
-    inclusions: [
-      "Includes one-time registration",
-      "First consultation + 1 follow-up",
-      "2 months of medicine included",
-      "Same price online or in-clinic",
-    ],
-    isActive: true,
-    sortOrder: 2,
+    sortOrder: 5,
   },
   {
     id: "fallback-new-patient-3m",
     code: "new_patient_3m",
     title: "New Patient — 3 Months",
     mode: "in_clinic",
-    priceInr: 7500,
-    badge: "Most Chosen",
+    priceInr: 8000,
+    originalPriceInr: 8500,
     inclusions: [
       "Includes one-time registration",
       "First consultation + 2 follow-ups",
       "3 months of medicine included",
       "Same price online or in-clinic",
+    ],
+    isActive: true,
+    sortOrder: 4,
+  },
+  {
+    id: "fallback-new-patient-6m",
+    code: "new_patient_6m",
+    title: "New Patient — 6 Months",
+    mode: "in_clinic",
+    priceInr: 14700,
+    originalPriceInr: 16000,
+    inclusions: [
+      "Includes one-time registration",
+      "First consultation + 5 follow-ups",
+      "6 months of medicine included",
+      "Same price online or in-clinic",
+    ],
+    isActive: true,
+    sortOrder: 3,
+  },
+  {
+    id: "fallback-new-patient-9m",
+    code: "new_patient_9m",
+    title: "New Patient — 9 Months",
+    mode: "in_clinic",
+    priceInr: 20900,
+    originalPriceInr: 23500,
+    inclusions: [
+      "Includes one-time registration",
+      "First consultation + 8 follow-ups",
+      "9 months of medicine included",
+      "Same price online or in-clinic",
+    ],
+    isActive: true,
+    sortOrder: 2,
+  },
+  {
+    id: "fallback-new-patient-12m",
+    code: "new_patient_12m",
+    title: "New Patient — 12 Months",
+    mode: "in_clinic",
+    priceInr: 27000,
+    originalPriceInr: 31000,
+    badge: "Best Value for Chronic Cases",
+    inclusions: [
+      "Includes one-time registration",
+      "First consultation + 11 follow-ups",
+      "12 months of medicine included",
+      "Same price online or in-clinic",
+      "Advance payment required",
     ],
     isActive: true,
     sortOrder: 1,
@@ -95,29 +134,15 @@ const FALLBACK_PRICING: PricingPlan[] = [
       "Telephonic support between visits",
     ],
     isActive: true,
-    sortOrder: 6,
-  },
-  {
-    id: "fallback-followup-2m",
-    code: "followup_2m",
-    title: "Follow-Up — 2 Months",
-    mode: "in_clinic",
-    priceInr: 5000,
-    inclusions: [
-      "2 follow-up consultations",
-      "Prescription adjustment as needed",
-      "2 months of medicine included",
-      "Telephonic support between visits",
-    ],
-    isActive: true,
-    sortOrder: 5,
+    sortOrder: 10,
   },
   {
     id: "fallback-followup-3m",
     code: "followup_3m",
     title: "Follow-Up — 3 Months",
     mode: "in_clinic",
-    priceInr: 7500,
+    priceInr: 7100,
+    originalPriceInr: 7500,
     inclusions: [
       "3 follow-up consultations",
       "Prescription adjustment as needed",
@@ -125,7 +150,57 @@ const FALLBACK_PRICING: PricingPlan[] = [
       "Telephonic support between visits",
     ],
     isActive: true,
-    sortOrder: 4,
+    sortOrder: 9,
+  },
+  {
+    id: "fallback-followup-6m",
+    code: "followup_6m",
+    title: "Follow-Up — 6 Months",
+    mode: "in_clinic",
+    priceInr: 13800,
+    originalPriceInr: 15000,
+    inclusions: [
+      "6 follow-up consultations",
+      "Prescription adjustment as needed",
+      "6 months of medicine included",
+      "Telephonic support between visits",
+    ],
+    isActive: true,
+    sortOrder: 8,
+  },
+  {
+    id: "fallback-followup-9m",
+    code: "followup_9m",
+    title: "Follow-Up — 9 Months",
+    mode: "in_clinic",
+    priceInr: 20000,
+    originalPriceInr: 22500,
+    inclusions: [
+      "9 follow-up consultations",
+      "Prescription adjustment as needed",
+      "9 months of medicine included",
+      "Telephonic support between visits",
+    ],
+    isActive: true,
+    sortOrder: 7,
+  },
+  {
+    id: "fallback-followup-12m",
+    code: "followup_12m",
+    title: "Follow-Up — 12 Months",
+    mode: "in_clinic",
+    priceInr: 26000,
+    originalPriceInr: 30000,
+    badge: "Best Value",
+    inclusions: [
+      "12 follow-up consultations",
+      "Prescription adjustment as needed",
+      "12 months of medicine included",
+      "Telephonic support between visits",
+      "Advance payment required",
+    ],
+    isActive: true,
+    sortOrder: 6,
   },
 ];
 

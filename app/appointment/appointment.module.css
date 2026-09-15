@@ -307,6 +307,18 @@
   margin-bottom: 12px;
 }
 
+.priceSave {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--green);
+  background: rgba(91, 138, 45, 0.1);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin: -6px 0 12px;
+}
+
 .priceIncludes {
   list-style: none;
   padding: 0;
