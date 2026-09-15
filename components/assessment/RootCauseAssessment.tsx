@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   CONCERN_OPTIONS,
   DURATION_OPTIONS,
@@ -204,6 +204,22 @@ function ContactStep({
 
 function ResultStep({ answers }: { answers: AssessmentAnswers }) {
   const message = buildAssessmentWhatsAppMessage(answers);
+  const submitted = useRef(false);
+
+  // Saved as a safety net the moment the result is shown — a patient who
+  // completes the whole quiz but never taps "Send on WhatsApp" (closes the
+  // tab, changes their mind) would otherwise leave no trace anywhere.
+  useEffect(() => {
+    if (submitted.current) return;
+    submitted.current = true;
+    fetch("/api/assessment/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(answers),
+    }).catch(() => {
+      // Best-effort — the WhatsApp send below is still the primary path.
+    });
+  }, [answers]);
 
   return (
     <div className="text-center">

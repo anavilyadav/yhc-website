@@ -7,9 +7,12 @@
  * feel heard before they even book, and (b) hand the clinic a
  * genuinely useful, structured lead instead of a bare "hi" message.
  *
- * No backend/DB submission — answers are compiled into a pre-filled
- * WhatsApp message the patient sends themselves, same pattern as
- * every other WhatsApp CTA on the site (see lib/whatsapp.ts).
+ * Answers are compiled into a pre-filled WhatsApp message the patient
+ * sends themselves, same pattern as every other WhatsApp CTA on the site
+ * (see lib/whatsapp.ts). They're also saved to the assessment_submissions
+ * table (POST /api/assessment/submit) as a safety net — otherwise a
+ * patient who completes the whole quiz but never taps "Send on WhatsApp"
+ * leaves no trace anywhere.
  */
 export const CONCERN_OPTIONS = [
   "Skin condition (Vitiligo, Psoriasis, Eczema)",
