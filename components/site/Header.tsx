@@ -49,6 +49,7 @@ const locationLinks = [
 
 const resourceLinks = [
   { label: "Root Cause Assessment", href: "/root-cause-assessment" },
+  { label: "Diet & Lifestyle Guide", href: "/diet-lifestyle-guide" },
   { label: "Blog", href: "/blog" },
   { label: "Patient Stories", href: "/patient-stories" },
   { label: "FAQ", href: "/faq" },
