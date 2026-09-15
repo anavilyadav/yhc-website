@@ -40,7 +40,7 @@ const JOURNEY_STEPS = [
   },
   {
     title: "Payment for Medicine",
-    body: "Medicine cost (separate from the consultation fee) is invoiced after your consultation. We accept PayPal and Wise — payment details are shared with you on WhatsApp once your case is confirmed.",
+    body: "Medicine cost (separate from the consultation fee) is invoiced after your consultation. Our PayPal/Wise setup is currently being finalised — until it's live, we'll confirm the easiest payment method for your country directly on WhatsApp once your case is confirmed.",
   },
   {
     title: "Delivery",
@@ -280,10 +280,10 @@ export default function InternationalPatientsPage() {
           </div>
           <p className="mt-6 flex items-start gap-1.5 text-[12.5px] italic leading-relaxed text-text-light">
             <InfoIcon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-dark" />
-            Payment currently by PayPal or Wise, with details shared on WhatsApp once your
-            consultation is booked — no consultation fee is ever included in the medicine cost,
-            and no payment is refundable once a consultation has taken place or an annual plan
-            has started.
+            Our PayPal/Wise setup is currently being finalised — until it&apos;s live, the easiest
+            payment method for your country will be confirmed on WhatsApp once your consultation
+            is booked. No consultation fee is ever included in the medicine cost, and no payment
+            is refundable once a consultation has taken place or an annual plan has started.
           </p>
         </div>
       </section>
