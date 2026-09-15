@@ -124,6 +124,21 @@ export default async function AppointmentPage() {
         </div>
       </div>
 
+      <div className="bg-white px-5 pb-12">
+        <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-3 rounded-lg border border-border-amber bg-cream-bg px-6 py-5 text-center shadow-sm sm:flex-row sm:text-left">
+          <p className="text-sm text-navy">
+            <span className="font-bold">Already a patient and just need more medicine posted?</span>{" "}
+            Pay the courier charge alone — no new consultation needed.
+          </p>
+          <Link
+            href="/medicine-shipping"
+            className="whitespace-nowrap rounded-sm border-2 border-navy px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-navy hover:text-cream"
+          >
+            Pay for Medicine Shipping →
+          </Link>
+        </div>
+      </div>
+
       <PreparationChecklist />
 
       <section className={styles.section} id="faq">

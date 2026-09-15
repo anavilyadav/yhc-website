@@ -15,6 +15,7 @@ const exploreLinks = [
   { label: "Homeopathy FAQ (50 Q&A)", href: "/homeopathy-faq" },
   { label: "Blog", href: "/blog" },
   { label: "Book Appointment", href: "/appointment" },
+  { label: "Medicine Shipping", href: "/medicine-shipping" },
 ];
 
 const treatmentLinks = [
