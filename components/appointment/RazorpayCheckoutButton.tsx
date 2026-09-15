@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import type { PricingPlan } from "@/lib/types";
+import { getCourierFeeForPlanCode } from "@/lib/courier";
 import styles from "@/app/appointment/appointment.module.css";
 
 declare global {
@@ -30,7 +31,15 @@ export function RazorpayCheckoutButton({ plan }: { plan: PricingPlan }) {
   const [step, setStep] = useState<"idle" | "form" | "processing">("idle");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [includeCourier, setIncludeCourier] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Consultation fee is identical online or in-clinic — courier is a
+  // separate, real shipping cost that only applies when medicine is
+  // actually posted, so it's offered here as an optional add-on rather
+  // than baked into the plan price itself.
+  const courierFee = getCourierFeeForPlanCode(plan.code);
+  const totalInr = (plan.priceInr ?? 0) + (includeCourier ? courierFee ?? 0 : 0);
 
   async function handlePay() {
     if (!name.trim() || !phone.trim()) {
@@ -51,7 +60,12 @@ export function RazorpayCheckoutButton({ plan }: { plan: PricingPlan }) {
       const orderRes = await fetch("/api/razorpay/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ planCode: plan.code, patientName: name, patientPhone: phone }),
+        body: JSON.stringify({
+          planCode: plan.code,
+          patientName: name,
+          patientPhone: phone,
+          includeCourier,
+        }),
       });
       const order = await orderRes.json();
 
@@ -120,6 +134,18 @@ export function RazorpayCheckoutButton({ plan }: { plan: PricingPlan }) {
         onChange={(e) => setPhone(e.target.value)}
         className={styles.payInput}
       />
+      {courierFee !== null && (
+        <label className={styles.courierCheckbox}>
+          <input
+            type="checkbox"
+            checked={includeCourier}
+            onChange={(e) => setIncludeCourier(e.target.checked)}
+          />
+          Consulting online? Ship my medicine to me (+₹{courierFee.toLocaleString("en-IN")}
+          courier — skip this if you&apos;ll collect in-clinic, or if you&apos;re in Jaipur and
+          want to arrange your own fast local delivery)
+        </label>
+      )}
       {error && <p className={styles.payError}>{error}</p>}
       <button
         type="button"
@@ -127,7 +153,9 @@ export function RazorpayCheckoutButton({ plan }: { plan: PricingPlan }) {
         onClick={handlePay}
         disabled={step === "processing"}
       >
-        {step === "processing" ? "Opening payment window…" : "Proceed to Pay →"}
+        {step === "processing"
+          ? "Opening payment window…"
+          : `Proceed to Pay ₹${totalInr.toLocaleString("en-IN")} →`}
       </button>
     </div>
   );

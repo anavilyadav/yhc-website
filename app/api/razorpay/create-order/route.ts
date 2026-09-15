@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getPricingPlanByCode } from "@/lib/data/appointment";
 import { createRazorpayOrder, getRazorpayKeyId, isRazorpayConfigured } from "@/lib/razorpay";
+import { getCourierFeeForPlanCode } from "@/lib/courier";
 
 export async function POST(request: Request) {
   if (!isRazorpayConfigured()) {
@@ -10,7 +11,12 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: { planCode?: string; patientName?: string; patientPhone?: string };
+  let body: {
+    planCode?: string;
+    patientName?: string;
+    patientPhone?: string;
+    includeCourier?: boolean;
+  };
   try {
     body = await request.json();
   } catch {
@@ -39,14 +45,21 @@ export async function POST(request: Request) {
     );
   }
 
+  // Courier fee is looked up server-side from the plan's own duration,
+  // same as the plan price — the client only sends whether it wants
+  // courier included, never the amount itself.
+  const courierFee = body.includeCourier ? getCourierFeeForPlanCode(planCode) : null;
+  const totalInr = plan.priceInr + (courierFee ?? 0);
+
   try {
     const order = await createRazorpayOrder({
-      amountInPaise: plan.priceInr * 100,
+      amountInPaise: totalInr * 100,
       receipt: `${planCode}-${Date.now()}`,
       notes: {
         plan: plan.title,
         patientName,
         patientPhone,
+        courierFee: courierFee ? `₹${courierFee}` : "none",
       },
     });
 
@@ -56,6 +69,7 @@ export async function POST(request: Request) {
       currency: order.currency,
       keyId: getRazorpayKeyId(),
       planTitle: plan.title,
+      courierFee,
     });
   } catch (err) {
     console.error("Razorpay order creation failed:", err);
