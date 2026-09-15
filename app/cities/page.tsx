@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CITIES } from "@/lib/data/cities";
+import { CITIES, type CityRegion } from "@/lib/data/cities";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { WhatsAppIcon } from "@/components/shared/icons";
 
@@ -13,12 +13,15 @@ export const metadata: Metadata = {
   alternates: { canonical: pageUrl },
 };
 
-const REGION_ORDER = ["Rajasthan", "Metro", "Other"] as const;
-const REGION_LABEL: Record<(typeof REGION_ORDER)[number], string> = {
-  Rajasthan: "Rajasthan",
-  Metro: "Metro Cities",
-  Other: "Other Major Cities",
-};
+const REGION_ORDER: CityRegion[] = [
+  "Rajasthan",
+  "Delhi NCR",
+  "North India",
+  "West India",
+  "Central India",
+  "East & Northeast India",
+  "South India",
+];
 
 export default function CitiesHubPage() {
   return (
@@ -57,7 +60,7 @@ export default function CitiesHubPage() {
         return (
           <section key={region} className="bg-white px-5 py-10 first-of-type:pt-4">
             <div className="mx-auto max-w-4xl">
-              <h2 className="font-serif text-lg text-navy">{REGION_LABEL[region]}</h2>
+              <h2 className="font-serif text-lg text-navy">{region}</h2>
               <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 sm:grid-cols-3 md:grid-cols-4">
                 {cities.map((city) => (
                   <Link
