@@ -54,6 +54,7 @@ const resourceLinks = [
   { label: "Homeopathy FAQ (50 Q&A)", href: "/homeopathy-faq" },
   { label: "Online Consultation", href: "/online-consultation" },
   { label: "International Patients", href: "/international-patients" },
+  { label: "Cities We Serve", href: "/cities" },
 ];
 
 const trailingLinks = [
