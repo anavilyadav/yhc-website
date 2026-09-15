@@ -219,6 +219,21 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Yes. Online consultation works the same way as in-clinic, at the same price. Share clear photographs of the affected areas over WhatsApp along with your case history, and follow-ups are conducted the same way. Many of our vitiligo and psoriasis patients are treated entirely online.",
       },
+      {
+        question: "How soon will I see the first sign of change?",
+        answer:
+          "For most skin conditions, the first sign is usually that things stop getting worse — new patches stop appearing, flares reduce in frequency — typically within 2 to 3 months. Visible repigmentation or clearance takes longer, usually 6 to 12 months for a well-established condition. We give you an honest, case-specific timeline at your first consultation rather than a generic promise.",
+      },
+      {
+        question: "Will my skin get worse before it gets better?",
+        answer:
+          "For most patients, no — the usual pattern is a gradual slowing and stopping of new activity, not a flare-up. A brief, mild aggravation is occasionally seen very early in some cases as the body's response shifts, but this is not universal and is not something to be alarmed by if it happens. We monitor this closely at follow-ups and adjust the prescription if needed.",
+      },
+      {
+        question: "Is homeopathic treatment for skin conditions safe during pregnancy or for young children?",
+        answer:
+          "Yes — constitutional homeopathic medicines are considered safe in pregnancy and for children of any age, including infants. We take extra care with case-taking in both situations and will always tell you honestly if any part of a case needs a specialist's involvement alongside our treatment.",
+      },
     ],
     finalCta: "Ready to Begin Your Skin Healing Journey? Book a Consultation With Us Today →",
     disclaimer:
@@ -387,6 +402,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Yes — constitutional homeopathic medicines are safe during pregnancy. This is especially relevant for autoimmune patients planning a pregnancy, since some conventional immunosuppressants must be stopped or changed before conception under specialist guidance. Please always inform us if you are pregnant or planning to be, so we can coordinate carefully with your rheumatologist.",
       },
+      {
+        question: "How long before my lab values start improving?",
+        answer:
+          "Most patients see symptomatic improvement (less stiffness, less fatigue) within 2 to 3 months, with measurable improvement in inflammatory markers typically following over 6 to 12 months of consistent treatment. Autoimmune conditions are chronic by nature, so we set realistic, honest timelines at your first consultation based on your specific reports and disease duration.",
+      },
+      {
+        question: "Will my symptoms flare up while starting homeopathic treatment?",
+        answer:
+          "We do not expect or aim for a flare when starting treatment — the goal is a steady reduction in disease activity alongside your existing specialist care. If anything changes during treatment, we review it immediately at your next follow-up (or sooner, over WhatsApp) and adjust the approach — you are never left to manage a change alone.",
+      },
     ],
     finalCta: "Book an Autoimmune Consultation at Yadav Homeo Clinic →",
     disclaimer:
@@ -530,6 +555,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "Can this be managed online if we are travelling for treatment at a cancer centre outside Jaipur?",
         answer:
           "Yes. Many of our cancer-support patients are actually travelling between home and a treatment centre, and online consultation lets us stay involved throughout — sharing reports and treatment updates over WhatsApp between cycles, with prescriptions adjusted as your protocol changes.",
+      },
+      {
+        question: "How quickly does supportive treatment start helping with side effects?",
+        answer:
+          "Many patients notice some easing of nausea, appetite or fatigue within the first cycle of adding homeopathic support, though this varies by individual and by treatment protocol. We review and adjust the prescription at each cycle so support stays matched to whatever side effects that specific cycle brings.",
+      },
+      {
+        question: "Is supportive homeopathy safe for elderly or frail patients undergoing treatment?",
+        answer:
+          "Yes — homeopathic medicines carry no pharmacological burden, which makes them appropriate even for patients who are frail or managing multiple medications. We take extra care with case-taking for elderly patients and coordinate closely with the oncology team on anything specific to their overall health.",
       },
     ],
     finalCta: "Speak to Us About Homeopathic Cancer Support →",
@@ -752,6 +787,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Yes. Share your blood reports (creatinine, BUN, eGFR, electrolytes) over WhatsApp every 6 to 8 weeks as instructed, and we adjust your prescription based on the numbers — the same process as an in-clinic follow-up, at the same price.",
       },
+      {
+        question: "Could starting homeopathy make my kidney numbers worse while we wait to see if it works?",
+        answer:
+          "No — homeopathic medicines carry no pharmacological load on the kidneys, so starting treatment does not itself put any additional strain on kidney function. Your regular blood tests continue exactly as your nephrologist has scheduled them throughout, so any change — in either direction — is caught early, not discovered late.",
+      },
+      {
+        question: "Is homeopathic treatment for kidney disease safe for children or elderly patients?",
+        answer:
+          "Yes — we treat kidney conditions across all ages, from children with nephrotic syndrome to elderly patients with age-related decline. Case-taking and dosing are adjusted appropriately, and we always work in coordination with the treating nephrologist or paediatric nephrologist.",
+      },
     ],
     finalCta: "Share Your Reports With Us — Book a Kidney Consultation →",
     disclaimer:
@@ -904,6 +949,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "Is there a minimum age to start constitutional treatment?",
         answer:
           "No — we treat genetic conditions from infancy. Younger children often respond well because their overall constitutional pattern is less fixed. The case-taking approach is adapted for age, relying more on parent observation for infants and very young children.",
+      },
+      {
+        question: "Can homeopathy be combined with speech, occupational or physiotherapy?",
+        answer:
+          "Yes — we actively encourage it. Constitutional homeopathic treatment works alongside these therapies, not instead of them. Many parents find their child engages more readily with therapy sessions as overall health, sleep and comfort improve, though this varies by individual.",
+      },
+      {
+        question: "Will starting homeopathy cause any setback while we wait to see results?",
+        answer:
+          "No — homeopathic medicines carry no pharmacological burden, so there is no risk of a treatment-induced setback. Genetic conditions themselves don't change, but supportive systemic improvements (immunity, sleep, digestion) build gradually and are monitored at every follow-up.",
       },
     ],
     finalCta: "Book a Consultation for Your Family Member With a Genetic Condition →",
@@ -1137,6 +1192,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "No. Treatment is not intended to be indefinite. As the child's constitutional health stabilises and gains are sustained, the frequency and dosage are gradually reduced under our supervision. Most families see the clearest picture of how long ongoing treatment will realistically be needed by the 12-month mark.",
       },
+      {
+        question: "Could my child's behaviour get more difficult while we wait to see if treatment is working?",
+        answer:
+          "Starting homeopathic treatment does not itself cause behaviour to worsen — it carries no sedating or stimulating pharmacological effect. Day-to-day behaviour naturally fluctuates for many autistic children regardless of treatment, and we ask parents to track patterns (not single days) so we can judge genuine trends at each follow-up.",
+      },
+      {
+        question: "Is homeopathic treatment safe for a non-verbal or very young autistic child?",
+        answer:
+          "Yes. Case-taking is adapted specifically for non-verbal and very young children — we rely heavily on structured parent observation (sleep, eating, sensory responses, routine changes) rather than the child's own verbal account. This is a well-established part of paediatric case-taking, not a limitation on treatment.",
+      },
     ],
     finalCta: "Book Your Child's Consultation — We Are Listening →",
     disclaimer:
@@ -1300,6 +1365,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "Can neurological conditions be managed through online consultation?",
         answer:
           "Yes, for most conditions on this page — epilepsy, migraine, Parkinson's, essential tremor and others — online consultation works the same way as in-clinic, at the same price. For cerebral palsy or conditions where physical observation is genuinely useful, we may request a video call in addition to the written history.",
+      },
+      {
+        question: "How long before migraine frequency actually reduces?",
+        answer:
+          "Most patients notice fewer or milder attacks within 2 to 3 months of consistent constitutional treatment, with more substantial reduction in frequency typically by 6 months. We track attack frequency and severity at every follow-up so progress (or the lack of it) is measured, not guessed at.",
+      },
+      {
+        question: "Will starting homeopathy increase my seizure risk while we wait to see if it helps?",
+        answer:
+          "No — homeopathic medicines have no pharmacological action on the seizure threshold, so there is no added risk from starting treatment. Your anti-epileptic medication continues exactly as your neurologist has prescribed throughout, with no interruption at any point.",
       },
     ],
     finalCta: "Book a Neurological Consultation at Yadav Homeo Clinic →",
@@ -1470,6 +1545,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "Can we do the consultation online, or does my child need to be seen in person?",
         answer:
           "Online consultation works well for most childhood conditions — we take a thorough history from parents, covering symptoms, patterns and behaviours in detail. For a small number of cases we may request a video call, but an in-person visit is rarely essential.",
+      },
+      {
+        question: "How soon should we expect to see fewer infections or better sleep?",
+        answer:
+          "For recurrent infections and sleep issues, many parents notice initial improvement within 6 to 8 weeks, with a clearer, more stable pattern by 3 to 4 months. Children's constitutional response is often faster than adults', but we still track patterns over weeks, not days.",
+      },
+      {
+        question: "Is it safe to start homeopathy while my child is already unwell?",
+        answer:
+          "Yes — homeopathic treatment can generally be started regardless of your child's current state, and does not carry any risk of worsening an existing acute illness. If your child needs urgent medical attention, we will tell you directly and clearly rather than delaying that with homeopathic treatment.",
       },
     ],
     finalCta: "Book Your Child's Consultation at Yadav Homeo Clinic →",
@@ -1690,6 +1775,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Yes. Online consultation works the same way as in-clinic, at the same price, and is often preferred for the privacy it offers. Share your reports and history over WhatsApp, and follow-ups continue the same way.",
       },
+      {
+        question: "Can I take homeopathy alongside Metformin or other PCOS medication?",
+        answer:
+          "Yes — never stop medication prescribed by your gynaecologist or endocrinologist without their guidance. Homeopathic treatment works alongside it, addressing the underlying hormonal pattern while your existing medication continues to manage the metabolic side of PCOS.",
+      },
+      {
+        question: "Will my cycle become more irregular while starting treatment?",
+        answer:
+          "Occasionally a cycle shifts slightly as the body responds to constitutional treatment, but this is not the expected pattern and is not something to be alarmed by if it happens once. We ask patients to track their cycle through treatment so any genuine pattern — not a single cycle — guides adjustments.",
+      },
     ],
     finalCta: "Book a Women's Health Consultation — Private, Compassionate, Effective →",
     disclaimer:
@@ -1863,6 +1958,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Yes — most of our men's health patients specifically choose online consultation for exactly this reason. It works the same way as in-clinic, at the same price, and means this conversation never has to happen in a waiting room.",
       },
+      {
+        question: "How long before I notice a real difference?",
+        answer:
+          "For sexual health and infertility concerns, most patients need at least one full spermatogenesis cycle (around 3 months) before meaningful change in semen parameters can be judged. For symptomatic issues like ED, some patients notice change sooner, but we set an honest, specific timeline based on your case at the first consultation rather than a generic promise.",
+      },
+      {
+        question: "Is it safe to start treatment while I'm still figuring out the cause of my symptoms?",
+        answer:
+          "Yes — homeopathic treatment carries no risk while further tests or specialist opinions are pending. If anything in your case suggests urgent investigation is needed, we will say so directly rather than starting treatment as if that weren't the case.",
+      },
     ],
     finalCta: "Book a Confidential Men's Health Consultation →",
     disclaimer:
@@ -2015,6 +2120,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "Can respiratory conditions be treated through online consultation?",
         answer:
           "Yes. Online consultation works the same way as in-clinic, at the same price. This is especially convenient for ongoing asthma or allergy management, where most follow-ups are about reviewing symptom frequency rather than a physical examination.",
+      },
+      {
+        question: "How long before I need my inhaler or antihistamines less often?",
+        answer:
+          "Many patients notice reduced frequency of acute episodes within 2 to 3 months of consistent treatment, with more stable, sustained control typically by 6 months. Reduction in rescue-medication use is something we track together with you at each follow-up, rather than something you should judge alone.",
+      },
+      {
+        question: "Could my breathing get worse while we wait to see if homeopathy helps?",
+        answer:
+          "No — starting homeopathic treatment does not itself affect your breathing or lung function. Your inhalers and other prescribed respiratory medication continue exactly as before, so your baseline control is never put at risk while the constitutional treatment takes effect.",
       },
     ],
     finalCta: "Book a Respiratory Disease Consultation at Yadav Homeo Clinic →",
@@ -2174,6 +2289,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Yes. Online consultation works the same way as in-clinic, at the same price. Share your reports (endoscopy, colonoscopy, ultrasound) over WhatsApp, and follow-ups continue the same way as an in-person visit.",
       },
+      {
+        question: "How long before my symptoms genuinely settle down?",
+        answer:
+          "Acute flares of gastritis or IBS-type symptoms often ease within a few weeks, but the underlying digestive sensitivity that causes repeated flares typically takes 3 to 6 months of constitutional treatment to meaningfully change. We track flare frequency, not just single episodes, to judge real progress.",
+      },
+      {
+        question: "Will my symptoms flare up more while starting treatment?",
+        answer:
+          "This is not the expected pattern — homeopathic treatment does not carry any pharmacological effect that would provoke a digestive flare. If your symptoms do change for any reason during treatment, tell us promptly so we can review and adjust rather than waiting until your next scheduled follow-up.",
+      },
     ],
     finalCta: "Book a Digestive Disease Consultation at Yadav Homeo Clinic →",
     disclaimer:
@@ -2304,6 +2429,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "Can hormonal conditions be managed through online consultation?",
         answer:
           "Yes. Online consultation works the same way as in-clinic, at the same price. Share your thyroid or blood sugar reports over WhatsApp every 3 months as instructed, and your prescription is adjusted based on the results.",
+      },
+      {
+        question: "How long before my thyroid or blood sugar numbers actually change?",
+        answer:
+          "Endocrine markers move slowly by nature — most patients see early trend changes at the 3-month blood test, with a clearer picture by 6 to 9 months. This is a genuinely gradual process, and we review your reports with you at every check rather than asking you to guess at progress.",
+      },
+      {
+        question: "Will my thyroid or blood sugar levels get worse while starting homeopathy?",
+        answer:
+          "No — starting homeopathic treatment does not itself affect thyroid or blood sugar levels in either direction. Your prescribed hormonal or diabetes medication continues without interruption, and the same monitoring schedule your endocrinologist has set stays exactly in place.",
       },
     ],
     finalCta: "Book a Hormonal Disease Consultation at Yadav Homeo Clinic →",
@@ -2483,6 +2618,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Yes — many patients specifically prefer online consultation for mental health, for the added privacy. It works the same way as in-clinic, at the same price. If you are in a mental health crisis, please contact a mental health professional immediately or call iCall at 9152987821 — this is not an emergency service.",
       },
+      {
+        question: "How long before I feel a genuine difference in my anxiety or mood?",
+        answer:
+          "Some patients notice a subtle easing within the first few weeks, but a genuine, sustained shift usually takes 3 to 6 months of consistent constitutional treatment. Mental health improvement is rarely linear — we review your pattern over time with you at each follow-up, rather than expecting a single turning point.",
+      },
+      {
+        question: "Could starting homeopathy make my anxiety or mood worse first?",
+        answer:
+          "This is not the expected or intended pattern. Homeopathic treatment does not carry the kind of pharmacological adjustment period that some psychiatric medications do. If anything changes for you during treatment, tell us right away over WhatsApp rather than waiting for your next scheduled visit — and never adjust any psychiatric medication yourself without your prescribing doctor's guidance.",
+      },
     ],
     finalCta: "Book a Confidential Mental Health Consultation at Yadav Homeo Clinic →",
     disclaimer:
@@ -2611,6 +2756,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Yes. Online consultation works the same way as in-clinic, at the same price. Share your X-ray or MRI reports over WhatsApp along with your symptom history, and follow-ups continue the same way.",
       },
+      {
+        question: "How long before my joint pain actually reduces?",
+        answer:
+          "Many patients notice some easing of pain and stiffness within 4 to 6 weeks, with more substantial improvement in mobility typically over 3 to 6 months for chronic joint conditions. Structural changes (like disc degeneration) don't reverse, but pain, stiffness and function can improve meaningfully — we set honest expectations specific to your imaging and history.",
+      },
+      {
+        question: "Will my joint pain flare up while starting homeopathic treatment?",
+        answer:
+          "Starting homeopathic treatment does not itself provoke a flare. Joint conditions naturally have good and bad days regardless of treatment, so we track your pattern over several weeks — not single days — to judge whether treatment is genuinely helping.",
+      },
     ],
     finalCta: "Book a Joint & Spine Consultation at Yadav Homeo Clinic →",
     disclaimer:
@@ -2729,6 +2884,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         answer:
           "Yes, for ongoing supportive care and follow-up — online consultation works the same way as in-clinic, at the same price. Share your latest cardiology reports over WhatsApp so we can coordinate our supportive prescribing with your treatment plan.",
       },
+      {
+        question: "Is it safe to add homeopathy while my cardiac condition is being actively managed?",
+        answer:
+          "Yes — homeopathic medicines carry no pharmacological load on the heart, so adding supportive treatment does not interfere with active cardiology management, medication, or a planned procedure. We always coordinate with your cardiologist and never suggest any change to cardiac medication ourselves.",
+      },
+      {
+        question: "Will supportive treatment ever delay a needed cardiac procedure?",
+        answer:
+          "No — we do not use homeopathy as a reason to delay or avoid a procedure your cardiologist has recommended. Our role is strictly supportive, alongside whatever your cardiology team has planned, not a substitute for it.",
+      },
     ],
     finalCta: "Book a Cardiac Support Consultation at Yadav Homeo Clinic →",
     disclaimer:
@@ -2834,6 +2999,16 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         question: "Will I be judged or asked uncomfortable questions?",
         answer:
           "No. We approach every sexual health consultation with the same clinical professionalism as any other medical condition — no judgment, no unnecessary questions. You share what's relevant to your case, at your own pace.",
+      },
+      {
+        question: "How long does treatment usually take for these concerns?",
+        answer:
+          "This varies a great deal by the specific concern — some patients notice change within weeks, others need several months of constitutional treatment. We give you a specific, honest timeline for your case at the first consultation rather than a generic answer here.",
+      },
+      {
+        question: "Is homeopathic treatment safe alongside any medication I'm already taking?",
+        answer:
+          "Yes — never stop any prescribed medication without your treating doctor's guidance. Homeopathic treatment works alongside existing medical care, and we'll tell you clearly if any part of your case needs a specialist's direct involvement.",
       },
     ],
     finalCta: "Ready to Talk? Every Conversation Here Is Completely Confidential.",
