@@ -48,6 +48,7 @@ const locationLinks = [
 ];
 
 const resourceLinks = [
+  { label: "Root Cause Assessment", href: "/root-cause-assessment" },
   { label: "Blog", href: "/blog" },
   { label: "Patient Stories", href: "/patient-stories" },
   { label: "FAQ", href: "/faq" },

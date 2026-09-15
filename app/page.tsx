@@ -1,5 +1,6 @@
 import Hero from "@/components/homepage/Hero";
 import StatsBar from "@/components/homepage/StatsBar";
+import { AssessmentTeaser } from "@/components/homepage/AssessmentTeaser";
 import AboutTeaser from "@/components/homepage/AboutTeaser";
 import ConditionsGrid from "@/components/homepage/ConditionsGrid";
 import HowWeWork from "@/components/homepage/HowWeWork";
@@ -76,6 +77,7 @@ export default async function HomePage() {
 
       <Hero />
       <StatsBar />
+      <AssessmentTeaser />
       <PageVideo videos={videos} />
       <PhotoGallery photos={photos} />
       <AboutTeaser />
