@@ -4,6 +4,7 @@ import { getAllDiseasePageSlugs } from "@/lib/data/disease-pages";
 import { getAllBlogSlugs } from "@/lib/data/blog";
 import { getDoctors } from "@/lib/supabase/queries/doctors";
 import { getConditionFaqSlugs } from "@/lib/content/homeopathy-faq-content";
+import { CITIES } from "@/lib/data/cities";
 
 const STATIC_ROUTES = [
   "",
@@ -27,6 +28,9 @@ const STATIC_ROUTES = [
   "privacy-policy",
   "terms-of-use",
   "medical-disclaimer",
+  "cities",
+  "international-patients",
+  "diet-lifestyle-guide",
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -61,11 +65,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(),
   }));
 
+  const cityEntries = CITIES.map((city) => ({
+    url: `${siteConfig.url}/cities/${city.slug}/`,
+    lastModified: new Date(),
+  }));
+
   return [
     ...staticEntries,
     ...diseaseEntries,
     ...blogEntries,
     ...doctorEntries,
     ...conditionFaqEntries,
+    ...cityEntries,
   ];
 }
