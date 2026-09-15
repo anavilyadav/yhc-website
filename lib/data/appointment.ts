@@ -289,6 +289,13 @@ const FALLBACK_FAQS: FaqItem[] = [
     answer:
       "We understand that plans change. If you need to reschedule your appointment, please inform us at least 24 hours in advance via call or WhatsApp so that we can offer your slot to another patient. We will reschedule your appointment at the earliest convenient time.",
   },
+  {
+    id: "faq-13",
+    sortOrder: 13,
+    question: "What is your refund policy?",
+    answer:
+      "Payments are not refundable — this applies to every plan, whether it's a single month, a multi-month advance-pay package (3, 6, 9 or 12 months), or the ₹1,000 registration-only payment. Please choose the plan and duration that genuinely suits your case before paying; if you're unsure, WhatsApp us first and we'll help you decide.",
+  },
 ];
 
 /**

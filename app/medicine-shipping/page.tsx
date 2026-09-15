@@ -34,7 +34,12 @@ export default function MedicineShippingPage() {
           <CourierPaymentForm />
         </div>
 
-        <p className="mt-6 text-center text-[13px] text-text-mid">
+        <p className="mt-6 text-center text-[12px] text-text-light">
+          Courier payments are non-refundable once made — please pick the size that matches your
+          parcel before paying.
+        </p>
+
+        <p className="mt-3 text-center text-[13px] text-text-mid">
           Not sure which size to pick?{" "}
           <a
             href={whatsappLink("Hello, I need to arrange medicine courier for my ongoing treatment.")}

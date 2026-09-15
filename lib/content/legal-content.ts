@@ -128,25 +128,32 @@ export const termsOfUse: LegalPageContent = {
       ],
     },
     {
-      heading: "5. Intellectual Property",
+      heading: "5. Payments and Refunds",
+      body: [
+        "All consultation, package, and registration payments — whether for a single month, a multi-month advance-pay package, international plans, or the medicine-courier charge — are non-refundable once made. Please confirm the plan, duration, and amount suit your case before paying; WhatsApp us first if you are unsure.",
+        "Prices are quoted at the time of payment and may change for future bookings without affecting a payment already completed.",
+      ],
+    },
+    {
+      heading: "6. Intellectual Property",
       body: [
         "All content on yadavhomeoclinic.com — text, images, layouts, and design — is the property of Yadav Homeo Clinic and may not be reproduced, distributed or used without written permission.",
       ],
     },
     {
-      heading: "6. Changes to Terms",
+      heading: "7. Changes to Terms",
       body: [
         'We reserve the right to update these Terms of Use at any time. The "Last Updated" date above will reflect the most recent version. Continued use of the website after changes constitutes acceptance.',
       ],
     },
     {
-      heading: "7. Governing Law",
+      heading: "8. Governing Law",
       body: [
         "These Terms are governed by the laws of India. Any disputes shall be subject to the jurisdiction of the courts of Jaipur, Rajasthan.",
       ],
     },
     {
-      heading: "8. Contact",
+      heading: "9. Contact",
       body: ["Questions about these terms: +91-8949427254 | [clinic email]"],
     },
   ],
