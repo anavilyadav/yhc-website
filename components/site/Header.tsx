@@ -37,8 +37,9 @@ const treatmentLinks = [
   { label: "Cardiac Support", href: "/heart-cardiac-support" },
 ];
 
+const homeLink = { label: "Home", href: "/" };
+
 const primaryLinks = [
-  { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Our Doctors", href: "/our-doctors" },
 ];
@@ -69,7 +70,7 @@ const trailingLinks = [
 // as the desktop bar, just grouped as a single scrollable list instead
 // of hover dropdowns (which don't work well with touch).
 const mobileGroups = [
-  { heading: "Explore", links: [...primaryLinks, ...trailingLinks] },
+  { heading: "Explore", links: [homeLink, ...primaryLinks, ...trailingLinks] },
   { heading: "Treatments", links: treatmentLinks },
   { heading: "Locations", links: locationLinks },
   { heading: "Resources", links: resourceLinks },
@@ -222,7 +223,7 @@ export default function Header({ settings }: { settings: SiteSettings }) {
       </div>
 
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
-        <Link href="/" className="flex shrink-0 flex-col items-start gap-1">
+        <Link href="/" className="flex shrink-0 flex-col items-center gap-1">
           {/*
             The logo's own wordmark is dark navy (near-identical to this
             header's background), so it needs a light backing to actually
@@ -239,12 +240,18 @@ export default function Header({ settings }: { settings: SiteSettings }) {
               className="h-11 w-auto md:h-12"
             />
           </span>
-          <span className="pl-0.5 text-[10px] tracking-[0.2em] text-amber-light/80 uppercase">
+          <span className="text-[10px] tracking-[0.2em] text-amber-light/80 uppercase">
             Jaipur · Since {siteConfig.foundingYear}
           </span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
+          <Link
+            href={homeLink.href}
+            className="text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
+          >
+            {homeLink.label}
+          </Link>
           <NavMegaMenu label="Treatments" links={treatmentLinks} />
           {primaryLinks.map((link) => (
             <Link
