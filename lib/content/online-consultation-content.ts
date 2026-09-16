@@ -44,7 +44,7 @@ export const processSteps: { title: string; body: string }[] = [
   },
   {
     title: "Make Payment",
-    body: "Pay via UPI or bank transfer — details shared on WhatsApp once your case is reviewed. Send the payment screenshot to WhatsApp with your full name. International patients: payment details shared on WhatsApp.",
+    body: "Pay securely online on our Appointment page — by card, UPI, or netbanking. Prefer a bank transfer instead? WhatsApp us for details. International patients: payment details shared on WhatsApp.",
   },
   {
     title: "Prescription Delivered",

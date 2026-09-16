@@ -12,9 +12,7 @@ const STEPS = [
   },
   {
     title: "Pay the Consultation Fee",
-    body: siteConfig.upiId
-      ? `Pay via UPI (${siteConfig.upiId}) or bank transfer. After payment, send us the screenshot with your full name.`
-      : "Pay via UPI or bank transfer — WhatsApp us and we'll share our current UPI ID and bank details directly. After payment, send us the screenshot with your full name.",
+    body: "Pay securely online in the pricing section below — by card, UPI, or netbanking. Prefer a bank transfer instead? WhatsApp us and we'll share our current bank details directly.",
   },
   {
     title: "Dr Anavil / Dr T P Yadav Reviews Your Complete Case",

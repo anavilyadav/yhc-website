@@ -36,9 +36,6 @@ export const siteConfig = {
     e164: "+918003231288",
   },
   email: process.env.NEXT_PUBLIC_CLINIC_EMAIL || null, // fill in real clinic email
-  // Confirmed directly by Dr Anavil (chat, 2026-08-29) — no longer a
-  // placeholder. Env var can still override if it ever changes.
-  upiId: process.env.NEXT_PUBLIC_CLINIC_UPI || "paytmqr6in7uh@ptys",
   social: {
     facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || null,
     instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || null,
