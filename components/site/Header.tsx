@@ -101,7 +101,7 @@ function NavDropdown({ label, links }: { label: string; links: { label: string; 
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex items-center gap-1 text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
+        className="flex items-center gap-1 whitespace-nowrap text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
       >
         {label}
         <span aria-hidden className={`text-[10px] transition-transform ${open ? "rotate-180" : ""}`}>
@@ -151,7 +151,7 @@ function NavMegaMenu({ label, links }: { label: string; links: { label: string; 
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex items-center gap-1 text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
+        className="flex items-center gap-1 whitespace-nowrap text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
       >
         {label}
         <span aria-hidden className={`text-[10px] transition-transform ${open ? "rotate-180" : ""}`}>
@@ -248,7 +248,7 @@ export default function Header({ settings }: { settings: SiteSettings }) {
         <nav className="hidden items-center gap-6 lg:flex">
           <Link
             href={homeLink.href}
-            className="text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
+            className="whitespace-nowrap text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
           >
             {homeLink.label}
           </Link>
@@ -257,7 +257,7 @@ export default function Header({ settings }: { settings: SiteSettings }) {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
+              className="whitespace-nowrap text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
             >
               {link.label}
             </Link>
@@ -268,7 +268,7 @@ export default function Header({ settings }: { settings: SiteSettings }) {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
+              className="whitespace-nowrap text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
             >
               {link.label}
             </Link>
