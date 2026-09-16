@@ -38,6 +38,7 @@ const treatmentLinks = [
 ];
 
 const primaryLinks = [
+  { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Our Doctors", href: "/our-doctors" },
 ];
