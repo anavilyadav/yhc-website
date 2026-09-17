@@ -1,4 +1,5 @@
 import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlaceholder";
+import { SHOW_MEDIA_PLACEHOLDERS } from "@/lib/feature-flags";
 
 /**
  * Photo-break slot — layout #8 ("Visual Proof Strip"), the photo
@@ -8,6 +9,7 @@ import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlace
  */
 export default function PhotoEmbed({ photoUrl, caption }: { photoUrl?: string; caption: string }) {
   if (!photoUrl) {
+    if (!SHOW_MEDIA_PLACEHOLDERS) return null;
     return (
       <div className="mx-auto my-6 max-w-2xl">
         <ContentNeededPlaceholder kind="photo" description={caption} />

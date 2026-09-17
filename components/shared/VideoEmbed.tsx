@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlaceholder";
+import { SHOW_MEDIA_PLACEHOLDERS } from "@/lib/feature-flags";
 
 /**
  * Video-hero slot — the #1 layout from the video-first redesign plan.
@@ -24,6 +25,7 @@ export default function VideoEmbed({
   const [playing, setPlaying] = useState(false);
 
   if (!youtubeId) {
+    if (!SHOW_MEDIA_PLACEHOLDERS) return null;
     return (
       <div className="mx-auto my-6 max-w-2xl">
         <ContentNeededPlaceholder kind="video" description={title} />

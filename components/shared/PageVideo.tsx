@@ -1,6 +1,7 @@
 import type { PageVideo as PageVideoData } from "@/lib/types";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlaceholder";
+import { SHOW_MEDIA_PLACEHOLDERS } from "@/lib/feature-flags";
 
 /**
  * Renders every video attached to a page (via the page_videos Supabase
@@ -16,6 +17,7 @@ import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlace
  */
 export function PageVideo({ videos }: { videos: PageVideoData[] }) {
   if (videos.length === 0) {
+    if (!SHOW_MEDIA_PLACEHOLDERS) return null;
     return (
       <div className="bg-cream-bg px-5 py-8 print:hidden">
         <ContentNeededPlaceholder

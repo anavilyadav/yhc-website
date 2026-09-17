@@ -1,5 +1,6 @@
 import type { GalleryPhoto } from "@/lib/types";
 import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlaceholder";
+import { SHOW_MEDIA_PLACEHOLDERS } from "@/lib/feature-flags";
 
 /**
  * Page-level photo gallery (2026-09-11 build spec, Section 6) — the photo
@@ -16,6 +17,7 @@ import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlace
  */
 export function PhotoGallery({ photos }: { photos: GalleryPhoto[] }) {
   if (photos.length === 0) {
+    if (!SHOW_MEDIA_PLACEHOLDERS) return null;
     return (
       <div className="bg-white px-5 py-8 print:hidden">
         <ContentNeededPlaceholder

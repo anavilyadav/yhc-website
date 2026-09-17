@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { PageVideo as PageVideoType } from "@/lib/types";
 import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlaceholder";
+import { SHOW_MEDIA_PLACEHOLDERS } from "@/lib/feature-flags";
 
 function thumbnailUrl(youtubeId: string): string {
   return `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
@@ -16,6 +17,7 @@ function thumbnailUrl(youtubeId: string): string {
  */
 export function VideoGallery({ videos }: { videos: PageVideoType[] }) {
   if (videos.length === 0) {
+    if (!SHOW_MEDIA_PLACEHOLDERS) return null;
     return (
       <div className="bg-white px-5 py-8">
         <ContentNeededPlaceholder

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { ContentNeededPlaceholder } from "@/components/shared/ContentNeededPlaceholder";
+import { SHOW_MEDIA_PLACEHOLDERS } from "@/lib/feature-flags";
 import type { RelatedVideo } from "@/lib/types";
 
 function VideoCard({ video }: { video: RelatedVideo }) {
@@ -69,6 +70,7 @@ export default function RelatedVideosGallery({
   heading?: string;
 }) {
   if (videos.length === 0) {
+    if (!SHOW_MEDIA_PLACEHOLDERS) return null;
     return (
       <section className="bg-cream-bg px-5 py-12 print:hidden">
         <div className="mx-auto max-w-5xl">
