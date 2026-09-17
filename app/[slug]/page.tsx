@@ -16,7 +16,6 @@ import TriggerChips from "@/components/disease-page/TriggerChips";
 import SoundFamiliar from "@/components/disease-page/SoundFamiliar";
 import PriceTeaser from "@/components/disease-page/PriceTeaser";
 import { PricingSection } from "@/components/appointment/PricingSection";
-import { PdfSummaryButton } from "@/components/disease-page/PdfSummaryButton";
 import { PrintLetterhead } from "@/components/disease-page/PrintLetterhead";
 import { AuthorBox } from "@/components/blog/AuthorBox";
 import { PageVideo } from "@/components/shared/PageVideo";
@@ -139,17 +138,6 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
           lastReviewed={formatDate(new Date())}
           reviewedBy={`${siteConfig.doctors.founder.name}, BHMS, MD — Founder, 35+ years of clinical practice.`}
         />
-      </div>
-
-      {/*
-        PDF summary — UW ch.5 "low-effort lead magnet built from content
-        already on the site". Originally scoped to only the 5 flagship
-        pages with a comparisonTable, but the button itself (window.print())
-        has no dependency on that table — it prints whatever's on the page —
-        so it's shown on every disease page now.
-      */}
-      <div className="mx-auto max-w-4xl px-5 pt-4 text-center sm:text-left">
-        <PdfSummaryButton conditionName={page.aboutCondition.name} />
       </div>
 
       {page.disclaimerProminent && (
