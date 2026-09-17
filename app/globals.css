@@ -22,11 +22,20 @@
   --color-navy: #1a2a41;
   --color-navy-light: #2c4162;
   --color-navy-2: #233a57;
+  /*
+    amber-dark darkened again 2026-09-17 — #a97b2e only hit ~3.5-3.8:1
+    against white/cream-bg/cream, below the 4.5:1 WCAG AA minimum for the
+    small (10-12.5px) labels/badges it's used for sitewide (eyebrow
+    labels, "New Patient"/"Follow-Up" tags, secondary links). This value
+    keeps the same hue/saturation, just darker: 5.9:1 vs white, 5.5:1 vs
+    cream-bg, 5.1:1 vs cream — clears all three with margin. green
+    mirrors it, per the 2026-09-10 retarget above.
+  */
   --color-amber: #d4a04a;
-  --color-amber-dark: #a97b2e;
+  --color-amber-dark: #815e23;
   --color-amber-light: #facb7a;
   --color-amber-tint: #fbf1df;
-  --color-green: #a97b2e;
+  --color-green: #815e23;
   --color-green-tint: #fbf1df;
   --color-white: #ffffff;
   --color-text-mid: #4a5a72;
