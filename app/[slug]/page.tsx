@@ -143,14 +143,14 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
 
       {/*
         PDF summary — UW ch.5 "low-effort lead magnet built from content
-        already on the site". Scoped to the same 5 flagship pages that
-        already have a comparisonTable, not every disease page.
+        already on the site". Originally scoped to only the 5 flagship
+        pages with a comparisonTable, but the button itself (window.print())
+        has no dependency on that table — it prints whatever's on the page —
+        so it's shown on every disease page now.
       */}
-      {page.comparisonTable && (
-        <div className="mx-auto max-w-4xl px-5 pt-4 text-center sm:text-left">
-          <PdfSummaryButton conditionName={page.aboutCondition.name} />
-        </div>
-      )}
+      <div className="mx-auto max-w-4xl px-5 pt-4 text-center sm:text-left">
+        <PdfSummaryButton conditionName={page.aboutCondition.name} />
+      </div>
 
       {page.disclaimerProminent && (
         <DisclaimerBanner text={page.disclaimer} prominent />
