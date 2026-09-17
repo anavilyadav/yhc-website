@@ -3,6 +3,7 @@ import StatsBar from "@/components/homepage/StatsBar";
 import WhatYouGet from "@/components/homepage/WhatYouGet";
 import { AssessmentTeaser } from "@/components/homepage/AssessmentTeaser";
 import AboutTeaser from "@/components/homepage/AboutTeaser";
+import { AutismFeature } from "@/components/homepage/AutismFeature";
 import ConditionsGrid from "@/components/homepage/ConditionsGrid";
 import HowWeWork from "@/components/homepage/HowWeWork";
 import WhyChooseUs from "@/components/homepage/WhyChooseUs";
@@ -83,6 +84,7 @@ export default async function HomePage() {
       <PageVideo videos={videos} />
       <PhotoGallery photos={photos} />
       <AboutTeaser />
+      <AutismFeature />
       <ConditionsGrid diseases={diseases} />
       <QuickCheck />
       <HowWeWork />
