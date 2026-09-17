@@ -8,6 +8,7 @@ import { DoctorProfileSection } from "@/components/about/DoctorProfileSection";
 import { ClinicTimeline } from "@/components/about/ClinicTimeline";
 import { MissionVisionValues } from "@/components/about/MissionVisionValues";
 import { WhyUsGrid } from "@/components/about/WhyUsGrid";
+import { MythsVsFacts } from "@/components/about/MythsVsFacts";
 import { AboutCta } from "@/components/about/AboutCta";
 import { PhysicianSchema } from "@/components/schema/PhysicianSchema";
 import { PageVideo } from "@/components/shared/PageVideo";
@@ -80,6 +81,7 @@ export default async function AboutPage() {
       <ClinicTimeline />
       <MissionVisionValues />
       <WhyUsGrid />
+      <MythsVsFacts />
       <AboutCta />
 
       {drTpYadav && <PhysicianSchema doctor={drTpYadav} />}

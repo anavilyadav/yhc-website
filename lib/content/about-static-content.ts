@@ -66,6 +66,38 @@ export const whyUs = {
   ],
 };
 
+export const mythsVsFacts = {
+  heading: "What Homeopathy Is — And Is Not",
+  subheading:
+    "Before you decide whether to try classical homeopathy, it helps to know what it actually promises — and what it deliberately does not.",
+  points: [
+    {
+      myth: "“It’s just a placebo.”",
+      fact: "We won’t claim homeopathy has been proven the way a drug trial proves a medicine — that isn’t how classical homeopathy is studied. What we can point to is 35 years of documented clinical outcomes, tracked case by case, remedy matched to remedy. Judge it on that record, not on a slogan either way.",
+    },
+    {
+      myth: "“One medicine treats everyone with the same disease.”",
+      fact: "Classical homeopathy doesn’t work that way. Two patients with the same diagnosed condition can walk out of Yadav Homeo Clinic with two completely different remedies, because the prescription is built from your whole case — not just the disease's name.",
+    },
+    {
+      myth: "“Homeopathy is always slow — you wait years to see anything.”",
+      fact: "Some things move faster than people expect (many patients notice a change in symptom frequency or severity within weeks), and some structural or long-standing changes genuinely take months. We give you a specific, honest timeline for your condition at the first consultation — not a vague ‘be patient’.",
+    },
+    {
+      myth: "“It's natural, so you can just try it on your own.”",
+      fact: "Classical homeopathy is gentle at the dilutions we prescribe, but it isn’t a self-service remedy cabinet. Getting the right single remedy depends on proper case-taking by a registered physician — not picking a bottle off a shelf because it lists your symptom.",
+    },
+    {
+      myth: "“You have to stop your other medicines to start homeopathy.”",
+      fact: "Never. Continue every medicine your treating doctor has prescribed. Homeopathic treatment is designed to work alongside your existing care, not replace it — any change to conventional medication is a decision for you and that doctor, never made unilaterally here.",
+    },
+    {
+      myth: "“Homeopathy can cure absolutely anything, guaranteed.”",
+      fact: "It cannot, and we say so directly on every condition we treat — including cancer, where we are explicit that homeopathy does not claim to cure the disease itself. We tell patients clearly and kindly what a treatment can and cannot realistically do for their specific case.",
+    },
+  ],
+};
+
 export const aboutSeo = {
   title: "About Us | Yadav Homeo Clinic | Classical Homeopathy in Jaipur Since 1991",
   description:
