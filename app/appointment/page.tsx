@@ -15,7 +15,7 @@ import { PricingSection } from "@/components/appointment/PricingSection";
 import { PreparationChecklist } from "@/components/appointment/PreparationChecklist";
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { JsonLd } from "@/components/shared/JsonLd";
-import { MapPinIcon, GlobeIcon } from "@/components/shared/icons";
+import { MapPinIcon, GlobeIcon, CheckIcon } from "@/components/shared/icons";
 import SectionJumpNav from "@/components/disease-page/SectionJumpNav";
 import styles from "./appointment.module.css";
 
@@ -108,6 +108,20 @@ export default async function AppointmentPage() {
 
       <OnlineProcessSteps />
       <PricingSection plans={pricingPlans} doctors={doctors} />
+
+      <div className="bg-white px-5 pb-12">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-3 rounded-lg border-2 border-green/30 bg-green/5 px-6 py-6 text-center shadow-sm">
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-green/15 text-green">
+            <CheckIcon className="h-5 w-5" />
+          </span>
+          <p className="text-sm leading-relaxed text-navy">
+            <span className="font-bold">Our honesty commitment:</span> if after a fair trial of
+            treatment — typically 4 to 6 months — we are not seeing the response we expected, we
+            will tell you clearly and suggest appropriate next steps. We do not keep patients on
+            treatment indefinitely without meaningful progress.
+          </p>
+        </div>
+      </div>
 
       <div className="bg-white px-5 pb-12">
         <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-3 rounded-lg border border-border-amber bg-cream-bg px-6 py-5 text-center shadow-sm sm:flex-row sm:text-left">
