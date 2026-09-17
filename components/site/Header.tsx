@@ -245,7 +245,7 @@ export default function Header({ settings }: { settings: SiteSettings }) {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-6 xl:flex">
           <Link
             href={homeLink.href}
             className="whitespace-nowrap text-[15px] font-medium text-cream/70 transition-colors hover:text-amber-light"
@@ -289,7 +289,7 @@ export default function Header({ settings }: { settings: SiteSettings }) {
             onClick={() => setMobileOpen((v) => !v)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            className="flex h-9 w-9 shrink-0 flex-col items-center justify-center gap-1.5 rounded-sm border border-amber/30 lg:hidden"
+            className="flex h-9 w-9 shrink-0 flex-col items-center justify-center gap-1.5 rounded-sm border border-amber/30 xl:hidden"
           >
             <span
               aria-hidden
@@ -312,7 +312,7 @@ export default function Header({ settings }: { settings: SiteSettings }) {
       </div>
 
       {mobileOpen && (
-        <div className="max-h-[calc(100vh-64px)] overflow-y-auto border-t border-amber/20 bg-navy lg:hidden">
+        <div className="max-h-[calc(100vh-64px)] overflow-y-auto border-t border-amber/20 bg-navy xl:hidden">
           <nav className="mx-auto max-w-6xl px-5 pb-24 pt-6">
             {mobileGroups.map((group) => (
               <div key={group.heading} className="mb-6">
