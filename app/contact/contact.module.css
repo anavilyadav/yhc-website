@@ -308,13 +308,23 @@
 }
 
 .formMessage {
+  /*
+    .formLayout is a 2-column grid with default align-items: stretch, so
+    without this the message div (replacing the much-taller form) was
+    stretched to match the intro column's height — leaving the actual
+    text sitting at the top of a mostly-empty box that looked like the
+    submission produced nothing.
+  */
+  align-self: start;
   font-size: 14px;
-  padding: 12px 14px;
+  line-height: 1.6;
+  padding: 16px 18px;
   border-radius: var(--radius-sm);
 }
 
 .formMessageSuccess {
   background: var(--green-tint);
+  border: 1px solid var(--amber-dark);
   color: var(--navy);
 }
 
