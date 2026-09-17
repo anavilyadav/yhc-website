@@ -44,6 +44,11 @@ export default function Hero() {
           </Link>
         </div>
 
+        <p className="mt-4 text-sm font-semibold text-amber-dark">
+          Every patient is seen personally by Dr T P Yadav or Dr Anavil Yadav — we&apos;ve stayed
+          two doctors, not a chain, so weekly appointment slots are genuinely limited.
+        </p>
+
         <p className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-sm font-medium text-text-mid">
           {trustPoints.map((point) => (
             <span key={point} className="inline-flex items-center gap-1.5">
