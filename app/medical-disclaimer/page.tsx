@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: { absolute: medicalDisclaimerPage.title },
   description:
     "The medical disclaimer covering all content and consultation services on the Yadav Homeo Clinic website.",
-  alternates: { canonical: `${siteConfig.url}/medical-disclaimer/` },
+  alternates: { canonical: `${siteConfig.url}/medical-disclaimer` },
 };
 
 export default function MedicalDisclaimerPage() {

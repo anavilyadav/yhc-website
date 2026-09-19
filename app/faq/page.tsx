@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   title: { absolute: faqSeo.pageTitle },
   description: faqSeo.metaDescription,
   keywords: [faqSeo.focusKeyword, ...faqSeo.secondaryKeywords],
-  alternates: { canonical: `${siteConfig.url}/faq/` },
+  alternates: { canonical: `${siteConfig.url}/faq` },
   openGraph: {
     title: faqSeo.pageTitle,
     description: faqSeo.metaDescription,
-    url: `${siteConfig.url}/faq/`,
+    url: `${siteConfig.url}/faq`,
     siteName: siteConfig.name,
     locale: "en_IN",
     type: "website",

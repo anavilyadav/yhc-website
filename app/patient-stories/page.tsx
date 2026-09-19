@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   title: { absolute: patientStoriesSeo.pageTitle },
   description: patientStoriesSeo.metaDescription,
   keywords: [patientStoriesSeo.focusKeyword, ...patientStoriesSeo.secondaryKeywords],
-  alternates: { canonical: `${siteConfig.url}/patient-stories/` },
+  alternates: { canonical: `${siteConfig.url}/patient-stories` },
   openGraph: {
     title: patientStoriesSeo.pageTitle,
     description: patientStoriesSeo.metaDescription,
-    url: `${siteConfig.url}/patient-stories/`,
+    url: `${siteConfig.url}/patient-stories`,
     siteName: siteConfig.name,
     locale: "en_IN",
     type: "website",

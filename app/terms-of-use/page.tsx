@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: { absolute: termsOfUse.title },
   description: "Terms of use for the Yadav Homeo Clinic website and consultation services.",
-  alternates: { canonical: `${siteConfig.url}/terms-of-use/` },
+  alternates: { canonical: `${siteConfig.url}/terms-of-use` },
 };
 
 export default function TermsOfUsePage() {

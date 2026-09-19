@@ -13,8 +13,8 @@ import { siteConfig } from "@/lib/site-config";
  */
 
 const clinicId = `${siteConfig.url}/#clinic`;
-const founderId = `${siteConfig.url}/our-doctors/${siteConfig.doctors.founder.slug}/#doctor`;
-const physicianId = `${siteConfig.url}/our-doctors/${siteConfig.doctors.physician.slug}/#doctor`;
+const founderId = `${siteConfig.url}/our-doctors/${siteConfig.doctors.founder.slug}#doctor`;
+const physicianId = `${siteConfig.url}/our-doctors/${siteConfig.doctors.physician.slug}#doctor`;
 
 function socialLinks(): string[] {
   const links = [
@@ -95,7 +95,7 @@ export function buildClinicSchema() {
   return schema;
 }
 
-const jagatpuraClinicId = `${siteConfig.url}/homeopathy-clinic-jagatpura-jaipur/#clinic`;
+const jagatpuraClinicId = `${siteConfig.url}/homeopathy-clinic-jagatpura-jaipur#clinic`;
 
 /**
  * JSON-LD for the Jagatpura branch — a distinct MedicalClinic location
@@ -112,7 +112,7 @@ export function buildJagatpuraClinicSchema() {
     name: `${siteConfig.name} — Jagatpura`,
     description:
       "Jagatpura branch of Yadav Homeo Clinic — classical homeopathy for chronic disease, open Sundays. Founded by Dr T P Yadav, now led by Dr T P Yadav (BHMS, MD) and Dr Anavil Yadav (BHMS).",
-    url: `${siteConfig.url}/homeopathy-clinic-jagatpura-jaipur/`,
+    url: `${siteConfig.url}/homeopathy-clinic-jagatpura-jaipur`,
     parentOrganization: { "@id": clinicId },
     logo: `${siteConfig.url}/logo-full.png`,
     image: `${siteConfig.url}/logo-full.png`,
@@ -163,7 +163,7 @@ export function buildSpeakableSchema() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: `${siteConfig.name} — Jaipur Homeopathy`,
-    url: `${siteConfig.url}/`,
+    url: siteConfig.url,
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: [".clinic-intro", ".hero-text", ".why-choose-us"],
@@ -200,7 +200,7 @@ export function buildMedicalWebPageSchema(page: {
   aboutCondition: { name: string; alternateNames: string[]; description: string };
   breadcrumbParent?: { label: string; href: string };
 }) {
-  const pageUrl = `${siteConfig.url}/${page.slug}/`;
+  const pageUrl = `${siteConfig.url}/${page.slug}`;
   const parent = page.breadcrumbParent ?? { label: "Conditions We Treat", href: "/#conditions" };
 
   return {
@@ -232,7 +232,7 @@ export function buildMedicalWebPageSchema(page: {
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: `${siteConfig.url}/` },
+        { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
         {
           "@type": "ListItem",
           position: 2,
@@ -272,7 +272,7 @@ export function buildBlogPostingSchema(post: {
   secondaryKeywords: string[];
   publishedDate: string;
 }) {
-  const postUrl = `${siteConfig.url}/blog/${post.slug}/`;
+  const postUrl = `${siteConfig.url}/blog/${post.slug}`;
 
   return {
     "@context": "https://schema.org",
@@ -287,7 +287,7 @@ export function buildBlogPostingSchema(post: {
       "@id": physicianId,
       name: siteConfig.doctors.physician.name,
       jobTitle: "Homeopathic Physician, BHMS",
-      url: `${siteConfig.url}/our-doctors/${siteConfig.doctors.physician.slug}/`,
+      url: `${siteConfig.url}/our-doctors/${siteConfig.doctors.physician.slug}`,
     },
     publisher: {
       "@type": "Organization",
@@ -314,7 +314,7 @@ export function buildPhysicianSchemas() {
     name: siteConfig.doctors.founder.name,
     description:
       "Founder and Chief Homeopathic Physician at Yadav Homeo Clinic, Jaipur. 35+ years of classical homeopathic practice. Specialist in vitiligo, autism, kidney disease, autoimmune conditions and genetic diseases.",
-    url: `${siteConfig.url}/our-doctors/${siteConfig.doctors.founder.slug}/`,
+    url: `${siteConfig.url}/our-doctors/${siteConfig.doctors.founder.slug}`,
     jobTitle: siteConfig.doctors.founder.title,
     worksFor: { "@id": clinicId },
     hasCredential: {
@@ -348,7 +348,7 @@ export function buildPhysicianSchemas() {
     familyName: "Yadav",
     description:
       "Homeopathic physician (BHMS 2016) at Yadav Homeo Clinic, Jaipur. Second-generation classical homeopath. Son of Dr T P Yadav (35+ years experience). Extensive clinical experience in chronic skin diseases, autoimmune conditions, autism and online homeopathy consultations pan-India and internationally.",
-    url: `${siteConfig.url}/our-doctors/${siteConfig.doctors.physician.slug}/`,
+    url: `${siteConfig.url}/our-doctors/${siteConfig.doctors.physician.slug}`,
     jobTitle: siteConfig.doctors.physician.title,
     worksFor: { "@id": clinicId },
     hasCredential: {

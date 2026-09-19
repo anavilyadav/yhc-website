@@ -4,7 +4,7 @@ import { ConditionTabs } from "@/components/diet-lifestyle/ConditionTabs";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { WhatsAppIcon, InfoIcon } from "@/components/shared/icons";
 
-const pageUrl = `${siteConfig.url}/diet-lifestyle-guide/`;
+const pageUrl = `${siteConfig.url}/diet-lifestyle-guide`;
 
 export const metadata: Metadata = {
   title: { absolute: `Diet & Lifestyle Guide for Homeopathy Patients | ${siteConfig.name}` },

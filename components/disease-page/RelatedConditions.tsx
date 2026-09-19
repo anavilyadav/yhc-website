@@ -15,7 +15,7 @@ export default function RelatedConditions({
           {items.map((item) => (
             <Link
               key={item.slug}
-              href={`/${item.slug}/`}
+              href={`/${item.slug}`}
               className="rounded-sm border border-border-amber bg-white px-4 py-2 text-sm font-semibold text-navy transition-colors hover:border-amber hover:text-amber-dark"
             >
               {item.label} →

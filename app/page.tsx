@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { siteConfig } from "@/lib/site-config";
 import Hero from "@/components/homepage/Hero";
 import StatsBar from "@/components/homepage/StatsBar";
 import WhatYouGet from "@/components/homepage/WhatYouGet";
@@ -28,6 +30,14 @@ import {
 // per hour, so admin-panel edits go live without a redeploy while the page
 // still serves as a fast, cached static response the rest of the time.
 export const revalidate = 3600;
+
+// The homepage never had its own canonical before — it silently inherited
+// nothing from the root layout, so Google saw no canonical tag at all here.
+// Title/description/openGraph are already correct via the root layout's
+// own metadata, so only the missing canonical needs adding.
+export const metadata: Metadata = {
+  alternates: { canonical: siteConfig.url },
+};
 
 export default async function HomePage() {
   const [diseases, testimonials, videos, photos] = await Promise.all([

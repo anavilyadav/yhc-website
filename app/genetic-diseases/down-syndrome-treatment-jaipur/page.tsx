@@ -25,11 +25,11 @@ export const metadata: Metadata = {
   title: { absolute: page.pageTitle },
   description: page.metaDescription,
   keywords: [page.focusKeyword, ...page.secondaryKeywords],
-  alternates: { canonical: `${siteConfig.url}/${page.parentSlug}/${page.slug}/` },
+  alternates: { canonical: `${siteConfig.url}/${page.parentSlug}/${page.slug}` },
   openGraph: {
     title: page.pageTitle,
     description: page.metaDescription,
-    url: `${siteConfig.url}/${page.parentSlug}/${page.slug}/`,
+    url: `${siteConfig.url}/${page.parentSlug}/${page.slug}`,
     siteName: siteConfig.name,
     locale: "en_IN",
     type: "website",

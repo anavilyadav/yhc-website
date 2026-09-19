@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: { absolute: privacyPolicy.title },
   description:
     "How Yadav Homeo Clinic collects, uses, and protects your personal data, in accordance with the Digital Personal Data Protection Act 2023.",
-  alternates: { canonical: `${siteConfig.url}/privacy-policy/` },
+  alternates: { canonical: `${siteConfig.url}/privacy-policy` },
 };
 
 export default function PrivacyPolicyPage() {

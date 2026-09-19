@@ -27,7 +27,7 @@ export async function generateMetadata({
   const extra = doctorProfileExtras[slug];
   if (!extra) return {};
 
-  const pageUrl = `${siteConfig.url}/our-doctors/${slug}/`;
+  const pageUrl = `${siteConfig.url}/our-doctors/${slug}`;
 
   return {
     title: { absolute: extra.seo.pageTitle },

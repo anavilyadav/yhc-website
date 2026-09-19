@@ -20,7 +20,7 @@ export async function generateMetadata({
   const info = getCityBySlug(city);
   if (!info) return {};
 
-  const pageUrl = `${siteConfig.url}/cities/${info.slug}/`;
+  const pageUrl = `${siteConfig.url}/cities/${info.slug}`;
   return {
     title: { absolute: `Online Homeopathy Consultation for ${info.name} Patients | ${siteConfig.name}` },
     description: `Video consultation with Dr Anavil Yadav and Dr T P Yadav for ${info.name} patients — same depth of case-taking as an in-clinic visit at Yadav Homeo Clinic, Jaipur. Medicine couriered to ${info.name}.`,

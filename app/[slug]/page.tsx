@@ -52,7 +52,7 @@ export async function generateMetadata({
   const page = await getDiseasePage(slug);
   if (!page) return {};
 
-  const pageUrl = `${siteConfig.url}/${page.slug}/`;
+  const pageUrl = `${siteConfig.url}/${page.slug}`;
 
   return {
     title: { absolute: page.pageTitle },
@@ -170,7 +170,7 @@ export default async function DiseasePage({ params }: { params: Promise<{ slug: 
             {subPageLinks.map((link) => (
               <Link
                 key={link.slug}
-                href={`/${link.slug}/`}
+                href={`/${link.slug}`}
                 className="rounded-sm border border-border-amber bg-cream-bg px-4 py-2 text-sm font-semibold text-navy transition-colors hover:border-amber hover:text-amber-dark"
               >
                 {link.label} →

@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Explicit, not just Next's default — every canonical, sitemap entry,
+  // JSON-LD url/@id and internal link in this codebase is written without
+  // a trailing slash, so this must stay false or every one of those goes
+  // back to redirecting against itself.
+  trailingSlash: false,
   images: {
     // Patient-story video thumbnails pulled directly from YouTube's own
     // CDN (img.youtube.com/vi/{id}/hqdefault.jpg) for the video gallery.

@@ -25,11 +25,11 @@ export const metadata: Metadata = {
   title: { absolute: homeopathyFaqSeo.pageTitle },
   description: homeopathyFaqSeo.metaDescription,
   keywords: [homeopathyFaqSeo.focusKeyword, ...homeopathyFaqSeo.secondaryKeywords],
-  alternates: { canonical: `${siteConfig.url}/homeopathy-faq/` },
+  alternates: { canonical: `${siteConfig.url}/homeopathy-faq` },
   openGraph: {
     title: homeopathyFaqSeo.pageTitle,
     description: homeopathyFaqSeo.metaDescription,
-    url: `${siteConfig.url}/homeopathy-faq/`,
+    url: `${siteConfig.url}/homeopathy-faq`,
     siteName: siteConfig.name,
     locale: "en_IN",
     type: "website",
@@ -103,7 +103,7 @@ export default async function HomeopathyFaqPage() {
               {conditionLinks.map((c) => (
                 <Link
                   key={c.slug}
-                  href={`/homeopathy-faq/${c.slug}/`}
+                  href={`/homeopathy-faq/${c.slug}`}
                   className="rounded-full border border-border-amber bg-white px-4 py-1.5 text-sm font-medium text-navy transition-colors hover:border-amber hover:text-amber-dark"
                 >
                   {c.name} →

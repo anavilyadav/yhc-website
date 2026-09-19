@@ -5,7 +5,7 @@ import { INTERNATIONAL_PLANS, percentSaved } from "@/lib/data/international-pric
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { WhatsAppIcon, GlobeIcon, CheckIcon, InfoIcon } from "@/components/shared/icons";
 
-const pageUrl = `${siteConfig.url}/international-patients/`;
+const pageUrl = `${siteConfig.url}/international-patients`;
 
 export const metadata: Metadata = {
   title: { absolute: `Homeopathy Consultation for International Patients | ${siteConfig.name}` },

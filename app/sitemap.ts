@@ -41,32 +41,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]);
 
   const staticEntries = STATIC_ROUTES.map((route) => ({
-    url: `${siteConfig.url}/${route}${route ? "/" : ""}`,
+    url: route ? `${siteConfig.url}/${route}` : siteConfig.url,
     lastModified: new Date(),
   }));
 
   const diseaseEntries = diseaseSlugs.map((slug) => ({
-    url: `${siteConfig.url}/${slug}/`,
+    url: `${siteConfig.url}/${slug}`,
     lastModified: new Date(),
   }));
 
   const blogEntries = blogSlugs.map((slug) => ({
-    url: `${siteConfig.url}/blog/${slug}/`,
+    url: `${siteConfig.url}/blog/${slug}`,
     lastModified: new Date(),
   }));
 
   const doctorEntries = doctors.map((doctor) => ({
-    url: `${siteConfig.url}/our-doctors/${doctor.slug}/`,
+    url: `${siteConfig.url}/our-doctors/${doctor.slug}`,
     lastModified: new Date(),
   }));
 
   const conditionFaqEntries = getConditionFaqSlugs().map((slug) => ({
-    url: `${siteConfig.url}/homeopathy-faq/${slug}/`,
+    url: `${siteConfig.url}/homeopathy-faq/${slug}`,
     lastModified: new Date(),
   }));
 
   const cityEntries = CITIES.map((city) => ({
-    url: `${siteConfig.url}/cities/${city.slug}/`,
+    url: `${siteConfig.url}/cities/${city.slug}`,
     lastModified: new Date(),
   }));
 

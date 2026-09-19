@@ -41,7 +41,7 @@ export async function generateMetadata({
 
   const title = `Homeopathy for ${page.aboutCondition.name} — FAQ | Yadav Homeo Clinic`;
   const description = `Common questions about homeopathic treatment for ${page.aboutCondition.name.toLowerCase()}, answered by Dr Anavil Yadav (BHMS), Yadav Homeo Clinic, Jaipur.`;
-  const pageUrl = `${siteConfig.url}/homeopathy-faq/${slug}/`;
+  const pageUrl = `${siteConfig.url}/homeopathy-faq/${slug}`;
 
   return {
     title: { absolute: title },
@@ -105,7 +105,7 @@ export default async function ConditionFaqPage({ params }: { params: Promise<{ s
       <section className="bg-white px-5 py-10 text-center">
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Link
-            href={`/${slug}/`}
+            href={`/${slug}`}
             className="w-full rounded-sm bg-amber px-7 py-3 text-sm font-bold uppercase tracking-wide text-navy transition-opacity hover:opacity-90 sm:w-auto"
           >
             Full {page.aboutCondition.name} Treatment Page →

@@ -25,11 +25,11 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: { absolute: aboutSeo.title },
   description: aboutSeo.description,
-  alternates: { canonical: `${siteConfig.url}/about/` },
+  alternates: { canonical: `${siteConfig.url}/about` },
   openGraph: {
     title: aboutSeo.title,
     description: aboutSeo.description,
-    url: `${siteConfig.url}/about/`,
+    url: `${siteConfig.url}/about`,
     type: "website",
   },
 };

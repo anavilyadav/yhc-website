@@ -4,7 +4,7 @@ import { CITIES, type CityRegion } from "@/lib/data/cities";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { WhatsAppIcon } from "@/components/shared/icons";
 
-const pageUrl = `${siteConfig.url}/cities/`;
+const pageUrl = `${siteConfig.url}/cities`;
 
 export const metadata: Metadata = {
   title: { absolute: `Homeopathy Consultation Across India — Cities We Serve | ${siteConfig.name}` },

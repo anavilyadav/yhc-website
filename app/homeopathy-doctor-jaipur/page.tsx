@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   title: { absolute: jaipurLocationSeo.pageTitle },
   description: jaipurLocationSeo.metaDescription,
   keywords: [jaipurLocationSeo.focusKeyword, ...jaipurLocationSeo.secondaryKeywords],
-  alternates: { canonical: `${siteConfig.url}/homeopathy-doctor-jaipur/` },
+  alternates: { canonical: `${siteConfig.url}/homeopathy-doctor-jaipur` },
   openGraph: {
     title: jaipurLocationSeo.pageTitle,
     description: jaipurLocationSeo.metaDescription,
-    url: `${siteConfig.url}/homeopathy-doctor-jaipur/`,
+    url: `${siteConfig.url}/homeopathy-doctor-jaipur`,
     siteName: siteConfig.name,
     locale: "en_IN",
     type: "website",

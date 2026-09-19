@@ -15,7 +15,7 @@ interface Props {
  * corresponding Supabase column is filled in — never with placeholder text.
  */
 export function PhysicianSchema({ doctor }: Props) {
-  const url = `${siteConfig.url}/our-doctors/${doctor.slug}/`;
+  const url = `${siteConfig.url}/our-doctors/${doctor.slug}`;
 
   const sameAs = [doctor.social_instagram, doctor.social_linkedin, doctor.social_youtube].filter(
     (v): v is string => Boolean(v)

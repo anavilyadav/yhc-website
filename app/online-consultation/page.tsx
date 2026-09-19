@@ -32,11 +32,11 @@ export const metadata: Metadata = {
   title: { absolute: onlineConsultationSeo.pageTitle },
   description: onlineConsultationSeo.metaDescription,
   keywords: [onlineConsultationSeo.focusKeyword, ...onlineConsultationSeo.secondaryKeywords],
-  alternates: { canonical: `${siteConfig.url}/online-consultation/` },
+  alternates: { canonical: `${siteConfig.url}/online-consultation` },
   openGraph: {
     title: onlineConsultationSeo.pageTitle,
     description: onlineConsultationSeo.metaDescription,
-    url: `${siteConfig.url}/online-consultation/`,
+    url: `${siteConfig.url}/online-consultation`,
     siteName: siteConfig.name,
     locale: "en_IN",
     type: "website",

@@ -18,7 +18,7 @@ export default function ConditionsGrid({ diseases }: { diseases: Disease[] }) {
           {diseases.map((disease, index) => (
             <Link
               key={disease.slug}
-              href={`/${disease.slug}/`}
+              href={`/${disease.slug}`}
               // A lone card left over in the final row (e.g. 16 items in a
               // 3-column grid) reads as a layout mistake — centre it under
               // the row above instead of leaving it stranded on the left.

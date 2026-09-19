@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   title: "Blog | Homeopathy Insights From Dr Anavil Yadav",
   description:
     "Honest, experience-based articles on vitiligo, autism, kidney disease and classical homeopathy from Dr Anavil Yadav, Yadav Homeo Clinic, Jaipur.",
-  alternates: { canonical: `${siteConfig.url}/blog/` },
+  alternates: { canonical: `${siteConfig.url}/blog` },
   openGraph: {
     title: "Blog | Yadav Homeo Clinic",
     description:
       "Honest, experience-based articles on vitiligo, autism, kidney disease and classical homeopathy from Dr Anavil Yadav.",
-    url: `${siteConfig.url}/blog/`,
+    url: `${siteConfig.url}/blog`,
     type: "website",
   },
 };

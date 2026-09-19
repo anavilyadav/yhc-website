@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { RootCauseAssessment } from "@/components/assessment/RootCauseAssessment";
 import { siteConfig } from "@/lib/site-config";
 
-const pageUrl = `${siteConfig.url}/root-cause-assessment/`;
+const pageUrl = `${siteConfig.url}/root-cause-assessment`;
 
 export const metadata: Metadata = {
   title: { absolute: `Root Cause Assessment — Find What's Behind Your Condition | ${siteConfig.name}` },

@@ -39,7 +39,7 @@ export async function generateMetadata({
   const post = await getBlogPost(slug);
   if (!post) return {};
 
-  const postUrl = `${siteConfig.url}/blog/${post.slug}/`;
+  const postUrl = `${siteConfig.url}/blog/${post.slug}`;
 
   return {
     title: { absolute: `${post.title} | ${siteConfig.name}` },
