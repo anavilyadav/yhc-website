@@ -25,6 +25,13 @@ export async function generateMetadata({
     title: { absolute: `Online Homeopathy Consultation for ${info.name} Patients | ${siteConfig.name}` },
     description: `Video consultation with Dr Anavil Yadav and Dr T P Yadav for ${info.name} patients — same depth of case-taking as an in-clinic visit at Yadav Homeo Clinic, Jaipur. Medicine couriered to ${info.name}.`,
     alternates: { canonical: pageUrl },
+    // Techeve audit (17 Sept 2026): 157 near-identical city pages risk
+    // "doorway page" treatment. Per Dr Anavil's decision (2026-09-19),
+    // only the ~20 major cities (lib/data/cities.ts, isMajor) stay
+    // indexable — the page itself still exists and works for anyone who
+    // reaches it directly or via the /cities hub, it's just excluded from
+    // the sitemap and told not to be indexed.
+    ...(info.isMajor ? {} : { robots: { index: false, follow: true } }),
   };
 }
 

@@ -65,7 +65,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(),
   }));
 
-  const cityEntries = CITIES.map((city) => ({
+  // Only the major cities are indexable (see CityInfo.isMajor) — the rest
+  // are noindex,follow and deliberately left out of the sitemap.
+  const cityEntries = CITIES.filter((city) => city.isMajor).map((city) => ({
     url: `${siteConfig.url}/cities/${city.slug}`,
     lastModified: new Date(),
   }));

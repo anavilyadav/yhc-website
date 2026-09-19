@@ -30,6 +30,17 @@ export interface CityInfo {
   travelOptions: string; // e.g. "5-6 hrs by road, or a 1-hr flight"
   /** Only filled in for cities with confidently-known real localities — left empty otherwise. */
   knownAreas?: string[];
+  /**
+   * Techeve audit (17 Sept 2026) flagged all 157 city pages as risking
+   * "doorway page" treatment — near-identical template, only the city
+   * name/distance changed. Per Dr Anavil's decision (2026-09-19): keep
+   * one genuinely major city per state/region indexable with its own
+   * full page (Option A), and fold the rest into a plain name list on
+   * the /cities hub instead of giving each its own indexable page
+   * (Option B) — see app/cities/[city]/page.tsx (robots noindex for
+   * non-major cities) and app/sitemap.ts (major cities only).
+   */
+  isMajor?: boolean;
 }
 
 export const CITIES: CityInfo[] = [
@@ -47,13 +58,13 @@ export const CITIES: CityInfo[] = [
   { slug: "pali", name: "Pali", state: "Rajasthan", region: "Rajasthan", distanceKm: 300, travelOptions: "around 5-6 hours by road" },
   { slug: "chittorgarh", name: "Chittorgarh", state: "Rajasthan", region: "Rajasthan", distanceKm: 310, travelOptions: "around 5-6 hours by road or train" },
   { slug: "bikaner", name: "Bikaner", state: "Rajasthan", region: "Rajasthan", distanceKm: 330, travelOptions: "around 5-6 hours by road or train" },
-  { slug: "jodhpur", name: "Jodhpur", state: "Rajasthan", region: "Rajasthan", distanceKm: 340, travelOptions: "around 6 hours by road, or a short flight" },
-  { slug: "udaipur", name: "Udaipur", state: "Rajasthan", region: "Rajasthan", distanceKm: 395, travelOptions: "around 6-7 hours by road, or a short flight" },
+  { slug: "jodhpur", name: "Jodhpur", state: "Rajasthan", region: "Rajasthan", distanceKm: 340, travelOptions: "around 6 hours by road, or a short flight", isMajor: true },
+  { slug: "udaipur", name: "Udaipur", state: "Rajasthan", region: "Rajasthan", distanceKm: 395, travelOptions: "around 6-7 hours by road, or a short flight", isMajor: true },
   { slug: "sri-ganganagar", name: "Sri Ganganagar", state: "Rajasthan", region: "Rajasthan", distanceKm: 400, travelOptions: "around 7-8 hours by road" },
 
   // Delhi NCR
-  { slug: "delhi", name: "Delhi", state: "Delhi", region: "Delhi NCR", distanceKm: 280, travelOptions: "around 5 hours by road, a short flight, or a comfortable train", knownAreas: ["South Delhi", "Dwarka", "Rohini"] },
-  { slug: "gurugram", name: "Gurugram", state: "Haryana", region: "Delhi NCR", distanceKm: 250, travelOptions: "around 4.5 hours by road" },
+  { slug: "delhi", name: "Delhi", state: "Delhi", region: "Delhi NCR", distanceKm: 280, travelOptions: "around 5 hours by road, a short flight, or a comfortable train", knownAreas: ["South Delhi", "Dwarka", "Rohini"], isMajor: true },
+  { slug: "gurugram", name: "Gurugram", state: "Haryana", region: "Delhi NCR", distanceKm: 250, travelOptions: "around 4.5 hours by road", isMajor: true },
   { slug: "noida", name: "Noida", state: "Uttar Pradesh", region: "Delhi NCR", distanceKm: 280, travelOptions: "around 5 hours by road" },
   { slug: "ghaziabad", name: "Ghaziabad", state: "Uttar Pradesh", region: "Delhi NCR", distanceKm: 285, travelOptions: "around 5 hours by road" },
   { slug: "faridabad", name: "Faridabad", state: "Haryana", region: "Delhi NCR", distanceKm: 270, travelOptions: "around 5 hours by road" },
@@ -69,7 +80,7 @@ export const CITIES: CityInfo[] = [
   { slug: "ambala", name: "Ambala", state: "Haryana", region: "North India", distanceKm: 400, travelOptions: "around 7 hours by road or train" },
   { slug: "yamunanagar", name: "Yamunanagar", state: "Haryana", region: "North India", distanceKm: 430, travelOptions: "around 7-8 hours by road" },
   { slug: "panchkula", name: "Panchkula", state: "Haryana", region: "North India", distanceKm: 450, travelOptions: "around 8 hours by road, or a short flight (via Chandigarh)" },
-  { slug: "chandigarh", name: "Chandigarh", state: "Punjab/Haryana", region: "North India", distanceKm: 450, travelOptions: "around 8-9 hours by road, or a short flight" },
+  { slug: "chandigarh", name: "Chandigarh", state: "Punjab/Haryana", region: "North India", distanceKm: 450, travelOptions: "around 8-9 hours by road, or a short flight", isMajor: true },
 
   // Punjab
   { slug: "patiala", name: "Patiala", state: "Punjab", region: "North India", distanceKm: 480, travelOptions: "around 8 hours by road or train" },
@@ -80,7 +91,7 @@ export const CITIES: CityInfo[] = [
   { slug: "firozpur", name: "Firozpur", state: "Punjab", region: "North India", distanceKm: 460, travelOptions: "around 8 hours by road" },
   { slug: "jalandhar", name: "Jalandhar", state: "Punjab", region: "North India", distanceKm: 520, travelOptions: "around 9 hours by road or train" },
   { slug: "hoshiarpur", name: "Hoshiarpur", state: "Punjab", region: "North India", distanceKm: 560, travelOptions: "around 9-10 hours by road" },
-  { slug: "amritsar", name: "Amritsar", state: "Punjab", region: "North India", distanceKm: 580, travelOptions: "around 10 hours by road, or a short connecting flight" },
+  { slug: "amritsar", name: "Amritsar", state: "Punjab", region: "North India", distanceKm: 580, travelOptions: "around 10 hours by road, or a short connecting flight", isMajor: true },
   { slug: "pathankot", name: "Pathankot", state: "Punjab", region: "North India", distanceKm: 630, travelOptions: "around 10-11 hours by road" },
 
   // Uttar Pradesh (beyond NCR)
@@ -93,7 +104,7 @@ export const CITIES: CityInfo[] = [
   { slug: "bareilly", name: "Bareilly", state: "Uttar Pradesh", region: "North India", distanceKm: 480, travelOptions: "around 8 hours by road" },
   { slug: "jhansi", name: "Jhansi", state: "Uttar Pradesh", region: "North India", distanceKm: 430, travelOptions: "around 7-8 hours by road or train" },
   { slug: "kanpur", name: "Kanpur", state: "Uttar Pradesh", region: "North India", distanceKm: 470, travelOptions: "around 8 hours by road or train" },
-  { slug: "lucknow", name: "Lucknow", state: "Uttar Pradesh", region: "North India", distanceKm: 590, travelOptions: "around a 1.5-hour flight, or an overnight train" },
+  { slug: "lucknow", name: "Lucknow", state: "Uttar Pradesh", region: "North India", distanceKm: 590, travelOptions: "around a 1.5-hour flight, or an overnight train", isMajor: true },
   { slug: "prayagraj", name: "Prayagraj", state: "Uttar Pradesh", region: "North India", distanceKm: 700, travelOptions: "around a connecting flight, or a long overnight train" },
   { slug: "gorakhpur", name: "Gorakhpur", state: "Uttar Pradesh", region: "North India", distanceKm: 900, travelOptions: "around a connecting flight, or a long train journey" },
   { slug: "varanasi", name: "Varanasi", state: "Uttar Pradesh", region: "North India", distanceKm: 830, travelOptions: "around a 2-hour connecting flight, or a long overnight train" },
@@ -102,7 +113,7 @@ export const CITIES: CityInfo[] = [
   { slug: "roorkee", name: "Roorkee", state: "Uttarakhand", region: "North India", distanceKm: 430, travelOptions: "around 7-8 hours by road" },
   { slug: "haridwar", name: "Haridwar", state: "Uttarakhand", region: "North India", distanceKm: 450, travelOptions: "around 8 hours by road or train" },
   { slug: "rishikesh", name: "Rishikesh", state: "Uttarakhand", region: "North India", distanceKm: 470, travelOptions: "around 8 hours by road" },
-  { slug: "dehradun", name: "Dehradun", state: "Uttarakhand", region: "North India", distanceKm: 480, travelOptions: "around 8-9 hours by road, or a connecting flight via Delhi" },
+  { slug: "dehradun", name: "Dehradun", state: "Uttarakhand", region: "North India", distanceKm: 480, travelOptions: "around 8-9 hours by road, or a connecting flight via Delhi", isMajor: true },
   { slug: "kashipur", name: "Kashipur", state: "Uttarakhand", region: "North India", distanceKm: 480, travelOptions: "around 8 hours by road" },
   { slug: "rudrapur", name: "Rudrapur", state: "Uttarakhand", region: "North India", distanceKm: 500, travelOptions: "around 8-9 hours by road" },
   { slug: "haldwani", name: "Haldwani", state: "Uttarakhand", region: "North India", distanceKm: 530, travelOptions: "around 9 hours by road" },
@@ -115,7 +126,7 @@ export const CITIES: CityInfo[] = [
   { slug: "hamirpur", name: "Hamirpur", state: "Himachal Pradesh", region: "North India", distanceKm: 540, travelOptions: "around 9 hours by road" },
   { slug: "solan", name: "Solan", state: "Himachal Pradesh", region: "North India", distanceKm: 530, travelOptions: "around 9 hours by road" },
   { slug: "bilaspur-hp", name: "Bilaspur", state: "Himachal Pradesh", region: "North India", distanceKm: 570, travelOptions: "around 9-10 hours by road" },
-  { slug: "shimla", name: "Shimla", state: "Himachal Pradesh", region: "North India", distanceKm: 570, travelOptions: "around 10 hours by road, or a connecting flight via Delhi/Chandigarh" },
+  { slug: "shimla", name: "Shimla", state: "Himachal Pradesh", region: "North India", distanceKm: 570, travelOptions: "around 10 hours by road, or a connecting flight via Delhi/Chandigarh", isMajor: true },
   { slug: "mandi", name: "Mandi", state: "Himachal Pradesh", region: "North India", distanceKm: 630, travelOptions: "around 10-11 hours by road" },
   { slug: "dharamshala", name: "Dharamshala", state: "Himachal Pradesh", region: "North India", distanceKm: 650, travelOptions: "around 11 hours by road, or a connecting flight" },
   { slug: "kullu", name: "Kullu", state: "Himachal Pradesh", region: "North India", distanceKm: 680, travelOptions: "around 11-12 hours by road" },
@@ -123,18 +134,18 @@ export const CITIES: CityInfo[] = [
   { slug: "chamba", name: "Chamba", state: "Himachal Pradesh", region: "North India", distanceKm: 700, travelOptions: "around 12 hours by road" },
 
   // West India — Gujarat, Maharashtra
-  { slug: "ahmedabad", name: "Ahmedabad", state: "Gujarat", region: "West India", distanceKm: 660, travelOptions: "around a 1-hour flight, or an overnight train", knownAreas: ["Satellite", "Vastrapur", "Navrangpura"] },
+  { slug: "ahmedabad", name: "Ahmedabad", state: "Gujarat", region: "West India", distanceKm: 660, travelOptions: "around a 1-hour flight, or an overnight train", knownAreas: ["Satellite", "Vastrapur", "Navrangpura"], isMajor: true },
   { slug: "gandhinagar", name: "Gandhinagar", state: "Gujarat", region: "West India", distanceKm: 650, travelOptions: "around a 1-hour flight (via Ahmedabad), or an overnight train" },
   { slug: "vadodara", name: "Vadodara", state: "Gujarat", region: "West India", distanceKm: 590, travelOptions: "around a 1-hour flight, or an overnight train" },
   { slug: "anand", name: "Anand", state: "Gujarat", region: "West India", distanceKm: 610, travelOptions: "around a 1-hour flight (via Ahmedabad/Vadodara), or an overnight train" },
   { slug: "nadiad", name: "Nadiad", state: "Gujarat", region: "West India", distanceKm: 600, travelOptions: "around a 1-hour flight (via Ahmedabad), or an overnight train" },
-  { slug: "surat", name: "Surat", state: "Gujarat", region: "West India", distanceKm: 800, travelOptions: "around a 1.5-hour flight, or an overnight train" },
+  { slug: "surat", name: "Surat", state: "Gujarat", region: "West India", distanceKm: 800, travelOptions: "around a 1.5-hour flight, or an overnight train", isMajor: true },
   { slug: "bhavnagar", name: "Bhavnagar", state: "Gujarat", region: "West India", distanceKm: 700, travelOptions: "around a 1.5-hour flight, or a long road/train journey" },
   { slug: "jamnagar", name: "Jamnagar", state: "Gujarat", region: "West India", distanceKm: 780, travelOptions: "around a 1.5-hour connecting flight" },
   { slug: "rajkot", name: "Rajkot", state: "Gujarat", region: "West India", distanceKm: 750, travelOptions: "around a 1.5-hour connecting flight" },
   { slug: "junagadh", name: "Junagadh", state: "Gujarat", region: "West India", distanceKm: 800, travelOptions: "around a connecting flight (via Rajkot/Ahmedabad)" },
-  { slug: "mumbai", name: "Mumbai", state: "Maharashtra", region: "West India", distanceKm: 1150, travelOptions: "around a 1.5-hour flight, or an overnight train", knownAreas: ["Andheri", "Bandra", "Thane", "Navi Mumbai"] },
-  { slug: "pune", name: "Pune", state: "Maharashtra", region: "West India", distanceKm: 1180, travelOptions: "around a 2-hour flight (often via Mumbai)", knownAreas: ["Kothrud", "Viman Nagar", "Hinjewadi"] },
+  { slug: "mumbai", name: "Mumbai", state: "Maharashtra", region: "West India", distanceKm: 1150, travelOptions: "around a 1.5-hour flight, or an overnight train", knownAreas: ["Andheri", "Bandra", "Thane", "Navi Mumbai"], isMajor: true },
+  { slug: "pune", name: "Pune", state: "Maharashtra", region: "West India", distanceKm: 1180, travelOptions: "around a 2-hour flight (often via Mumbai)", knownAreas: ["Kothrud", "Viman Nagar", "Hinjewadi"], isMajor: true },
   { slug: "nashik", name: "Nashik", state: "Maharashtra", region: "West India", distanceKm: 950, travelOptions: "around a connecting flight via Mumbai, or a long road/train journey" },
   { slug: "jalgaon", name: "Jalgaon", state: "Maharashtra", region: "West India", distanceKm: 950, travelOptions: "around a connecting flight via Mumbai" },
   { slug: "aurangabad", name: "Aurangabad", state: "Maharashtra", region: "West India", distanceKm: 1100, travelOptions: "around a connecting flight via Mumbai" },
@@ -149,7 +160,7 @@ export const CITIES: CityInfo[] = [
   { slug: "ratlam", name: "Ratlam", state: "Madhya Pradesh", region: "Central India", distanceKm: 500, travelOptions: "around 8 hours by road or train" },
   { slug: "ujjain", name: "Ujjain", state: "Madhya Pradesh", region: "Central India", distanceKm: 475, travelOptions: "around 8 hours by road or train" },
   { slug: "dewas", name: "Dewas", state: "Madhya Pradesh", region: "Central India", distanceKm: 560, travelOptions: "around 9 hours by road" },
-  { slug: "indore", name: "Indore", state: "Madhya Pradesh", region: "Central India", distanceKm: 585, travelOptions: "around 9-10 hours by road, or a short connecting flight" },
+  { slug: "indore", name: "Indore", state: "Madhya Pradesh", region: "Central India", distanceKm: 585, travelOptions: "around 9-10 hours by road, or a short connecting flight", isMajor: true },
   { slug: "sagar", name: "Sagar", state: "Madhya Pradesh", region: "Central India", distanceKm: 650, travelOptions: "around 10-11 hours by road" },
   { slug: "bhopal", name: "Bhopal", state: "Madhya Pradesh", region: "Central India", distanceKm: 590, travelOptions: "around 9-10 hours by road or an overnight train" },
   { slug: "jabalpur", name: "Jabalpur", state: "Madhya Pradesh", region: "Central India", distanceKm: 750, travelOptions: "around a connecting flight, or a long road/train journey" },
@@ -157,7 +168,7 @@ export const CITIES: CityInfo[] = [
   { slug: "rewa", name: "Rewa", state: "Madhya Pradesh", region: "Central India", distanceKm: 850, travelOptions: "around a connecting flight, or a long road/train journey" },
 
   // East & Northeast India
-  { slug: "kolkata", name: "Kolkata", state: "West Bengal", region: "East & Northeast India", distanceKm: 1650, travelOptions: "around a 2.5-hour flight" },
+  { slug: "kolkata", name: "Kolkata", state: "West Bengal", region: "East & Northeast India", distanceKm: 1650, travelOptions: "around a 2.5-hour flight", isMajor: true },
   { slug: "howrah", name: "Howrah", state: "West Bengal", region: "East & Northeast India", distanceKm: 1650, travelOptions: "around a 2.5-hour flight (via Kolkata)" },
   { slug: "durgapur", name: "Durgapur", state: "West Bengal", region: "East & Northeast India", distanceKm: 1550, travelOptions: "around a connecting flight, or a long train journey" },
   { slug: "asansol", name: "Asansol", state: "West Bengal", region: "East & Northeast India", distanceKm: 1500, travelOptions: "around a connecting flight, or a long train journey" },
@@ -167,7 +178,7 @@ export const CITIES: CityInfo[] = [
   { slug: "malda", name: "Malda", state: "West Bengal", region: "East & Northeast India", distanceKm: 1750, travelOptions: "around a connecting flight, or a long train journey" },
   { slug: "darjeeling", name: "Darjeeling", state: "West Bengal", region: "East & Northeast India", distanceKm: 1800, travelOptions: "around a connecting flight via Bagdogra" },
   { slug: "haldia", name: "Haldia", state: "West Bengal", region: "East & Northeast India", distanceKm: 1700, travelOptions: "around a connecting flight (via Kolkata)" },
-  { slug: "patna", name: "Patna", state: "Bihar", region: "East & Northeast India", distanceKm: 1200, travelOptions: "around a 2-hour connecting flight, or a long train journey" },
+  { slug: "patna", name: "Patna", state: "Bihar", region: "East & Northeast India", distanceKm: 1200, travelOptions: "around a 2-hour connecting flight, or a long train journey", isMajor: true },
   { slug: "gaya", name: "Gaya", state: "Bihar", region: "East & Northeast India", distanceKm: 1150, travelOptions: "around a connecting flight, or a long train journey" },
   { slug: "chapra", name: "Chapra", state: "Bihar", region: "East & Northeast India", distanceKm: 1150, travelOptions: "around a connecting flight (via Patna)" },
   { slug: "muzaffarpur", name: "Muzaffarpur", state: "Bihar", region: "East & Northeast India", distanceKm: 1250, travelOptions: "around a connecting flight (via Patna)" },
@@ -177,7 +188,7 @@ export const CITIES: CityInfo[] = [
   { slug: "bhagalpur", name: "Bhagalpur", state: "Bihar", region: "East & Northeast India", distanceKm: 1350, travelOptions: "around a connecting flight" },
   { slug: "katihar", name: "Katihar", state: "Bihar", region: "East & Northeast India", distanceKm: 1400, travelOptions: "around a connecting flight" },
   { slug: "purnia", name: "Purnia", state: "Bihar", region: "East & Northeast India", distanceKm: 1450, travelOptions: "around a connecting flight" },
-  { slug: "guwahati", name: "Guwahati", state: "Assam", region: "East & Northeast India", distanceKm: 2100, travelOptions: "around a 3-hour connecting flight" },
+  { slug: "guwahati", name: "Guwahati", state: "Assam", region: "East & Northeast India", distanceKm: 2100, travelOptions: "around a 3-hour connecting flight", isMajor: true },
   { slug: "dhubri", name: "Dhubri", state: "Assam", region: "East & Northeast India", distanceKm: 1900, travelOptions: "around a 3-hour connecting flight (via Guwahati)" },
   { slug: "bongaigaon", name: "Bongaigaon", state: "Assam", region: "East & Northeast India", distanceKm: 1950, travelOptions: "around a 3-hour connecting flight (via Guwahati)" },
   { slug: "nagaon", name: "Nagaon", state: "Assam", region: "East & Northeast India", distanceKm: 2150, travelOptions: "around a connecting flight (via Guwahati)" },
@@ -189,7 +200,7 @@ export const CITIES: CityInfo[] = [
   { slug: "karimganj", name: "Karimganj", state: "Assam", region: "East & Northeast India", distanceKm: 2300, travelOptions: "around a connecting flight (via Silchar/Guwahati)" },
 
   // South India
-  { slug: "bangalore", name: "Bangalore", state: "Karnataka", region: "South India", distanceKm: 2000, travelOptions: "around a 2.5-hour flight", knownAreas: ["Koramangala", "Whitefield", "Indiranagar", "HSR Layout"] },
+  { slug: "bangalore", name: "Bangalore", state: "Karnataka", region: "South India", distanceKm: 2000, travelOptions: "around a 2.5-hour flight", knownAreas: ["Koramangala", "Whitefield", "Indiranagar", "HSR Layout"], isMajor: true },
   { slug: "mysore", name: "Mysore", state: "Karnataka", region: "South India", distanceKm: 2100, travelOptions: "around a connecting flight via Bangalore" },
   { slug: "tumkur", name: "Tumkur", state: "Karnataka", region: "South India", distanceKm: 1980, travelOptions: "around a connecting flight via Bangalore" },
   { slug: "davangere", name: "Davangere", state: "Karnataka", region: "South India", distanceKm: 1950, travelOptions: "around a connecting flight via Bangalore" },
@@ -199,9 +210,9 @@ export const CITIES: CityInfo[] = [
   { slug: "gulbarga", name: "Gulbarga", state: "Karnataka", region: "South India", distanceKm: 1600, travelOptions: "around a connecting flight" },
   { slug: "bellary", name: "Bellary", state: "Karnataka", region: "South India", distanceKm: 1800, travelOptions: "around a connecting flight" },
   { slug: "mangalore", name: "Mangalore", state: "Karnataka", region: "South India", distanceKm: 2100, travelOptions: "around a connecting flight via Bangalore" },
-  { slug: "hyderabad", name: "Hyderabad", state: "Telangana", region: "South India", distanceKm: 1300, travelOptions: "around a 2-hour flight", knownAreas: ["Banjara Hills", "Gachibowli", "Secunderabad"] },
-  { slug: "chennai", name: "Chennai", state: "Tamil Nadu", region: "South India", distanceKm: 2000, travelOptions: "around a 2.5-hour flight" },
-  { slug: "kochi", name: "Kochi", state: "Kerala", region: "South India", distanceKm: 2100, travelOptions: "around a 3-hour connecting flight" },
+  { slug: "hyderabad", name: "Hyderabad", state: "Telangana", region: "South India", distanceKm: 1300, travelOptions: "around a 2-hour flight", knownAreas: ["Banjara Hills", "Gachibowli", "Secunderabad"], isMajor: true },
+  { slug: "chennai", name: "Chennai", state: "Tamil Nadu", region: "South India", distanceKm: 2000, travelOptions: "around a 2.5-hour flight", isMajor: true },
+  { slug: "kochi", name: "Kochi", state: "Kerala", region: "South India", distanceKm: 2100, travelOptions: "around a 3-hour connecting flight", isMajor: true },
   { slug: "thrissur", name: "Thrissur", state: "Kerala", region: "South India", distanceKm: 2150, travelOptions: "around a 3-hour connecting flight (via Kochi)" },
   { slug: "palakkad", name: "Palakkad", state: "Kerala", region: "South India", distanceKm: 2100, travelOptions: "around a 3-hour connecting flight" },
   { slug: "kottayam", name: "Kottayam", state: "Kerala", region: "South India", distanceKm: 2200, travelOptions: "around a 3-hour connecting flight (via Kochi)" },

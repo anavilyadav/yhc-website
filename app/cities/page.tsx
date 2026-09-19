@@ -54,22 +54,49 @@ export default function CitiesHubPage() {
         </div>
       </section>
 
+      {/*
+        Techeve audit (17 Sept 2026) flagged all 157 city pages as a
+        near-identical-template "doorway page" risk. Per Dr Anavil's
+        decision (2026-09-19): major cities keep a full, prominently
+        linked, indexable page; every other city still has a working
+        page (reachable from here), it's just listed by name rather than
+        given the same card treatment, and excluded from the sitemap.
+      */}
+      <section className="bg-white px-5 py-14">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="font-serif text-xl text-navy md:text-2xl">Major Cities We Serve</h2>
+          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+            {CITIES.filter((c) => c.isMajor).map((city) => (
+              <Link
+                key={city.slug}
+                href={`/cities/${city.slug}`}
+                className="rounded-lg border border-border-amber bg-cream-bg px-4 py-3.5 text-center shadow-sm transition-shadow hover:shadow-md"
+              >
+                <span className="block font-serif text-[15px] font-bold text-navy">{city.name}</span>
+                <span className="block text-[12px] text-text-mid">{city.state}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {REGION_ORDER.map((region) => {
-        const cities = CITIES.filter((c) => c.region === region);
+        const cities = CITIES.filter((c) => c.region === region && !c.isMajor);
         if (cities.length === 0) return null;
         return (
-          <section key={region} className="bg-white px-5 py-10 first-of-type:pt-4">
+          <section key={region} className="bg-cream-bg px-5 py-8 first-of-type:pt-4">
             <div className="mx-auto max-w-4xl">
-              <h2 className="font-serif text-lg text-navy">{region}</h2>
-              <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 sm:grid-cols-3 md:grid-cols-4">
-                {cities.map((city) => (
-                  <Link
-                    key={city.slug}
-                    href={`/cities/${city.slug}`}
-                    className="rounded-sm px-2 py-1.5 text-sm text-text-mid transition-colors hover:bg-cream-bg hover:text-amber-dark"
-                  >
-                    {city.name}
-                  </Link>
+              <h3 className="text-xs font-bold uppercase tracking-wide text-amber-dark">
+                {region} — Also Serving
+              </h3>
+              <div className="mt-3 flex flex-wrap gap-x-1 gap-y-1.5 text-[13.5px] text-text-mid">
+                {cities.map((city, i) => (
+                  <span key={city.slug}>
+                    <Link href={`/cities/${city.slug}`} className="hover:text-amber-dark hover:underline">
+                      {city.name}
+                    </Link>
+                    {i < cities.length - 1 && <span className="text-text-light">,</span>}
+                  </span>
                 ))}
               </div>
             </div>
