@@ -49,6 +49,36 @@ const locationLinks = [
   { label: "Jagatpura Branch", href: "/homeopathy-clinic-jagatpura-jaipur" },
 ];
 
+// The major cities from lib/data/cities.ts (isMajor: true), alphabetised
+// for quick scanning — direct one-click header access instead of having
+// to open /cities and scroll past the "also serving" lists. Kept in sync
+// manually with lib/data/cities.ts's isMajor flags since that file has no
+// "use client" boundary this component could import from directly.
+const cityLinks = [
+  { label: "Ahmedabad", href: "/cities/ahmedabad" },
+  { label: "Amritsar", href: "/cities/amritsar" },
+  { label: "Bangalore", href: "/cities/bangalore" },
+  { label: "Chandigarh", href: "/cities/chandigarh" },
+  { label: "Chennai", href: "/cities/chennai" },
+  { label: "Dehradun", href: "/cities/dehradun" },
+  { label: "Delhi", href: "/cities/delhi" },
+  { label: "Gurugram", href: "/cities/gurugram" },
+  { label: "Guwahati", href: "/cities/guwahati" },
+  { label: "Hyderabad", href: "/cities/hyderabad" },
+  { label: "Indore", href: "/cities/indore" },
+  { label: "Jodhpur", href: "/cities/jodhpur" },
+  { label: "Kochi", href: "/cities/kochi" },
+  { label: "Kolkata", href: "/cities/kolkata" },
+  { label: "Lucknow", href: "/cities/lucknow" },
+  { label: "Mumbai", href: "/cities/mumbai" },
+  { label: "Patna", href: "/cities/patna" },
+  { label: "Pune", href: "/cities/pune" },
+  { label: "Shimla", href: "/cities/shimla" },
+  { label: "Surat", href: "/cities/surat" },
+  { label: "Udaipur", href: "/cities/udaipur" },
+  { label: "All Cities We Serve →", href: "/cities" },
+];
+
 const resourceLinks = [
   { label: "Root Cause Assessment", href: "/root-cause-assessment" },
   { label: "Diet & Lifestyle Guide", href: "/diet-lifestyle-guide" },
@@ -58,7 +88,15 @@ const resourceLinks = [
   { label: "Homeopathy FAQ (50 Q&A)", href: "/homeopathy-faq" },
   { label: "Online Consultation", href: "/online-consultation" },
   { label: "International Patients", href: "/international-patients" },
-  { label: "Cities We Serve", href: "/cities" },
+  { label: "Medicine Shipping", href: "/medicine-shipping" },
+  // Everything the footer's legalLinks has, minus Sexual Health — Dr
+  // Anavil confirmed (chat, 2026-09-21) that one stays footer-only, per
+  // the original "quiet placement" clinical-discretion decision. Folded
+  // into Resources rather than its own top-level dropdown so the header
+  // doesn't overflow at 1280px with two more triggers added.
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Use", href: "/terms-of-use" },
+  { label: "Medical Disclaimer", href: "/medical-disclaimer" },
 ];
 
 const trailingLinks = [
@@ -73,6 +111,7 @@ const mobileGroups = [
   { heading: "Explore", links: [homeLink, ...primaryLinks, ...trailingLinks] },
   { heading: "Treatments", links: treatmentLinks },
   { heading: "Locations", links: locationLinks },
+  { heading: "Cities", links: cityLinks },
   { heading: "Resources", links: resourceLinks },
 ];
 
@@ -263,6 +302,7 @@ export default function Header({ settings }: { settings: SiteSettings }) {
             </Link>
           ))}
           <NavDropdown label="Locations" links={locationLinks} />
+          <NavMegaMenu label="Cities" links={cityLinks} />
           <NavDropdown label="Resources" links={resourceLinks} />
           {trailingLinks.map((link) => (
             <Link
