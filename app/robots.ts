@@ -24,6 +24,11 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      // Techeve audit (17 Sept 2026): /admin is already noindex'd
+      // per-page and behind Supabase auth, and /api has nothing for a
+      // crawler to usefully fetch — disallowing both here is defence in
+      // depth, not the only thing protecting them.
+      disallow: ["/admin", "/api"],
     },
     sitemap: `${siteConfig.url}/sitemap.xml`,
   };

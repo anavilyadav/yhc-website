@@ -63,7 +63,7 @@ const FAQS = [
   {
     question: "Is homeopathy treatment from India legal for me to receive?",
     answer:
-      "Homeopathy is a recognised system of medicine in India, regulated by the Central Council of Homeopathy, and Dr T P Yadav and Dr Anavil Yadav are both registered homeopathic physicians. Telemedicine/teleconsultation by registered Indian practitioners is permitted under India's 2020 Telemedicine Practice Guidelines and the AYUSH ministry's parallel guidelines for homeopathy. Receiving a consultation and personal-use medicine as a patient is generally not restricted, but rules on importing medicine differ by country — if you are unsure, check your own country's customs guidance before ordering, or ask us and we'll share what we know for your country.",
+      "Homeopathy is a recognised system of medicine in India, and Dr T P Yadav and Dr Anavil Yadav are both registered homeopathic physicians (Rajasthan Homeopathic Council). Telemedicine/teleconsultation by registered Indian practitioners is permitted under India's 2020 Telemedicine Practice Guidelines and the AYUSH ministry's parallel guidelines for homeopathy. Receiving a consultation and personal-use medicine as a patient is generally not restricted, but rules on importing medicine differ by country — if you are unsure, check your own country's customs guidance before ordering, or ask us and we'll share what we know for your country.",
   },
   {
     question: "Will my medicine clear customs?",

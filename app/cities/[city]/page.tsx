@@ -21,16 +21,35 @@ export async function generateMetadata({
   if (!info) return {};
 
   const pageUrl = `${siteConfig.url}/cities/${info.slug}`;
+  const pageTitle = `Online Homeopathy Consultation for ${info.name} Patients | ${siteConfig.name}`;
+  const pageDescription = `Video consultation with Dr Anavil Yadav and Dr T P Yadav for ${info.name} patients — same depth of case-taking as an in-clinic visit at Yadav Homeo Clinic, Jaipur. Medicine couriered to ${info.name}.`;
+
   return {
-    title: { absolute: `Online Homeopathy Consultation for ${info.name} Patients | ${siteConfig.name}` },
-    description: `Video consultation with Dr Anavil Yadav and Dr T P Yadav for ${info.name} patients — same depth of case-taking as an in-clinic visit at Yadav Homeo Clinic, Jaipur. Medicine couriered to ${info.name}.`,
+    title: { absolute: pageTitle },
+    description: pageDescription,
     alternates: { canonical: pageUrl },
-    // Techeve audit (17 Sept 2026): 157 near-identical city pages risk
-    // "doorway page" treatment. Per Dr Anavil's decision (2026-09-19),
-    // only the ~20 major cities (lib/data/cities.ts, isMajor) stay
-    // indexable — the page itself still exists and works for anyone who
-    // reaches it directly or via the /cities hub, it's just excluded from
-    // the sitemap and told not to be indexed.
+    // Techeve audit (17 Sept 2026) also flagged every city page as
+    // outputting the homepage's og:title/description/url instead of its
+    // own — shared links (WhatsApp, Facebook) previewed the wrong page.
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: pageUrl,
+      siteName: siteConfig.name,
+      locale: "en_IN",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title: pageTitle,
+      description: pageDescription,
+    },
+    // 157 near-identical city pages risk "doorway page" treatment. Per Dr
+    // Anavil's decision (2026-09-19), only the ~20 major cities
+    // (lib/data/cities.ts, isMajor) stay indexable — the page itself
+    // still exists and works for anyone who reaches it directly or via
+    // the /cities hub, it's just excluded from the sitemap and told not
+    // to be indexed.
     ...(info.isMajor ? {} : { robots: { index: false, follow: true } }),
   };
 }

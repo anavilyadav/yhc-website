@@ -25,6 +25,15 @@ const nextConfig: NextConfig = {
         destination: "/patient-stories",
         permanent: false,
       },
+      {
+        // Techeve audit (17 Sept 2026): an existing backlink points at
+        // /Appointment (capitalised), which 404s since Next's routing is
+        // case-sensitive. Permanent redirect so that backlink's link
+        // equity lands on the real page instead of a dead end.
+        source: "/Appointment",
+        destination: "/appointment",
+        permanent: true,
+      },
     ];
   },
 };

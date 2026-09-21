@@ -321,7 +321,7 @@ export function buildPhysicianSchemas() {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "degree",
       name: "BHMS, MD",
-      recognizedBy: { "@type": "Organization", name: "Central Council of Homeopathy, India" },
+      recognizedBy: { "@type": "Organization", name: "Rajasthan Homeopathic Council" },
     },
     medicalSpecialty: [
       "Homeopathy",
@@ -356,7 +356,7 @@ export function buildPhysicianSchemas() {
       credentialCategory: "degree",
       name: "BHMS",
       dateCreated: "2016",
-      recognizedBy: { "@type": "Organization", name: "Central Council of Homeopathy, India" },
+      recognizedBy: { "@type": "Organization", name: "Rajasthan Homeopathic Council" },
     },
     knowsAbout: [
       "Classical Homeopathy",

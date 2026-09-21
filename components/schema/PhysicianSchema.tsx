@@ -54,7 +54,7 @@ export function PhysicianSchema({ doctor }: Props) {
       credentialCategory: "degree",
       name: doctor.credential_name,
       ...(doctor.credential_year ? { dateCreated: doctor.credential_year } : {}),
-      recognizedBy: { "@type": "Organization", name: "Central Council of Homeopathy, India" },
+      recognizedBy: { "@type": "Organization", name: "Rajasthan Homeopathic Council" },
     };
   }
 
