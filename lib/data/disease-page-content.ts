@@ -22,7 +22,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     pageTitle:
       "Homeopathy Treatment for Skin Diseases in Jaipur | Vitiligo, Psoriasis, Eczema | Yadav Homeo Clinic",
     metaDescription:
-      "Best homeopathic treatment for vitiligo, psoriasis, eczema, urticaria & all chronic skin diseases in Jaipur. 30+ years experience. 1000+ skin patients treated. Book now.",
+      "Best homeopathic treatment for vitiligo, psoriasis, eczema, urticaria & all chronic skin diseases in Jaipur. 35+ years experience. 1000+ skin patients treated. Book now.",
     focusKeyword: "homeopathy for vitiligo Jaipur",
     secondaryKeywords: [
       "psoriasis homeopathy treatment Jaipur",
@@ -34,7 +34,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       headline:
         "You Have Tried Everything. Your Skin Still Has Not Healed. Here Is Why — and What Comes Next.",
       subheadline:
-        "If you are reading this page, you have probably already tried steroid creams, antihistamines, PUVA therapy, or multiple doctors — and the vitiligo is still spreading, the psoriasis keeps returning, the eczema comes back every season. That pattern is not a failure of effort. It is a failure of approach. Chronic skin disease is not a skin problem — it is the body's immune system expressing something deeper. At Yadav Homeo Clinic, we have been treating the root of chronic skin conditions for over 30 years. Not the surface.",
+        "If you are reading this page, you have probably already tried steroid creams, antihistamines, PUVA therapy, or multiple doctors — and the vitiligo is still spreading, the psoriasis keeps returning, the eczema comes back every season. That pattern is not a failure of effort. It is a failure of approach. Chronic skin disease is not a skin problem — it is the body's immune system expressing something deeper. At Yadav Homeo Clinic, we have been treating the root of chronic skin conditions for over 35 years. Not the surface.",
       trustLine:
         "1000+ Skin Patients Treated | Vitiligo Specialist Since 1991 | Constitutional — No Steroid Dependency | Online Consultation Available",
     },
@@ -70,13 +70,13 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
         ],
       },
       {
-        heading: "Vitiligo — 30 Years of Clinical Experience, Hundreds of Cases Treated",
+        heading: "Vitiligo — 35 Years of Clinical Experience, Hundreds of Cases Treated",
         navLabel: "Vitiligo",
         listStyle: "stats",
         paragraphs: [
           "Vitiligo — known in Hindi as safed daag or leucoderma — is the condition we are most frequently consulted for, and the one where our clinical track record is strongest. White patches appear when melanocytes — the cells that produce skin pigment — are destroyed by the immune system. The patches are painless but profoundly affect confidence, social life and mental health.",
           "Conventional dermatology offers PUVA light therapy, tacrolimus cream, steroid applications and skin grafting. These can produce results in certain cases — but they do not address why the immune system is attacking melanocytes. Constitutional homeopathy does.",
-          "Honest answer based on 30 years of clinical practice: yes — in a significant proportion of cases, and particularly when treatment begins relatively early in the disease course.",
+          "Honest answer based on 35 years of clinical practice: yes — in a significant proportion of cases, and particularly when treatment begins relatively early in the disease course.",
           "In our experience at Yadav Homeo Clinic, constitutional treatment for vitiligo consistently achieves three outcomes across different patients:",
         ],
         list: [
@@ -255,7 +255,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     slug: "autoimmune-diseases",
     pageTitle: "Homeopathy for Autoimmune Diseases in Jaipur | RA, Lupus, Thyroid | Yadav Homeo Clinic",
     metaDescription:
-      "Constitutional homeopathic treatment for rheumatoid arthritis, lupus, Hashimoto's thyroiditis, scleroderma and all autoimmune diseases in Jaipur. 30+ years experience.",
+      "Constitutional homeopathic treatment for rheumatoid arthritis, lupus, Hashimoto's thyroiditis, scleroderma and all autoimmune diseases in Jaipur. 35+ years experience.",
     focusKeyword: "homeopathy for autoimmune diseases Jaipur",
     secondaryKeywords: [
       "rheumatoid arthritis homeopathy Jaipur",
@@ -587,7 +587,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     slug: "renal-diseases",
     pageTitle: "Homeopathy for Kidney Disease & High Creatinine in Jaipur | CKD Treatment | Yadav Homeo Clinic",
     metaDescription:
-      "Homeopathic support for CKD, high creatinine, nephrotic syndrome and renal diseases in Jaipur, alongside your nephrologist's care. 30+ years experience. Book now.",
+      "Homeopathic support for CKD, high creatinine, nephrotic syndrome and renal diseases in Jaipur, alongside your nephrologist's care. 35+ years experience. Book now.",
     focusKeyword: "homeopathy for kidney disease Jaipur",
     secondaryKeywords: [
       "high creatinine homeopathy treatment",
@@ -818,7 +818,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     slug: "genetic-diseases",
     pageTitle: "Homeopathy for Genetic Diseases in Jaipur | Down Syndrome, Thalassemia | Yadav Homeo Clinic",
     metaDescription:
-      "Homeopathic management of Down syndrome, thalassemia, haemophilia and genetic conditions in Jaipur. Quality of life improvement and constitutional support. 30+ years experience.",
+      "Homeopathic management of Down syndrome, thalassemia, haemophilia and genetic conditions in Jaipur. Quality of life improvement and constitutional support. 35+ years experience.",
     focusKeyword: "homeopathy for Down syndrome Jaipur",
     secondaryKeywords: [
       "thalassemia homeopathy treatment",
@@ -981,7 +981,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     slug: "autism",
     pageTitle: "Homeopathy for Autism in Jaipur | ASD, ADHD, Speech Delay | Yadav Homeo Clinic",
     metaDescription:
-      "Yadav Homeo Clinic — 5000+ special children treated. Homeopathic care for autism, ADHD, speech delay, developmental disorders. 30 years experience. Jaipur & online.",
+      "Yadav Homeo Clinic — 5000+ special children treated. Homeopathic care for autism, ADHD, speech delay, developmental disorders. 35 years experience. Jaipur & online.",
     focusKeyword: "homeopathy for autism Jaipur",
     secondaryKeywords: [
       "autism treatment homeopathy India",
@@ -991,9 +991,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       "Dr Anavil Yadav autism",
     ],
     hero: {
-      headline: "5,000+ Special Children. 30 Years. One Unwavering Commitment.",
+      headline: "5,000+ Special Children. 35 Years. One Unwavering Commitment.",
       subheadline:
-        "No parent should hear the words 'nothing can be done for your child' and have no path forward. At Yadav Homeo Clinic, we have dedicated three decades and over five thousand cases to proving that there is always something that can be done — not to erase autism, but to help every autistic child become the healthiest, most capable version of themselves.",
+        "No parent should hear the words 'nothing can be done for your child' and have no path forward. At Yadav Homeo Clinic, we have dedicated 35 years and over five thousand cases to proving that there is always something that can be done — not to erase autism, but to help every autistic child become the healthiest, most capable version of themselves.",
     },
     conditionsIntro: "Developmental Conditions We Treat",
     conditions: [
@@ -1223,7 +1223,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     slug: "nervous-system-disease",
     pageTitle: "Homeopathy for Neurological Diseases in Jaipur | Epilepsy, Migraine, CP | Yadav Homeo Clinic",
     metaDescription:
-      "Constitutional homeopathic treatment for epilepsy, migraine, cerebral palsy, Parkinson's and neurological conditions in Jaipur. Yadav Homeo Clinic — 30+ years.",
+      "Constitutional homeopathic treatment for epilepsy, migraine, cerebral palsy, Parkinson's and neurological conditions in Jaipur. Yadav Homeo Clinic — 35+ years.",
     focusKeyword: "homeopathy for neurological diseases Jaipur",
     secondaryKeywords: [
       "epilepsy homeopathy Jaipur",
@@ -1234,7 +1234,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     hero: {
       headline: "Neurological Conditions — Where Conventional Medicine Manages, Homeopathy Supports Deeply",
       subheadline:
-        "The nervous system governs everything — thought, movement, sensation, emotion. When it is disrupted, the impact touches every part of life. At Yadav Homeo Clinic, we bring 30 years of experience in supporting neurological conditions with deep constitutional homeopathic treatment — always alongside, never instead of, neurological care.",
+        "The nervous system governs everything — thought, movement, sensation, emotion. When it is disrupted, the impact touches every part of life. At Yadav Homeo Clinic, we bring 35 years of experience in supporting neurological conditions with deep constitutional homeopathic treatment — always alongside, never instead of, neurological care.",
     },
     conditionsIntro: "Neurological Conditions We Address With Homeopathy",
     conditions: [
@@ -1398,7 +1398,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     pageTitle:
       "Homeopathy for Children in Jaipur | Paediatric Homeopathy | Tonsillitis, Allergies, Bed-Wetting | Yadav Homeo Clinic",
     metaDescription:
-      "Safe, gentle homeopathic treatment for children — recurrent infections, tonsillitis, bed-wetting, allergies & more. No side effects. Yadav Homeo Clinic, Jaipur — 30+ years.",
+      "Safe, gentle homeopathic treatment for children — recurrent infections, tonsillitis, bed-wetting, allergies & more. No side effects. Yadav Homeo Clinic, Jaipur — 35+ years.",
     focusKeyword: "homeopathy for children Jaipur",
     secondaryKeywords: [
       "paediatric homeopathy Jaipur",
@@ -1413,7 +1413,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       subheadline:
         "You have watched your child go through tonsillitis surgery discussions, long antibiotic courses that leave them tired, or allergy medications they may need for years. You are not wrong to want something different. Children respond to correctly prescribed constitutional homeopathy with a speed and depth that consistently surprises even experienced practitioners — because their immune systems are still developing and respond powerfully to the right support. At Yadav Homeo Clinic, we have been treating children since 1991. Their recoveries are among the most joyful work we do.",
       trustLine:
-        "Children Treated From Birth | 30+ Years Paediatric Homeopathy | No Side Effects on Developing Immune System | Online Consultation Available",
+        "Children Treated From Birth | 35+ Years Paediatric Homeopathy | No Side Effects on Developing Immune System | Online Consultation Available",
     },
     conditionsIntro:
       "We treat a full range of childhood health concerns — from recurring infections to developmental and behavioural conditions:",
@@ -1809,7 +1809,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     pageTitle:
       "Homeopathy for Men's Health in Jaipur | Infertility, Prostate, Sexual Health | Yadav Homeo Clinic",
     metaDescription:
-      "Confidential homeopathic treatment for male infertility, prostate disease, sexual health and men's health concerns in Jaipur. Complete privacy. Yadav Homeo Clinic — 30+ years.",
+      "Confidential homeopathic treatment for male infertility, prostate disease, sexual health and men's health concerns in Jaipur. Complete privacy. Yadav Homeo Clinic — 35+ years.",
     focusKeyword: "homeopathy for male infertility Jaipur",
     secondaryKeywords: [
       "male infertility homeopathy India",
@@ -1989,7 +1989,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     slug: "respiratory-diseases",
     pageTitle: "Homeopathy for Asthma & Respiratory Diseases in Jaipur | Yadav Homeo Clinic",
     metaDescription:
-      "Effective homeopathic treatment for asthma, sinusitis, allergic rhinitis & chronic respiratory conditions in Jaipur. Reduce steroid dependence. 30+ years experience.",
+      "Effective homeopathic treatment for asthma, sinusitis, allergic rhinitis & chronic respiratory conditions in Jaipur. Reduce steroid dependence. 35+ years experience.",
     focusKeyword: "homeopathy for asthma Jaipur",
     secondaryKeywords: [
       "asthma homeopathy treatment Jaipur",
@@ -2153,7 +2153,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     pageTitle:
       "Homeopathy for Digestive Diseases in Jaipur | IBS, Colitis, Piles, Acidity | Yadav Homeo Clinic",
     metaDescription:
-      "Homeopathic treatment for IBS, ulcerative colitis, Crohn's, piles, acidity and all digestive conditions in Jaipur. Heal from the root. Yadav Homeo Clinic — 30+ years.",
+      "Homeopathic treatment for IBS, ulcerative colitis, Crohn's, piles, acidity and all digestive conditions in Jaipur. Heal from the root. Yadav Homeo Clinic — 35+ years.",
     focusKeyword: "homeopathy for IBS Jaipur",
     secondaryKeywords: [
       "ulcerative colitis homeopathy Jaipur",
@@ -2321,7 +2321,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     pageTitle:
       "Homeopathy for Hormonal Disorders in Jaipur | Thyroid, PCOD, Diabetes | Yadav Homeo Clinic",
     metaDescription:
-      "Constitutional homeopathic treatment for thyroid disorders, PCOD, hormonal imbalances and diabetes management in Jaipur. Yadav Homeo Clinic — 30+ years of clinical experience.",
+      "Constitutional homeopathic treatment for thyroid disorders, PCOD, hormonal imbalances and diabetes management in Jaipur. Yadav Homeo Clinic — 35+ years of clinical experience.",
     focusKeyword: "homeopathy for thyroid Jaipur",
     secondaryKeywords: [
       "hypothyroidism homeopathy Jaipur",
@@ -2464,7 +2464,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     pageTitle:
       "Homeopathy for Mental Health in Jaipur | Anxiety, Depression, OCD, Insomnia | Yadav Homeo Clinic",
     metaDescription:
-      "Safe, non-habit-forming homeopathic treatment for anxiety, depression, OCD and insomnia in Jaipur. No side effects. No dependency. Yadav Homeo Clinic — 30+ years.",
+      "Safe, non-habit-forming homeopathic treatment for anxiety, depression, OCD and insomnia in Jaipur. No side effects. No dependency. Yadav Homeo Clinic — 35+ years.",
     focusKeyword: "homeopathy for anxiety Jaipur",
     secondaryKeywords: [
       "depression homeopathy Jaipur",
@@ -2596,7 +2596,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       {
         question: "Is homeopathy for mental health just a placebo?",
         answer:
-          "This is a fair question and one we take seriously. In our 30 years of practice, we have treated hundreds of patients with anxiety, depression and OCD with constitutional homeopathic treatment. The changes we observe — in sleep, in cognitive function, in emotional regulation, in behaviour — are documented, consistent, and in many cases confirmed by the patients' psychiatrists and therapists. The placebo argument does not account for the specificity of improvement or the reversal of symptoms with the wrong remedy and their resolution with the correct one.",
+          "This is a fair question and one we take seriously. In our 35 years of practice, we have treated hundreds of patients with anxiety, depression and OCD with constitutional homeopathic treatment. The changes we observe — in sleep, in cognitive function, in emotional regulation, in behaviour — are documented, consistent, and in many cases confirmed by the patients' psychiatrists and therapists. The placebo argument does not account for the specificity of improvement or the reversal of symptoms with the wrong remedy and their resolution with the correct one.",
       },
       {
         question: "Can homeopathy help OCD?",
@@ -2654,7 +2654,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     pageTitle:
       "Homeopathy for Joint & Bone Diseases in Jaipur | RA, Ankylosing Spondylitis, Slipped Disc | Yadav Homeo Clinic",
     metaDescription:
-      "Homeopathic treatment for Rheumatoid Arthritis, Ankylosing Spondylitis, Avascular Necrosis, Slipped Disc, Gout in Jaipur. 30+ years. No painkillers. Book consultation.",
+      "Homeopathic treatment for Rheumatoid Arthritis, Ankylosing Spondylitis, Avascular Necrosis, Slipped Disc, Gout in Jaipur. 35+ years. No painkillers. Book consultation.",
     focusKeyword: "homeopathy for joint pain Jaipur",
     secondaryKeywords: [
       "rheumatoid arthritis homeopathy",
@@ -2667,7 +2667,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
       subheadline:
         "Joint pain, arthritis, and spine problems are usually met with one of two conventional options — painkillers or surgery. Both carry real risks and real limitations. Classical homeopathy offers a third option — one that aims to address the inflammation at its cause, without lifetime dependency on medication.",
       trustLine:
-        "30+ Years Joint & Spine Cases | RA, Ankylosing Spondylitis, AVN Specialist | No NSAIDs, No Steroids | Online Consultation Available",
+        "35+ Years Joint & Spine Cases | RA, Ankylosing Spondylitis, AVN Specialist | No NSAIDs, No Steroids | Online Consultation Available",
     },
     conditionsIntro:
       "We treat the full range of joint, spine and bone conditions — with particular depth in cases conventional medicine finds most difficult:",
@@ -2794,7 +2794,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
     pageTitle:
       "Homeopathy for Heart Disease in Jaipur | ASD, VSD, Hypertension, Cardiomyopathy | Yadav Homeo Clinic",
     metaDescription:
-      "Homeopathic supportive care for heart conditions — ASD, VSD, Eisenmenger's Syndrome, High BP, Cardiomyopathy in Jaipur. 30+ years. Alongside cardiology care.",
+      "Homeopathic supportive care for heart conditions — ASD, VSD, Eisenmenger's Syndrome, High BP, Cardiomyopathy in Jaipur. 35+ years. Alongside cardiology care.",
     focusKeyword: "homeopathy for heart disease Jaipur",
     secondaryKeywords: [
       "ASD VSD homeopathy",

@@ -13,7 +13,7 @@ export interface PatientStoryEntry {
 export const patientStoriesSeo = {
   pageTitle: "Patient Success Stories | Yadav Homeo Clinic Jaipur | Real Homeopathy Results",
   metaDescription:
-    "Real patient recovery stories from Yadav Homeo Clinic — vitiligo, kidney disease, autism, PCOS, psoriasis and more. 30+ years. 1 lakh+ patients. Read their journeys.",
+    "Real patient recovery stories from Yadav Homeo Clinic — vitiligo, kidney disease, autism, PCOS, psoriasis and more. 35+ years. 1 lakh+ patients. Read their journeys.",
   focusKeyword: "homeopathy patient success stories Jaipur",
   secondaryKeywords: [
     "vitiligo recovery homeopathy",
@@ -32,7 +32,7 @@ export const patientStoriesHero = {
 };
 
 export const patientStoriesIntro = [
-  "In 30+ years of practice at Yadav Homeo Clinic, we have seen patterns that defy easy explanation by conventional medicine. Vitiligo patches that stopped spreading and began to repigment. Kidney function that improved steadily over time in cases that looked concerning. Autism children who began speaking. PCOS cases where cycles regularised and fertility was restored without hormonal manipulation.",
+  "In 35+ years of practice at Yadav Homeo Clinic, we have seen patterns that defy easy explanation by conventional medicine. Vitiligo patches that stopped spreading and began to repigment. Kidney function that improved steadily over time in cases that looked concerning. Autism children who began speaking. PCOS cases where cycles regularised and fertility was restored without hormonal manipulation.",
   "We do not claim to understand the full mechanism behind every recovery. We know that correctly prescribed classical homeopathy — individualised, constitutional, patient-specific — produces results that text books sometimes call impossible. These patient stories are our evidence.",
   "We share them not to sell, but because families facing these diagnoses deserve to know what has been possible here.",
 ];

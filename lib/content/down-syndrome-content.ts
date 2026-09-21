@@ -100,7 +100,7 @@ export const DOWN_SYNDROME_PAGE: DiseaseSubPageContent = {
       navLabel: "Why Us",
       media: { type: "photo", caption: "Constitutional case-taking session, in progress" },
       paragraphs: [
-        "Genetic and developmental conditions in children have been part of our clinical practice since Dr T P Yadav founded Yadav Homeo Clinic in 1991. Across three decades, the clinic has supported thousands of special children — including many with Down Syndrome — alongside their paediatricians, cardiologists, endocrinologists and special educators.",
+        "Genetic and developmental conditions in children have been part of our clinical practice since Dr T P Yadav founded Yadav Homeo Clinic in 1991. Across 35 years, the clinic has supported thousands of special children — including many with Down Syndrome — alongside their paediatricians, cardiologists, endocrinologists and special educators.",
         "Dr Anavil Yadav now leads most of these family consultations, taking the time to understand each child's specific immune, digestive, thyroid and developmental picture rather than treating 'Down Syndrome' as a single, uniform diagnosis.",
       ],
     },

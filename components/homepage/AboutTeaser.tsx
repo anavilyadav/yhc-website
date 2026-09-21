@@ -11,7 +11,7 @@ export default function AboutTeaser() {
         <div className="mt-5 space-y-4 text-[15px] leading-relaxed text-text-mid">
           <p>
             Yadav Homeo Clinic was founded by Dr T P Yadav — one of Jaipur&apos;s most respected
-            homeopathic physicians with over three decades of unbroken clinical practice. What
+            homeopathic physicians with over 35 years of unbroken clinical practice. What
             began as a small clinic has grown into one of Rajasthan&apos;s most sought-after
             homeopathy centres, with patients travelling from across India and from countries
             including the UAE, United Kingdom, United States, Canada, and Australia.

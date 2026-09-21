@@ -18,9 +18,9 @@ import type { BlogPost } from "@/lib/types";
 export const BLOG_POST_SEED: BlogPost[] = [
   {
     slug: "can-homeopathy-cure-vitiligo",
-    title: "Can Homeopathy Cure Vitiligo? 30 Years of Clinical Experience Gives an Honest Answer",
+    title: "Can Homeopathy Cure Vitiligo? 35 Years of Clinical Experience Gives an Honest Answer",
     metaDescription:
-      "Can vitiligo be cured by homeopathy? An honest, evidence-based answer from Dr Anavil Yadav of Yadav Homeo Clinic, Jaipur — based on 30 years of treating vitiligo patients.",
+      "Can vitiligo be cured by homeopathy? An honest, evidence-based answer from Dr Anavil Yadav of Yadav Homeo Clinic, Jaipur — based on 35 years of treating vitiligo patients.",
     focusKeyword: "can homeopathy cure vitiligo",
     secondaryKeywords: [
       "vitiligo homeopathy treatment",
@@ -34,7 +34,7 @@ export const BLOG_POST_SEED: BlogPost[] = [
     publishedDate: "2026-08-07",
     intro: [
       "If you have vitiligo — those white patches that appear on the skin and refuse to go away — you have probably heard every promise imaginable. Certain diets that will cure it. Herbal oils. Light therapy. And homeopathy.",
-      "You deserve an honest answer. Not a sales pitch. Not a miraculous claim. An honest answer — from a clinic that has been treating vitiligo patients for 30 years.",
+      "You deserve an honest answer. Not a sales pitch. Not a miraculous claim. An honest answer — from a clinic that has been treating vitiligo patients for 35 years.",
       "That is what this article is.",
     ],
     sections: [
@@ -62,7 +62,7 @@ export const BLOG_POST_SEED: BlogPost[] = [
         ],
       },
       {
-        heading: "What We Have Seen in 30 Years — Honest Clinical Observations",
+        heading: "What We Have Seen in 35 Years — Honest Clinical Observations",
         paragraphs: [
           "I grew up watching my father, Dr T P Yadav, treat vitiligo patients. I have now been practising alongside him for nearly a decade. Based on our combined experience of hundreds of vitiligo cases, here is what we have consistently observed:",
         ],
@@ -113,7 +113,7 @@ export const BLOG_POST_SEED: BlogPost[] = [
     title:
       "My Child Has Autism — Can Homeopathy Help? An Honest Answer From a Doctor Who Has Treated 5,000 Special Children",
     metaDescription:
-      "Can homeopathy help a child with autism? Dr Anavil Yadav of Yadav Homeo Clinic, Jaipur answers honestly — based on 30 years and 5000+ autism cases. Read before deciding.",
+      "Can homeopathy help a child with autism? Dr Anavil Yadav of Yadav Homeo Clinic, Jaipur answers honestly — based on 35 years and 5000+ autism cases. Read before deciding.",
     focusKeyword: "homeopathy for autism",
     secondaryKeywords: [
       "homeopathy for autism India",
@@ -130,7 +130,7 @@ export const BLOG_POST_SEED: BlogPost[] = [
       "This is the question we receive more than any other. And the one we take most seriously.",
       "Behind it is not just a medical query. Behind it is a parent who has been through the diagnosis — the grief, the fear, the overwhelming flood of information and misinformation. A parent who is doing everything they possibly can for their child. A parent who has heard things that gave hope, and things that took it away.",
       "This parent deserves a completely honest answer. Not hope-selling. Not dismissal. Honest.",
-      "So here it is — based on 30 years of practice at Yadav Homeo Clinic and over 5,000 children with autism and developmental conditions treated by my father, Dr T P Yadav, and more recently by myself.",
+      "So here it is — based on 35 years of practice at Yadav Homeo Clinic and over 5,000 children with autism and developmental conditions treated by my father, Dr T P Yadav, and more recently by myself.",
     ],
     sections: [
       {
@@ -214,7 +214,7 @@ export const BLOG_POST_SEED: BlogPost[] = [
     publishedDate: "2026-08-07",
     intro: [
       "If you or someone in your family has chronic kidney disease with rising creatinine levels, you are probably in a state of controlled panic. Dialysis has been mentioned. The nephrologist's options are narrowing. And someone — a neighbour, a relative, a Google search at 2am — has suggested homeopathy.",
-      "You need an honest answer. Not a miracle claim and not a dismissal. So here is what we have actually observed at Yadav Homeo Clinic — after treating hundreds of kidney disease patients over 30 years.",
+      "You need an honest answer. Not a miracle claim and not a dismissal. So here is what we have actually observed at Yadav Homeo Clinic — after treating hundreds of kidney disease patients over 35 years.",
     ],
     sections: [
       {
@@ -368,7 +368,7 @@ export const BLOG_POST_SEED: BlogPost[] = [
 
   {
     slug: "myths-about-homeopathy-answered",
-    title: "5 Myths About Homeopathy — Answered Honestly by a Doctor With 30 Years of Clinical Experience",
+    title: "5 Myths About Homeopathy — Answered Honestly by a Doctor With 35 Years of Clinical Experience",
     metaDescription:
       "Is homeopathy just a placebo? Only for minor conditions? Dr Anavil Yadav addresses the 5 biggest myths about homeopathy — honestly, with clinical examples. Read before judging.",
     focusKeyword: "does homeopathy work",

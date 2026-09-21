@@ -18,7 +18,7 @@ export const onlineConsultationSeo = {
 export const onlineConsultationHero = {
   headline: "The Same Consultation. Without the Distance.",
   subheadline:
-    "For over 30 years, patients have travelled from across India to sit with Dr T P Yadav and Dr Anavil Yadav at Yadav Homeo Clinic, Jaipur. Today, patients from Delhi, Mumbai, London and Dubai receive the same depth of care — the same 45-minute case-taking, the same constitutional prescription — without leaving their city.",
+    "For over 35 years, patients have travelled from across India to sit with Dr T P Yadav and Dr Anavil Yadav at Yadav Homeo Clinic, Jaipur. Today, patients from Delhi, Mumbai, London and Dubai receive the same depth of care — the same 45-minute case-taking, the same constitutional prescription — without leaving their city.",
   trustLine:
     "15+ Countries Served | Same Prescription Process as In-Clinic | All Reports Reviewed Personally | WhatsApp Support Throughout Treatment",
 };

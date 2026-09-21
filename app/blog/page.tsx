@@ -41,7 +41,7 @@ export default async function BlogIndexPage() {
             Honest Answers, Not Sales Pitches
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-cream/80 sm:text-lg">
-            Articles written from 30 years of clinical experience treating chronic and complex
+            Articles written from 35 years of clinical experience treating chronic and complex
             disease with classical homeopathy — what it can do, what it cannot, and what to
             realistically expect.
           </p>

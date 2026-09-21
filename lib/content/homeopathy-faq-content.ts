@@ -88,7 +88,7 @@ export const homeopathyFaqCategories: FaqCategory[] = [
       {
         question: "Can homeopathy treat vitiligo (leucoderma/safed daag)?",
         answer:
-          "Vitiligo is one of the specialities of Yadav Homeo Clinic, Jaipur, with 30+ years of clinical experience. Constitutional homeopathic treatment for vitiligo works by addressing the underlying immune dysregulation that causes melanocyte destruction. Outcomes vary: most patients achieve halting of new patch formation; approximately 40-60% achieve visible repigmentation of existing patches over 12-18 months. Best results in: early-stage vitiligo (under 7 years), face and trunk patches, actively spreading disease. The treatment takes patience — minimum 12 months for meaningful results.",
+          "Vitiligo is one of the specialities of Yadav Homeo Clinic, Jaipur, with 35+ years of clinical experience. Constitutional homeopathic treatment for vitiligo works by addressing the underlying immune dysregulation that causes melanocyte destruction. Outcomes vary: most patients achieve halting of new patch formation; approximately 40-60% achieve visible repigmentation of existing patches over 12-18 months. Best results in: early-stage vitiligo (under 7 years), face and trunk patches, actively spreading disease. The treatment takes patience — minimum 12 months for meaningful results.",
         conditionSlug: "skin-diseases",
       },
       {
@@ -100,7 +100,7 @@ export const homeopathyFaqCategories: FaqCategory[] = [
       {
         question: "Does homeopathy help children with autism spectrum disorder?",
         answer:
-          "Homeopathy does not cure autism. It consistently improves the co-occurring conditions that make autism more difficult — chronic sleep disorders, gastrointestinal problems, hyperactivity, aggressive behaviours, and immune susceptibility to infections. Over 5,000 children with autism and developmental conditions have been treated at Yadav Homeo Clinic over 30 years. The most reliable improvements are in sleep (often within 2-3 months), digestive function, and reduction in behavioural dysregulation. Language development, when it occurs, typically comes later. All existing therapies (speech, OT, ABA) must continue alongside homeopathic treatment.",
+          "Homeopathy does not cure autism. It consistently improves the co-occurring conditions that make autism more difficult — chronic sleep disorders, gastrointestinal problems, hyperactivity, aggressive behaviours, and immune susceptibility to infections. Over 5,000 children with autism and developmental conditions have been treated at Yadav Homeo Clinic over 35 years. The most reliable improvements are in sleep (often within 2-3 months), digestive function, and reduction in behavioural dysregulation. Language development, when it occurs, typically comes later. All existing therapies (speech, OT, ABA) must continue alongside homeopathic treatment.",
         conditionSlug: "autism",
       },
       {

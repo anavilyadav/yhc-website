@@ -15,7 +15,7 @@ export const VITILIGO_PAGE: DiseaseSubPageContent = {
   parentLabel: "Skin Diseases",
   pageTitle: "Vitiligo Treatment in Jaipur | Homeopathy for Leucoderma | Yadav Homeo Clinic",
   metaDescription:
-    "Homeopathic vitiligo treatment at Yadav Homeo Clinic Jaipur — 30+ years, 1000+ vitiligo cases treated. Constitutional approach. Repigmentation seen in 40-60% of cases. Book consultation.",
+    "Homeopathic vitiligo treatment at Yadav Homeo Clinic Jaipur — 35+ years, 1000+ vitiligo cases treated. Constitutional approach. Repigmentation seen in 40-60% of cases. Book consultation.",
   focusKeyword: "vitiligo treatment in Jaipur",
   secondaryKeywords: [
     "leucoderma treatment Jaipur",
@@ -27,9 +27,9 @@ export const VITILIGO_PAGE: DiseaseSubPageContent = {
   hero: {
     headline: "Vitiligo — When the Spread Stops, Healing Can Begin.",
     subheadline:
-      "You have watched the white patches appear, spread, and affect parts of your face and body that have changed how you see yourself in the mirror. Three things need to happen: the spread must stop, the immune attack on melanocytes must be addressed, and wherever possible — the pigment must return. That is exactly what 30 years of classical homeopathic treatment at Yadav Homeo Clinic aims to do.",
+      "You have watched the white patches appear, spread, and affect parts of your face and body that have changed how you see yourself in the mirror. Three things need to happen: the spread must stop, the immune attack on melanocytes must be addressed, and wherever possible — the pigment must return. That is exactly what 35 years of classical homeopathic treatment at Yadav Homeo Clinic aims to do.",
     trustLine:
-      "30+ Years of Vitiligo Cases | 1000+ Vitiligo Patients Treated | Repigmentation Seen in 40–60% of Cases | Constitutional — No Topical Steroids",
+      "35+ Years of Vitiligo Cases | 1000+ Vitiligo Patients Treated | Repigmentation Seen in 40–60% of Cases | Constitutional — No Topical Steroids",
   },
   sections: [
     {
@@ -44,7 +44,7 @@ export const VITILIGO_PAGE: DiseaseSubPageContent = {
       media: { type: "video", caption: "Dr. Anavil explains: why vitiligo spreads and why creams alone can't stop it" },
     },
     {
-      heading: "What Our 30 Years of Vitiligo Cases Actually Show — No Exaggeration",
+      heading: "What Our 35 Years of Vitiligo Cases Actually Show — No Exaggeration",
       navLabel: "What We See",
       paragraphs: ["Based on our clinical experience at Yadav Homeo Clinic across hundreds of vitiligo cases:"],
       listStyle: "stats",
@@ -110,7 +110,7 @@ export const VITILIGO_PAGE: DiseaseSubPageContent = {
       navLabel: "Why Us",
       media: { type: "photo", caption: "Constitutional case-taking session, in progress" },
       paragraphs: [
-        "Our vitiligo experience is the deepest part of our clinical identity. Dr T P Yadav began treating vitiligo cases in 1991 when Jaipur had very few classical homeopaths. For 30 years, patients with vitiligo have come from across Rajasthan, from Delhi, from abroad — many of them referred by other patients who recovered here.",
+        "Our vitiligo experience is the deepest part of our clinical identity. Dr T P Yadav began treating vitiligo cases in 1991 when Jaipur had very few classical homeopaths. For 35 years, patients with vitiligo have come from across Rajasthan, from Delhi, from abroad — many of them referred by other patients who recovered here.",
         "Dr Anavil Yadav now leads vitiligo cases with the same constitutional approach — deepened by his own clinical training and updated by his engagement with current immunological understanding of the disease.",
         "What makes our approach different is not a specific medicine or a protocol. It is the commitment to finding the constitutional remedy that matches the individual — their physical constitution, their emotional tendencies, their reaction patterns, their immune fingerprint. Vitiligo is not treated the same way in every patient here. It is treated as the individual patient's immune system speaking — and answered accordingly.",
       ],

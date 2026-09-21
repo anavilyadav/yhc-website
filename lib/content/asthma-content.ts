@@ -14,7 +14,7 @@ export const ASTHMA_PAGE: DiseaseSubPageContent = {
   parentLabel: "Respiratory Diseases",
   pageTitle: "Asthma Treatment in Jaipur | Homeopathy to Reduce Inhaler Dependence | Yadav Homeo Clinic",
   metaDescription:
-    "Homeopathic asthma treatment at Yadav Homeo Clinic Jaipur — constitutional approach to reduce bronchial hypersensitivity and inhaler dependence. 30+ years experience.",
+    "Homeopathic asthma treatment at Yadav Homeo Clinic Jaipur — constitutional approach to reduce bronchial hypersensitivity and inhaler dependence. 35+ years experience.",
   focusKeyword: "asthma treatment Jaipur",
   secondaryKeywords: [
     "homeopathy for asthma Jaipur",
@@ -26,7 +26,7 @@ export const ASTHMA_PAGE: DiseaseSubPageContent = {
     headline: "The Inhaler Controls the Attack. It Does Not Reduce Your Sensitivity to the Trigger.",
     subheadline:
       "Reliever inhalers and steroid preventers are safe, effective and often life-saving in the moment — we fully support their use. But years of inhaler use do not make your lungs any less reactive to dust, cold air or exercise. Constitutional homeopathic treatment at Yadav Homeo Clinic works at exactly that level — the underlying bronchial hypersensitivity that makes attacks possible in the first place.",
-    trustLine: "30+ Years Treating Chronic Respiratory Disease | Constitutional — Alongside Your Inhaler, Not Instead Of | Online Consultation Available",
+    trustLine: "35+ Years Treating Chronic Respiratory Disease | Constitutional — Alongside Your Inhaler, Not Instead Of | Online Consultation Available",
   },
   sections: [
     {
@@ -91,7 +91,7 @@ export const ASTHMA_PAGE: DiseaseSubPageContent = {
       paragraphs: [
         "Chronic respiratory disease has been part of our clinical practice since 1991. Asthma patients arrive here after years of managing attacks with inhalers alone, looking for an approach that addresses why the lungs remain reactive rather than only what to do once an attack has started.",
         "The constitutional remedy is never chosen from the diagnosis alone — it is chosen from the complete picture of the individual patient, including specific triggers, the pattern and timing of attacks, and the patient's overall constitution. This individualisation is what classical homeopathy offers that a standard inhaler protocol cannot.",
-        "We treat asthma across all ages — from young children just diagnosed to adults managing decades-long disease — with the same constitutional framework Dr T P Yadav built over 30 years, now carried forward by Dr Anavil Yadav.",
+        "We treat asthma across all ages — from young children just diagnosed to adults managing decades-long disease — with the same constitutional framework Dr T P Yadav built over 35 years, now carried forward by Dr Anavil Yadav.",
       ],
     },
   ],

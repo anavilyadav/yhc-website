@@ -11,11 +11,11 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Best Homeopathy Doctor in Jaipur | Yadav Homeo Clinic | 30+ Years",
+    default: "Best Homeopathy Doctor in Jaipur | Yadav Homeo Clinic | 35+ Years",
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Yadav Homeo Clinic — Jaipur's most trusted homeopathy clinic for chronic, genetic & autoimmune diseases. 30+ years. 1 lakh+ patients. Book your consultation today.",
+    "Yadav Homeo Clinic — Jaipur's most trusted homeopathy clinic for chronic, genetic & autoimmune diseases. 35+ years. 1 lakh+ patients. Book your consultation today.",
   keywords: [
     "homeopathy doctor in Jaipur",
     "best homeopathy clinic Jaipur",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Best Homeopathy Doctor in Jaipur | Yadav Homeo Clinic",
     description:
-      "Jaipur's most trusted homeopathy clinic for chronic, genetic & autoimmune diseases. 30+ years. 1 lakh+ patients treated.",
+      "Jaipur's most trusted homeopathy clinic for chronic, genetic & autoimmune diseases. 35+ years. 1 lakh+ patients treated.",
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "en_IN",

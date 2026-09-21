@@ -151,7 +151,7 @@ export const faqCategories: FaqCategory[] = [
       {
         question: "Kitne patients treat kiye Yadav Homeo Clinic ne?",
         answer:
-          "1 lakh se zyada patients 30+ years mein — in mein 5000+ special children shamil hain. Dr T P Yadav ne 1991 mein clinic shuru kiya. Do Jaipur locations aaj available hain in-clinic patients ke liye aur pan-India + international online consultations ke liye.",
+          "1 lakh se zyada patients 35+ years mein — in mein 5000+ special children shamil hain. Dr T P Yadav ne 1991 mein clinic shuru kiya. Do Jaipur locations aaj available hain in-clinic patients ke liye aur pan-India + international online consultations ke liye.",
       },
       {
         question: "Kya skin before/after photos dekh sakte hain?",

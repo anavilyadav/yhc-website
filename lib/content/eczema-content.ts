@@ -13,7 +13,7 @@ export const ECZEMA_PAGE: DiseaseSubPageContent = {
   parentLabel: "Skin Diseases",
   pageTitle: "Eczema Treatment in Jaipur | Homeopathy for Atopic Dermatitis | Yadav Homeo Clinic",
   metaDescription:
-    "Homeopathic eczema treatment at Yadav Homeo Clinic Jaipur — constitutional approach addressing the immune hypersensitivity behind eczema, not just the itch. 30+ years experience.",
+    "Homeopathic eczema treatment at Yadav Homeo Clinic Jaipur — constitutional approach addressing the immune hypersensitivity behind eczema, not just the itch. 35+ years experience.",
   focusKeyword: "eczema treatment Jaipur",
   secondaryKeywords: [
     "eczema homeopathy Jaipur",
@@ -25,7 +25,7 @@ export const ECZEMA_PAGE: DiseaseSubPageContent = {
     headline: "Eczema Comes Back Every Season Because the Cream Only Calms the Itch.",
     subheadline:
       "Moisturisers and steroid creams bring real relief — but for most patients the dryness, redness and itching return with the next change of weather, the next stressful week, or the next food trigger. That pattern exists because eczema is driven by an underlying immune hypersensitivity, not a defect in the skin itself. Constitutional homeopathic treatment at Yadav Homeo Clinic addresses that hypersensitivity directly.",
-    trustLine: "30+ Years Treating Chronic Skin Disease | Constitutional — No Steroid Dependency | Online Consultation Available",
+    trustLine: "35+ Years Treating Chronic Skin Disease | Constitutional — No Steroid Dependency | Online Consultation Available",
   },
   sections: [
     {
@@ -102,7 +102,7 @@ export const ECZEMA_PAGE: DiseaseSubPageContent = {
       paragraphs: [
         "Chronic skin disease has been the deepest part of our clinical practice since 1991. Eczema patients arrive here after years of managing flares with moisturisers and steroid creams alone, looking for an approach that addresses why the flares keep happening rather than only what to apply when they do.",
         "The constitutional remedy is never chosen from the diagnosis alone — it is chosen from the complete picture of the individual patient, including known triggers, family history of allergies or asthma, and how the skin behaves across seasons. This individualisation is what classical homeopathy offers that a standard moisturiser-and-steroid routine cannot.",
-        "We treat eczema across all ages — from infants with their first flare-ups to adults managing decades-long atopic dermatitis — with the same constitutional framework Dr T P Yadav built over 30 years, now carried forward by Dr Anavil Yadav.",
+        "We treat eczema across all ages — from infants with their first flare-ups to adults managing decades-long atopic dermatitis — with the same constitutional framework Dr T P Yadav built over 35 years, now carried forward by Dr Anavil Yadav.",
       ],
     },
   ],

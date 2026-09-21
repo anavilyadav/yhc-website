@@ -20,7 +20,7 @@ export const PSORIASIS_PAGE: DiseaseSubPageContent = {
   parentLabel: "Skin Diseases",
   pageTitle: "Psoriasis Treatment in Jaipur | Homeopathy Without Steroids | Yadav Homeo Clinic",
   metaDescription:
-    "Homeopathic psoriasis treatment at Yadav Homeo Clinic Jaipur — constitutional approach, no steroid dependency. Plaque, guttate, scalp and nail psoriasis. 30+ years experience.",
+    "Homeopathic psoriasis treatment at Yadav Homeo Clinic Jaipur — constitutional approach, no steroid dependency. Plaque, guttate, scalp and nail psoriasis. 35+ years experience.",
   focusKeyword: "psoriasis treatment Jaipur",
   secondaryKeywords: [
     "psoriasis homeopathy treatment Jaipur",
@@ -33,7 +33,7 @@ export const PSORIASIS_PAGE: DiseaseSubPageContent = {
     subheadline:
       "Steroid creams, tar preparations, phototherapy — most psoriasis patients have tried several before they ever consider homeopathy. Each brings temporary relief, and each flare returns when treatment stops. That pattern exists because psoriasis is driven by an overactive immune response, not a skin defect. Constitutional homeopathic treatment at Yadav Homeo Clinic addresses that immune activity directly.",
     trustLine:
-      "30+ Years Treating Chronic Skin Disease | Constitutional — No Steroid Dependency | Online Consultation Available",
+      "35+ Years Treating Chronic Skin Disease | Constitutional — No Steroid Dependency | Online Consultation Available",
   },
   sections: [
     {
