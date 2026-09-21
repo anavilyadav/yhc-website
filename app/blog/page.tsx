@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site-config";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Blog | Homeopathy Insights From Dr Anavil Yadav",
+  title: { absolute: "Blog | Homeopathy Insights From Dr Anavil Yadav" },
   description:
     "Honest, experience-based articles on vitiligo, autism, kidney disease and classical homeopathy from Dr Anavil Yadav, Yadav Homeo Clinic, Jaipur.",
   alternates: { canonical: `${siteConfig.url}/blog` },

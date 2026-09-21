@@ -19,10 +19,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "skin-diseases",
-    pageTitle:
-      "Homeopathy Treatment for Skin Diseases in Jaipur | Vitiligo, Psoriasis, Eczema | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Skin Diseases in Jaipur | Yadav Homeo",
     metaDescription:
-      "Best homeopathic treatment for vitiligo, psoriasis, eczema, urticaria & all chronic skin diseases in Jaipur. 35+ years experience. 1000+ skin patients treated. Book now.",
+      "Homeopathic treatment for vitiligo, psoriasis, eczema, urticaria and chronic skin diseases in Jaipur. 35+ years experience, 1000+ skin patients treated.",
     focusKeyword: "homeopathy for vitiligo Jaipur",
     secondaryKeywords: [
       "psoriasis homeopathy treatment Jaipur",
@@ -253,9 +252,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "autoimmune-diseases",
-    pageTitle: "Homeopathy for Autoimmune Diseases in Jaipur | RA, Lupus, Thyroid | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Autoimmune Diseases in Jaipur | Yadav Homeo",
     metaDescription:
-      "Constitutional homeopathic treatment for rheumatoid arthritis, lupus, Hashimoto's thyroiditis, scleroderma and all autoimmune diseases in Jaipur. 35+ years experience.",
+      "Constitutional homeopathic treatment for rheumatoid arthritis, lupus, Hashimoto's thyroiditis, scleroderma and autoimmune diseases in Jaipur. 35+ years.",
     focusKeyword: "homeopathy for autoimmune diseases Jaipur",
     secondaryKeywords: [
       "rheumatoid arthritis homeopathy Jaipur",
@@ -431,10 +430,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "cancer",
-    pageTitle:
-      "Homeopathy for Cancer Support in Jaipur | Reduce Side Effects & Improve Immunity | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Cancer Support in Jaipur | Yadav Homeo Clinic",
     metaDescription:
-      "Homeopathy as supportive care during and after cancer treatment. Reduce chemotherapy side effects, strengthen immunity and improve quality of life. Yadav Homeo Clinic, Jaipur.",
+      "Homeopathy as supportive care during and after cancer treatment — reduce chemotherapy side effects, strengthen immunity. Yadav Homeo Clinic, Jaipur.",
     focusKeyword: "homeopathy cancer support Jaipur",
     secondaryKeywords: [
       "homeopathy during chemotherapy",
@@ -585,9 +583,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "renal-diseases",
-    pageTitle: "Homeopathy for Kidney Disease & High Creatinine in Jaipur | CKD Treatment | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Kidney Disease in Jaipur | Yadav Homeo Clinic",
     metaDescription:
-      "Homeopathic support for CKD, high creatinine, nephrotic syndrome and renal diseases in Jaipur, alongside your nephrologist's care. 35+ years experience. Book now.",
+      "Homeopathic support for CKD, high creatinine and nephrotic syndrome in Jaipur, alongside your nephrologist's care. 35+ years of clinical experience.",
     focusKeyword: "homeopathy for kidney disease Jaipur",
     secondaryKeywords: [
       "high creatinine homeopathy treatment",
@@ -816,9 +814,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "genetic-diseases",
-    pageTitle: "Homeopathy for Genetic Diseases in Jaipur | Down Syndrome, Thalassemia | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Genetic Diseases in Jaipur | Yadav Homeo",
     metaDescription:
-      "Homeopathic management of Down syndrome, thalassemia, haemophilia and genetic conditions in Jaipur. Quality of life improvement and constitutional support. 35+ years experience.",
+      "Homeopathic management of Down syndrome, thalassemia, haemophilia and genetic conditions in Jaipur — quality-of-life support, 35+ years of experience.",
     focusKeyword: "homeopathy for Down syndrome Jaipur",
     secondaryKeywords: [
       "thalassemia homeopathy treatment",
@@ -979,9 +977,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "autism",
-    pageTitle: "Homeopathy for Autism in Jaipur | ASD, ADHD, Speech Delay | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Autism in Jaipur | Yadav Homeo Clinic",
     metaDescription:
-      "Yadav Homeo Clinic — 5000+ special children treated. Homeopathic care for autism, ADHD, speech delay, developmental disorders. 35 years experience. Jaipur & online.",
+      "5000+ special children treated. Homeopathic care for autism, ADHD, speech delay and developmental disorders in Jaipur and online. 35 years experience.",
     focusKeyword: "homeopathy for autism Jaipur",
     secondaryKeywords: [
       "autism treatment homeopathy India",
@@ -1221,9 +1219,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "nervous-system-disease",
-    pageTitle: "Homeopathy for Neurological Diseases in Jaipur | Epilepsy, Migraine, CP | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Neurological Diseases in Jaipur | Yadav Homeo",
     metaDescription:
-      "Constitutional homeopathic treatment for epilepsy, migraine, cerebral palsy, Parkinson's and neurological conditions in Jaipur. Yadav Homeo Clinic — 35+ years.",
+      "Constitutional homeopathic treatment for epilepsy, migraine, cerebral palsy and Parkinson's disease in Jaipur. Yadav Homeo Clinic, 35+ years experience.",
     focusKeyword: "homeopathy for neurological diseases Jaipur",
     secondaryKeywords: [
       "epilepsy homeopathy Jaipur",
@@ -1395,10 +1393,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "childrens-health",
-    pageTitle:
-      "Homeopathy for Children in Jaipur | Paediatric Homeopathy | Tonsillitis, Allergies, Bed-Wetting | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Children in Jaipur | Yadav Homeo Clinic",
     metaDescription:
-      "Safe, gentle homeopathic treatment for children — recurrent infections, tonsillitis, bed-wetting, allergies & more. No side effects. Yadav Homeo Clinic, Jaipur — 35+ years.",
+      "Safe, gentle homeopathic treatment for children — recurrent infections, tonsillitis, bed-wetting, allergies. Yadav Homeo Clinic, Jaipur, 35+ years.",
     focusKeyword: "homeopathy for children Jaipur",
     secondaryKeywords: [
       "paediatric homeopathy Jaipur",
@@ -1575,10 +1572,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "womens-health",
-    pageTitle:
-      "Homeopathy for Women's Health in Jaipur | PCOD, Fibroids, Menopause | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Women's Health in Jaipur | Yadav Homeo Clinic",
     metaDescription:
-      "Homeopathic treatment for PCOD/PCOS, uterine fibroids, irregular periods, menopause, female infertility & all gynaecological conditions. Yadav Homeo Clinic, Jaipur.",
+      "Homeopathic treatment for PCOD/PCOS, uterine fibroids, irregular periods, menopause and female infertility in Jaipur. Yadav Homeo Clinic, 35+ years.",
     focusKeyword: "homeopathy for PCOD Jaipur",
     secondaryKeywords: [
       "PCOS homeopathy treatment Jaipur",
@@ -1806,10 +1802,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "mens-health",
-    pageTitle:
-      "Homeopathy for Men's Health in Jaipur | Infertility, Prostate, Sexual Health | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Men's Health in Jaipur | Yadav Homeo Clinic",
     metaDescription:
-      "Confidential homeopathic treatment for male infertility, prostate disease, sexual health and men's health concerns in Jaipur. Complete privacy. Yadav Homeo Clinic — 35+ years.",
+      "Confidential homeopathic treatment for male infertility, prostate disease, sexual health and men's health concerns in Jaipur. Complete privacy assured.",
     focusKeyword: "homeopathy for male infertility Jaipur",
     secondaryKeywords: [
       "male infertility homeopathy India",
@@ -1987,9 +1982,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "respiratory-diseases",
-    pageTitle: "Homeopathy for Asthma & Respiratory Diseases in Jaipur | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Respiratory Diseases in Jaipur | Yadav Homeo",
     metaDescription:
-      "Effective homeopathic treatment for asthma, sinusitis, allergic rhinitis & chronic respiratory conditions in Jaipur. Reduce steroid dependence. 35+ years experience.",
+      "Effective homeopathic treatment for asthma, sinusitis, allergic rhinitis and chronic respiratory conditions in Jaipur. Reduce steroid dependence.",
     focusKeyword: "homeopathy for asthma Jaipur",
     secondaryKeywords: [
       "asthma homeopathy treatment Jaipur",
@@ -2150,10 +2145,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "digestive-diseases",
-    pageTitle:
-      "Homeopathy for Digestive Diseases in Jaipur | IBS, Colitis, Piles, Acidity | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Digestive Diseases in Jaipur | Yadav Homeo",
     metaDescription:
-      "Homeopathic treatment for IBS, ulcerative colitis, Crohn's, piles, acidity and all digestive conditions in Jaipur. Heal from the root. Yadav Homeo Clinic — 35+ years.",
+      "Homeopathic treatment for IBS, ulcerative colitis, Crohn's disease, piles and acidity in Jaipur. Heal from the root. Yadav Homeo Clinic, 35+ years.",
     focusKeyword: "homeopathy for IBS Jaipur",
     secondaryKeywords: [
       "ulcerative colitis homeopathy Jaipur",
@@ -2318,10 +2312,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "hormonal-diseases",
-    pageTitle:
-      "Homeopathy for Hormonal Disorders in Jaipur | Thyroid, PCOD, Diabetes | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Hormonal Disorders in Jaipur | Yadav Homeo",
     metaDescription:
-      "Constitutional homeopathic treatment for thyroid disorders, PCOD, hormonal imbalances and diabetes management in Jaipur. Yadav Homeo Clinic — 35+ years of clinical experience.",
+      "Constitutional homeopathic treatment for thyroid disorders, PCOD and hormonal imbalances in Jaipur. Yadav Homeo Clinic, 35+ years of experience.",
     focusKeyword: "homeopathy for thyroid Jaipur",
     secondaryKeywords: [
       "hypothyroidism homeopathy Jaipur",
@@ -2461,10 +2454,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "mental-health",
-    pageTitle:
-      "Homeopathy for Mental Health in Jaipur | Anxiety, Depression, OCD, Insomnia | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Mental Health in Jaipur | Yadav Homeo Clinic",
     metaDescription:
-      "Safe, non-habit-forming homeopathic treatment for anxiety, depression, OCD and insomnia in Jaipur. No side effects. No dependency. Yadav Homeo Clinic — 35+ years.",
+      "Safe, non-habit-forming homeopathic treatment for anxiety, depression, OCD and insomnia in Jaipur. No side effects, no dependency. 35+ years experience.",
     focusKeyword: "homeopathy for anxiety Jaipur",
     secondaryKeywords: [
       "depression homeopathy Jaipur",
@@ -2651,10 +2643,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "joint-bone-diseases",
-    pageTitle:
-      "Homeopathy for Joint & Bone Diseases in Jaipur | RA, Ankylosing Spondylitis, Slipped Disc | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Joint & Bone Diseases in Jaipur | Yadav Homeo",
     metaDescription:
-      "Homeopathic treatment for Rheumatoid Arthritis, Ankylosing Spondylitis, Avascular Necrosis, Slipped Disc, Gout in Jaipur. 35+ years. No painkillers. Book consultation.",
+      "Homeopathic treatment for Rheumatoid Arthritis, Ankylosing Spondylitis, Avascular Necrosis, Slipped Disc and Gout in Jaipur. 35+ years. No painkillers.",
     focusKeyword: "homeopathy for joint pain Jaipur",
     secondaryKeywords: [
       "rheumatoid arthritis homeopathy",
@@ -2791,10 +2782,9 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "heart-cardiac-support",
-    pageTitle:
-      "Homeopathy for Heart Disease in Jaipur | ASD, VSD, Hypertension, Cardiomyopathy | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Heart Disease Support in Jaipur | Yadav Homeo",
     metaDescription:
-      "Homeopathic supportive care for heart conditions — ASD, VSD, Eisenmenger's Syndrome, High BP, Cardiomyopathy in Jaipur. 35+ years. Alongside cardiology care.",
+      "Homeopathic supportive care for heart conditions — ASD, VSD, Eisenmenger's Syndrome, high BP, cardiomyopathy in Jaipur, alongside your cardiologist.",
     focusKeyword: "homeopathy for heart disease Jaipur",
     secondaryKeywords: [
       "ASD VSD homeopathy",
@@ -2920,7 +2910,7 @@ export const DISEASE_PAGE_SEED: DiseasePageContent[] = [
   // ============================================================
   {
     slug: "sexual-health",
-    pageTitle: "Homeopathy for Sexual Health in Jaipur | Confidential Consultation | Yadav Homeo Clinic",
+    pageTitle: "Homeopathy for Sexual Health in Jaipur | Yadav Homeo Clinic",
     metaDescription:
       "Confidential homeopathic consultation for sexual health concerns — loss of libido, genital infections, STIs in Jaipur. Complete privacy. Dr Anavil Yadav.",
     focusKeyword: "sexual health homeopathy Jaipur",

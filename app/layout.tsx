@@ -11,18 +11,15 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Best Homeopathy Doctor in Jaipur | Yadav Homeo Clinic | 35+ Years",
+    // Techeve audit (17 Sept 2026): was 65 chars with "| 35+ Years"
+    // appended; trimmed to the 53-char version the audit itself proposed.
+    default: "Best Homeopathy Doctor in Jaipur | Yadav Homeo Clinic",
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Yadav Homeo Clinic — Jaipur's most trusted homeopathy clinic for chronic, genetic & autoimmune diseases. 35+ years. 1 lakh+ patients. Book your consultation today.",
-  keywords: [
-    "homeopathy doctor in Jaipur",
-    "best homeopathy clinic Jaipur",
-    "homeopathy for vitiligo Jaipur",
-    "homeopathy for autism Jaipur",
-    "classical homeopath Rajasthan",
-  ],
+    "Yadav Homeo Clinic, Jaipur: classical homeopathy for chronic, genetic and autoimmune conditions since 1991. 1 lakh+ patients. Book your consultation.",
+  // meta keywords removed (Techeve audit, item #21) — Google has ignored
+  // this tag since 2009, and it was identical on every page anyway.
   openGraph: {
     title: "Best Homeopathy Doctor in Jaipur | Yadav Homeo Clinic",
     description:

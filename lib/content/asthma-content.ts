@@ -12,9 +12,9 @@ export const ASTHMA_PAGE: DiseaseSubPageContent = {
   slug: "asthma-treatment-jaipur",
   parentSlug: "respiratory-diseases",
   parentLabel: "Respiratory Diseases",
-  pageTitle: "Asthma Treatment in Jaipur | Homeopathy to Reduce Inhaler Dependence | Yadav Homeo Clinic",
+  pageTitle: "Asthma Treatment in Jaipur | Yadav Homeo Clinic",
   metaDescription:
-    "Homeopathic asthma treatment at Yadav Homeo Clinic Jaipur — constitutional approach to reduce bronchial hypersensitivity and inhaler dependence. 35+ years experience.",
+    "Homeopathic asthma treatment at Yadav Homeo Clinic, Jaipur — constitutional approach to reduce bronchial hypersensitivity & inhaler use. 35+ years.",
   focusKeyword: "asthma treatment Jaipur",
   secondaryKeywords: [
     "homeopathy for asthma Jaipur",

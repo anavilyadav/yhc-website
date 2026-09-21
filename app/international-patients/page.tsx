@@ -8,9 +8,9 @@ import { WhatsAppIcon, GlobeIcon, CheckIcon, InfoIcon } from "@/components/share
 const pageUrl = `${siteConfig.url}/international-patients`;
 
 export const metadata: Metadata = {
-  title: { absolute: `Homeopathy Consultation for International Patients | ${siteConfig.name}` },
+  title: { absolute: "Homeopathy Consultation for International Patients" },
   description:
-    "Online homeopathy consultation from anywhere in the world with Dr Anavil Yadav and Dr T P Yadav — video case-taking, medicine shipped internationally, PayPal/Wise payment.",
+    "Online homeopathy consultation from anywhere in the world with Dr Anavil Yadav & Dr T P Yadav — video case-taking, medicine shipped internationally.",
   alternates: { canonical: pageUrl },
 };
 

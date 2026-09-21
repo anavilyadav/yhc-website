@@ -7,9 +7,9 @@ import { WhatsAppIcon, InfoIcon } from "@/components/shared/icons";
 const pageUrl = `${siteConfig.url}/diet-lifestyle-guide`;
 
 export const metadata: Metadata = {
-  title: { absolute: `Diet & Lifestyle Guide for Homeopathy Patients | ${siteConfig.name}` },
+  title: { absolute: "Diet & Lifestyle Guide for Homeopathy Patients" },
   description:
-    "General diet and lifestyle guidance to support your homeopathic treatment — hydration, meal timing, sleep, movement and condition-specific tips from Yadav Homeo Clinic.",
+    "General diet and lifestyle guidance to support homeopathic treatment — hydration, meal timing, sleep, movement and condition-specific tips from us.",
   alternates: { canonical: pageUrl },
 };
 

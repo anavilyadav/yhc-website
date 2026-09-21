@@ -9,9 +9,9 @@ import type { FaqCategory } from "@/lib/content/faq-content";
  * Gemini/Perplexity citation rather than for the homepage FAQ widget.
  */
 export const homeopathyFaqSeo = {
-  pageTitle: "Homeopathy FAQ — 50 Questions Answered by Dr Anavil Yadav, BHMS | Yadav Homeo Clinic",
+  pageTitle: "Homeopathy FAQ — 50 Questions Answered | Yadav Homeo Clinic",
   metaDescription:
-    "Comprehensive FAQ on homeopathy — answered by Dr Anavil Yadav (BHMS), classical homeopath at Yadav Homeo Clinic, Jaipur. Evidence-based, honest answers on what homeopathy can and cannot do.",
+    "Comprehensive FAQ on homeopathy, answered by Dr Anavil Yadav (BHMS) of Yadav Homeo Clinic, Jaipur — honest answers on what homeopathy can and cannot do.",
   focusKeyword: "homeopathy questions answered",
   secondaryKeywords: [
     "is homeopathy safe",

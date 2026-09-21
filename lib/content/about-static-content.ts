@@ -99,7 +99,9 @@ export const mythsVsFacts = {
 };
 
 export const aboutSeo = {
-  title: "About Us | Yadav Homeo Clinic | Classical Homeopathy in Jaipur Since 1991",
+  // Techeve audit (17 Sept 2026): title was 73 chars, description 171 —
+  // both trimmed to fit the 60-char / 120-155-char targets.
+  title: "About Yadav Homeo Clinic | Classical Homeopathy Since 1991",
   description:
-    "Learn the story of Yadav Homeo Clinic — founded in 1991 by Dr T P Yadav, now led by Dr Anavil Yadav. 35+ years of classical homeopathy in Jaipur. 1 lakh+ patients treated.",
+    "The story of Yadav Homeo Clinic — founded in 1991 by Dr T P Yadav, now led with Dr Anavil Yadav. 35+ years of classical homeopathy in Jaipur.",
 };

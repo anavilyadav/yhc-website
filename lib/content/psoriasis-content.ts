@@ -18,9 +18,9 @@ export const PSORIASIS_PAGE: DiseaseSubPageContent = {
   slug: "psoriasis-treatment-jaipur",
   parentSlug: "skin-diseases",
   parentLabel: "Skin Diseases",
-  pageTitle: "Psoriasis Treatment in Jaipur | Homeopathy Without Steroids | Yadav Homeo Clinic",
+  pageTitle: "Psoriasis Treatment in Jaipur | Yadav Homeo Clinic",
   metaDescription:
-    "Homeopathic psoriasis treatment at Yadav Homeo Clinic Jaipur — constitutional approach, no steroid dependency. Plaque, guttate, scalp and nail psoriasis. 35+ years experience.",
+    "Homeopathic psoriasis treatment at Yadav Homeo Clinic, Jaipur — constitutional, no steroid dependency. 35+ years treating plaque & scalp psoriasis.",
   focusKeyword: "psoriasis treatment Jaipur",
   secondaryKeywords: [
     "psoriasis homeopathy treatment Jaipur",

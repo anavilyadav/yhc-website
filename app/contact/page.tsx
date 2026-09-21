@@ -18,9 +18,9 @@ import styles from "./contact.module.css";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: { absolute: "Contact Yadav Homeo Clinic | Jaipur Homeopathy | +91-8949427254" },
+  title: { absolute: "Contact Yadav Homeo Clinic | Jaipur Homeopathy" },
   description:
-    "Contact Yadav Homeo Clinic in Jaipur. Two clinic locations — main branch & Jagatpura. Call or WhatsApp: +91-8949427254. Online consultations worldwide. We respond to every enquiry.",
+    "Contact Yadav Homeo Clinic in Jaipur — two clinic locations, main branch & Jagatpura. Call or WhatsApp +91-8949427254. Online consultations worldwide too.",
   alternates: {
     canonical: "/contact",
   },

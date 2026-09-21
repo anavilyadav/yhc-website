@@ -32,9 +32,9 @@ const jumpNavItems = [
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Book Homeopathy Consultation in Jaipur | Online & In-Clinic",
+  title: { absolute: "Book Homeopathy Consultation in Jaipur | Online & In-Clinic" },
   description:
-    "Book your consultation at Yadav Homeo Clinic — in-clinic at Jaipur or online from anywhere in India & abroad. Call +91-8949427254. Same-week appointments available.",
+    "Book your consultation at Yadav Homeo Clinic — in-clinic at Jaipur or online from anywhere in India & abroad. Same-week appointments available.",
   alternates: {
     canonical: "/appointment",
   },

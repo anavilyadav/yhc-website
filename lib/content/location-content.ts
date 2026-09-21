@@ -4,9 +4,9 @@
 // page already uses — rather than being duplicated here.
 
 export const jaipurLocationSeo = {
-  pageTitle: "Homeopathy Doctor in Jaipur | Best Homeopathic Clinic Jaipur | Yadav Homeo Clinic",
+  pageTitle: "Homeopathy Doctor in Jaipur | Yadav Homeo Clinic",
   metaDescription:
-    "Looking for the best homeopathy doctor in Jaipur? Yadav Homeo Clinic — 35+ years, 1 lakh+ patients, Dr T P Yadav & Dr Anavil Yadav. Vitiligo, autism, kidney, PCOS and more.",
+    "Best homeopathy doctor in Jaipur? Yadav Homeo Clinic — 35+ years, 1 lakh+ patients, Dr T P Yadav & Dr Anavil Yadav. Vitiligo, autism, kidney disease.",
   focusKeyword: "homeopathy doctor in Jaipur",
   secondaryKeywords: [
     "best homeopathic clinic Jaipur",
@@ -49,9 +49,9 @@ export const conditionsTreatedLinks: { label: string; href: string }[] = [
 ];
 
 export const jagatpuraLocationSeo = {
-  pageTitle: "Homeopathy Clinic in Jagatpura Jaipur | Yadav Homeo Clinic — Branch",
+  pageTitle: "Homeopathy Clinic in Jagatpura, Jaipur | Yadav Homeo",
   metaDescription:
-    "Yadav Homeo Clinic Jagatpura branch — classical homeopathic treatment in South Jaipur. Same doctors, same approach. Vitiligo, kidney disease, PCOS, autism and more.",
+    "Yadav Homeo Clinic's Jagatpura branch — classical homeopathic treatment in South Jaipur. Same doctors, same approach. Vitiligo, kidney disease, autism.",
   focusKeyword: "homeopathy clinic Jagatpura Jaipur",
   secondaryKeywords: [
     "homeopathy doctor Jagatpura",

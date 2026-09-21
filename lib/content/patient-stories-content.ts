@@ -11,9 +11,9 @@ export interface PatientStoryEntry {
 }
 
 export const patientStoriesSeo = {
-  pageTitle: "Patient Success Stories | Yadav Homeo Clinic Jaipur | Real Homeopathy Results",
+  pageTitle: "Patient Success Stories | Yadav Homeo Clinic Jaipur",
   metaDescription:
-    "Real patient recovery stories from Yadav Homeo Clinic — vitiligo, kidney disease, autism, PCOS, psoriasis and more. 35+ years. 1 lakh+ patients. Read their journeys.",
+    "Real patient recovery stories from Yadav Homeo Clinic — vitiligo, kidney disease, autism, PCOS, psoriasis and more. 35+ years, 1 lakh+ patients treated.",
   focusKeyword: "homeopathy patient success stories Jaipur",
   secondaryKeywords: [
     "vitiligo recovery homeopathy",

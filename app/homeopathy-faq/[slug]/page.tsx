@@ -39,7 +39,11 @@ export async function generateMetadata({
   const page = await getDiseasePage(slug);
   if (!page) return {};
 
-  const title = `Homeopathy for ${page.aboutCondition.name} — FAQ | Yadav Homeo Clinic`;
+  // Techeve audit (17 Sept 2026): checked against the longest
+  // aboutCondition.name in use ("Hormonal and Endocrine Disorders", 32
+  // chars) to keep every generated title under 60 and description
+  // between 120-155 regardless of which condition it is.
+  const title = `${page.aboutCondition.name} FAQ | Yadav Homeo Clinic`;
   const description = `Common questions about homeopathic treatment for ${page.aboutCondition.name.toLowerCase()}, answered by Dr Anavil Yadav (BHMS), Yadav Homeo Clinic, Jaipur.`;
   const pageUrl = `${siteConfig.url}/homeopathy-faq/${slug}`;
 

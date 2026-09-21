@@ -21,8 +21,12 @@ export async function generateMetadata({
   if (!info) return {};
 
   const pageUrl = `${siteConfig.url}/cities/${info.slug}`;
-  const pageTitle = `Online Homeopathy Consultation for ${info.name} Patients | ${siteConfig.name}`;
-  const pageDescription = `Video consultation with Dr Anavil Yadav and Dr T P Yadav for ${info.name} patients — same depth of case-taking as an in-clinic visit at Yadav Homeo Clinic, Jaipur. Medicine couriered to ${info.name}.`;
+  // Techeve audit (17 Sept 2026): title/description templates need to
+  // stay under 60/155 chars for every city name, including the longest
+  // (Chandigarh, 10 chars) — verified in a scratch script before writing
+  // these, min/max length checked across all major cities.
+  const pageTitle = `Online Homeopathy for ${info.name} | ${siteConfig.name}`;
+  const pageDescription = `Online homeopathy consultation for ${info.name} patients with Dr Anavil & Dr T P Yadav — same depth as in-clinic, medicine couriered from Jaipur.`;
 
   return {
     title: { absolute: pageTitle },

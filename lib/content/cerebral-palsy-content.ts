@@ -18,9 +18,9 @@ export const CEREBRAL_PALSY_PAGE: DiseaseSubPageContent = {
   slug: "cerebral-palsy-treatment-jaipur",
   parentSlug: "nervous-system-disease",
   parentLabel: "Nervous System Disorders",
-  pageTitle: "Cerebral Palsy Treatment in Jaipur | Constitutional Homeopathy | Yadav Homeo Clinic",
+  pageTitle: "Cerebral Palsy Treatment in Jaipur | Yadav Homeo Clinic",
   metaDescription:
-    "Supportive homeopathic treatment for Cerebral Palsy in Jaipur — alongside physiotherapy and occupational therapy. Constitutional care for spasticity, sleep and development.",
+    "Supportive homeopathic treatment for Cerebral Palsy in Jaipur — alongside physiotherapy, for spasticity, sleep and developmental engagement.",
   focusKeyword: "cerebral palsy treatment Jaipur",
   secondaryKeywords: [
     "cerebral palsy homeopathy India",

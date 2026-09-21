@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site-config";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: { absolute: "Our Doctors | Dr T P Yadav & Dr Anavil Yadav | Yadav Homeo Clinic Jaipur" },
+  title: { absolute: "Our Doctors | Dr T P Yadav & Dr Anavil Yadav" },
   description:
     "Meet the doctors of Yadav Homeo Clinic — Dr T P Yadav (35+ years, founder) and Dr Anavil Yadav (BHMS). Classical homeopathy practitioners in Jaipur.",
   keywords: ["homeopathy doctor Jaipur"],

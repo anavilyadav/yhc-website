@@ -3,9 +3,9 @@ import type { DiseasePageFAQ, DiseasePageSection } from "@/lib/types";
 // Source: dr-anavil-step7-missing-pages-2026-07-12.docx, Page 1.
 
 export const onlineConsultationSeo = {
-  pageTitle: "Online Homeopathy Consultation | Yadav Homeo Clinic Jaipur | Pan India & International",
+  pageTitle: "Online Homeopathy Consultation | Yadav Homeo Clinic",
   metaDescription:
-    "Book an online homeopathy consultation with Dr Anavil Yadav (BHMS). Patients across India, UAE, UK, USA, Canada treated with same precision as in-clinic. WhatsApp: +91-8949427254",
+    "Book an online homeopathy consultation with Dr Anavil Yadav (BHMS) — patients across India, UAE, UK, USA & Canada treated with in-clinic precision.",
   focusKeyword: "online homeopathy consultation",
   secondaryKeywords: [
     "online homeopathy doctor India",

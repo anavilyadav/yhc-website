@@ -20,9 +20,9 @@ export const DOWN_SYNDROME_PAGE: DiseaseSubPageContent = {
   slug: "down-syndrome-treatment-jaipur",
   parentSlug: "genetic-diseases",
   parentLabel: "Genetic & Rare Diseases",
-  pageTitle: "Down Syndrome Homeopathy Treatment in Jaipur | Yadav Homeo Clinic",
+  pageTitle: "Down Syndrome Treatment in Jaipur | Yadav Homeo Clinic",
   metaDescription:
-    "Constitutional homeopathic support for children with Down Syndrome in Jaipur — immunity, digestion, sleep and developmental engagement. Alongside all conventional care.",
+    "Constitutional homeopathic support for children with Down Syndrome in Jaipur — immunity, digestion, sleep and development, alongside conventional care.",
   focusKeyword: "Down syndrome homeopathy Jaipur",
   secondaryKeywords: [
     "Down syndrome treatment Jaipur",

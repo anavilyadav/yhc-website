@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: { absolute: medicalDisclaimerPage.title },
   description:
-    "The medical disclaimer covering all content and consultation services on the Yadav Homeo Clinic website.",
+    "The medical disclaimer covering all content, treatment information and consultation services on the Yadav Homeo Clinic website — please read carefully.",
   alternates: { canonical: `${siteConfig.url}/medical-disclaimer` },
 };
 

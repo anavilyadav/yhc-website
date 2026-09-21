@@ -13,9 +13,9 @@ export const VITILIGO_PAGE: DiseaseSubPageContent = {
   slug: "vitiligo-treatment-jaipur",
   parentSlug: "skin-diseases",
   parentLabel: "Skin Diseases",
-  pageTitle: "Vitiligo Treatment in Jaipur | Homeopathy for Leucoderma | Yadav Homeo Clinic",
+  pageTitle: "Vitiligo Treatment in Jaipur | Yadav Homeo Clinic",
   metaDescription:
-    "Homeopathic vitiligo treatment at Yadav Homeo Clinic Jaipur — 35+ years, 1000+ vitiligo cases treated. Constitutional approach. Repigmentation seen in 40-60% of cases. Book consultation.",
+    "Homeopathic vitiligo treatment at Yadav Homeo Clinic, Jaipur — 35+ years, 1000+ cases treated. Repigmentation seen in 40-60% of cases. Book a consultation.",
   focusKeyword: "vitiligo treatment in Jaipur",
   secondaryKeywords: [
     "leucoderma treatment Jaipur",

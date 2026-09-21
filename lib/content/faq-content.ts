@@ -25,9 +25,9 @@ export interface FaqCategory {
 }
 
 export const faqSeo = {
-  pageTitle: "Frequently Asked Questions | Yadav Homeo Clinic Jaipur | Homeopathy FAQ",
+  pageTitle: "Frequently Asked Questions | Yadav Homeo Clinic",
   metaDescription:
-    "Answers to the most common questions about homeopathic treatment at Yadav Homeo Clinic — fees, vitiligo, online consultation, autism, kidney disease, PCOS, and more.",
+    "Answers to common questions about treatment at Yadav Homeo Clinic — fees, vitiligo, online consultation, autism, kidney disease, PCOS, and more.",
   focusKeyword: "homeopathy FAQ Jaipur",
   secondaryKeywords: [
     "Yadav Homeo Clinic questions",

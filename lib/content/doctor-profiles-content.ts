@@ -19,9 +19,9 @@ export interface DoctorProfileExtra {
 export const doctorProfileExtras: Record<string, DoctorProfileExtra> = {
   "dr-tp-yadav": {
     seo: {
-      pageTitle: "Dr T P Yadav — Founder, Classical Homeopath | Yadav Homeo Clinic Jaipur | 35 Years",
+      pageTitle: "Dr T P Yadav — Founder | Yadav Homeo Clinic",
       metaDescription:
-        "Dr T P Yadav — founder of Yadav Homeo Clinic (1991). 35+ years, 1 lakh+ patients. Specialist in vitiligo, kidney disease, autism, autoimmune conditions. Jaipur.",
+        "Dr T P Yadav — founder of Yadav Homeo Clinic (1991). 35+ years, 1 lakh+ patients. Specialist in vitiligo, kidney disease, autism and autoimmune conditions.",
       focusKeyword: "Dr T P Yadav homeopathy Jaipur",
       secondaryKeywords: [
         "best homeopathy doctor Jaipur",
@@ -38,9 +38,9 @@ export const doctorProfileExtras: Record<string, DoctorProfileExtra> = {
   },
   "dr-anavil-yadav": {
     seo: {
-      pageTitle: "Dr Anavil Yadav — Homeopathic Physician BHMS | Yadav Homeo Clinic Jaipur | Online Consultations",
+      pageTitle: "Dr Anavil Yadav — Homeopathic Physician, BHMS",
       metaDescription:
-        "Dr Anavil Yadav BHMS — second-generation classical homeopath at Yadav Homeo Clinic Jaipur. Extensive experience in chronic, genetic & autoimmune diseases. Online consultations pan-India & international.",
+        "Dr Anavil Yadav BHMS — second-generation classical homeopath at Yadav Homeo Clinic, Jaipur. Online consultations across India and internationally.",
       focusKeyword: "Dr Anavil Yadav homeopath Jaipur",
       secondaryKeywords: [
         "online homeopathy consultation India",

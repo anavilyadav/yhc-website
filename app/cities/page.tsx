@@ -7,9 +7,9 @@ import { WhatsAppIcon } from "@/components/shared/icons";
 const pageUrl = `${siteConfig.url}/cities`;
 
 export const metadata: Metadata = {
-  title: { absolute: `Homeopathy Consultation Across India — Cities We Serve | ${siteConfig.name}` },
+  title: { absolute: `Homeopathy Consultation Across India | ${siteConfig.name}` },
   description:
-    "Yadav Homeo Clinic offers online homeopathy consultation to patients across India, with medicine couriered to your city — Jaipur, Delhi, Mumbai, Bangalore and many more.",
+    "Yadav Homeo Clinic offers online homeopathy consultation to patients across India, with medicine couriered to your city — Jaipur, Delhi, Mumbai and more.",
   alternates: { canonical: pageUrl },
 };
 

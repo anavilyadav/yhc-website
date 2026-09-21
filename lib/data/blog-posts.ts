@@ -18,9 +18,9 @@ import type { BlogPost } from "@/lib/types";
 export const BLOG_POST_SEED: BlogPost[] = [
   {
     slug: "can-homeopathy-cure-vitiligo",
-    title: "Can Homeopathy Cure Vitiligo? 35 Years of Clinical Experience Gives an Honest Answer",
+    title: "Can Homeopathy Cure Vitiligo?",
     metaDescription:
-      "Can vitiligo be cured by homeopathy? An honest, evidence-based answer from Dr Anavil Yadav of Yadav Homeo Clinic, Jaipur — based on 35 years of treating vitiligo patients.",
+      "Can vitiligo be cured by homeopathy? An honest, evidence-based answer from Dr Anavil Yadav of Yadav Homeo Clinic — based on 35 years treating vitiligo.",
     focusKeyword: "can homeopathy cure vitiligo",
     secondaryKeywords: [
       "vitiligo homeopathy treatment",
@@ -110,10 +110,9 @@ export const BLOG_POST_SEED: BlogPost[] = [
 
   {
     slug: "homeopathy-for-autism",
-    title:
-      "My Child Has Autism — Can Homeopathy Help? An Honest Answer From a Doctor Who Has Treated 5,000 Special Children",
+    title: "Can Homeopathy Help With Autism?",
     metaDescription:
-      "Can homeopathy help a child with autism? Dr Anavil Yadav of Yadav Homeo Clinic, Jaipur answers honestly — based on 35 years and 5000+ autism cases. Read before deciding.",
+      "Can homeopathy help a child with autism? Dr Anavil Yadav of Yadav Homeo Clinic answers honestly, based on 35 years and 5000+ autism cases treated.",
     focusKeyword: "homeopathy for autism",
     secondaryKeywords: [
       "homeopathy for autism India",
@@ -197,9 +196,9 @@ export const BLOG_POST_SEED: BlogPost[] = [
 
   {
     slug: "homeopathy-for-high-creatinine-kidney-disease",
-    title: "High Creatinine and Kidney Disease — What Homeopathy Can Do (And What It Cannot)",
+    title: "High Creatinine & Kidney Disease",
     metaDescription:
-      "Can homeopathy reduce high creatinine and help kidney disease? Dr Anavil Yadav gives an honest clinical answer based on treating hundreds of CKD patients at Yadav Homeo Clinic, Jaipur.",
+      "Can homeopathy reduce high creatinine and help kidney disease? An honest clinical answer from Dr Anavil Yadav, based on treating hundreds of CKD patients.",
     focusKeyword: "homeopathy for high creatinine",
     secondaryKeywords: [
       "high creatinine homeopathy",
@@ -275,9 +274,9 @@ export const BLOG_POST_SEED: BlogPost[] = [
 
   {
     slug: "what-to-expect-first-homeopathy-consultation",
-    title: "What Happens in Your First Consultation at Yadav Homeo Clinic — A Complete Patient Guide",
+    title: "What to Expect: First Consultation",
     metaDescription:
-      "Wondering what a first homeopathy consultation is like at Yadav Homeo Clinic? Dr Anavil Yadav walks you through every step — from arrival to prescription. Know before you come.",
+      "Wondering what a first homeopathy consultation is like at Yadav Homeo Clinic? Dr Anavil Yadav walks you through every step, from arrival to prescription.",
     focusKeyword: "first homeopathy consultation Jaipur",
     secondaryKeywords: [
       "homeopathy consultation what to expect",
@@ -368,9 +367,9 @@ export const BLOG_POST_SEED: BlogPost[] = [
 
   {
     slug: "myths-about-homeopathy-answered",
-    title: "5 Myths About Homeopathy — Answered Honestly by a Doctor With 35 Years of Clinical Experience",
+    title: "5 Myths About Homeopathy, Answered",
     metaDescription:
-      "Is homeopathy just a placebo? Only for minor conditions? Dr Anavil Yadav addresses the 5 biggest myths about homeopathy — honestly, with clinical examples. Read before judging.",
+      "Is homeopathy just a placebo? Only for minor conditions? Dr Anavil Yadav addresses the 5 biggest myths about homeopathy honestly, with clinical examples.",
     focusKeyword: "does homeopathy work",
     secondaryKeywords: [
       "is homeopathy effective",

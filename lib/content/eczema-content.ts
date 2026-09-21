@@ -11,9 +11,9 @@ export const ECZEMA_PAGE: DiseaseSubPageContent = {
   slug: "eczema-treatment-jaipur",
   parentSlug: "skin-diseases",
   parentLabel: "Skin Diseases",
-  pageTitle: "Eczema Treatment in Jaipur | Homeopathy for Atopic Dermatitis | Yadav Homeo Clinic",
+  pageTitle: "Eczema Treatment in Jaipur | Yadav Homeo Clinic",
   metaDescription:
-    "Homeopathic eczema treatment at Yadav Homeo Clinic Jaipur — constitutional approach addressing the immune hypersensitivity behind eczema, not just the itch. 35+ years experience.",
+    "Homeopathic eczema treatment at Yadav Homeo Clinic, Jaipur — constitutional approach to the immune hypersensitivity behind eczema. 35+ years experience.",
   focusKeyword: "eczema treatment Jaipur",
   secondaryKeywords: [
     "eczema homeopathy Jaipur",
