@@ -25,15 +25,11 @@ const nextConfig: NextConfig = {
         destination: "/patient-stories",
         permanent: false,
       },
-      {
-        // Techeve audit (17 Sept 2026): an existing backlink points at
-        // /Appointment (capitalised), which 404s since Next's routing is
-        // case-sensitive. Permanent redirect so that backlink's link
-        // equity lands on the real page instead of a dead end.
-        source: "/Appointment",
-        destination: "/appointment",
-        permanent: true,
-      },
+      // The /Appointment (capitalised) redirect used to live here, but
+      // next.config.ts's redirects() matches case-INSENSITIVELY — it was
+      // also matching the real, lowercase /appointment and redirecting it
+      // to itself in an infinite loop. Moved to middleware.ts, which does
+      // an exact case-sensitive string comparison instead.
     ];
   },
 };

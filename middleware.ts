@@ -1,4 +1,4 @@
-import type { NextRequest } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 import { siteConfig } from "@/lib/site-config";
 import { updateSession } from "@/lib/supabase/middleware";
 
@@ -18,6 +18,18 @@ const productionHost = new URL(siteConfig.url).hostname;
  * videos/settings/gallery_photos tables added in this session.
  */
 export async function middleware(request: NextRequest) {
+  // Case-sensitive on purpose: next.config.ts's redirects() matched this
+  // path case-INSENSITIVELY, which meant the real /appointment page
+  // (lowercase) was matching its own "/Appointment → /appointment" rule
+  // and redirecting to itself in an infinite loop — a live production
+  // bug on the site's actual booking/payment page. String equality here
+  // only ever matches the exact capitalised legacy path.
+  if (request.nextUrl.pathname === "/Appointment") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/appointment";
+    return NextResponse.redirect(url, 308);
+  }
+
   const response = await updateSession(request);
 
   if (request.nextUrl.hostname !== productionHost || request.nextUrl.pathname.startsWith("/admin")) {
