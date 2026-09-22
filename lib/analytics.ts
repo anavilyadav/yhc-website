@@ -1,8 +1,10 @@
 // GA4 wiring — GIOS_P5_Patient_Conversion_OS.docx Part 8 "Event Tracking".
-// Entirely inert until NEXT_PUBLIC_GA_MEASUREMENT_ID is set (Vercel env
-// vars), matching the Supabase/schema pattern used elsewhere on this site:
-// omit real tracking rather than ship a fake/placeholder measurement ID.
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || null;
+// Real measurement ID from Dr Anavil's GA4 property (chat, 2026-09-22),
+// closing the Techeve audit's "no analytics detected" finding. Hardcoded
+// fallback matches the pattern used for other real IDs in site-config.ts
+// (googleBusinessProfile, facebook, instagram) rather than requiring a
+// Vercel env var to be set separately.
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-RYH490HSXE";
 
 declare global {
   interface Window {
