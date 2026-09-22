@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
     // Patient-story video thumbnails pulled directly from YouTube's own
     // CDN (img.youtube.com/vi/{id}/hqdefault.jpg) for the video gallery.
     remotePatterns: [{ protocol: "https", hostname: "img.youtube.com" }],
+    // Techeve audit (17 Sept 2026): serve AVIF first, falling back to
+    // WebP, for every image the built-in optimizer touches (next/image
+    // picks whichever the requesting browser supports via Accept header).
+    formats: ["image/avif", "image/webp"],
   },
   async redirects() {
     return [

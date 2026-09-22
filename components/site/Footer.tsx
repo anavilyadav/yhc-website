@@ -64,7 +64,14 @@ export default function Footer({ settings }: { settings: SiteSettings }) {
       <div className="mx-auto max-w-6xl">
         <div className="mb-3 inline-flex flex-col items-start gap-1">
           <span className="rounded-md bg-cream-bg px-2.5 py-1.5">
-            <Image src="/logo-full.png" alt={siteConfig.name} width={600} height={529} className="h-12 w-auto" />
+            <Image
+              src="/logo-full.png"
+              alt={siteConfig.name}
+              width={109}
+              height={96}
+              sizes="109px"
+              className="h-12 w-auto"
+            />
           </span>
           <span className="pl-0.5 text-[10px] tracking-[0.2em] text-amber-light/80 uppercase">
             Jaipur · Since {siteConfig.foundingYear}

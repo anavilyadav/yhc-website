@@ -273,9 +273,10 @@ export default function Header({ settings }: { settings: SiteSettings }) {
             <Image
               src="/logo-full.png"
               alt={siteConfig.name}
-              width={600}
-              height={529}
+              width={109}
+              height={96}
               priority
+              sizes="109px"
               className="h-11 w-auto md:h-12"
             />
           </span>
