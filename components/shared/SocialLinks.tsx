@@ -50,7 +50,7 @@ export default function SocialLinks({
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
+    <svg width={20} height={20} viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
       <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z" />
     </svg>
   );
@@ -58,7 +58,7 @@ function FacebookIcon({ className }: { className?: string }) {
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden>
+    <svg width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden>
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
@@ -68,7 +68,7 @@ function InstagramIcon({ className }: { className?: string }) {
 
 function YouTubeIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
+    <svg width={20} height={20} viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
       <path d="M21.6 7.2s-.21-1.5-.86-2.16c-.82-.87-1.74-.87-2.16-.92C15.6 4 12 4 12 4h-.01s-3.6 0-6.58.12c-.42.05-1.34.05-2.16.92-.65.66-.86 2.16-.86 2.16S2.18 8.96 2.18 10.7v1.6c0 1.74.2 3.5.2 3.5s.21 1.5.86 2.16c.82.87 1.9.84 2.38.93 1.72.17 7.38.22 7.38.22s3.6 0 6.58-.12c.42-.05 1.34-.05 2.16-.92.65-.66.86-2.16.86-2.16s.2-1.76.2-3.5v-1.6c0-1.74-.2-3.5-.2-3.5ZM9.95 14.6V8.9l5.4 2.86-5.4 2.85Z" />
     </svg>
   );

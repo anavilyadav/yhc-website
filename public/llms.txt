@@ -1,0 +1,33 @@
+# Yadav Homeo Clinic
+
+> Classical homeopathy clinic in Jaipur, India, founded in 1991 by Dr T P Yadav and now also led by Dr Anavil Yadav (BHMS). 35+ years of practice, 1 lakh+ patients treated. Specialises in chronic, genetic and autoimmune conditions — vitiligo, autism, kidney disease (high creatinine), psoriasis, PCOS/PCOD, thyroid disorders and more. Offers both in-clinic consultations (Jaipur — main branch and Jagatpura) and online consultations for patients across India and internationally.
+
+## Doctors
+
+- [Our Doctors](https://yadavhomeoclinic.com/our-doctors): Overview of both practising physicians.
+- [Dr T P Yadav](https://yadavhomeoclinic.com/our-doctors/dr-tp-yadav): Founder, 35+ years of classical homeopathic practice.
+- [Dr Anavil Yadav](https://yadavhomeoclinic.com/our-doctors/dr-anavil-yadav): Second-generation physician, BHMS, leads online consultations.
+
+## Conditions Treated
+
+- [Skin Diseases](https://yadavhomeoclinic.com/skin-diseases): Vitiligo, psoriasis, eczema and chronic skin conditions.
+- [Autism](https://yadavhomeoclinic.com/autism): Autism, ADHD, speech delay and developmental disorders.
+- [Kidney Disease](https://yadavhomeoclinic.com/renal-diseases): High creatinine, CKD and nephrotic syndrome, alongside nephrology care.
+- [Women's Health](https://yadavhomeoclinic.com/womens-health): PCOD/PCOS, fibroids, menopause and female infertility.
+- [Hormonal Disorders](https://yadavhomeoclinic.com/hormonal-diseases): Thyroid disorders and hormonal imbalances.
+- [Autoimmune Diseases](https://yadavhomeoclinic.com/autoimmune-diseases): Rheumatoid arthritis, lupus, Hashimoto's thyroiditis.
+- [Genetic Diseases](https://yadavhomeoclinic.com/genetic-diseases): Down syndrome, thalassemia and related conditions.
+- [Homeopathy FAQ](https://yadavhomeoclinic.com/homeopathy-faq): 50 questions on homeopathy answered by Dr Anavil Yadav.
+- [Full condition list](https://yadavhomeoclinic.com/sitemap.xml): All treatment pages.
+
+## Consultation & Contact
+
+- [Book an Appointment](https://yadavhomeoclinic.com/appointment): In-clinic or online booking.
+- [Online Consultation](https://yadavhomeoclinic.com/online-consultation): For patients across India and internationally.
+- [International Patients](https://yadavhomeoclinic.com/international-patients): Consultation details for patients outside India.
+- [Contact](https://yadavhomeoclinic.com/contact): Clinic locations, phone and WhatsApp.
+- [Patient Stories](https://yadavhomeoclinic.com/patient-stories): Real patient recovery accounts.
+
+## Notes
+
+Content on this site is written and reviewed by licensed homeopathic physicians registered with the Rajasthan Homeopathic Council. Treatment claims are stated with individual-results-vary disclaimers throughout; homeopathy is offered as a complementary or supportive treatment alongside conventional medical care where relevant (e.g. cancer, heart disease, kidney disease), not as a replacement for it.
