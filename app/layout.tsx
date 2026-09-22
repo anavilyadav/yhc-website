@@ -5,6 +5,7 @@ import SiteChrome from "@/components/site/SiteChrome";
 import GoogleAnalytics from "@/components/site/GoogleAnalytics";
 import { siteConfig } from "@/lib/site-config";
 import { getSiteSettings } from "@/lib/data/settings";
+import { getClinicLocations } from "@/lib/data/contact";
 
 export const revalidate = 3600;
 
@@ -46,13 +47,15 @@ const workSans = Work_Sans({
 });
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const settings = await getSiteSettings();
+  const [settings, clinics] = await Promise.all([getSiteSettings(), getClinicLocations()]);
 
   return (
     <html lang="en" className={`h-full ${lora.variable} ${workSans.variable}`}>
       <body className="flex min-h-full flex-col antialiased">
         <GoogleAnalytics />
-        <SiteChrome settings={settings}>{children}</SiteChrome>
+        <SiteChrome settings={settings} clinics={clinics}>
+          {children}
+        </SiteChrome>
       </body>
     </html>
   );

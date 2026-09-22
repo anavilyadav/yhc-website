@@ -129,6 +129,10 @@
   color: var(--navy);
 }
 
+.clinicAddress {
+  font-style: normal;
+}
+
 /* Online contact */
 .onlineBox {
   background: var(--green-tint);

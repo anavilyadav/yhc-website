@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { siteConfig, telLink, whatsappLink } from "@/lib/site-config";
+import { siteConfig, whatsappLink } from "@/lib/site-config";
 import SocialLinks from "@/components/shared/SocialLinks";
-import type { SiteSettings } from "@/lib/types";
+import type { SiteSettings, ClinicLocation } from "@/lib/types";
 
 const exploreLinks = [
   { label: "Home", href: "/" },
@@ -58,7 +58,13 @@ const legalLinks = [
   { label: "Sexual Health (Confidential)", href: "/sexual-health" },
 ];
 
-export default function Footer({ settings }: { settings: SiteSettings }) {
+export default function Footer({
+  settings,
+  clinics,
+}: {
+  settings: SiteSettings;
+  clinics: ClinicLocation[];
+}) {
   return (
     <footer className="bg-navy px-5 py-12 pb-28 text-cream print:hidden md:pb-12">
       <div className="mx-auto max-w-6xl">
@@ -122,33 +128,44 @@ export default function Footer({ settings }: { settings: SiteSettings }) {
             <h3 className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-amber-light">
               Locations
             </h3>
-            <ul className="space-y-2 text-sm text-cream/60">
-              <li>
-                <Link href="/homeopathy-doctor-jaipur" className="hover:text-amber-light">
-                  Main Branch, Jaipur
-                </Link>
-              </li>
-              <li>
-                <Link href="/homeopathy-clinic-jagatpura-jaipur" className="hover:text-amber-light">
-                  Jagatpura Branch, Jaipur
-                </Link>
-              </li>
-              <li>
-                <a href={telLink()} className="hover:text-amber-light">
-                  {siteConfig.phone.display}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={whatsappLink()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-amber-light"
-                >
-                  WhatsApp Us
-                </a>
-              </li>
-            </ul>
+            {/*
+              Techeve audit (17 Sept 2026): the street address existed only
+              in JSON-LD schema, not visible anywhere on the page — NAP
+              (name/address/phone) should match the Google Business
+              Profile exactly and be readable by visitors, not just
+              crawlers. A real <address> element per clinic, matching
+              /contact's, closes that gap.
+            */}
+            <div className="space-y-4 text-sm text-cream/60">
+              {clinics.map((clinic) => {
+                const locationHref =
+                  clinic.slug === "jagatpura" ? "/homeopathy-clinic-jagatpura-jaipur" : "/homeopathy-doctor-jaipur";
+                return (
+                  <div key={clinic.id}>
+                    <Link href={locationHref} className="font-semibold text-cream/80 hover:text-amber-light">
+                      {clinic.name}
+                    </Link>
+                    {clinic.addressLine && (
+                      <address className="mt-0.5 text-[13px] not-italic leading-snug text-cream/55">
+                        {clinic.addressLine}, {clinic.city}, {clinic.state}
+                        {clinic.pinCode ? ` — ${clinic.pinCode}` : ""}
+                      </address>
+                    )}
+                    <a href={`tel:${clinic.phone}`} className="mt-0.5 block text-[13px] hover:text-amber-light">
+                      {clinic.phone}
+                    </a>
+                  </div>
+                );
+              })}
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block hover:text-amber-light"
+              >
+                WhatsApp Us
+              </a>
+            </div>
           </div>
 
           <div>

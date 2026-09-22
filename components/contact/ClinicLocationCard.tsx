@@ -31,7 +31,7 @@ export function ClinicLocationCard({ clinic }: { clinic: ClinicLocation }) {
         {fullAddress && (
           <div className={styles.clinicRow}>
             <strong>Address:</strong>
-            <span>{fullAddress}</span>
+            <address className={styles.clinicAddress}>{fullAddress}</address>
           </div>
         )}
         {clinic.landmark && (
