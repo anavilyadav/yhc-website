@@ -40,13 +40,16 @@ export const siteConfig = {
     facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || null,
     instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || null,
     youtube: process.env.NEXT_PUBLIC_YOUTUBE_URL || null,
-    // Main branch's real Google Business Profile share link (chat,
-    // 2026-08-29). This links to the real profile so a visitor can read
-    // and verify reviews themselves — it is not a live embedded star
-    // widget (that needs a separate service like Elfsight, connected to
-    // the GBP account, which hasn't been set up yet).
+    // Official Google review link from the GBP dashboard's "Get more
+    // reviews" panel (chat, 2026-09-22) — replaces the earlier
+    // share.google short link per the Techeve audit (17 Sept 2026),
+    // which recommended "the official review link for the profile"
+    // instead of a share link. Also links to the real profile so a
+    // visitor can read and verify reviews themselves — it is not a live
+    // embedded star widget (that needs a separate service like Elfsight,
+    // connected to the GBP account, which hasn't been set up yet).
     googleBusinessProfile:
-      process.env.NEXT_PUBLIC_GBP_URL || "https://share.google/w79lFy9J9p50Wu8re",
+      process.env.NEXT_PUBLIC_GBP_URL || "https://g.page/r/CcbuRE41Mi97EBM/review",
   },
   doctors: {
     founder: {
