@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Lora, Work_Sans } from "next/font/google";
 import "./globals.css";
 import SiteChrome from "@/components/site/SiteChrome";
-import GoogleAnalytics from "@/components/site/GoogleAnalytics";
+import CookieConsentGate from "@/components/site/CookieConsentGate";
 import { siteConfig } from "@/lib/site-config";
 import { getSiteSettings } from "@/lib/data/settings";
 import { getClinicLocations } from "@/lib/data/contact";
@@ -52,7 +52,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="en" className={`h-full ${lora.variable} ${workSans.variable}`}>
       <body className="flex min-h-full flex-col antialiased">
-        <GoogleAnalytics />
+        <CookieConsentGate />
         <SiteChrome settings={settings} clinics={clinics}>
           {children}
         </SiteChrome>
