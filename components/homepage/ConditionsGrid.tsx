@@ -19,6 +19,13 @@ export default function ConditionsGrid({ diseases }: { diseases: Disease[] }) {
             <Link
               key={disease.slug}
               href={`/${disease.slug}`}
+              // Techeve audit (17 Sept 2026): the whole card — title, badge
+              // and full description — sits inside this <a>, which made its
+              // accessible name (and the anchor text crawlers see) the
+              // entire paragraph, 100+ characters long. aria-label overrides
+              // that with just the condition name, without changing the
+              // clickable area or visible design at all.
+              aria-label={disease.title}
               // A lone card left over in the final row (e.g. 16 items in a
               // 3-column grid) reads as a layout mistake — centre it under
               // the row above instead of leaving it stranded on the left.

@@ -28,6 +28,12 @@ export function DoctorProfileSection({
   const bioParagraphs = isTeaser ? doctor.bio_paragraphs.slice(0, 1) : doctor.bio_paragraphs;
   const hasCredentialBlock =
     doctor.college_name || doctor.registration_number || doctor.credential_name;
+  // "full" is always the dedicated /our-doctors/[slug] page, which had no
+  // H1 at all (Seobility audit, 17 Sept 2026) because this section used a
+  // fixed h2/h3. "teaser" is always the /about page, which already has its
+  // own H1 above this section — so only "full" shifts up a level.
+  const NameHeading = isTeaser ? "h2" : "h1";
+  const SubHeading = isTeaser ? "h3" : "h2";
 
   return (
     <section
@@ -88,9 +94,9 @@ export function DoctorProfileSection({
 
         {/* Story */}
         <div>
-          <h2 id={`${doctor.slug}-heading`} className="font-serif text-2xl text-navy sm:text-3xl">
+          <NameHeading id={`${doctor.slug}-heading`} className="font-serif text-2xl text-navy sm:text-3xl">
             {doctor.full_name}
-          </h2>
+          </NameHeading>
           <p className="mt-1 text-sm font-semibold text-amber-dark">{doctor.role_title}</p>
           {doctor.header_subline && (
             <p className="mt-0.5 text-sm text-text-mid">{doctor.header_subline}</p>
@@ -117,9 +123,9 @@ export function DoctorProfileSection({
 
           {!isTeaser && doctor.specializations.length > 0 && (
             <div className="mt-8">
-              <h3 className="text-sm font-bold uppercase tracking-wide text-navy">
+              <SubHeading className="text-sm font-bold uppercase tracking-wide text-navy">
                 Areas of Clinical Focus
-              </h3>
+              </SubHeading>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {doctor.specializations.map((spec) => (
                   <li
@@ -135,9 +141,9 @@ export function DoctorProfileSection({
 
           {!isTeaser && doctor.consultation_points && doctor.consultation_points.length > 0 && (
             <div className="mt-10">
-              <h3 className="font-serif text-xl text-navy">
+              <SubHeading className="font-serif text-xl text-navy">
                 What a Consultation With {doctor.full_name.replace("Dr ", "Dr ")} Looks Like
-              </h3>
+              </SubHeading>
               <ul className="mt-4 space-y-4">
                 {doctor.consultation_points.map((point) => (
                   <li key={point.heading}>

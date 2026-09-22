@@ -44,44 +44,47 @@ export function LegalPageBody({ content }: { content: LegalPageContent }) {
       <SectionJumpNav items={jumpNavItems} />
 
       <div className="bg-white px-5 py-10 md:py-14">
-        <div className="mx-auto max-w-3xl overflow-hidden rounded-xl border border-navy/10 shadow-sm">
-          {content.sections.map((section, i) => (
-            <details
-              key={section.heading}
-              id={slugify(section.heading)}
-              open={i === 0}
-              className={`group scroll-mt-32 px-6 py-5 ${i % 2 === 0 ? "bg-white" : "bg-cream-bg"} ${
-                i > 0 ? "border-t border-navy/10" : ""
-              }`}
-            >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-serif text-lg text-navy md:text-xl">
-                {section.heading}
-                <span aria-hidden className="text-xl text-amber-dark transition-transform group-open:rotate-45">
-                  +
-                </span>
-              </summary>
-              <div className="mt-3 space-y-3">
-                {section.body.map((block, j) =>
-                  Array.isArray(block) ? (
-                    <ul key={j} className="space-y-2 pl-1">
-                      {block.map((item) => (
-                        <li key={item.slice(0, 60)} className="flex gap-2.5 text-[15px] leading-relaxed text-text-mid">
-                          <span aria-hidden className="mt-1 text-amber-dark">
-                            •
-                          </span>
-                          <span>{resolveEmail(item)}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p key={j} className="text-[15px] leading-relaxed text-text-mid">
-                      {resolveEmail(block)}
-                    </p>
-                  )
-                )}
-              </div>
-            </details>
-          ))}
+        <div className="mx-auto max-w-3xl">
+          <h2 className="sr-only">Sections</h2>
+          <div className="overflow-hidden rounded-xl border border-navy/10 shadow-sm">
+            {content.sections.map((section, i) => (
+              <details
+                key={section.heading}
+                id={slugify(section.heading)}
+                open={i === 0}
+                className={`group scroll-mt-32 px-6 py-5 ${i % 2 === 0 ? "bg-white" : "bg-cream-bg"} ${
+                  i > 0 ? "border-t border-navy/10" : ""
+                }`}
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-serif text-lg text-navy md:text-xl">
+                  {section.heading}
+                  <span aria-hidden className="text-xl text-amber-dark transition-transform group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <div className="mt-3 space-y-3">
+                  {section.body.map((block, j) =>
+                    Array.isArray(block) ? (
+                      <ul key={j} className="space-y-2 pl-1">
+                        {block.map((item) => (
+                          <li key={item.slice(0, 60)} className="flex gap-2.5 text-[15px] leading-relaxed text-text-mid">
+                            <span aria-hidden className="mt-1 text-amber-dark">
+                              •
+                            </span>
+                            <span>{resolveEmail(item)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p key={j} className="text-[15px] leading-relaxed text-text-mid">
+                        {resolveEmail(block)}
+                      </p>
+                    )
+                  )}
+                </div>
+              </details>
+            ))}
+          </div>
         </div>
       </div>
     </>

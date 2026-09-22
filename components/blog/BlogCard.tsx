@@ -9,6 +9,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
+      aria-label={post.title}
       className="flex flex-col rounded-xl border border-navy/10 bg-white p-6 shadow-sm transition-[box-shadow,border-color,transform] duration-200 hover:-translate-y-1 hover:border-amber/60 hover:shadow-lg"
     >
       <p className="text-xs font-bold uppercase tracking-wide text-amber-dark">{post.category}</p>

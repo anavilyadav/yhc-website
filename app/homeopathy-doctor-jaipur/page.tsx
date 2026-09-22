@@ -51,6 +51,7 @@ export default async function JaipurLocationPage() {
       {mainClinic && (
         <section className="bg-cream-bg px-5 py-14">
           <div className="mx-auto max-w-md">
+            <h2 className="mb-5 text-center font-serif text-xl text-navy md:text-2xl">Visit Us in Jaipur</h2>
             <ClinicLocationCard clinic={mainClinic} />
           </div>
         </section>
