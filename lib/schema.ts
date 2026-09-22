@@ -5,11 +5,11 @@ import { siteConfig } from "@/lib/site-config";
  * Content and structure match GIOS_P2_SEO_Schema_WordPress.docx, Sections 4 & 5.
  *
  * Address and geo coordinates come from siteConfig.address (confirmed
- * directly by Dr Anavil, chat, 2026-08-29). Social links and aggregate
- * rating are still business details only the clinic owner can supply —
- * those read from environment variables and are omitted until set,
- * rather than shipped as fake placeholder data (a Google Schema policy
- * violation).
+ * directly by Dr Anavil, chat, 2026-08-29). Social links come from
+ * siteConfig.social (chat, 2026-09-22). Aggregate rating is still a
+ * business detail only the clinic owner can supply — that reads from an
+ * environment variable and is omitted until set, rather than shipped as
+ * fake placeholder data (a Google Schema policy violation).
  */
 
 const clinicId = `${siteConfig.url}/#clinic`;
@@ -17,11 +17,14 @@ const founderId = `${siteConfig.url}/our-doctors/${siteConfig.doctors.founder.sl
 const physicianId = `${siteConfig.url}/our-doctors/${siteConfig.doctors.physician.slug}#doctor`;
 
 function socialLinks(): string[] {
-  const links = [
-    process.env.NEXT_PUBLIC_FACEBOOK_URL,
-    process.env.NEXT_PUBLIC_INSTAGRAM_URL,
-    process.env.NEXT_PUBLIC_GBP_URL,
-  ].filter((v): v is string => Boolean(v));
+  // Reads from siteConfig.social (single source of truth) rather than
+  // process.env directly, so this always matches the same profiles the
+  // footer's icon row links to. The GBP review link is deliberately left
+  // out here — sameAs should point to other profile pages for this same
+  // entity (Facebook, Instagram), not a "write a review" action URL.
+  const links = [siteConfig.social.facebook, siteConfig.social.instagram, siteConfig.social.youtube].filter(
+    (v): v is string => Boolean(v)
+  );
   return links;
 }
 

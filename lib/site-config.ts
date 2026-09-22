@@ -37,8 +37,12 @@ export const siteConfig = {
   },
   email: process.env.NEXT_PUBLIC_CLINIC_EMAIL || null, // fill in real clinic email
   social: {
-    facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || null,
-    instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || null,
+    // Real profiles linked from the clinic's Google Business Profile
+    // (chat, 2026-09-22) — closes the Techeve audit's "no social profiles
+    // linked" gap (both the visible footer icons and schema sameAs below
+    // read from these, so setting them here is the one place needed).
+    facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/yhcresearchcentre/",
+    instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/yadavhomeoclinic/",
     youtube: process.env.NEXT_PUBLIC_YOUTUBE_URL || null,
     // Official Google review link from the GBP dashboard's "Get more
     // reviews" panel (chat, 2026-09-22) — replaces the earlier
